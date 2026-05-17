@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrickHeroGuide - LEGO Batman: Legacy of the Dark Knight Complete Guide</title>
+  <meta name="description" content="The ultimate guide to LEGO Batman: Legacy of the Dark Knight. Find all minikits, red bricks, character unlocks, walkthroughs, collectibles and tips.">
+  <meta name="keywords" content="LEGO Batman Legacy of the Dark Knight guide, minikits, red bricks, collectibles, walkthrough, characters, tips">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://brickheroguide.com/">
+  <meta property="og:title" content="BrickHeroGuide - LEGO Batman: Legacy of the Dark Knight Complete Guide">
+  <meta property="og:description" content="Your complete companion for LEGO Batman: Legacy of the Dark Knight. All minikits, red bricks, characters, walkthroughs and collectibles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brickheroguide.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Google Analytics - Replace GA_MEASUREMENT_ID with your actual ID -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script> -->
+  <!-- Google AdSense - Replace ca-pub-XXXXXXX with your publisher ID -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX" crossorigin="anonymous"></script> -->
+  <style>
+    /* ===== CSS Reset & Base ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d27;
+      --bg-card-hover: #222633;
+      --text: #e8eaed;
+      --text-secondary: #9aa0ab;
+      --accent: #fbbf24;
+      --accent-hover: #f59e0b;
+      --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a;
+      --max-width: 1100px;
+      --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-hover); }
+    img { max-width: 100%; display: block; }
+
+    /* ===== Header / Nav ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .logo {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-icon { font-size: 22px; }
+    .logo span { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .hero p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto 28px;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== Guide Category Cards ===== */
+    .section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px 48px;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      transition: transform 0.2s, border-color 0.2s, background 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      background: var(--bg-card-hover);
+    }
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+    .card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      flex: 1;
+    }
+    .card-link {
+      margin-top: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* ===== Article List ===== */
+    .articles {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .article-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .article-row:hover {
+      border-color: var(--accent);
+      background: var(--bg-card-hover);
+    }
+    .article-tag {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-walkthrough { background: #3b82f620; color: #60a5fa; }
+    .tag-collectible { background: #10b98120; color: #34d399; }
+    .tag-tips { background: #f59e0b20; color: #fbbf24; }
+    .tag-characters { background: #a78bfa20; color: #a78bfa; }
+    .article-info { flex: 1; min-width: 0; }
+    .article-info h4 {
+      font-size: 15px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .article-info span {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    .article-arrow {
+      color: var(--text-secondary);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    /* ===== Ad Placeholder ===== */
+    .ad-slot {
+      max-width: var(--max-width);
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+    .ad-placeholder {
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 12px;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+      max-width: var(--max-width);
+      margin: 40px auto 0;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    .footer-disclaimer {
+      font-size: 11px;
+      color: #555;
+      max-width: 600px;
+      margin: 12px auto 0;
+      line-height: 1.5;
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 20px;
+        gap: 16px;
+      }
+      .menu-toggle { display: block; }
+      .hero { padding: 40px 20px 30px; }
+      .hero-stats { gap: 20px; }
+      .cards { grid-template-columns: 1fr; }
+      .article-row { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">&#9881;</span>
+        Brick<span>Hero</span>Guide
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#guides">Guides</a></li>
+        <li><a href="#walkthrough">Walkthrough</a></li>
+        <li><a href="#collectibles">Collectibles</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#tips">Tips</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-badge">Updated for Launch Day - May 2026</div>
+    <h1>Your Complete Guide to<br><em>LEGO Batman: Legacy of the Dark Knight</em></h1>
+    <p>Every minikit location, red brick, character unlock, and walkthrough. Built by fans, powered by passion.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Characters</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Collectibles</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Completion Guide</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Guide Categories ===== -->
+  <section class="section" id="guides">
+    <h2 class="section-title">Guide Categories</h2>
+    <div class="cards">
+      <a href="walkthrough.html" class="card">
+        <div class="card-icon">&#128214;</div>
+        <h3>Full Walkthrough</h3>
+        <p>Step-by-step mission walkthroughs with all secrets and optional objectives covered.</p>
+        <span class="card-link">View all missions &rarr;</span>
+      </a>
+      <a href="minikits.html" class="card">
+        <div class="card-icon">&#127922;</div>
+        <h3>All Minikits</h3>
+        <p>Every minikit location in every chapter. Never miss a single one on your way to 100%.</p>
+        <span class="card-link">Find all minikits &rarr;</span>
+      </a>
+      <a href="red-bricks.html" class="card">
+        <div class="card-icon">&#128308;</div>
+        <h3>Red Bricks</h3>
+        <p>Unlock powerful extras and multipliers. Complete red brick location guide for every level.</p>
+        <span class="card-link">Unlock all extras &rarr;</span>
+      </a>
+      <a href="characters.html" class="card" id="characters">
+        <div class="card-icon">&#129464;</div>
+        <h3>Characters &amp; Unlocks</h3>
+        <p>All playable characters, their unique abilities, and how to unlock each one.</p>
+        <span class="card-link">View all characters &rarr;</span>
+      </a>
+      <a href="batcave.html" class="card">
+        <div class="card-icon">&#127961;</div>
+        <h3>Batcave Hub Guide</h3>
+        <p>Master the Batcave: upgrades, vehicle displays, WayneTech Chips, and customization.</p>
+        <span class="card-link">Explore the Batcave &rarr;</span>
+      </a>
+      <a href="trophies.html" class="card">
+        <div class="card-icon">&#127942;</div>
+        <h3>Trophy / Achievement Guide</h3>
+        <p>Roadmap to platinum. Every trophy and achievement with tips for the tricky ones.</p>
+        <span class="card-link">Get all trophies &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Ad Slot ===== -->
+  <div class="ad-slot">
+    <div class="ad-placeholder">
+      <!-- Google AdSense ad unit will go here -->
+      Ad Space - Google AdSense
+    </div>
+  </div>
+
+  <!-- ===== Latest Guides ===== -->
+  <section class="section" id="walkthrough">
+    <h2 class="section-title">Latest Guides</h2>
+    <div class="articles">
+      <a href="guides/beginners-guide.html" class="article-row">
+        <span class="article-tag tag-tips">Tips</span>
+        <div class="article-info">
+          <h4>Beginner's Guide: 10 Things to Know Before You Start</h4>
+          <span>Essential tips for new players jumping into Gotham</span>
+        </div>
+        <span class="article-arrow">&rarr;</span>
+      </a>
+      <a href="guides/all-characters-unlock.html" class="article-row">
+        <span class="article-tag tag-characters">Characters</span>
+        <div class="article-info">
+          <h4>All 7 Playable Characters &amp; How to Unlock Them</h4>
+          <span>Complete character roster with unlock conditions</span>
+        </div>
+        <span class="article-arrow">&rarr;</span>
+      </a>
+      <a href="guides/waynetech-chips-guide.html" class="article-row">
+        <span class="article-tag tag-tips">Tips</span>
+        <div class="article-info">
+          <h4>WayneTech Chips &amp; Skill Bricks: Currency Guide</h4>
+          <span>How to earn and spend every currency in the game</span>
+        </div>
+        <span class="article-arrow">&rarr;</span>
+      </a>
+      <a href="guides/batcave-hub-guide.html" class="article-row">
+        <span class="article-tag tag-walkthrough">Walkthrough</span>
+        <div class="article-info">
+          <h4>Batcave Hub: All Facilities, Upgrades &amp; Secrets</h4>
+          <span>Everything you can do in your home base</span>
+        </div>
+        <span class="article-arrow">&rarr;</span>
+      </a>
+      <a href="guides/mission-1-walkthrough.html" class="article-row">
+        <span class="article-tag tag-walkthrough">Walkthrough</span>
+        <div class="article-info">
+          <h4>Mission 1 Walkthrough &amp; All Collectibles</h4>
+          <span>Full walkthrough with every minikit and red brick</span>
+        </div>
+        <span class="article-arrow">&rarr;</span>
+      </a>
+      <a href="guides/mission-2-walkthrough.html" class="article-row">
+        <span class="article-tag tag-walkthrough">Walkthrough</span>
+        <div class="article-info">
+          <h4>Mission 2 Walkthrough &amp; All Collectibles</h4>
+          <span>Full walkthrough with every minikit and red brick</span>
+        </div>
+        <span class="article-arrow">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Collectibles Section ===== -->
+  <section class="section" id="collectibles">
+    <h2 class="section-title">Collectibles Tracker</h2>
+    <div class="cards">
+      <a href="minikits.html" class="card">
+        <div class="card-icon">&#128230;</div>
+        <h3>Minikits Checklist</h3>
+        <p>Track your progress across all missions. Check off each minikit as you find it.</p>
+        <span class="card-link">Open checklist &rarr;</span>
+      </a>
+      <a href="red-bricks.html" class="card">
+        <div class="card-icon">&#128308;</div>
+        <h3>Red Bricks Checklist</h3>
+        <p>All red brick locations and the extras they unlock. Track your collection.</p>
+        <span class="card-link">Open checklist &rarr;</span>
+      </a>
+      <a href="vehicles.html" class="card">
+        <div class="card-icon">&#128663;</div>
+        <h3>All Vehicles</h3>
+        <p>Every vehicle in the game and how to unlock them, from the Batmobile to the Batwing.</p>
+        <span class="card-link">View all vehicles &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Ad Slot ===== -->
+  <div class="ad-slot">
+    <div class="ad-placeholder">
+      <!-- Google AdSense ad unit will go here -->
+      Ad Space - Google AdSense
+    </div>
+  </div>
+
+  <!-- ===== Tips Section ===== -->
+  <section class="section" id="tips">
+    <h2 class="section-title">Tips &amp; Tricks</h2>
+    <div class="articles">
+      <a href="guides/best-characters-each-mission.html" class="article-row">
+        <span class="article-tag tag-characters">Characters</span>
+        <div class="article-info">
+          <h4>Best Character for Each Mission</h4>
+          <span>Which hero to pick for every level</span>
+        </div>
+        <span class="article-arrow">&rarr;</span>
+      </a>
+      <a href="guides/fast-waynetech-chips.html" class="article-row">
+        <span class="article-tag tag-tips">Tips</span>
+        <div class="article-info">
+          <h4>Fastest Way to Farm WayneTech Chips</h4>
+          <span>Best methods to earn currency quickly</span>
+        </div>
+        <span class="article-arrow">&rarr;</span>
+      </a>
+      <a href="guides/100-percent-completion.html" class="article-row">
+        <span class="article-tag tag-collectible">Collectible</span>
+        <div class="article-info">
+          <h4>100% Completion Checklist &amp; Roadmap</h4>
+          <span>Everything you need to fully complete the game</span>
+        </div>
+        <span class="article-arrow">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">
+      BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries. All game content, names, and images are trademarks of their respective owners and are used here for informational purposes under fair use.
+    </p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    // Close menu on link click
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>

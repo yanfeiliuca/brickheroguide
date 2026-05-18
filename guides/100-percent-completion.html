@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100% Completion Checklist & Roadmap - BrickHeroGuide</title>
+  <meta name="description" content="The definitive roadmap to 100% completion in LEGO Batman: Legacy of the Dark Knight. Checklist for all missions, collectibles, and unlocks.">
+  <meta name="keywords" content="LEGO Batman Legacy 100% completion, checklist, roadmap, all collectibles">
+  <link rel="canonical" href="https://brickheroguide.com/guides/100-percent-completion.html">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d27;
+      --bg-card-hover: #222633;
+      --text: #e8eaed;
+      --text-secondary: #9aa0ab;
+      --accent: #fbbf24;
+      --accent-hover: #f59e0b;
+      --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a;
+      --max-width: 1100px;
+      --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+
+    /* Nav */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between; height: 56px;
+    }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+
+    /* Layout */
+    .page-layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 40px;
+    }
+
+    /* Article */
+    .article-tag {
+      display: inline-block;
+      font-size: 10px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px;
+      background: #10b98120; color: #34d399; margin-bottom: 10px;
+    }
+    .article-header h1 {
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    /* Content */
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-header">
+        <span class="article-tag">Collectible</span>
+        <h1>100% Completion Checklist & Roadmap</h1>
+        <p>Your ultimate guide to mastering LEGO Batman: Legacy of the Dark Knight.</p>
+      </div>
+
+      <div class="content">
+        <p>Achieving 100% completion in <strong>LEGO Batman: Legacy of the Dark Knight</strong> is a true test of a fan's dedication. It requires finding every secret, unlocking every character, and mastering every mission. Here is your definitive checklist.</p>
+
+        <h2>The 100% Requirements</h2>
+        <ul>
+          <li><strong>All 15 Story Missions:</strong> Complete the story mode.</li>
+          <li><strong>True Hero Status:</strong> Earn "True Hero" in every story mission.</li>
+          <li><strong>All 150 Minikits:</strong> Find all 10 Minikits in every mission.</li>
+          <li><strong>All 15 Red Bricks:</strong> Find the hidden Red Brick in each mission.</li>
+          <li><strong>All 7 Main Characters:</strong> Unlock all playable heroes.</li>
+          <li><strong>All 20 Vehicles:</strong> Unlock and purchase every vehicle.</li>
+          <li><strong>All Instruction Pages:</strong> Find all hidden blueprint pages.</li>
+          <li><strong>Full WayneTech Upgrades:</strong> Purchase every skill and gadget upgrade.</li>
+        </ul>
+
+        <h2>Roadmap</h2>
+        <p>Focus on the story first. Once you have the full roster of characters, return to each mission in Free Play to collect the Minikits and Red Bricks you missed. Use the stud multiplier Red Bricks as soon as you find them to make purchasing upgrades trivial.</p>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Guides</h3>
+        <a href="collectibles-guide.html" class="sidebar-link">Collectibles Guide</a>
+        <a href="trophy-guide.html" class="sidebar-link">Trophy Guide</a>
+        <a href="all-characters-unlock.html" class="sidebar-link">Characters Guide</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

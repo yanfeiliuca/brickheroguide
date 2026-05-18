@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
+    <loc>https://brickheroguide.com/about.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://brickheroguide.com/contact.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://brickheroguide.com/</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>daily</changefreq>
@@ -12,6 +24,12 @@
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://brickheroguide.com/guides/100-percent-completion.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brickheroguide.com/guides/all-characters-unlock.html</loc>
@@ -32,6 +50,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://brickheroguide.com/guides/best-characters-each-mission.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://brickheroguide.com/guides/collectibles-guide.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -42,6 +66,12 @@
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brickheroguide.com/guides/fast-waynetech-chips.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brickheroguide.com/guides/gotham-map-guide.html</loc>
@@ -87,6 +117,12 @@
   </url>
   <url>
     <loc>https://brickheroguide.com/guides/tips-for-new-players.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brickheroguide.com/guides/trophy-guide.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

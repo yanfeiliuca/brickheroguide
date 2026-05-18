@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All 7 Playable Characters & How to Unlock Them - BrickHeroGuide</title>
+  <meta name="description" content="Complete guide to all 7 playable characters in LEGO Batman: Legacy of the Dark Knight. Learn each character's unique abilities and how to unlock them.">
+  <meta name="keywords" content="LEGO Batman Legacy characters, unlock characters, Batman, Robin, Batgirl, Nightwing, playable characters">
+  <link rel="canonical" href="https://brickheroguide.com/guides/all-characters-unlock.html">
+  <meta property="og:title" content="All 7 Characters & How to Unlock - LEGO Batman Legacy">
+  <meta property="og:description" content="Complete roster of all playable characters, their unique abilities, and unlock conditions in LEGO Batman: Legacy of the Dark Knight.">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <!-- Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+  <!-- Google AdSense -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX" crossorigin="anonymous"></script> -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
+      --text: #e8eaed; --text-secondary: #9aa0ab;
+      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+
+    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .article-header { margin-bottom: 28px; }
+    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; background: #3b82f620; color: #60a5fa; margin-bottom: 10px; }
+    .article-header h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+
+    .toc { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin-bottom: 28px; }
+    .toc-title { font-size: 14px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .toc li { font-size: 14px; }
+    .toc a { color: var(--text-secondary); }
+    .toc a:hover { color: var(--accent); }
+
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+
+    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .tip-box strong { color: var(--accent); }
+    .warning-box { background: rgba(239, 68, 68, 0.08); border-left: 3px solid #ef4444; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .warning-box strong { color: #ef4444; }
+
+    .char-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin: 16px 0; }
+    .char-card h3 { margin-top: 0; font-size: 19px; }
+    .char-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0; font-size: 14px; }
+    .char-stats dt { color: var(--text-secondary); }
+    .char-stats dd { color: var(--text); font-weight: 600; }
+    .char-unlock { background: var(--accent-dim); border-radius: 8px; padding: 10px 14px; font-size: 14px; margin-top: 12px; }
+    .char-unlock strong { color: var(--accent); }
+
+    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+
+    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+      .char-stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/#guides">Guides</a> &rsaquo; All Characters &amp; Unlocks
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag">Characters</span>
+        <h1>All 7 Playable Characters &amp; How to Unlock Them</h1>
+        <div class="article-meta">Last updated: May 22, 2026 &middot; 10 min read</div>
+      </div>
+
+      <div class="toc">
+        <div class="toc-title">&#128220; Table of Contents</div>
+        <ol>
+          <li><a href="#overview">Character Overview</a></li>
+          <li><a href="#batman">Batman (Bruce Wayne)</a></li>
+          <li><a href="#robin">Robin (Tim Drake)</a></li>
+          <li><a href="#batgirl">Batgirl (Barbara Gordon)</a></li>
+          <li><a href="#nightwing">Nightwing (Dick Grayson)</a></li>
+          <li><a href="#alfred">Alfred Pennyworth</a></li>
+          <li><a href="#catwoman">Catwoman (Selina Kyle)</a></li>
+          <li><a href="#batwoman">Batwoman (Kate Kane)</a></li>
+          <li><a href="#abilities">Ability Comparison Chart</a></li>
+          <li><a href="#tips">Tips for Choosing the Right Character</a></li>
+        </ol>
+      </div>
+
+      <div class="content">
+        <p><strong>LEGO Batman: Legacy of the Dark Knight</strong> features 7 fully playable characters, each with unique abilities and an upgradeable skill tree. Unlike previous LEGO games that offered massive rosters of simple characters, Legacy focuses on a smaller cast with much deeper gameplay mechanics. Here's every character, what they can do, and exactly how to unlock them.</p>
+
+        <h2 id="overview">Character Overview</h2>
+        <p>All 7 characters fall into different gameplay roles. Some excel at combat, others at puzzle-solving or traversal. For 100% completion, you'll eventually need every character's abilities, so make sure to unlock them all as you progress through the story.</p>
+        <div class="tip-box"><strong>Tip:</strong> You start the game with only Batman. Other characters unlock progressively as you complete story missions. Focus on the main story first to build up your full roster.</div>
+
+        <h2 id="batman">1. Batman (Bruce Wayne)</h2>
+        <div class="char-card">
+          <h3>&#129415; Batman</h3>
+          <dl class="char-stats">
+            <dt>Role:</dt><dd>All-Rounder / Combat</dd>
+            <dt>How to Unlock:</dt><dd>Available from start</dd>
+            <dt>Signature Gadget:</dt><dd>Batarang</dd>
+            <dt>Traversal:</dt><dd>Grapnel Gun, Glide Cape</dd>
+          </dl>
+          <h3>Unique Abilities</h3>
+          <ul>
+            <li><strong>Batarang Throw</strong> — Hit distant targets and switches. Can be upgraded to hit multiple targets at once.</li>
+            <li><strong>Grapnel Gun</strong> — Reach high ledges marked with grapple points. Essential for vertical exploration.</li>
+            <li><strong>Glide</strong> — Hold jump mid-air to glide across gaps. Covers more distance than any other character's jump.</li>
+            <li><strong>Detective Vision</strong> — Reveal hidden objects, breakable walls, and footprint trails. Activated by pressing the special ability button.</li>
+            <li><strong>Suit Swap</strong> — Access special Bat-suits at designated changing stations throughout levels for unique abilities (Power Suit, Sensor Suit, etc.).</li>
+          </ul>
+          <div class="char-unlock"><strong>&#128275; Unlock:</strong> Batman is your default starting character. No unlock required.</div>
+        </div>
+
+        <h2 id="robin">2. Robin (Tim Drake)</h2>
+        <div class="char-card">
+          <h3>&#129464; Robin</h3>
+          <dl class="char-stats">
+            <dt>Role:</dt><dd>Tech Specialist / Puzzle Solver</dd>
+            <dt>How to Unlock:</dt><dd>Complete Mission 1</dd>
+            <dt>Signature Gadget:</dt><dd>Staff &amp; Zip-Line</dd>
+            <dt>Traversal:</dt><dd>Acrobatic Poles, Small Vents</dd>
+          </dl>
+          <h3>Unique Abilities</h3>
+          <ul>
+            <li><strong>Technology Hack</strong> — Interact with tech panels and computer terminals to open doors, disable traps, and control machinery.</li>
+            <li><strong>Vent Crawl</strong> — Squeeze into small openings that other characters can't access. Many collectibles are hidden behind vents.</li>
+            <li><strong>Acrobatic Poles</strong> — Swing on horizontal poles to cross large gaps. Only Robin and Nightwing can use these.</li>
+            <li><strong>Magnetic Suit</strong> — Walk on special magnetic walls and ceilings at designated suit stations.</li>
+          </ul>
+          <div class="char-unlock"><strong>&#128275; Unlock:</strong> Automatically unlocked after completing <a href="mission-1-walkthrough.html">Mission 1: Shadows Over Gotham</a>. Robin joins your team during the mission's final cutscene.</div>
+        </div>
+
+        <div class="ad-inline"><!-- AdSense mid-article ad unit -->Advertisement</div>
+
+        <h2 id="batgirl">3. Batgirl (Barbara Gordon)</h2>
+        <div class="char-card">
+          <h3>&#129464; Batgirl</h3>
+          <dl class="char-stats">
+            <dt>Role:</dt><dd>Combat / Investigation</dd>
+            <dt>How to Unlock:</dt><dd>Complete Mission 3</dd>
+            <dt>Signature Gadget:</dt><dd>Dual Batarangs</dd>
+            <dt>Traversal:</dt><dd>Grapnel Gun, Double Jump</dd>
+          </dl>
+          <h3>Unique Abilities</h3>
+          <ul>
+            <li><strong>Dual Batarangs</strong> — Throw two batarangs simultaneously, hitting two targets at once. Great for multi-switch puzzles.</li>
+            <li><strong>GCPD Database</strong> — Scan crime scenes to reveal hidden clues and unlock bonus collectible hints.</li>
+            <li><strong>Double Jump</strong> — A second mid-air jump allows reaching platforms that require precise vertical movement.</li>
+            <li><strong>Martial Arts Combo</strong> — Extended combat chains that deal more damage than standard attacks.</li>
+          </ul>
+          <div class="char-unlock"><strong>&#128275; Unlock:</strong> Automatically unlocked after completing Mission 3: Gotham City Sirens. Batgirl arrives as reinforcement during the boss fight.</div>
+        </div>
+
+        <h2 id="nightwing">4. Nightwing (Dick Grayson)</h2>
+        <div class="char-card">
+          <h3>&#128374; Nightwing</h3>
+          <dl class="char-stats">
+            <dt>Role:</dt><dd>Agility / Traversal</dd>
+            <dt>How to Unlock:</dt><dd>Complete Mission 5</dd>
+            <dt>Signature Gadget:</dt><dd>Escrima Sticks</dd>
+            <dt>Traversal:</dt><dd>Acrobatic Poles, Wall Jump</dd>
+          </dl>
+          <h3>Unique Abilities</h3>
+          <ul>
+            <li><strong>Wall Jump</strong> — Bounce between parallel walls to reach extreme heights. Unique to Nightwing.</li>
+            <li><strong>Escrima Sticks</strong> — Electrified melee weapons that can also power electrical panels and generators.</li>
+            <li><strong>Acrobatic Poles</strong> — Like Robin, Nightwing can swing on horizontal poles.</li>
+            <li><strong>Speed Build</strong> — Assemble LEGO builds faster than other characters, useful in timed puzzle sections.</li>
+          </ul>
+          <div class="char-unlock"><strong>&#128275; Unlock:</strong> Automatically unlocked after completing Mission 5: Bludhaven Burning. Nightwing joins the team in the post-mission Batcave cutscene.</div>
+        </div>
+
+        <h2 id="alfred">5. Alfred Pennyworth</h2>
+        <div class="char-card">
+          <h3>&#129333; Alfred</h3>
+          <dl class="char-stats">
+            <dt>Role:</dt><dd>Support / Utility</dd>
+            <dt>How to Unlock:</dt><dd>Complete Mission 7</dd>
+            <dt>Signature Gadget:</dt><dd>Serving Tray (Shield)</dd>
+            <dt>Traversal:</dt><dd>Standard</dd>
+          </dl>
+          <h3>Unique Abilities</h3>
+          <ul>
+            <li><strong>Butler's Access</strong> — Open locked "service" doors found throughout Wayne properties and Gotham buildings. Many hidden rooms require this.</li>
+            <li><strong>Repair</strong> — Fix broken LEGO machinery and vehicles that other characters cannot interact with.</li>
+            <li><strong>Tea Service</strong> — Heal nearby allies and buff their attack power temporarily. Essential in tough Free Play challenges.</li>
+            <li><strong>Serving Tray Block</strong> — A unique defensive ability that deflects projectiles back at enemies.</li>
+          </ul>
+          <div class="char-unlock"><strong>&#128275; Unlock:</strong> Complete Mission 7: Siege of Wayne Manor. Alfred proves himself in combat during the manor defense sequence.</div>
+        </div>
+
+        <div class="ad-inline"><!-- AdSense mid-article ad unit -->Advertisement</div>
+
+        <h2 id="catwoman">6. Catwoman (Selina Kyle)</h2>
+        <div class="char-card">
+          <h3>&#128049; Catwoman</h3>
+          <dl class="char-stats">
+            <dt>Role:</dt><dd>Stealth / Agility</dd>
+            <dt>How to Unlock:</dt><dd>Complete Mission 9</dd>
+            <dt>Signature Gadget:</dt><dd>Whip</dd>
+            <dt>Traversal:</dt><dd>Wall Climb, Whip Swing</dd>
+          </dl>
+          <h3>Unique Abilities</h3>
+          <ul>
+            <li><strong>Whip Swing</strong> — Latch onto whip points to swing across large gaps. Some areas are only reachable with the whip.</li>
+            <li><strong>Wall Climb</strong> — Climb special textured surfaces that no other character can scale.</li>
+            <li><strong>Stealth Mode</strong> — Turn invisible to bypass security cameras and laser grids. Required for several collectibles.</li>
+            <li><strong>Cat Burglar</strong> — Open safes and locked containers that other characters cannot interact with. Many contain bonus studs or collectibles.</li>
+          </ul>
+          <div class="char-unlock"><strong>&#128275; Unlock:</strong> Complete Mission 9: Rooftop Rendezvous. Catwoman switches allegiance and becomes a playable ally.</div>
+        </div>
+
+        <h2 id="batwoman">7. Batwoman (Kate Kane)</h2>
+        <div class="char-card">
+          <h3>&#129464; Batwoman</h3>
+          <dl class="char-stats">
+            <dt>Role:</dt><dd>Heavy Combat / Demolition</dd>
+            <dt>How to Unlock:</dt><dd>Complete Mission 11 (final story mission)</dd>
+            <dt>Signature Gadget:</dt><dd>Explosive Gel</dd>
+            <dt>Traversal:</dt><dd>Grapnel Gun, Glide</dd>
+          </dl>
+          <h3>Unique Abilities</h3>
+          <ul>
+            <li><strong>Explosive Gel</strong> — Place and detonate explosives on cracked walls and silver LEGO objects. The only way to break silver objects outside of suit stations.</li>
+            <li><strong>Military Training</strong> — Superior combat damage and unique finishing moves. Best raw combat character in the game.</li>
+            <li><strong>Tactical Vision</strong> — Similar to Batman's Detective Vision but also highlights enemy weaknesses and hidden explosive points.</li>
+            <li><strong>Grapnel &amp; Glide</strong> — Same traversal abilities as Batman, making her a versatile replacement in Free Play.</li>
+          </ul>
+          <div class="char-unlock"><strong>&#128275; Unlock:</strong> Complete Mission 11: Legacy of the Dark Knight (the final story mission). Batwoman joins after the credits roll.</div>
+        </div>
+
+        <h2 id="abilities">Ability Comparison Chart</h2>
+        <p>This quick-reference chart shows which character can do what. Use it to pick the right hero for each mission in Free Play mode:</p>
+
+        <div style="overflow-x: auto; margin: 16px 0;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 600px;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border);">
+                <th style="text-align: left; padding: 10px 8px; color: var(--accent);">Ability</th>
+                <th style="padding: 10px 4px; text-align: center;">BAT</th>
+                <th style="padding: 10px 4px; text-align: center;">ROB</th>
+                <th style="padding: 10px 4px; text-align: center;">BG</th>
+                <th style="padding: 10px 4px; text-align: center;">NW</th>
+                <th style="padding: 10px 4px; text-align: center;">ALF</th>
+                <th style="padding: 10px 4px; text-align: center;">CW</th>
+                <th style="padding: 10px 4px; text-align: center;">BW</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Grapnel Gun</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Glide</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Tech Hack</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Vent Crawl</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Acrobatic Poles</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Double Jump</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Wall Jump</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Electrical Panels</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Repair</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Service Doors</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Stealth / Invisibility</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Wall Climb</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Safes &amp; Locks</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td><td style="text-align:center;">&#10060;</td></tr>
+              <tr><td style="padding: 8px;">Explosive Gel (Silver)</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#10060;</td><td style="text-align:center;">&#9989;</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 13px; color: var(--text-secondary);">BAT = Batman, ROB = Robin, BG = Batgirl, NW = Nightwing, ALF = Alfred, CW = Catwoman, BW = Batwoman</p>
+
+        <h2 id="tips">Tips for Choosing the Right Character</h2>
+        <p>When replaying missions in Free Play mode, picking the right characters saves a lot of time. Here are some practical suggestions:</p>
+        <ul>
+          <li><strong>For general exploration:</strong> Batman or Batwoman (grapnel + glide covers the most ground)</li>
+          <li><strong>For collectible hunting:</strong> Catwoman (stealth + wall climb + safe cracking reaches the most hidden areas)</li>
+          <li><strong>For tech puzzles:</strong> Robin is the only option (tech hack + vent crawl)</li>
+          <li><strong>For vertical areas:</strong> Nightwing (wall jump reaches places no one else can)</li>
+          <li><strong>For silver objects:</strong> Batwoman is the only character with Explosive Gel</li>
+          <li><strong>For locked rooms in Wayne buildings:</strong> Alfred with Butler's Access</li>
+        </ul>
+        <div class="tip-box"><strong>Pro Tip:</strong> In Free Play, you can bring any two characters. The ideal pair for most missions is <strong>Catwoman + Robin</strong> — together they cover stealth, tech, vents, wall climb, and safe cracking. Switch to Batman + Batwoman for missions heavy on grapple points and silver objects.</div>
+
+        <h2>What's Next?</h2>
+        <p>Now that you know the full roster, dive deeper into the game:</p>
+        <ul>
+          <li><a href="waynetech-chips-guide.html">WayneTech Chips &amp; Skill Bricks: How to Upgrade Your Characters</a></li>
+          <li><a href="batcave-hub-guide.html">Batcave Hub Guide: All Facilities &amp; Secrets</a></li>
+          <li><a href="mission-1-walkthrough.html">Mission 1 Full Walkthrough &amp; All Collectibles</a></li>
+          <li><a href="best-characters-each-mission.html">Best Character for Each Mission</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="beginners-guide.html" class="sidebar-link">Beginner's Guide: 10 Tips</a>
+        <a href="mission-1-walkthrough.html" class="sidebar-link">Mission 1 Walkthrough</a>
+        <a href="../minikits.html" class="sidebar-link">All Minikit Locations</a>
+        <a href="../red-bricks.html" class="sidebar-link">All Red Brick Locations</a>
+        <a href="waynetech-chips-guide.html" class="sidebar-link">Currency Guide</a>
+        <a href="batcave-hub-guide.html" class="sidebar-link">Batcave Hub Guide</a>
+      </div>
+      <div class="sidebar-box" style="border-style: dashed;">
+        <div style="text-align:center; color: var(--text-secondary); font-size: 12px; padding: 30px 0;"><!-- AdSense sidebar ad -->Ad Space</div>
+      </div>
+      <div class="sidebar-box">
+        <h3>Quick Links</h3>
+        <a href="/#walkthrough" class="sidebar-link">All Walkthroughs</a>
+        <a href="/#collectibles" class="sidebar-link">Collectibles Tracker</a>
+        <a href="../trophies.html" class="sidebar-link">Trophy Guide</a>
+        <a href="100-percent-completion.html" class="sidebar-link">100% Roadmap</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

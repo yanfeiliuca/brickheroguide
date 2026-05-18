@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGO Batman Legacy of the Dark Knight Suits and Abilities Guide - BrickHeroGuide</title>
+  <meta name="description" content="Complete guide to every Batman suit in LEGO Batman: Legacy of the Dark Knight. Learn each suit's abilities, when to use them, and how to upgrade them.">
+  <meta name="keywords" content="LEGO Batman Legacy suits, Batman suits, abilities, Armored Suit, Stealth Suit, Thermal Suit, Sonic Suit, Power Suit, suit upgrades">
+  <link rel="canonical" href="https://brickheroguide.com/guides/suits-abilities-guide.html">
+  <meta property="og:title" content="Batman Suits & Abilities Guide - LEGO Batman Legacy">
+  <meta property="og:description" content="Master all six Batman suits with our complete abilities guide. Learn every suit's powers, best uses, and upgrade paths.">
+  <meta property="og:type" content="article">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d27;
+      --bg-card-hover: #222633;
+      --text: #e8eaed;
+      --text-secondary: #9aa0ab;
+      --accent: #fbbf24;
+      --accent-hover: #f59e0b;
+      --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a;
+      --max-width: 1100px;
+      --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between; height: 56px;
+    }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+
+    .page-layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 40px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+
+    .article-header { margin-bottom: 28px; }
+    .article-tag {
+      display: inline-block;
+      font-size: 10px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px;
+      background: #3b82f620; color: #60a5fa; margin-bottom: 10px;
+    }
+    .article-header h1 {
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 28px;
+    }
+    .toc-title { font-size: 14px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .toc li { font-size: 14px; }
+    .toc a { color: var(--text-secondary); }
+    .toc a:hover { color: var(--accent); }
+
+    .content h2 {
+      font-size: 22px; font-weight: 700;
+      margin: 36px 0 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+
+    .tip-box {
+      background: var(--accent-dim);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .tip-box strong { color: var(--accent); }
+
+    .suit-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin: 20px 0;
+    }
+    .suit-card h4 { font-size: 18px; font-weight: 700; color: var(--accent); margin-bottom: 12px; }
+    .suit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 14px; }
+    @media (max-width: 600px) { .suit-grid { grid-template-columns: 1fr; } }
+    .suit-label { color: var(--text-secondary); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .suit-value { color: var(--text); font-weight: 500; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    th {
+      background: var(--bg-card);
+      color: var(--accent);
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+      font-weight: 700;
+    }
+    td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) td { background: rgba(26,29,39,0.5); }
+
+    .ad-inline {
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 12px;
+      margin: 28px 0;
+    }
+
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/#guides">Guides</a> &rsaquo; Suits &amp; Abilities Guide
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag">Gameplay Guide</span>
+        <h1>LEGO Batman Legacy of the Dark Knight — Suits &amp; Abilities Guide</h1>
+        <div class="article-meta">
+          Last updated: May 17, 2026 &middot; 9 min read
+        </div>
+      </div>
+
+      <div class="toc">
+        <div class="toc-title">&#128220; Table of Contents</div>
+        <ol>
+          <li><a href="#how-suits-work">How Suit Switching Works</a></li>
+          <li><a href="#standard-suit">Standard Batsuit</a></li>
+          <li><a href="#armored-suit">Armored Batsuit</a></li>
+          <li><a href="#stealth-suit">Stealth Batsuit</a></li>
+          <li><a href="#thermal-suit">Thermal Batsuit</a></li>
+          <li><a href="#sonic-suit">Sonic Batsuit</a></li>
+          <li><a href="#power-suit">Power Batsuit</a></li>
+          <li><a href="#upgrade-system">Suit Upgrade System</a></li>
+          <li><a href="#best-suit">Best Suit for Each Situation</a></li>
+        </ol>
+      </div>
+
+      <div class="content">
+        <p>Batman's suit-switching mechanic is the defining feature of LEGO Batman: Legacy of the Dark Knight. With <strong>six distinct Batsuits</strong>, each with unique abilities, knowing when and how to use each suit is the key to mastering the game. This guide covers every suit, every ability, and the upgrade paths that make them even more powerful.</p>
+
+        <h2 id="how-suits-work">How Suit Switching Works</h2>
+        <p>Batman can switch between suits at any time during gameplay using the D-pad. Each direction on the D-pad is mapped to a specific suit (configurable in settings). There's a brief 0.5-second animation when swapping, during which Batman is briefly vulnerable, so avoid switching mid-combat unless you have an opening.</p>
+        <p>Suits are unlocked progressively through the story. You start with the Standard and Armored suits, and unlock the remaining four as you complete missions and Batcave upgrades. By Mission 5, you should have all six suits available.</p>
+        <div class="tip-box"><strong>Quick Swap Tip:</strong> You can swap suits mid-glide and mid-grapple. This is essential for reaching certain collectibles — for example, grappling as Standard Batman then swapping to Thermal Suit mid-swing to break an ice wall at the grapple destination.</div>
+
+        <h2 id="standard-suit">Standard Batsuit — The All-Rounder</h2>
+        <div class="suit-card">
+          <h4>Standard Batsuit</h4>
+          <div class="suit-grid">
+            <div><div class="suit-label">Unlocked</div><div class="suit-value">Available from game start</div></div>
+            <div><div class="suit-label">D-Pad Direction</div><div class="suit-value">Up (default)</div></div>
+            <div><div class="suit-label">Core Abilities</div><div class="suit-value">Batarang, Grapple Gun, Glide Cape, Basic Melee</div></div>
+            <div><div class="suit-label">Signature Move</div><div class="suit-value">Cape Stun — stuns nearby enemies with cape flourish</div></div>
+          </div>
+        </div>
+        <p>The Standard Batsuit is your default and most versatile option. It has no special strengths but no weaknesses either. The Batarang hits distant switches and stuns enemies. The Grapple Gun reaches high ledges and grapple points marked with a bat symbol. The Glide Cape lets you traverse gaps and descend safely from heights.</p>
+        <p>When in doubt, this is your fallback suit. If you're not sure what obstacle you're facing, start here and observe the environment for clues about which specialized suit you need.</p>
+
+        <h2 id="armored-suit">Armored Batsuit — The Tank</h2>
+        <div class="suit-card">
+          <h4>Armored Batsuit</h4>
+          <div class="suit-grid">
+            <div><div class="suit-label">Unlocked</div><div class="suit-value">Available from game start</div></div>
+            <div><div class="suit-label">D-Pad Direction</div><div class="suit-value">Left (default)</div></div>
+            <div><div class="suit-label">Core Abilities</div><div class="suit-value">Heavy Melee, Riot Shield, Ground Slam, Explosive Resistance</div></div>
+            <div><div class="suit-label">Signature Move</div><div class="suit-value">Shield Charge — bulldozes through groups of enemies</div></div>
+          </div>
+        </div>
+        <p>The Armored Batsuit sacrifices speed for raw defensive power. Damage taken is reduced by 60%, making it the go-to suit for boss fights and heavy combat encounters. The Shield Charge can break through enemy block formations and destroy reinforced objects that resist standard attacks.</p>
+        <p>The trade-off: you can't glide or grapple in this suit, so it's purely for combat situations. Switch out of it for traversal sections.</p>
+        <div class="tip-box"><strong>Boss Fight MVP:</strong> Whenever you see a health bar at the top of the screen, switch to Armored Suit. The 60% damage reduction is the difference between breezing through and burning through your stud respawns.</div>
+
+        <div class="ad-inline">Advertisement</div>
+
+        <h2 id="stealth-suit">Stealth Batsuit — The Ghost</h2>
+        <div class="suit-card">
+          <h4>Stealth Batsuit</h4>
+          <div class="suit-grid">
+            <div><div class="suit-label">Unlocked</div><div class="suit-value">Complete Mission 2: "Gotham Under Siege"</div></div>
+            <div><div class="suit-label">D-Pad Direction</div><div class="suit-value">Right (default)</div></div>
+            <div><div class="suit-label">Core Abilities</div><div class="suit-value">Active Camouflage, Silent Takedown, Laser Grid Pass-Through, Sound Muffling</div></div>
+            <div><div class="suit-label">Signature Move</div><div class="suit-value">Shadow Strike — instant takedown from camouflage state</div></div>
+          </div>
+        </div>
+        <p>The Stealth Batsuit introduces stealth mechanics to the LEGO Batman formula. Activating camouflage makes Batman nearly invisible for 8 seconds (upgradable to 15), allowing you to bypass security cameras, sneak past enemies, and pass through laser grids without triggering alarms.</p>
+        <p>Silent Takedowns eliminate enemies instantly without alerting nearby foes. This suit is essential for stealth sections in Missions 3, 5, and 7, as well as for accessing certain hidden areas marked with a stealth indicator (a crossed-out eye symbol).</p>
+
+        <h2 id="thermal-suit">Thermal Batsuit — The Elemental</h2>
+        <div class="suit-card">
+          <h4>Thermal Batsuit</h4>
+          <div class="suit-grid">
+            <div><div class="suit-label">Unlocked</div><div class="suit-value">Complete Mission 4: "Shadows of the Past"</div></div>
+            <div class="suit-label">D-Pad Direction</div>
+            <div class="suit-value">Down (default)</div></div>
+            <div><div class="suit-label">Core Abilities</div><div class="suit-value">Heat Beam, Ice Wall Melting, Fire Immunity, Thermal Vision</div></div>
+            <div><div class="suit-label">Signature Move</div><div class="suit-value">Heat Wave — AoE blast that melts all ice and freezable objects in range</div></div>
+          </div>
+        </div>
+        <p>The Thermal Batsuit is your key to elemental puzzles. Its Heat Beam melts ice walls, frozen switches, and ice-encased collectibles. Thermal Vision highlights heat signatures through walls, revealing hidden enemies, secret passages, and temperature-based puzzles.</p>
+        <p>Fire immunity means you can walk through flame hazards that would damage other suits, opening up alternate paths in several missions. In combat, the Heat Beam deals continuous damage to enemies weak to fire (like Clayface and Mr. Freeze).</p>
+
+        <h2 id="sonic-suit">Sonic Batsuit — The Disruptor</h2>
+        <div class="suit-card">
+          <h4>Sonic Batsuit</h4>
+          <div class="suit-grid">
+            <div><div class="suit-label">Unlocked</div><div class="suit-value">Complete Mission 6: "Crimson Reckoning"</div></div>
+            <div><div class="suit-label">D-Pad Direction</div><div class="suit-value">Right + Down combo press (default)</div></div>
+            <div><div class="suit-label">Core Abilities</div><div class="suit-value">Sonic Blast, Glass Shatter, Enemy Disorient, Echo Location</div></div>
+            <div><div class="suit-label">Signature Move</div><div class="suit-value">Sonic Boom — charged AoE blast that shatters all glass and stuns all enemies in a wide radius</div></div>
+          </div>
+        </div>
+        <p>The Sonic Batsuit uses sound waves to solve puzzles and control crowds. Its Sonic Blast shatters glass barriers, breaks sonically-sealed containers, and activates sound-sensitive switches. Echo Location pulses reveal invisible platforms and hidden structural weaknesses in the environment.</p>
+        <p>In combat, the Sonic Boom is the best crowd control tool in the game — it stuns every enemy in a 15-meter radius for 5 seconds, giving you time to pick off priority targets or revive a downed co-op partner.</p>
+
+        <h2 id="power-suit">Power Batsuit — The Heavy Lifter</h2>
+        <div class="suit-card">
+          <h4>Power Batsuit</h4>
+          <div class="suit-grid">
+            <div><div class="suit-label">Unlocked</div><div class="suit-value">Complete Mission 7: "The Dark Knight Falls"</div></div>
+            <div><div class="suit-label">D-Pad Direction</div><div class="suit-value">Left + Up combo press (default)</div></div>
+            <div><div class="suit-label">Core Abilities</div><div class="suit-value">Super Strength, Object Lift &amp; Throw, Ground Pound, Reinforced Wall Break</div></div>
+            <div><div class="suit-label">Signature Move</div><div class="suit-value">Seismic Slam — ground pound that damages and knocks down all enemies in a wide area</div></div>
+          </div>
+        </div>
+        <p>The Power Batsuit is the ultimate problem solver for physical obstacles. Super Strength lets Batman lift and throw large objects (cars, shipping containers, giant LEGO blocks), smash through reinforced walls that resist even Red Hood's C4, and activate heavy pressure plates.</p>
+        <p>This suit is unlocked late in the story, which means you'll need to revisit earlier missions in Free Play mode to access power-locked areas. Many of the most valuable collectibles (Red Bricks, rare Minikits) are hidden behind Power Suit obstacles.</p>
+        <div class="tip-box"><strong>100% Completion Essential:</strong> If you're aiming for 100%, the Power Suit is mandatory. At least 12 Minikits and 4 Red Bricks across the game require Power Suit access. Budget time for a Free Play cleanup run after unlocking this suit.</div>
+
+        <div class="ad-inline">Advertisement</div>
+
+        <h2 id="upgrade-system">Suit Upgrade System</h2>
+        <p>Each suit has its own upgrade tree at the Batcave's Armor Workbench, purchasable with WayneTech Chips. Upgrades fall into three tiers:</p>
+        <table>
+          <thead>
+            <tr><th>Tier</th><th>Cost (WayneTech Chips)</th><th>Examples</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tier 1</td><td>500 - 1,000</td><td>Extended glide duration, faster grapple, basic damage boost</td></tr>
+            <tr><td>Tier 2</td><td>1,500 - 3,000</td><td>Longer camouflage, heat beam damage+, sonic blast range+</td></tr>
+            <tr><td>Tier 3</td><td>5,000 - 10,000</td><td>Unlimited glide, double shield health, seismic slam radius+</td></tr>
+          </tbody>
+        </table>
+        <p>We recommend upgrading in this priority order for the smoothest experience:</p>
+        <ol>
+          <li><strong>Standard Suit:</strong> Grapple speed and glide duration first (improves all traversal)</li>
+          <li><strong>Armored Suit:</strong> Shield health (makes boss fights significantly easier)</li>
+          <li><strong>Thermal Suit:</strong> Heat Beam range (lets you melt objects from safer distances)</li>
+          <li><strong>Power Suit:</strong> Seismic Slam radius (essential for late-game combat encounters)</li>
+          <li><strong>Stealth Suit:</strong> Camouflage duration (15 seconds instead of 8 is game-changing)</li>
+          <li><strong>Sonic Suit:</strong> Sonic Boom radius (quality of life, lowest priority)</li>
+        </ol>
+
+        <h2 id="best-suit">Best Suit for Each Situation</h2>
+        <table>
+          <thead>
+            <tr><th>Situation</th><th>Recommended Suit</th><th>Reason</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Exploration / Traversal</td><td>Standard</td><td>Grapple + glide combo is unmatched for movement</td></tr>
+            <tr><td>Boss Fights</td><td>Armored</td><td>60% damage reduction makes every boss manageable</td></tr>
+            <tr><td>Stealth Sections</td><td>Stealth</td><td>Camouflage + silent takedowns required for objectives</td></tr>
+            <tr><td>Ice / Fire Areas</td><td>Thermal</td><td>Melts ice barriers, fire immunity, thermal vision</td></tr>
+            <tr><td>Glass / Sound Puzzles</td><td>Sonic</td><td>Shatters glass, activates sound sensors</td></tr>
+            <tr><td>Heavy Objects / Walls</td><td>Power</td><td>Only suit that can lift heavy objects and break reinforced walls</td></tr>
+            <tr><td>Speedrunning Levels</td><td>Standard</td><td>Best mobility, no movement penalties</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Related Guides</h2>
+        <ul>
+          <li><a href="all-characters-unlock.html">All Playable Characters &amp; How to Unlock</a></li>
+          <li><a href="tips-for-new-players.html">Tips for New Players</a></li>
+          <li><a href="gotham-map-guide.html">Gotham Map Guide: All Districts &amp; Landmarks</a></li>
+          <li><a href="collectibles-guide.html">Complete Collectibles Guide</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="beginners-guide.html" class="sidebar-link">Beginner's Guide</a>
+        <a href="all-characters-unlock.html" class="sidebar-link">All Characters &amp; Unlocks</a>
+        <a href="../minikits.html" class="sidebar-link">All Minikit Locations</a>
+        <a href="../red-bricks.html" class="sidebar-link">All Red Brick Locations</a>
+        <a href="suits-abilities-guide.html" class="sidebar-link">Suits &amp; Abilities Guide</a>
+        <a href="tips-for-new-players.html" class="sidebar-link">Tips for New Players</a>
+      </div>
+
+      <div class="sidebar-box" style="border-style: dashed;">
+        <div style="text-align:center; color: var(--text-secondary); font-size: 12px; padding: 30px 0;">
+          Ad Space
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Quick Links</h3>
+        <a href="/#walkthrough" class="sidebar-link">All Walkthroughs</a>
+        <a href="/#collectibles" class="sidebar-link">Collectibles Tracker</a>
+        <a href="../trophies.html" class="sidebar-link">Trophy Guide</a>
+        <a href="100-percent-completion.html" class="sidebar-link">100% Roadmap</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

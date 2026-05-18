@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGO Batman Legacy of the Dark Knight Gotham Map Guide - BrickHeroGuide</title>
+  <meta name="description" content="Complete open-world guide to Gotham City in LEGO Batman: Legacy of the Dark Knight. Every district, landmark, fast travel point, and hidden activity explained.">
+  <meta name="keywords" content="LEGO Batman Legacy Gotham map, districts, landmarks, fast travel, open world, Batcave, Arkham, GCPD">
+  <link rel="canonical" href="https://brickheroguide.com/guides/gotham-map-guide.html">
+  <meta property="og:title" content="Gotham Map Guide - LEGO Batman Legacy of the Dark Knight">
+  <meta property="og:description" content="Navigate every district of Gotham City with our complete open-world map guide. All landmarks, fast travel points, and hidden activities.">
+  <meta property="og:type" content="article">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d27;
+      --bg-card-hover: #222633;
+      --text: #e8eaed;
+      --text-secondary: #9aa0ab;
+      --accent: #fbbf24;
+      --accent-hover: #f59e0b;
+      --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a;
+      --max-width: 1100px;
+      --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between; height: 56px;
+    }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+
+    .page-layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 40px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+
+    .article-header { margin-bottom: 28px; }
+    .article-tag {
+      display: inline-block;
+      font-size: 10px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px;
+      background: #10b98120; color: #34d399; margin-bottom: 10px;
+    }
+    .article-header h1 {
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 28px;
+    }
+    .toc-title { font-size: 14px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .toc li { font-size: 14px; }
+    .toc a { color: var(--text-secondary); }
+    .toc a:hover { color: var(--accent); }
+
+    .content h2 {
+      font-size: 22px; font-weight: 700;
+      margin: 36px 0 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+
+    .tip-box {
+      background: var(--accent-dim);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .tip-box strong { color: var(--accent); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    th {
+      background: var(--bg-card);
+      color: var(--accent);
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+      font-weight: 700;
+    }
+    td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) td { background: rgba(26,29,39,0.5); }
+
+    .ad-inline {
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 12px;
+      margin: 28px 0;
+    }
+
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/#guides">Guides</a> &rsaquo; Gotham Map Guide
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag">Open World</span>
+        <h1>LEGO Batman Legacy of the Dark Knight — Gotham Map Guide</h1>
+        <div class="article-meta">
+          Last updated: May 17, 2026 &middot; 8 min read
+        </div>
+      </div>
+
+      <div class="toc">
+        <div class="toc-title">&#128220; Table of Contents</div>
+        <ol>
+          <li><a href="#overview">Gotham City Overview</a></li>
+          <li><a href="#batcave">The Batcave (Hub Area)</a></li>
+          <li><a href="#downtown">Downtown Gotham</a></li>
+          <li><a href="#industrial">Industrial District</a></li>
+          <li><a href="#arkham">Arkham Island</a></li>
+          <li><a href="#harbor">Gotham Harbor &amp; Docks</a></li>
+          <li><a href="#historic">Historic District</a></li>
+          <li><a href="#fast-travel">Fast Travel Points</a></li>
+          <li><a href="#open-world-activities">Open World Activities</a></li>
+        </ol>
+      </div>
+
+      <div class="content">
+        <p>Gotham City in LEGO Batman: Legacy of the Dark Knight is the largest open world in any LEGO Batman game to date. Spanning six distinct districts and the Batcave hub, the city is packed with collectibles, side activities, and secrets. This guide covers every area, landmark, and hidden activity so you never miss a thing.</p>
+
+        <h2 id="overview">Gotham City Overview</h2>
+        <p>The open world is divided into seven main zones connected by bridges, tunnels, and waterways. You can traverse between them on foot, by vehicle, or using fast travel. Each district has its own visual identity, enemy types, and collectible density:</p>
+        <table>
+          <thead>
+            <tr><th>District</th><th>Minikits</th><th>Red Bricks</th><th>Side Activities</th><th>Difficulty</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Batcave (Hub)</td><td>3</td><td>0</td><td>5</td><td>Easy</td></tr>
+            <tr><td>Downtown Gotham</td><td>8</td><td>2</td><td>8</td><td>Easy</td></tr>
+            <tr><td>Industrial District</td><td>6</td><td>1</td><td>6</td><td>Medium</td></tr>
+            <tr><td>Arkham Island</td><td>5</td><td>2</td><td>4</td><td>Hard</td></tr>
+            <tr><td>Gotham Harbor</td><td>4</td><td>1</td><td>5</td><td>Medium</td></tr>
+            <tr><td>Historic District</td><td>4</td><td>1</td><td>4</td><td>Medium</td></tr>
+          </tbody>
+        </table>
+
+        <div class="ad-inline">Advertisement</div>
+
+        <h2 id="batcave">The Batcave (Hub Area)</h2>
+        <p>The Batcave is your home base and central hub. It's where you'll spend time between missions upgrading gear, switching characters, and accessing mission replay. Key locations within the Batcave:</p>
+        <ul>
+          <li><strong>Batcomputer:</strong> Mission select, character viewer, and game progress tracking</li>
+          <li><strong>Armor Workbench:</strong> Upgrade all six Batsuits using WayneTech Chips</li>
+          <li><strong>Vehicle Bay:</strong> View, customize, and spawn unlocked vehicles</li>
+          <li><strong>Training Room:</strong> Combat challenges that reward Skill Bricks</li>
+          <li><strong>Trophy Room:</strong> Displays collectibles you've found; expands as you progress</li>
+          <li><strong>Batcave Exit:</strong> Three exits leading to Downtown, Industrial District, and Arkham</li>
+        </ul>
+        <div class="tip-box"><strong>Batcave Minikits:</strong> There are 3 minikits hidden within the Batcave itself. One behind the giant penny (use Thermal Suit), one in the rafters above the T-Rex (use Grapple), and one inside the Trophy Room once you've collected 20 minikits.</div>
+
+        <h2 id="downtown">Downtown Gotham</h2>
+        <p>Downtown is the largest district and the first open-world area you'll explore. It's a dense urban environment with skyscrapers, rooftop collectibles, and street-level activities.</p>
+        <h3>Key Landmarks</h3>
+        <ul>
+          <li><strong>Wayne Tower:</strong> Central skyscraper with a rooftop landing pad. Contains 2 minikits (one on the roof, one in the lobby safe).</li>
+          <li><strong>GCPD Headquarters:</strong> Police station with Commissioner Gordon-specific areas. Roof access via grapple points.</li>
+          <li><strong>Monarch Theater:</strong> Crime Alley location with a hidden Red Brick behind the screen.</li>
+          <li><strong>Gotham Bank:</strong> Interior area with a vault puzzle that rewards a Red Brick. Requires Explosive Gel.</li>
+        </ul>
+        <h3>Collectible Hotspots</h3>
+        <p>Downtown has the highest collectible density in the game. Focus on rooftops (8 of the district's collectibles are above street level) and alleyways behind major buildings. The Bat-Signal on GCPD's roof is a grapple point that leads to a hidden rooftop circuit of stud collectibles.</p>
+
+        <div class="ad-inline">Advertisement</div>
+
+        <h2 id="industrial">Industrial District</h2>
+        <p>The Industrial District is Gotham's manufacturing quarter, characterized by factories, warehouses, and the infamous Ace Chemicals plant. This district favors the Thermal Suit and Power Suit for puzzle-solving.</p>
+        <h3>Key Landmarks</h3>
+        <ul>
+          <li><strong>Ace Chemicals Processing Plant:</strong> Multi-level interior with chemical vat puzzles. Red Brick located in the main mixing chamber.</li>
+          <li><strong>Steel Mill:</strong> Heavy combat zone with respawning enemies. Good for stud farming.</li>
+          <li><strong>Abandoned Subway Terminal:</strong> Underground area connecting to Downtown. Stealth Suit recommended for laser grid navigation.</li>
+          <li><strong>Scrap Yard:</strong> Vehicle-focused area with ramps and stunt challenges.</li>
+        </ul>
+        <div class="tip-box"><strong>Stud Farm Spot:</strong> The Steel Mill's conveyor belt room spawns endless enemies. Equip a stud multiplier Red Brick and farm here for quick WayneTech Chips.</div>
+
+        <h2 id="arkham">Arkham Island</h2>
+        <p>Arkham Island is the most dangerous district, accessible via the Arkham Bridge from Downtown or by Batwing fast travel. This gothic, rain-soaked island houses Arkham Asylum and is patrolled by high-level enemies.</p>
+        <h3>Key Landmarks</h3>
+        <ul>
+          <li><strong>Arkham Asylum (Main Building):</strong> Massive interior with cell blocks, a medical wing, and a maximum-security wing. Contains 2 Red Bricks.</li>
+          <li><strong>Asylum Grounds:</strong> Maze-like gardens with hedge walls. Power Suit needed for stone wall destruction.</li>
+          <li><strong>Underground Tunnels:</strong> Network of catacombs beneath the asylum. Thermal Vision reveals hidden passages.</li>
+        </ul>
+        <div class="tip-box"><strong>Warning:</strong> Arkham enemies are tougher than street-level thugs. Bring the Armored Suit or a leveled-up character. The asylum interior has limited checkpoint respawns, so dying means restarting from the entrance.</div>
+
+        <h2 id="harbor">Gotham Harbor &amp; Docks</h2>
+        <p>The Harbor district stretches along Gotham's eastern waterfront. It's a mix of dockyards, warehouses, and the iconic Gotham Light lighthouse. This area is heavy on vehicle-based activities and water traversal.</p>
+        <h3>Key Landmarks</h3>
+        <ul>
+          <li><strong>Gotham Light Lighthouse:</strong> Climb to the top for a minikit and a stunning view of the city. Sonic Suit needed for fog-related puzzle.</li>
+          <li><strong>Shipping Yard:</strong> Stacked containers create a 3D platforming maze. Power Suit rearranges container positions.</li>
+          <li><strong>Iceberg Lounge (Exterior):</strong> Penguin's nightclub, accessible by boat. Minikit hidden on the roof balcony.</li>
+        </ul>
+
+        <h2 id="historic">Historic District</h2>
+        <p>Old Gotham, also known as the Historic District, features gothic architecture, cobblestone streets, and landmarks tied to Gotham's founding families. This district is smaller but dense with lore collectibles.</p>
+        <h3>Key Landmarks</h3>
+        <ul>
+          <li><strong>Gotham Cathedral:</strong> Massive gothic church with bell tower climbing puzzle. Red Brick in the crypt.</li>
+          <li><strong>Wayne Manor (Ruins):</strong> The burned-out shell of Wayne Manor sits on the district's northern edge. Commissioner Gordon's Evidence Scanner reveals hidden lore.</li>
+          <li><strong>Solomon Wayne Courthouse:</strong> Interior with court records room. Robin's hacking needed for secure terminals.</li>
+        </ul>
+        <div class="tip-box"><strong>Lore Hunter:</strong> The Historic District has the most hidden lore collectibles in the game. Bring Commissioner Gordon and use his Evidence Scanner in every building interior — many lore items are invisible without it.</div>
+
+        <h2 id="fast-travel">Fast Travel Points</h2>
+        <p>Fast travel is unlocked after completing Mission 3. Each district has at least one Bat-Signal fast travel point. To unlock a fast travel point, you must first reach it on foot or by vehicle and interact with the Bat-Signal projector:</p>
+        <table>
+          <thead>
+            <tr><th>Fast Travel Point</th><th>District</th><th>Unlock Requirement</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Batcave (default)</td><td>Hub</td><td>Always available</td></tr>
+            <tr><td>GCPD Rooftop</td><td>Downtown</td><td>Reach the roof (grapple from street level)</td></tr>
+            <tr><td>Ace Chemicals Entrance</td><td>Industrial</td><td>Complete Mission 2</td></tr>
+            <tr><td>Arkham Asylum Gate</td><td>Arkham Island</td><td>Cross Arkham Bridge</td></tr>
+            <tr><td>Gotham Light Lighthouse</td><td>Harbor</td><td>Reach lighthouse top</td></tr>
+            <tr><td>Gotham Cathedral</td><td>Historic</td><td>Enter the cathedral interior</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="open-world-activities">Open World Activities</h2>
+        <p>Between missions, Gotham offers these repeatable and one-time activities:</p>
+        <ul>
+          <li><strong>Riddler Challenges (20 total):</strong> Scattered across all districts. Solve environmental puzzles to earn Skill Bricks.</li>
+          <li><strong>Crime in Progress (random):</strong> Dynamic events where you stop robberies, car chases, and gang fights. Good for stud farming.</li>
+          <li><strong>Bat-Signal Races (6 total):</strong> Timed gliding courses between Bat-Signals. Gold medals reward WayneTech Chips.</li>
+          <li><strong>Vehicle Stunt Jumps (15 total):</strong> Ramp-based challenges for vehicles. Completion unlocks the Batmobile MK II.</li>
+          <li><strong>Photo Spots (12 total):</strong> Scenic locations marked with camera icons. Take a photo in Photo Mode for collectible tokens.</li>
+        </ul>
+
+        <h2>Related Guides</h2>
+        <ul>
+          <li><a href="collectibles-guide.html">Complete Collectibles Guide</a></li>
+          <li><a href="suits-abilities-guide.html">Suits &amp; Abilities Guide</a></li>
+          <li><a href="all-characters-unlock.html">All Characters &amp; How to Unlock</a></li>
+          <li><a href="tips-for-new-players.html">Tips for New Players</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="beginners-guide.html" class="sidebar-link">Beginner's Guide</a>
+        <a href="all-characters-unlock.html" class="sidebar-link">All Characters &amp; Unlocks</a>
+        <a href="../minikits.html" class="sidebar-link">All Minikit Locations</a>
+        <a href="../red-bricks.html" class="sidebar-link">All Red Brick Locations</a>
+        <a href="suits-abilities-guide.html" class="sidebar-link">Suits &amp; Abilities Guide</a>
+        <a href="tips-for-new-players.html" class="sidebar-link">Tips for New Players</a>
+      </div>
+
+      <div class="sidebar-box" style="border-style: dashed;">
+        <div style="text-align:center; color: var(--text-secondary); font-size: 12px; padding: 30px 0;">
+          Ad Space
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Quick Links</h3>
+        <a href="/#walkthrough" class="sidebar-link">All Walkthroughs</a>
+        <a href="/#collectibles" class="sidebar-link">Collectibles Tracker</a>
+        <a href="../trophies.html" class="sidebar-link">Trophy Guide</a>
+        <a href="100-percent-completion.html" class="sidebar-link">100% Roadmap</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beginner's Guide: 10 Things to Know Before You Start - BrickHeroGuide</title>
+  <meta name="description" content="New to LEGO Batman: Legacy of the Dark Knight? Here are 10 essential tips every beginner should know before jumping into Gotham City.">
+  <meta name="keywords" content="LEGO Batman Legacy beginner guide, tips, tricks, how to play, getting started">
+  <link rel="canonical" href="https://brickheroguide.com/guides/beginners-guide.html">
+  <meta property="og:title" content="Beginner's Guide: 10 Things to Know - LEGO Batman Legacy">
+  <meta property="og:description" content="10 essential tips every beginner should know before jumping into LEGO Batman: Legacy of the Dark Knight.">
+  <meta property="og:type" content="article">
+  <!-- Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+  <!-- Google AdSense -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX" crossorigin="anonymous"></script> -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d27;
+      --bg-card-hover: #222633;
+      --text: #e8eaed;
+      --text-secondary: #9aa0ab;
+      --accent: #fbbf24;
+      --accent-hover: #f59e0b;
+      --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a;
+      --max-width: 1100px;
+      --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+
+    /* Nav */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between; height: 56px;
+    }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+
+    /* Layout */
+    .page-layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 40px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+
+    /* Article */
+    .article-header { margin-bottom: 28px; }
+    .article-tag {
+      display: inline-block;
+      font-size: 10px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px;
+      background: #f59e0b20; color: #fbbf24; margin-bottom: 10px;
+    }
+    .article-header h1 {
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .article-meta {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    /* Table of Contents */
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 28px;
+    }
+    .toc-title {
+      font-size: 14px; font-weight: 700; margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .toc ol {
+      padding-left: 20px;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .toc li { font-size: 14px; }
+    .toc a { color: var(--text-secondary); }
+    .toc a:hover { color: var(--accent); }
+
+    /* Content */
+    .content h2 {
+      font-size: 22px; font-weight: 700;
+      margin: 36px 0 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .content h3 {
+      font-size: 17px; font-weight: 600;
+      margin: 24px 0 10px;
+      color: var(--accent);
+    }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol {
+      margin: 0 0 16px 20px;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .content li { font-size: 15px; }
+
+    .tip-box {
+      background: var(--accent-dim);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .tip-box strong { color: var(--accent); }
+
+    .warning-box {
+      background: rgba(239, 68, 68, 0.08);
+      border-left: 3px solid #ef4444;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .warning-box strong { color: #ef4444; }
+
+    /* Ad in content */
+    .ad-inline {
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 12px;
+      margin: 28px 0;
+    }
+
+    /* Sidebar */
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .sidebar-box h3 {
+      font-size: 14px; font-weight: 700; margin-bottom: 12px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--border);
+    }
+    .sidebar-link {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <!-- Main Content -->
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/#guides">Guides</a> &rsaquo; Beginner's Guide
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag">Tips &amp; Tricks</span>
+        <h1>Beginner's Guide: 10 Things to Know Before You Start</h1>
+        <div class="article-meta">
+          Last updated: May 22, 2026 &middot; 8 min read
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="toc">
+        <div class="toc-title">&#128220; Table of Contents</div>
+        <ol>
+          <li><a href="#tip1">Explore Everything Before Moving On</a></li>
+          <li><a href="#tip2">Switch Characters Often</a></li>
+          <li><a href="#tip3">Smash Every Object You See</a></li>
+          <li><a href="#tip4">Prioritize Batcave Upgrades Early</a></li>
+          <li><a href="#tip5">Don't Worry About 100% on Your First Run</a></li>
+          <li><a href="#tip6">Understand the Currency System</a></li>
+          <li><a href="#tip7">Use Photo Mode for Hidden Clues</a></li>
+          <li><a href="#tip8">Co-op Unlocks Bonus Areas</a></li>
+          <li><a href="#tip9">Red Bricks Are Game-Changers</a></li>
+          <li><a href="#tip10">Replay Missions in Free Play</a></li>
+        </ol>
+      </div>
+
+      <!-- Article Content -->
+      <div class="content">
+        <p>Jumping into <strong>LEGO Batman: Legacy of the Dark Knight</strong> for the first time? This Gotham adventure is packed with secrets, collectibles, and surprises around every corner. Whether you're a LEGO game veteran or a first-timer, these 10 essential tips will help you make the most of your experience from the very start.</p>
+
+        <h2 id="tip1">1. Explore Everything Before Moving On</h2>
+        <p>LEGO Batman: Legacy of the Dark Knight rewards curiosity. Each area is filled with hidden breakable objects, secret paths, and environmental puzzles. Before following the story marker to the next objective, take a moment to look around, smash objects, and check behind structures. Many collectibles are hidden in plain sight.</p>
+        <div class="tip-box"><strong>Tip:</strong> Look for glowing outlines on objects — these indicate interactive elements you can build or destroy for rewards.</div>
+
+        <h2 id="tip2">2. Switch Characters Often</h2>
+        <p>Each member of the Bat-family has unique abilities that are essential for solving different puzzles and reaching hidden areas. Unlike previous LEGO games with massive rosters, Legacy of the Dark Knight focuses on 7 deeply developed characters, each with upgradeable skill trees. Get comfortable switching between them regularly.</p>
+
+        <h2 id="tip3">3. Smash Every Object You See</h2>
+        <p>This is LEGO 101, but it bears repeating. Breaking objects drops studs — the game's primary currency. Early on, every stud counts for purchasing upgrades at the Batcave. Some objects also drop Instruction Pages, which are key collectibles for unlocking vehicle and Batcave upgrades.</p>
+
+        <!-- Mid-article ad -->
+        <div class="ad-inline">
+          <!-- AdSense mid-article ad unit -->
+          Advertisement
+        </div>
+
+        <h2 id="tip4">4. Prioritize Batcave Upgrades Early</h2>
+        <p>The Batcave is your central hub, and investing in upgrades early pays dividends throughout the entire game. Focus on unlocking the Vehicle Display first for extra stud bonuses, then prioritize the gadget workbench for expanded character abilities.</p>
+
+        <h2 id="tip5">5. Don't Worry About 100% on Your First Run</h2>
+        <p>Many collectibles in each mission require abilities you won't have during your first playthrough. Play through the story first to unlock all characters and abilities, then revisit missions in Free Play mode to mop up everything you missed.</p>
+        <div class="warning-box"><strong>Important:</strong> Some minikits can only be reached with specific character abilities. Don't waste time trying to reach them in Story mode if you don't have the right character yet.</div>
+
+        <h2 id="tip6">6. Understand the Currency System</h2>
+        <p>The game has two main currencies: <strong>WayneTech Chips</strong> (for upgrading combat, traversal, and gadgets) and <strong>Skill Bricks</strong> (for unlocking new abilities in each character's skill tree). Both are earned through gameplay, but knowing where to spend them wisely makes a huge difference.</p>
+        <p>For a detailed breakdown, check our <a href="waynetech-chips-guide.html">WayneTech Chips &amp; Skill Bricks Currency Guide</a>.</p>
+
+        <h2 id="tip7">7. Use Photo Mode for Hidden Clues</h2>
+        <p>The game's Photo Mode isn't just for screenshots — it can actually help you spot hidden objects and breakable walls that are hard to see during normal gameplay. Zoom in on suspicious areas to reveal secrets.</p>
+
+        <h2 id="tip8">8. Co-op Unlocks Bonus Areas</h2>
+        <p>Playing with a friend in local co-op isn't just more fun — certain areas in the game require two players to activate simultaneously. If you're aiming for 100% completion, you'll need a co-op partner for at least some missions.</p>
+
+        <!-- Mid-article ad -->
+        <div class="ad-inline">
+          <!-- AdSense mid-article ad unit -->
+          Advertisement
+        </div>
+
+        <h2 id="tip9">9. Red Bricks Are Game-Changers</h2>
+        <p>Finding Red Bricks unlocks powerful extras like stud multipliers (2x, 4x, 6x, 8x, 10x), invincibility, and other game-changing modifiers. The stud multipliers stack, so finding all five multiplier Red Bricks means you'll earn studs at an absurd 3,840x rate. For all locations, see our <a href="../red-bricks.html">Red Bricks Guide</a>.</p>
+
+        <h2 id="tip10">10. Replay Missions in Free Play</h2>
+        <p>After completing the story, Free Play mode lets you return to any mission with any unlocked character. This is essential for 100% completion, as many collectibles require specific character abilities you didn't have the first time around. Check our <a href="../walkthrough.html">Full Walkthrough</a> for mission-by-mission collectible guides.</p>
+
+        <h2>What's Next?</h2>
+        <p>Now that you know the basics, you're ready to dive into Gotham City. For more detailed guides, check out:</p>
+        <ul>
+          <li><a href="all-characters-unlock.html">All 7 Characters &amp; How to Unlock Them</a></li>
+          <li><a href="mission-1-walkthrough.html">Mission 1 Full Walkthrough</a></li>
+          <li><a href="../minikits.html">All Minikit Locations</a></li>
+          <li><a href="100-percent-completion.html">100% Completion Roadmap</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="all-characters-unlock.html" class="sidebar-link">All Characters &amp; Unlocks</a>
+        <a href="mission-1-walkthrough.html" class="sidebar-link">Mission 1 Walkthrough</a>
+        <a href="../minikits.html" class="sidebar-link">All Minikit Locations</a>
+        <a href="../red-bricks.html" class="sidebar-link">All Red Brick Locations</a>
+        <a href="waynetech-chips-guide.html" class="sidebar-link">Currency Guide</a>
+        <a href="batcave-hub-guide.html" class="sidebar-link">Batcave Hub Guide</a>
+      </div>
+
+      <!-- Sidebar Ad -->
+      <div class="sidebar-box" style="border-style: dashed;">
+        <div style="text-align:center; color: var(--text-secondary); font-size: 12px; padding: 30px 0;">
+          <!-- AdSense sidebar ad -->
+          Ad Space
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Quick Links</h3>
+        <a href="/#walkthrough" class="sidebar-link">All Walkthroughs</a>
+        <a href="/#collectibles" class="sidebar-link">Collectibles Tracker</a>
+        <a href="../trophies.html" class="sidebar-link">Trophy Guide</a>
+        <a href="100-percent-completion.html" class="sidebar-link">100% Roadmap</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

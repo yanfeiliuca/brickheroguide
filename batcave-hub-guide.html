@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batcave Hub Guide: All Facilities, Upgrades & Secrets - BrickHeroGuide</title>
+  <meta name="description" content="Complete Batcave hub guide for LEGO Batman: Legacy of the Dark Knight. All facilities, upgrades, hidden areas, WayneTech Chip locations, and secrets explained.">
+  <meta name="keywords" content="LEGO Batman Legacy Batcave, hub guide, upgrades, WayneTech Chips, Batcave secrets, facilities">
+  <link rel="canonical" href="https://brickheroguide.com/guides/batcave-hub-guide.html">
+  <meta property="og:title" content="Batcave Hub Guide: All Facilities & Secrets - LEGO Batman Legacy">
+  <meta property="og:description" content="Master the Batcave hub in LEGO Batman Legacy. Every facility, upgrade path, hidden area, and secret location revealed.">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <!-- Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+  <!-- Google AdSense -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX" crossorigin="anonymous"></script> -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
+      --text: #e8eaed; --text-secondary: #9aa0ab;
+      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+
+    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .article-header { margin-bottom: 28px; }
+    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; background: #8b5cf620; color: #a78bfa; margin-bottom: 10px; }
+    .article-header h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+
+    .toc { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin-bottom: 28px; }
+    .toc-title { font-size: 14px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .toc li { font-size: 14px; }
+    .toc a { color: var(--text-secondary); }
+    .toc a:hover { color: var(--accent); }
+
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+
+    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .tip-box strong { color: var(--accent); }
+    .warning-box { background: rgba(239, 68, 68, 0.08); border-left: 3px solid #ef4444; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .warning-box strong { color: #ef4444; }
+
+    .facility-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin: 16px 0; }
+    .facility-card h3 { margin-top: 0; font-size: 19px; }
+    .facility-meta { display: flex; gap: 20px; margin: 10px 0; font-size: 13px; color: var(--text-secondary); flex-wrap: wrap; }
+    .facility-meta span { background: var(--bg); padding: 3px 10px; border-radius: 6px; border: 1px solid var(--border); }
+
+    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+
+    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/#guides">Guides</a> &rsaquo; Batcave Hub Guide
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag">Walkthrough</span>
+        <h1>Batcave Hub Guide: All Facilities, Upgrades &amp; Secrets</h1>
+        <div class="article-meta">Last updated: May 22, 2026 &middot; 11 min read</div>
+      </div>
+
+      <div class="toc">
+        <div class="toc-title">&#128220; Table of Contents</div>
+        <ol>
+          <li><a href="#overview">Batcave Overview</a></li>
+          <li><a href="#batcomputer">The Batcomputer (Mission Select)</a></li>
+          <li><a href="#vehicle">Vehicle Display</a></li>
+          <li><a href="#gadget">Gadget Workbench</a></li>
+          <li><a href="#training">Training Room</a></li>
+          <li><a href="#trophy">Trophy Room</a></li>
+          <li><a href="#wardrobe">Wardrobe / Suit Station</a></li>
+          <li><a href="#alfred-kitchen">Alfred's Kitchen</a></li>
+          <li><a href="#hidden">Hidden Areas &amp; Secrets</a></li>
+          <li><a href="#chips">All WayneTech Chip Locations in the Batcave</a></li>
+          <li><a href="#unlock">Unlock Timeline</a></li>
+        </ol>
+      </div>
+
+      <div class="content">
+        <p>The Batcave is your central hub in <strong>LEGO Batman: Legacy of the Dark Knight</strong>. It's where you select missions, upgrade your characters and gadgets, access bonus content, and discover hidden secrets. The Batcave evolves as you progress through the story — new areas unlock, facilities become available, and hidden collectibles appear. This guide covers everything the Batcave has to offer.</p>
+
+        <h2 id="overview">Batcave Overview</h2>
+        <p>When you first enter the Batcave, you'll see a relatively modest space with just the Batcomputer and a few basic facilities. By the end of the game, it expands into a massive multi-level hub with 7 distinct areas. The cave grows after completing key story missions, so don't worry if large sections are blocked off early on.</p>
+
+        <div class="tip-box"><strong>Tip:</strong> Return to the Batcave between every few missions and explore. New areas often unlock quietly without any on-screen notification. Smash everything — the Batcave contains hidden studs, WayneTech Chips, and Instruction Pages behind breakable objects.</div>
+
+        <h2 id="batcomputer">The Batcomputer (Mission Select)</h2>
+        <div class="facility-card">
+          <h3>&#128187; Batcomputer</h3>
+          <div class="facility-meta">
+            <span>Available: From start</span>
+            <span>Upgrade cost: 12 / 20 WayneTech Chips</span>
+          </div>
+          <p>The Batcomputer is located front and center when you enter the cave. It serves as your mission select screen, progress tracker, and — once upgraded — your in-mission collectible radar.</p>
+          <h3>Functions</h3>
+          <ul>
+            <li><strong>Mission Select:</strong> Replay any completed mission in Story or Free Play mode</li>
+            <li><strong>Progress Overview:</strong> View completion percentage, collected minikits, red bricks, and characters</li>
+            <li><strong>Minimap Hints (Tier 2 — 12 chips):</strong> Shows collectible locations on the minimap during missions</li>
+            <li><strong>Full Reveal (Tier 3 — 20 chips):</strong> Reveals ALL hidden objects and secret areas during missions</li>
+          </ul>
+        </div>
+        <div class="warning-box"><strong>Priority Note:</strong> The Tier 2 Batcomputer upgrade (12 chips) is one of the most valuable upgrades in the game. It makes collectible hunting dramatically easier. Save for it after the Vehicle Display.</div>
+
+        <h2 id="vehicle">Vehicle Display</h2>
+        <div class="facility-card">
+          <h3>&#128663; Vehicle Display</h3>
+          <div class="facility-meta">
+            <span>Unlocks: After Mission 2</span>
+            <span>Upgrade cost: 5 WayneTech Chips</span>
+          </div>
+          <p>The Vehicle Display is in the left wing of the Batcave. Once activated with 5 WayneTech Chips, it provides a passive stud bonus: every vehicle you add to the display increases your base stud earnings by 2% across all missions.</p>
+          <h3>All Vehicles &amp; How to Add Them</h3>
+          <ul>
+            <li><strong>Batmobile:</strong> Automatically displayed after Mission 2</li>
+            <li><strong>Batcycle:</strong> Complete all Mission 4 challenges</li>
+            <li><strong>Batwing:</strong> Complete all Mission 6 challenges</li>
+            <li><strong>Batboat:</strong> Find all 3 Instruction Pages in Mission 8</li>
+            <li><strong>Robin's Redbird:</strong> Complete Robin's 5 personal challenges</li>
+            <li><strong>Nightwing's Motorcycle:</strong> Complete Nightwing's 5 personal challenges</li>
+            <li><strong>Catwoman's Catcycle:</strong> Complete Catwoman's 5 personal challenges</li>
+          </ul>
+          <p>With all 7 vehicles displayed, you get a 14% stud bonus on every mission. Combined with multiplier Red Bricks, this adds up fast.</p>
+        </div>
+
+        <div class="ad-inline"><!-- AdSense mid-article ad unit -->Advertisement</div>
+
+        <h2 id="gadget">Gadget Workbench</h2>
+        <div class="facility-card">
+          <h3>&#128295; Gadget Workbench</h3>
+          <div class="facility-meta">
+            <span>Unlocks: After Mission 3</span>
+            <span>Upgrade cost: 8 WayneTech Chips</span>
+          </div>
+          <p>Located to the right of the Batcomputer, the Gadget Workbench lets you enhance each character's signature gadget. Once unlocked, each character gets one gadget upgrade that significantly expands their capabilities.</p>
+          <h3>Available Upgrades</h3>
+          <ul>
+            <li><strong>Batman — Multi-Batarang:</strong> Batarang bounces to 3 targets instead of 1</li>
+            <li><strong>Robin — Remote Hack:</strong> Tech Hack works at double the range</li>
+            <li><strong>Batgirl — Homing Batarangs:</strong> Dual Batarangs auto-target the nearest two targets</li>
+            <li><strong>Nightwing — Chain Lightning:</strong> Escrima Sticks send electricity through chains of nearby enemies</li>
+            <li><strong>Alfred — Silver Tray Boomerang:</strong> Serving Tray returns to Alfred after being thrown, hitting enemies on the way back</li>
+            <li><strong>Catwoman — Extended Whip:</strong> Whip range increased by 50%, reaching more distant swing points</li>
+            <li><strong>Batwoman — Proximity Mines:</strong> Explosive Gel can be set as proximity-triggered traps</li>
+          </ul>
+        </div>
+
+        <h2 id="training">Training Room</h2>
+        <div class="facility-card">
+          <h3>&#129354; Training Room</h3>
+          <div class="facility-meta">
+            <span>Unlocks: After Mission 5</span>
+            <span>Upgrade cost: 10 WayneTech Chips</span>
+          </div>
+          <p>The Training Room is in the lower level of the Batcave, accessed via the elevator near Alfred's Kitchen. Once activated, it provides combat practice, tutorial replays, and — most importantly — daily rotating challenges.</p>
+          <h3>What's Inside</h3>
+          <ul>
+            <li><strong>Combat Arena:</strong> Practice combos and test character abilities with infinite respawning enemies</li>
+            <li><strong>Daily Challenges (3 per day):</strong> Rotating challenges including Combo Challenge, Survival, and Speed Run. Each awards 5-10 Skill Bricks</li>
+            <li><strong>Tutorial Replay:</strong> Review any previously seen tutorial prompts and control explanations</li>
+            <li><strong>Move List:</strong> Complete move list for every character, including unlocked skill tree abilities</li>
+          </ul>
+        </div>
+        <div class="tip-box"><strong>Tip:</strong> The Training Room daily challenges reset every 24 hours (real time). If you're grinding Skill Bricks, make a habit of completing all 3 daily challenges before starting your main play session.</div>
+
+        <h2 id="trophy">Trophy Room</h2>
+        <div class="facility-card">
+          <h3>&#127942; Trophy Room</h3>
+          <div class="facility-meta">
+            <span>Unlocks: After Mission 7</span>
+            <span>Upgrade cost: 15 WayneTech Chips</span>
+          </div>
+          <p>The Trophy Room is the visual heart of your collection progress. Located in the upper level behind the Batcomputer, it displays trophies for every major achievement and unlocks bonus challenge missions.</p>
+          <h3>Trophy Categories</h3>
+          <ul>
+            <li><strong>Villain Trophies:</strong> One per boss defeated — displayed automatically</li>
+            <li><strong>Minikit Models:</strong> Complete a level's minikit set to display the assembled model</li>
+            <li><strong>Gold Bricks:</strong> Wall display showing all collected gold bricks</li>
+            <li><strong>Bonus Challenges:</strong> 5 extra challenge missions unlock as you fill the Trophy Room (reaching 25%, 50%, 75%, 90%, and 100% trophy display completion)</li>
+          </ul>
+          <p>The 5 bonus challenges are unique to the Trophy Room and can't be accessed anywhere else. They offer significant stud and Skill Brick rewards and serve as some of the toughest content in the game.</p>
+        </div>
+
+        <div class="ad-inline"><!-- AdSense mid-article ad unit -->Advertisement</div>
+
+        <h2 id="wardrobe">Wardrobe / Suit Station</h2>
+        <div class="facility-card">
+          <h3>&#128084; Wardrobe</h3>
+          <div class="facility-meta">
+            <span>Unlocks: After Mission 4</span>
+            <span>No WayneTech cost</span>
+          </div>
+          <p>The Wardrobe is near the elevator on the main level. Here you can preview and equip any costumes you've purchased with studs. Costumes are purely cosmetic and don't affect gameplay stats.</p>
+          <h3>How to Unlock Costumes</h3>
+          <ul>
+            <li><strong>Story costumes:</strong> Some unlock automatically as you progress through missions</li>
+            <li><strong>Purchased costumes:</strong> Buy from the Wardrobe menu using studs (prices range from 25,000 to 500,000 studs)</li>
+            <li><strong>Secret costumes:</strong> 3 hidden costumes are found by solving environmental puzzles in the Batcave itself (see Hidden Areas below)</li>
+          </ul>
+        </div>
+
+        <h2 id="alfred-kitchen">Alfred's Kitchen</h2>
+        <div class="facility-card">
+          <h3>&#9749; Alfred's Kitchen</h3>
+          <div class="facility-meta">
+            <span>Unlocks: After Mission 7 (with Alfred)</span>
+            <span>No WayneTech cost</span>
+          </div>
+          <p>A small but charming area that unlocks when Alfred joins the team. Interacting with the kitchen counter triggers a short cutscene and grants a temporary buff: 10% bonus stud earnings for the next mission you play. The buff can be reactivated after each mission.</p>
+          <div class="tip-box"><strong>Tip:</strong> Always visit Alfred's Kitchen before replaying missions for stud farming. The 10% bonus stacks with multiplier Red Bricks.</div>
+        </div>
+
+        <h2 id="hidden">Hidden Areas &amp; Secrets</h2>
+        <p>The Batcave is full of secrets that aren't marked on any map. Here are the major hidden areas and how to access them:</p>
+
+        <h3>Secret Waterfall Passage</h3>
+        <p>Behind the waterfall on the left side of the main cave (visible from Mission 1 onward). Requires Catwoman's Wall Climb to reach. Contains 3 WayneTech Chips and a Purple Stud (10,000).</p>
+
+        <h3>Wayne Manor Access Tunnel</h3>
+        <p>After Mission 7, an elevator appears near Alfred's Kitchen leading up to Wayne Manor. The manor has 3 rooms to explore with breakable objects, 2 WayneTech Chips, and Alfred's Butler Access doors hiding bonus studs.</p>
+
+        <h3>Underground Garage</h3>
+        <p>Accessible after completing the story. Use Batwoman's Explosive Gel on the cracked wall below the Vehicle Display. Contains a hidden bonus vehicle and 2 WayneTech Chips.</p>
+
+        <h3>Bat-Signal Rooftop</h3>
+        <p>Use Batman or Batwoman's Grapnel Gun on the highest grapple point in the cave (above the Trophy Room). Leads to a rooftop area with the Bat-Signal. Interact with it to trigger a bonus cutscene and earn a Gold Brick.</p>
+
+        <h3>Three Secret Costumes</h3>
+        <ul>
+          <li><strong>Classic Batman (1966):</strong> Solve the puzzle behind the Batcomputer — requires Detective Vision to spot the hidden switches</li>
+          <li><strong>Animated Series Robin:</strong> Complete the acrobatic pole course above the Training Room entrance (Robin or Nightwing only)</li>
+          <li><strong>Stealth Suit Catwoman:</strong> Open the safe hidden behind the waterfall passage (Catwoman's Cat Burglar ability required)</li>
+        </ul>
+
+        <h2 id="chips">All WayneTech Chip Locations in the Batcave</h2>
+        <p>There are approximately 18 WayneTech Chips hidden throughout the Batcave hub. Here's where to find them all:</p>
+        <ol>
+          <li><strong>Main level, left of Batcomputer:</strong> Break the row of monitors on the desk (2 chips)</li>
+          <li><strong>Main level, behind the stairs:</strong> Smash the storage crates (1 chip)</li>
+          <li><strong>Vehicle Display area:</strong> On the top shelf, use Grapnel Gun (1 chip)</li>
+          <li><strong>Vehicle Display area:</strong> Under the platform, crawl through vent as Robin (1 chip)</li>
+          <li><strong>Gadget Workbench area:</strong> Repair the broken generator as Alfred (2 chips)</li>
+          <li><strong>Elevator shaft:</strong> Wall Jump as Nightwing between the elevator walls (1 chip)</li>
+          <li><strong>Training Room entrance:</strong> Above the door, Double Jump as Batgirl (1 chip)</li>
+          <li><strong>Training Room, back wall:</strong> Break the cracked wall with Batwoman's Explosive Gel (1 chip)</li>
+          <li><strong>Waterfall Passage (hidden area):</strong> Wall Climb as Catwoman (3 chips)</li>
+          <li><strong>Wayne Manor rooms:</strong> Behind Alfred's Butler Access doors (2 chips)</li>
+          <li><strong>Underground Garage (post-story):</strong> Behind the cracked wall (2 chips)</li>
+          <li><strong>Trophy Room, upper shelf:</strong> Grapnel + Glide from the highest point (1 chip)</li>
+        </ol>
+        <div class="warning-box"><strong>Note:</strong> Several Batcave chips require specific character abilities that unlock later in the story. Don't worry about getting them all early — come back once you have the full roster.</div>
+
+        <h2 id="unlock">Unlock Timeline</h2>
+        <p>Here's when each Batcave area becomes available:</p>
+        <div style="overflow-x: auto; margin: 16px 0;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border);">
+                <th style="text-align: left; padding: 10px 8px; color: var(--accent);">Story Progress</th>
+                <th style="text-align: left; padding: 10px 8px;">Unlocks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">Game Start</td><td style="padding: 8px;">Batcomputer (Tier 1), Main Level</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">After Mission 2</td><td style="padding: 8px;">Vehicle Display area</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">After Mission 3</td><td style="padding: 8px;">Gadget Workbench area</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">After Mission 4</td><td style="padding: 8px;">Wardrobe / Suit Station</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">After Mission 5</td><td style="padding: 8px;">Training Room (lower level), Elevator</td></tr>
+              <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 8px;">After Mission 7</td><td style="padding: 8px;">Alfred's Kitchen, Wayne Manor Tunnel, Trophy Room</td></tr>
+              <tr><td style="padding: 8px;">After Story Complete</td><td style="padding: 8px;">Underground Garage, Bat-Signal Rooftop</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>What's Next?</h2>
+        <p>Now that you know the Batcave inside and out, continue your adventure:</p>
+        <ul>
+          <li><a href="waynetech-chips-guide.html">WayneTech Chips &amp; Skill Bricks Currency Guide</a></li>
+          <li><a href="all-characters-unlock.html">All 7 Characters &amp; How to Unlock Them</a></li>
+          <li><a href="mission-1-walkthrough.html">Mission 1 Full Walkthrough &amp; All Collectibles</a></li>
+          <li><a href="100-percent-completion.html">100% Completion Roadmap</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="beginners-guide.html" class="sidebar-link">Beginner's Guide: 10 Tips</a>
+        <a href="all-characters-unlock.html" class="sidebar-link">All Characters &amp; Unlocks</a>
+        <a href="mission-1-walkthrough.html" class="sidebar-link">Mission 1 Walkthrough</a>
+        <a href="../minikits.html" class="sidebar-link">All Minikit Locations</a>
+        <a href="../red-bricks.html" class="sidebar-link">All Red Brick Locations</a>
+        <a href="waynetech-chips-guide.html" class="sidebar-link">Currency Guide</a>
+      </div>
+      <div class="sidebar-box" style="border-style: dashed;">
+        <div style="text-align:center; color: var(--text-secondary); font-size: 12px; padding: 30px 0;"><!-- AdSense sidebar ad -->Ad Space</div>
+      </div>
+      <div class="sidebar-box">
+        <h3>Quick Links</h3>
+        <a href="/#walkthrough" class="sidebar-link">All Walkthroughs</a>
+        <a href="/#collectibles" class="sidebar-link">Collectibles Tracker</a>
+        <a href="../trophies.html" class="sidebar-link">Trophy Guide</a>
+        <a href="100-percent-completion.html" class="sidebar-link">100% Roadmap</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

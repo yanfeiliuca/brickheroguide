@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGO Batman Legacy of the Dark Knight PC Requirements - BrickHeroGuide</title>
+  <meta name="description" content="Full PC system requirements for LEGO Batman: Legacy of the Dark Knight. Minimum and recommended specs, performance tips, and settings guide.">
+  <meta name="keywords" content="LEGO Batman Legacy PC requirements, system requirements, minimum specs, recommended specs, performance, settings, Steam">
+  <link rel="canonical" href="https://brickheroguide.com/guides/pc-requirements.html">
+  <meta property="og:title" content="PC System Requirements - LEGO Batman Legacy of the Dark Knight">
+  <meta property="og:description" content="Check if your PC can run LEGO Batman: Legacy of the Dark Knight. Minimum and recommended specs, plus optimization tips.">
+  <meta property="og:type" content="article">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d27;
+      --bg-card-hover: #222633;
+      --text: #e8eaed;
+      --text-secondary: #9aa0ab;
+      --accent: #fbbf24;
+      --accent-hover: #f59e0b;
+      --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a;
+      --max-width: 1100px;
+      --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between; height: 56px;
+    }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+
+    .page-layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 40px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+
+    .article-header { margin-bottom: 28px; }
+    .article-tag {
+      display: inline-block;
+      font-size: 10px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px;
+      background: #60a5fa20; color: #60a5fa; margin-bottom: 10px;
+    }
+    .article-header h1 {
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 28px;
+    }
+    .toc-title { font-size: 14px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .toc li { font-size: 14px; }
+    .toc a { color: var(--text-secondary); }
+    .toc a:hover { color: var(--accent); }
+
+    .content h2 {
+      font-size: 22px; font-weight: 700;
+      margin: 36px 0 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+
+    .tip-box {
+      background: var(--accent-dim);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .tip-box strong { color: var(--accent); }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .spec-table th {
+      background: var(--bg-card);
+      color: var(--accent);
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+      font-weight: 700;
+      width: 35%;
+    }
+    .spec-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+    .spec-table tr:nth-child(even) td { background: rgba(26,29,39,0.5); }
+
+    .ad-inline {
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 12px;
+      margin: 28px 0;
+    }
+
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/#guides">Guides</a> &rsaquo; PC Requirements
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag">Tech Specs</span>
+        <h1>LEGO Batman Legacy of the Dark Knight — PC System Requirements</h1>
+        <div class="article-meta">
+          Last updated: May 17, 2026 &middot; 5 min read
+        </div>
+      </div>
+
+      <div class="toc">
+        <div class="toc-title">&#128220; Table of Contents</div>
+        <ol>
+          <li><a href="#minimum">Minimum System Requirements</a></li>
+          <li><a href="#recommended">Recommended System Requirements</a></li>
+          <li><a href="#storage">Install Size &amp; Storage</a></li>
+          <li><a href="#steam-deck">Steam Deck Compatibility</a></li>
+          <li><a href="#performance-tips">Performance Optimization Tips</a></li>
+          <li><a href="#known-issues">Known Issues &amp; Fixes</a></li>
+        </ol>
+      </div>
+
+      <div class="content">
+        <p>Wondering if your PC can run LEGO Batman: Legacy of the Dark Knight? LEGO games are typically well-optimized and accessible on a wide range of hardware, and this entry is no exception. Here are the official system requirements, plus real-world performance tips.</p>
+
+        <h2 id="minimum">Minimum System Requirements (1080p / 30 FPS / Low Settings)</h2>
+        <table class="spec-table">
+          <tbody>
+            <tr><th>OS</th><td>Windows 10 64-bit (version 21H2 or newer)</td></tr>
+            <tr><th>CPU</th><td>Intel Core i5-4590 / AMD Ryzen 3 1200</td></tr>
+            <tr><th>RAM</th><td>8 GB</td></tr>
+            <tr><th>GPU</th><td>NVIDIA GeForce GTX 960 (4 GB) / AMD Radeon R9 380 (4 GB)</td></tr>
+            <tr><th>DirectX</th><td>Version 12</td></tr>
+            <tr><th>Storage</th><td>40 GB available space (HDD supported, SSD recommended)</td></tr>
+            <tr><th>Sound</th><td>DirectX-compatible sound card</td></tr>
+          </tbody>
+        </table>
+        <p>These specs target 1080p resolution at 30 FPS with graphics settings on Low. The game is designed to run on hardware that's roughly 8-10 years old, making it accessible to most PC gamers. If your system meets or exceeds these specs, you can play the game — just don't expect maxed-out visuals.</p>
+
+        <div class="tip-box"><strong>Note for laptop users:</strong> The minimum GPU requirement is for desktop-class cards. A laptop GTX 1650 or equivalent mobile GPU with 4 GB VRAM should handle minimum settings. Integrated graphics (Intel UHD, Iris Xe, AMD Vega) are <strong>not supported</strong> and will not run the game at playable frame rates.</div>
+
+        <h2 id="recommended">Recommended System Requirements (1080p / 60 FPS / High Settings)</h2>
+        <table class="spec-table">
+          <tbody>
+            <tr><th>OS</th><td>Windows 11 64-bit</td></tr>
+            <tr><th>CPU</th><td>Intel Core i7-8700K / AMD Ryzen 5 3600</td></tr>
+            <tr><th>RAM</th><td>16 GB</td></tr>
+            <tr><th>GPU</th><td>NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT (6 GB)</td></tr>
+            <tr><th>DirectX</th><td>Version 12</td></tr>
+            <tr><th>Storage</th><td>40 GB SSD (NVMe recommended for faster load times)</td></tr>
+            <tr><th>Sound</th><td>DirectX-compatible sound card</td></tr>
+          </tbody>
+        </table>
+        <p>These specs deliver a smooth 1080p / 60 FPS experience on High settings. For <strong>4K / 60 FPS</strong> on Ultra settings, you'll want at least an RTX 3070 or RX 6800 XT with 8+ GB VRAM. The game supports uncapped frame rates, so high-refresh-rate monitors (144 Hz, 240 Hz) are fully utilized on capable hardware.</p>
+
+        <div class="ad-inline">Advertisement</div>
+
+        <h2 id="storage">Install Size &amp; Storage Details</h2>
+        <p>The base install size is <strong>40 GB</strong>, with additional space needed for save files (approximately 500 MB for a full save with all collectibles) and future DLC content. The Deluxe Edition's DLC packs will add an estimated 5-10 GB over time. Plan for <strong>50 GB total</strong> if you own the Deluxe Edition.</p>
+        <p>While the minimum specs list HDD support, we strongly recommend an SSD. Load times between the Batcave and Gotham's open world average 8-12 seconds on SSD versus 35-45 seconds on HDD. With the amount of zone transitions in the game, an SSD saves you hours of cumulative loading over a full playthrough.</p>
+
+        <h2 id="steam-deck">Steam Deck Compatibility</h2>
+        <p>LEGO Batman: Legacy of the Dark Knight is <strong>Steam Deck Verified</strong> at launch. TT Games has confirmed full Steam Deck support with the following performance profile:</p>
+        <ul>
+          <li><strong>Native resolution (800p):</strong> Medium-High settings, 40-60 FPS</li>
+          <li><strong>Docked (1080p):</strong> Medium settings, 30-45 FPS</li>
+          <li><strong>Battery life:</strong> Approximately 2.5-3 hours at 40 FPS cap</li>
+        </ul>
+        <p>The game supports full controller input on Steam Deck with no additional configuration needed. Cloud saves via Steam Cloud are fully supported for seamless switching between desktop and Deck.</p>
+
+        <h2 id="performance-tips">Performance Optimization Tips</h2>
+        <h3>Settings That Impact Performance Most</h3>
+        <ol>
+          <li><strong>Shadow Quality:</strong> Biggest FPS hit. Dropping from Ultra to Medium gains 15-20% FPS with minimal visual difference in a LEGO game.</li>
+          <li><strong>Anti-Aliasing:</strong> TAA (Temporal Anti-Aliasing) looks great and runs efficiently. Avoid MSAA 8x — it's overkill for this art style and costs significant performance.</li>
+          <li><strong>Draw Distance:</strong> Affects open-world Gotham more than linear missions. High is fine for most systems; Ultra only if you have headroom.</li>
+          <li><strong>Ambient Occlusion:</strong> Moderate FPS impact. SSAO is sufficient; HBAO+ adds little visual benefit in the game's brick-based aesthetic.</li>
+          <li><strong>Texture Quality:</strong> Set based on VRAM. 4 GB VRAM = Medium, 6 GB = High, 8+ GB = Ultra. Exceeding your VRAM causes stuttering.</li>
+        </ol>
+        <div class="tip-box"><strong>Quick Optimization:</strong> If you're below 60 FPS, drop Shadows to Medium and set Anti-Aliasing to TAA first. These two settings alone often recover 20-30 FPS with barely any visual downgrade.</div>
+
+        <h3>Ultrawide Monitor Support</h3>
+        <p>The game fully supports 21:9 and 32:9 ultrawide resolutions natively — no ini tweaks or mods needed. Cutscenes are rendered in 16:9 with pillarboxing, but all gameplay and menus scale correctly to ultrawide aspect ratios.</p>
+
+        <h2 id="known-issues">Known Issues &amp; Fixes</h2>
+        <ul>
+          <li><strong>Stuttering on first launch:</strong> The game compiles shaders on first boot. This takes 2-3 minutes and causes temporary stuttering. Subsequent launches are smooth. <em>Fix: Wait for shader compilation to complete before playing.</em></li>
+          <li><strong>Controller not detected:</strong> If using a PlayStation controller on PC, enable PlayStation Controller Support in Steam's controller settings. Xbox controllers work natively.</li>
+          <li><strong>Audio crackling:</strong> Rare issue on some Realtek audio chipsets. <em>Fix: Set audio output to 16-bit 48000 Hz in Windows Sound Control Panel.</em></li>
+        </ul>
+
+        <h2>Related Guides</h2>
+        <ul>
+          <li><a href="release-date-platforms.html">Release Date, Platforms &amp; Where to Buy</a></li>
+          <li><a href="deluxe-edition-explained.html">Deluxe Edition Explained — Is It Worth It?</a></li>
+          <li><a href="beginners-guide.html">Beginner's Guide: 10 Things to Know Before You Start</a></li>
+          <li><a href="is-it-good-for-kids.html">Is LEGO Batman Legacy Good for Kids?</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="beginners-guide.html" class="sidebar-link">Beginner's Guide</a>
+        <a href="all-characters-unlock.html" class="sidebar-link">All Characters &amp; Unlocks</a>
+        <a href="../minikits.html" class="sidebar-link">All Minikit Locations</a>
+        <a href="../red-bricks.html" class="sidebar-link">All Red Brick Locations</a>
+        <a href="suits-abilities-guide.html" class="sidebar-link">Suits &amp; Abilities Guide</a>
+        <a href="tips-for-new-players.html" class="sidebar-link">Tips for New Players</a>
+      </div>
+
+      <div class="sidebar-box" style="border-style: dashed;">
+        <div style="text-align:center; color: var(--text-secondary); font-size: 12px; padding: 30px 0;">
+          Ad Space
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Quick Links</h3>
+        <a href="/#walkthrough" class="sidebar-link">All Walkthroughs</a>
+        <a href="/#collectibles" class="sidebar-link">Collectibles Tracker</a>
+        <a href="../trophies.html" class="sidebar-link">Trophy Guide</a>
+        <a href="100-percent-completion.html" class="sidebar-link">100% Roadmap</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

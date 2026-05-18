@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGO Batman Legacy of the Dark Knight Collectibles Guide - BrickHeroGuide</title>
+  <meta name="description" content="Complete guide to every type of collectible in LEGO Batman: Legacy of the Dark Knight — Minikits, Red Bricks, Instruction Pages, WayneTech Chips, and more.">
+  <meta name="keywords" content="LEGO Batman Legacy collectibles, minikits, red bricks, instruction pages, WayneTech Chips, Skill Bricks, 100% completion">
+  <link rel="canonical" href="https://brickheroguide.com/guides/collectibles-guide.html">
+  <meta property="og:title" content="Complete Collectibles Guide - LEGO Batman Legacy">
+  <meta property="og:description" content="Every collectible type explained: Minikits, Red Bricks, Instruction Pages, and everything you need for 100% completion.">
+  <meta property="og:type" content="article">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d27;
+      --bg-card-hover: #222633;
+      --text: #e8eaed;
+      --text-secondary: #9aa0ab;
+      --accent: #fbbf24;
+      --accent-hover: #f59e0b;
+      --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a;
+      --max-width: 1100px;
+      --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between; height: 56px;
+    }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+
+    .page-layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 40px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+
+    .article-header { margin-bottom: 28px; }
+    .article-tag {
+      display: inline-block;
+      font-size: 10px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px;
+      background: #10b98120; color: #34d399; margin-bottom: 10px;
+    }
+    .article-header h1 {
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 28px;
+    }
+    .toc-title { font-size: 14px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .toc li { font-size: 14px; }
+    .toc a { color: var(--text-secondary); }
+    .toc a:hover { color: var(--accent); }
+
+    .content h2 {
+      font-size: 22px; font-weight: 700;
+      margin: 36px 0 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+
+    .tip-box {
+      background: var(--accent-dim);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .tip-box strong { color: var(--accent); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    th {
+      background: var(--bg-card);
+      color: var(--accent);
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+      font-weight: 700;
+    }
+    td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) td { background: rgba(26,29,39,0.5); }
+
+    .ad-inline {
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 12px;
+      margin: 28px 0;
+    }
+
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/#collectibles">Collectibles</a> &rsaquo; Complete Collectibles Guide
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag">Collectibles</span>
+        <h1>LEGO Batman Legacy of the Dark Knight — Complete Collectibles Guide</h1>
+        <div class="article-meta">
+          Last updated: May 17, 2026 &middot; 10 min read
+        </div>
+      </div>
+
+      <div class="toc">
+        <div class="toc-title">&#128220; Table of Contents</div>
+        <ol>
+          <li><a href="#collectible-types">All 7 Collectible Types</a></li>
+          <li><a href="#minikits">Minikits — The Main Collectible</a></li>
+          <li><a href="#red-bricks">Red Bricks — Game-Changing Extras</a></li>
+          <li><a href="#instruction-pages">Instruction Pages — Vehicle &amp; Base Upgrades</a></li>
+          <li><a href="#waynetech-chips">WayneTech Chips — Upgrade Currency</a></li>
+          <li><a href="#skill-bricks">Skill Bricks — Character Progression</a></li>
+          <li><a href="#character-tokens">Character Tokens</a></li>
+          <li><a href="#gold-bricks">Gold Bricks — The Ultimate Prize</a></li>
+          <li><a href="#completion-roadmap">100% Completion Roadmap</a></li>
+        </ol>
+      </div>
+
+      <div class="content">
+        <p>LEGO Batman: Legacy of the Dark Knight features seven types of collectibles spread across 8 story missions and the open-world Gotham City. This guide explains what each collectible does, how many there are, and the most efficient order to hunt them down for 100% completion.</p>
+
+        <h2 id="collectible-types">All 7 Collectible Types at a Glance</h2>
+        <table>
+          <thead>
+            <tr><th>Collectible</th><th>Total Count</th><th>Purpose</th><th>Where to Find</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Minikits</strong></td><td>80 (10 per mission)</td><td>Unlock Gold Bricks</td><td>Hidden in story missions</td></tr>
+            <tr><td><strong>Red Bricks</strong></td><td>20</td><td>Unlock game modifiers</td><td>Story missions + open world</td></tr>
+            <tr><td><strong>Instruction Pages</strong></td><td>40</td><td>Vehicle &amp; Batcave upgrades</td><td>Open world only</td></tr>
+            <tr><td><strong>WayneTech Chips</strong></td><td>Unlimited (currency)</td><td>Suit &amp; gadget upgrades</td><td>Everywhere</td></tr>
+            <tr><td><strong>Skill Bricks</strong></td><td>50</td><td>Character skill tree unlocks</td><td>Challenges + open world</td></tr>
+            <tr><td><strong>Character Tokens</strong></td><td>7</td><td>Unlock playable characters</td><td>Story progression</td></tr>
+            <tr><td><strong>Gold Bricks</strong></td><td>30</td><td>100% completion tracker</td><td>Earned by collecting everything else</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="minikits">Minikits — The Main Collectible</h2>
+        <p>Minikits are the iconic LEGO game collectible. Each of the 8 story missions contains <strong>10 Minikits</strong>, for a total of 80. They appear as small, glowing LEGO model kits hidden throughout each level.</p>
+        <h3>How to Find Minikits</h3>
+        <p>Minikits emit a soft blue glow and a faint humming sound when you're nearby. In your first playthrough (Story Mode), you can typically find 3-5 per mission using just the characters available at that time. The remaining minikits require abilities from characters or suits you unlock later, making them accessible only in Free Play mode.</p>
+        <h3>Minikit Rewards</h3>
+        <p>Collecting all 10 minikits in a single mission rewards you with that mission's <strong>Gold Brick</strong>. Additionally, minikit collection milestones unlock cosmetic rewards in the Batcave Trophy Room:</p>
+        <ul>
+          <li>10 Minikits: Batcave Trophy Case (small)</li>
+          <li>30 Minikits: Classic Batsuit Display</li>
+          <li>50 Minikits: Joker Card Trophy</li>
+          <li>80 Minikits (all): Golden Batsuit Display + final Gold Brick</li>
+        </ul>
+        <div class="tip-box"><strong>Minikit Strategy:</strong> Don't stress about minikits on your first playthrough. Complete the story first to unlock all characters and suits, then use our <a href="../minikits.html">All Minikit Locations</a> guide in Free Play for efficient cleanup.</div>
+
+        <div class="ad-inline">Advertisement</div>
+
+        <h2 id="red-bricks">Red Bricks — Game-Changing Extras</h2>
+        <p>Red Bricks are the most valuable collectibles in the game. Each one unlocks a powerful modifier (called an "Extra") that you can toggle on or off from the Batcave's Batcomputer. There are <strong>20 Red Bricks</strong> total.</p>
+        <h3>All Red Brick Extras</h3>
+        <table>
+          <thead>
+            <tr><th>Red Brick</th><th>Effect</th><th>Priority</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Stud x2</td><td>Doubles all stud values</td><td>Highest</td></tr>
+            <tr><td>Stud x4</td><td>Quadruples all stud values</td><td>Highest</td></tr>
+            <tr><td>Stud x6</td><td>6x stud multiplier</td><td>Highest</td></tr>
+            <tr><td>Stud x8</td><td>8x stud multiplier</td><td>Highest</td></tr>
+            <tr><td>Stud x10</td><td>10x stud multiplier</td><td>Highest</td></tr>
+            <tr><td>Invincibility</td><td>No damage taken</td><td>High</td></tr>
+            <tr><td>Fast Build</td><td>Instant LEGO building</td><td>High</td></tr>
+            <tr><td>Minikit Detector</td><td>Shows minikits on minimap</td><td>High</td></tr>
+            <tr><td>Red Brick Detector</td><td>Shows red bricks on minimap</td><td>High</td></tr>
+            <tr><td>Infinite Batarangs</td><td>Unlimited ranged attacks</td><td>Medium</td></tr>
+            <tr><td>Super Speed</td><td>2x movement speed</td><td>Medium</td></tr>
+            <tr><td>Unlimited Grapple</td><td>No grapple cooldown</td><td>Medium</td></tr>
+            <tr><td>Big Head Mode</td><td>Enlarged character heads (cosmetic)</td><td>Low</td></tr>
+            <tr><td>Silly Voices</td><td>Replaces voices with gibberish (cosmetic)</td><td>Low</td></tr>
+            <tr><td>Confetti Studs</td><td>Studs burst into confetti (cosmetic)</td><td>Low</td></tr>
+            <tr><td>Disguise Mode</td><td>Enemies don't recognize you</td><td>High</td></tr>
+            <tr><td>Gold Brick Detector</td><td>Shows gold bricks on minimap</td><td>Medium</td></tr>
+            <tr><td>Super Strength Always</td><td>Power Suit strength on all suits</td><td>High</td></tr>
+            <tr><td>Infinite Health (Co-op)</td><td>Partner never takes damage</td><td>Medium</td></tr>
+            <tr><td>Score x2</td><td>Doubles combat score (affects stud drops)</td><td>Medium</td></tr>
+          </tbody>
+        </table>
+        <div class="tip-box"><strong>Critical Tip:</strong> Stud multipliers <strong>stack</strong>. With all five active, you earn 2 &times; 4 &times; 6 &times; 8 &times; 10 = <strong>3,840x studs</strong>. Finding the five stud multiplier Red Bricks should be your top priority after completing the story. They make affording every upgrade trivial.</div>
+
+        <h2 id="instruction-pages">Instruction Pages — Vehicle &amp; Base Upgrades</h2>
+        <p>Instruction Pages are parchment-like collectibles found exclusively in the open world. Each page you collect unlocks either a new vehicle for the Batcave Vehicle Bay or a cosmetic upgrade for the Batcave itself. There are 40 total, split roughly 50/50 between vehicles and base cosmetics.</p>
+        <p>Unlike minikits, Instruction Pages are found through exploration and puzzle-solving in Gotham's open-world districts. Many are hidden behind breakable walls, on rooftops, or underwater. Batgirl's Oracle Drone and Commissioner Gordon's Evidence Scanner are especially helpful for tracking them down.</p>
+
+        <h2 id="waynetech-chips">WayneTech Chips — Upgrade Currency</h2>
+        <p>WayneTech Chips are the primary currency for upgrading Batman's suits and gadgets at the Batcave's Armor Workbench. They're earned through:</p>
+        <ul>
+          <li>Collecting studs (every 10,000 studs = 1 WayneTech Chip)</li>
+          <li>Completing missions (bonus awarded at end screen based on studs collected)</li>
+          <li>Open world activities (Riddler Challenges, Bat-Signal Races)</li>
+          <li>Smashing special WayneTech crates (marked with a "W" logo)</li>
+        </ul>
+        <p>Fully upgrading all six Batsuits costs approximately 120,000 WayneTech Chips. With all five stud multiplier Red Bricks active, you can farm this in about 30 minutes at the Steel Mill stud farming spot in the Industrial District.</p>
+
+        <div class="ad-inline">Advertisement</div>
+
+        <h2 id="skill-bricks">Skill Bricks — Character Progression</h2>
+        <p>Skill Bricks are character-specific collectibles that unlock nodes in each character's skill tree. Each of the 7 playable characters has a skill tree with roughly 7-8 nodes, and each node costs 1 Skill Brick to unlock. There are exactly 50 Skill Bricks — enough to fully unlock every character's tree.</p>
+        <p>Skill Bricks are earned through:</p>
+        <ul>
+          <li>Completing story missions (guaranteed 2-3 per mission)</li>
+          <li>Riddler Challenges in the open world (20 total, 1 brick each)</li>
+          <li>Batcave Training Room combat challenges (10 total, 1 brick each)</li>
+          <li>Finding them as rare drops from elite enemies in Arkham Island</li>
+        </ul>
+
+        <h2 id="character-tokens">Character Tokens</h2>
+        <p>Character Tokens are story-gated and unmissable. Each of the 7 playable characters (except Batman, who starts unlocked) has a Character Token that you automatically earn by completing the mission where that character joins the story. There's no way to miss these — finish the story, and you'll have all 7 characters unlocked.</p>
+
+        <h2 id="gold-bricks">Gold Bricks — The Ultimate Prize</h2>
+        <p>Gold Bricks are the game's ultimate collectible and the primary metric for completion percentage. You earn Gold Bricks by reaching milestones across all other collectible types:</p>
+        <table>
+          <thead>
+            <tr><th>Source</th><th>Gold Bricks Earned</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>All 10 minikits per mission (8 missions)</td><td>8</td></tr>
+            <tr><td>All 80 minikits collected</td><td>1 (bonus)</td></tr>
+            <tr><td>Red Brick milestones (5, 10, 15, 20)</td><td>4</td></tr>
+            <tr><td>All 40 Instruction Pages</td><td>4 (1 per 10 pages)</td></tr>
+            <tr><td>All 50 Skill Bricks</td><td>1 (bonus)</td></tr>
+            <tr><td>Complete all 20 Riddler Challenges</td><td>2</td></tr>
+            <tr><td>Gold medal all 6 Bat-Signal Races</td><td>2</td></tr>
+            <tr><td>Complete all 15 Vehicle Stunt Jumps</td><td>2</td></tr>
+            <tr><td>Complete all 12 Photo Spots</td><td>1</td></tr>
+            <tr><td>Buy all Batcave upgrades</td><td>2</td></tr>
+            <tr><td>All 7 characters' skill trees maxed</td><td>3</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>30</strong></td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="completion-roadmap">100% Completion Roadmap</h2>
+        <p>Here's the most efficient order to tackle 100% completion:</p>
+        <ol>
+          <li><strong>Complete the 8-mission story</strong> on any difficulty. Don't stop for collectibles.</li>
+          <li><strong>Hunt the 5 stud multiplier Red Bricks</strong> first. These make everything else faster.</li>
+          <li><strong>Collect the Minikit Detector and Red Brick Detector</strong> Red Bricks next.</li>
+          <li><strong>Activate all 5 stud multipliers</strong> and farm WayneTech Chips at the Steel Mill for 30 minutes. Max out all suit upgrades.</li>
+          <li><strong>Replay all 8 missions in Free Play</strong> with detectors active. Collect all remaining minikits and red bricks mission by mission.</li>
+          <li><strong>Clear the open world:</strong> All Instruction Pages, Riddler Challenges, Bat-Signal Races, Vehicle Stunt Jumps, and Photo Spots.</li>
+          <li><strong>Max all skill trees</strong> with your remaining Skill Bricks.</li>
+          <li><strong>Buy all remaining Batcave upgrades.</strong></li>
+        </ol>
+        <p>Estimated time to 100%: <strong>25-35 hours</strong> (15-20 hours if following our guides).</p>
+
+        <h2>Related Guides</h2>
+        <ul>
+          <li><a href="../minikits.html">All Minikit Locations (Mission by Mission)</a></li>
+          <li><a href="../red-bricks.html">All Red Brick Locations</a></li>
+          <li><a href="gotham-map-guide.html">Gotham Map Guide</a></li>
+          <li><a href="100-percent-completion.html">100% Completion Checklist</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="beginners-guide.html" class="sidebar-link">Beginner's Guide</a>
+        <a href="all-characters-unlock.html" class="sidebar-link">All Characters &amp; Unlocks</a>
+        <a href="../minikits.html" class="sidebar-link">All Minikit Locations</a>
+        <a href="../red-bricks.html" class="sidebar-link">All Red Brick Locations</a>
+        <a href="suits-abilities-guide.html" class="sidebar-link">Suits &amp; Abilities Guide</a>
+        <a href="tips-for-new-players.html" class="sidebar-link">Tips for New Players</a>
+      </div>
+
+      <div class="sidebar-box" style="border-style: dashed;">
+        <div style="text-align:center; color: var(--text-secondary); font-size: 12px; padding: 30px 0;">
+          Ad Space
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Quick Links</h3>
+        <a href="/#walkthrough" class="sidebar-link">All Walkthroughs</a>
+        <a href="/#collectibles" class="sidebar-link">Collectibles Tracker</a>
+        <a href="../trophies.html" class="sidebar-link">Trophy Guide</a>
+        <a href="100-percent-completion.html" class="sidebar-link">100% Roadmap</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

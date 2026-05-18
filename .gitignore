@@ -4,3 +4,7 @@
 !.dev.vars.example
 .env*
 !.env.example
+
+# Chinese documentation — not for production
+*.md
+!guides/*.md

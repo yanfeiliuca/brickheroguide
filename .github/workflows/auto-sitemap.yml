@@ -1,0 +1,52 @@
+name: Auto-Update Sitemap
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'index.html'
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    # Don't run if this push came from this workflow itself
+    if: "!contains(github.event.head_commit.message, '[auto-sitemap]')"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate sitemap
+        run: python generate-sitemap.py
+
+      - name: Commit updated sitemap
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes to sitemap"
+          else
+            git commit -m "[auto-sitemap] Update sitemap.xml after new content"
+            git push
+          fi
+
+  ping-search-engines:
+    needs: update-sitemap
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Cloudflare to deploy
+        run: sleep 120
+
+      - name: Ping Google
+        run: |
+          curl -s -o /dev/null -w "Google: HTTP %{http_code}\n" \
+            "https://www.google.com/ping?sitemap=https://brickheroguide.com/sitemap.xml" || true
+
+      - name: Ping Bing
+        run: |
+          curl -s -o /dev/null -w "Bing: HTTP %{http_code}\n" \
+            "https://www.bing.com/ping?sitemap=https://brickheroguide.com/sitemap.xml" || true

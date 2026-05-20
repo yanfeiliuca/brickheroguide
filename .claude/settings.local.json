@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem *)",
+      "WebSearch",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:store.steampowered.com)",
+      "Bash(curl -s -L \"https://www.google.com/search?q=LEGO+Batman+Legacy+Dark+Knight+game+2026\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\)\")",
+      "WebFetch(domain:www.reddit.com)",
+      "WebFetch(domain:www.ign.com)",
+      "WebFetch(domain:duckduckgo.com)",
+      "Bash(curl -s \"https://lite.duckduckgo.com/lite/?q=LEGO+Batman+Legacy+of+the+Dark+Knight+game+2026\")",
+      "Bash(curl -s \"https://en.wikipedia.org/wiki/Lego_Batman\")",
+      "Bash(curl -s \"https://store.steampowered.com/api/storesearch?term=LEGO+Batman+Legacy+Dark+Knight&l=english&cc=US\")",
+      "Bash(curl -s \"https://en.wikipedia.org/wiki/Lego_Batman:_Legacy_of_the_Dark_Knight\")",
+      "Bash(curl -s \"https://www.bing.com/search?q=%22LEGO+Batman+Legacy+of+the+Dark+Knight%22+gameplay+characters+missions+2026&count=20\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\")",
+      "Bash(curl -s \"https://en.wikipedia.org/w/api.php?action=parse&page=Lego_Batman:_Legacy_of_the_Dark_Knight&prop=text&format=json\")",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); print\\(data['parse']['text']['*']\\)\")",
+      "Bash(curl *)",
+      "Bash(python3 -c ' *)",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

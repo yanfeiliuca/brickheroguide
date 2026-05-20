@@ -18,7 +18,8 @@
       "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); print\\(data['parse']['text']['*']\\)\")",
       "Bash(curl *)",
       "Bash(python3 -c ' *)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "PowerShell(New-Item *)"
     ]
   }
 }

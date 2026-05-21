@@ -7,4 +7,6 @@
 
 # Chinese documentation — not for production
 *.md
+!CLAUDE.md
+!PROGRESS.md
 !guides/*.md

@@ -1,0 +1,25 @@
+name: Daily Blog Generator
+
+on:
+  schedule:
+    # 01:00 UTC = 9:00 AM UTC+8 (Beijing)
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate-blog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install anthropic requests
+
+      - name: Generate daily blog post
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/daily-blog.py

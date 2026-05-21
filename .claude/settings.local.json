@@ -19,7 +19,19 @@
       "Bash(curl *)",
       "Bash(python3 -c ' *)",
       "Bash(python -c ' *)",
-      "PowerShell(New-Item *)"
+      "PowerShell(New-Item *)",
+      "Bash(Remove-Item *)",
+      "PowerShell($response = Invoke-WebRequest -Uri \"https://www.google.com/search?q=LEGO+Batman+Legacy+Dark+Knight+2026\" -UserAgent \"Mozilla/5.0\" -UseBasicParsing -TimeoutSec 15; $response.Content.Substring\\(0, [Math]::Min\\(3000, $response.Content.Length\\)\\))",
+      "Skill(Last 30 Days)",
+      "PowerShell($response = Invoke-WebRequest -Uri \"https://www.bing.com/search?q=LEGO+Batman+Legacy+of+the+Dark+Knight+2026+game\" -UserAgent \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" -UseBasicParsing -TimeoutSec 15; $response.Content.Substring\\(0, [Math]::Min\\(5000, $response.Content.Length\\)\\))",
+      "WebFetch(domain:www.metacritic.com)",
+      "Bash(python *)",
+      "PowerShell(if \\(Test-Path \"PROGRESS.md\"\\) { Write-Output \"EXISTS\"; \\(Get-Content \"PROGRESS.md\" | Measure-Object -Line\\).Lines } else { Write-Output \"NOT FOUND\" })",
+      "Bash(git check-ignore *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }

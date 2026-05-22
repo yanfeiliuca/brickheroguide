@@ -9,8 +9,12 @@ on:
 jobs:
   generate-blog:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-python@v5
         with:
@@ -22,4 +26,4 @@ jobs:
       - name: Generate daily blog post
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scripts/daily-blog.py
+        run: python3 scripts/daily-blog.py

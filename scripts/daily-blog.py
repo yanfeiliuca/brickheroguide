@@ -444,7 +444,7 @@ def commit_and_push(slug):
     # Run sitemap generator
     print("  Running sitemap generator...")
     sitemap_result = subprocess.run(
-        ["python", str(SITEMAP_SCRIPT)],
+        ["python3", str(SITEMAP_SCRIPT)],
         capture_output=True, text=True, cwd=str(REPO_ROOT),
     )
     if sitemap_result.returncode == 0:

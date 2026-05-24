@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BNQ7RJDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F7BNQ7RJDY');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGO Batman Legacy: PS5 vs Xbox Series X/S vs PC vs Steam Deck Performance Breakdown - BrickHeroGuide</title>
+  <meta name="description" content="How does LEGO Batman: Legacy of the Dark Knight run on every platform? Full breakdown of frame rates, resolutions, and visual modes on PS5, Xbox Series X, Series S, Steam Deck, and PC.">
+  <meta name="keywords" content="LEGO Batman Legacy performance, PS5 vs Xbox Series X, Xbox Series S frame rate, LEGO Batman PC performance, Steam Deck LEGO Batman, platform comparison">
+  <link rel="canonical" href="https://brickheroguide.com/blog/platform-performance-comparison.html">
+  <meta property="og:title" content="LEGO Batman Legacy: PS5 vs Xbox Series X/S vs PC vs Steam Deck Performance Breakdown">
+  <meta property="og:description" content="Full breakdown of frame rates, resolutions, and visual modes across every platform for LEGO Batman: Legacy of the Dark Knight.">
+  <meta property="og:image" content="https://legobatmangame.com/_astro/clues-2.D9jQ9zQy_Z12vcyH.webp">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
+      --text: #e8eaed; --text-secondary: #9aa0ab;
+      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .article-header { margin-bottom: 28px; }
+    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; margin-bottom: 10px; margin-right: 6px; }
+    .tag-analysis { background: #f59e0b20; color: #fbbf24; }
+    .tag-news { background: #3b82f620; color: #60a5fa; }
+    .article-header h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .tip-box strong { color: var(--accent); }
+    .highlight-box { background: rgba(59, 130, 246, 0.08); border-left: 3px solid #3b82f6; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .highlight-box strong { color: #60a5fa; }
+    .platform-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin: 20px 0; }
+    .platform-card h4 { font-size: 16px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+    .platform-card .platform-verdict { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+    .verdict-best { color: #34d399; }
+    .verdict-good { color: #60a5fa; }
+    .verdict-mid { color: #fbbf24; }
+    .verdict-check { color: #f87171; }
+    .platform-card p { font-size: 14px; margin-bottom: 0; }
+    .platform-card ul { margin: 8px 0 0 16px; display: flex; flex-direction: column; gap: 4px; }
+    .platform-card li { font-size: 14px; }
+    .featured-image { margin: 24px 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .featured-image img { width: 100%; display: block; }
+    .featured-image figcaption { padding: 10px 16px; font-size: 12px; color: var(--text-secondary); background: var(--bg-card); }
+    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .comparison-table th { background: var(--bg-card); border: 1px solid var(--border); padding: 10px 14px; text-align: left; color: var(--accent); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .comparison-table td { border: 1px solid var(--border); padding: 10px 14px; vertical-align: top; }
+    .comparison-table tr:nth-child(even) td { background: rgba(26,29,39,0.5); }
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Platform Performance Comparison
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag tag-analysis">Analysis</span>
+        <span class="article-tag tag-news">News</span>
+        <h1>LEGO Batman: Legacy of the Dark Knight &mdash; PS5 vs Xbox Series X/S vs PC vs Steam Deck Performance Breakdown</h1>
+        <p class="article-meta">&#128197; May 24, 2026 &nbsp;|&nbsp; &#9201; 6 min read</p>
+      </div>
+
+      <figure class="featured-image">
+        <img src="https://legobatmangame.com/_astro/clues-2.D9jQ9zQy_Z12vcyH.webp" alt="Gotham City at night in LEGO Batman: Legacy of the Dark Knight, showcasing neon lights and the Bat-Signal" loading="lazy">
+        <figcaption>Gotham City's neon-lit streets at night &mdash; one of the most visually demanding environments in the game. Image: &copy; TT Games / Warner Bros. Games. Official promotional screenshot via <a href="https://legobatmangame.com" target="_blank" rel="noopener">legobatmangame.com</a>, used for editorial purposes.</figcaption>
+      </figure>
+
+      <div class="content">
+        <p>With LEGO Batman: Legacy of the Dark Knight now in players' hands across all platforms, performance comparisons have begun flooding in. Built on Unreal Engine 5 &mdash; the same engine powering some of 2026's most technically demanding games &mdash; Legacy of the Dark Knight offers a genuinely next-gen visual experience. But that ambition comes with real trade-offs depending on which platform you're playing on. Here's a thorough breakdown of what to expect on each.</p>
+
+        <h2>At a Glance: Every Platform Compared</h2>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Display Modes</th>
+              <th>Resolution</th>
+              <th>Frame Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>PS5</strong></td>
+              <td>Fidelity + Performance</td>
+              <td>4K (Dynamic)</td>
+              <td>30 / 60 fps</td>
+            </tr>
+            <tr>
+              <td><strong>Xbox Series X</strong></td>
+              <td>Fidelity + Performance</td>
+              <td>4K (Dynamic)</td>
+              <td>30 / 60 fps</td>
+            </tr>
+            <tr>
+              <td><strong>Xbox Series S</strong></td>
+              <td>Single mode only</td>
+              <td>1080p (720p native)</td>
+              <td>30 fps</td>
+            </tr>
+            <tr>
+              <td><strong>Steam Deck</strong></td>
+              <td>Single mode</td>
+              <td>800p</td>
+              <td>~25&ndash;30 fps (variable)</td>
+            </tr>
+            <tr>
+              <td><strong>PC (mid-range)</strong></td>
+              <td>Fully configurable</td>
+              <td>Up to 4K+</td>
+              <td>60+ fps (hardware dependent)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Xbox Series X: Two Excellent Modes</h2>
+
+        <div class="platform-card">
+          <h4>Xbox Series X</h4>
+          <div class="platform-verdict verdict-good">&#10003; Highly Recommended</div>
+          <ul>
+            <li><strong>Fidelity Mode:</strong> 4K output with Dynamic Resolution Scaling, targeting 30 fps. Maximum visual quality with full lighting and shadow detail.</li>
+            <li><strong>Performance Mode:</strong> 4K output with Dynamic Resolution Scaling, targeting 60 fps. Reduced shadow quality and lighting fidelity to hit the higher frame rate.</li>
+          </ul>
+        </div>
+
+        <p>According to analysis from <a href="https://www.purexbox.com/news/2026/05/lego-batman-comparison-shows-difference-between-xbox-series-x-and-series-s" target="_blank" rel="noopener">Pure Xbox</a>, both modes on Xbox Series X deliver impressively stable frame rates with no observable drops in comparison footage. Reviewers describe Legacy of the Dark Knight as "the best-looking LEGO game yet" on this hardware. The Dynamic Resolution Scaling implementation appears well-tuned, keeping the image sharp even in the busiest areas of open-world Gotham.</p>
+
+        <p>For most players, Performance Mode at 60 fps will be the preferred way to play &mdash; the game's Arkham-inspired combat, with its precise dodges and counter-attack timing, benefits noticeably from the smoother frame rate. Fidelity Mode is worth exploring if you want to appreciate the game's lighting and environmental detail at their absolute best.</p>
+
+        <h2>PS5: Two Modes — With a Lighting Edge</h2>
+
+        <div class="platform-card">
+          <h4>PlayStation 5</h4>
+          <div class="platform-verdict verdict-best">&#9733; Best Console Visuals</div>
+          <ul>
+            <li><strong>Two display modes</strong> comparable to Xbox Series X (Fidelity and Performance targeting 30/60 fps respectively)</li>
+            <li><strong>Better volumetric lighting</strong> than Xbox Series X in equivalent settings, according to early technical analysis</li>
+            <li>Similar resolution and frame rate targets to its Xbox counterpart</li>
+          </ul>
+        </div>
+
+        <p>A pre-launch comparison published by <a href="https://twistedvoxel.com/lego-batman-legacy-of-the-dark-knight-ps5-comparison-shows-better-volumetric-lighting-than-xbox-series-x/" target="_blank" rel="noopener">TwistedVoxel</a> found that the PS5 version reportedly preserves more volumetric lighting effects than Xbox Series X at similar settings. In practice, this means fog, god-rays, and atmospheric light scattering in areas like the rain-slicked Gotham streets appear somewhat richer on Sony's hardware. The difference is subtle in motion, but side-by-side screenshots reveal a more pronounced atmospheric effect on PS5.</p>
+
+        <p>This type of platform-specific rendering difference isn't unusual for Unreal Engine 5 titles &mdash; the engine's volumetric and global illumination systems can behave slightly differently depending on how they're configured per-platform by developers. Neither version is a poor experience; the PS5 simply has a marginal edge in atmospheric rendering.</p>
+
+        <div class="ad-inline"><!-- AdSense mid-article ad unit -->Advertisement</div>
+
+        <h2>Xbox Series S: Only One Mode, and It Shows</h2>
+
+        <div class="platform-card">
+          <h4>Xbox Series S</h4>
+          <div class="platform-verdict verdict-check">&#9888; Manage Expectations</div>
+          <ul>
+            <li><strong>Single 30 fps mode only</strong> &mdash; no 60 fps option</li>
+            <li>Output at 1080p, but reportedly rendering natively at 720p with upscaling</li>
+            <li>Noticeable reductions in shadow quality and lighting compared to Series X and PS5</li>
+            <li>30 fps is reportedly stable and smooth despite the resolution compromise</li>
+          </ul>
+        </div>
+
+        <p>This is where Legacy of the Dark Knight's Unreal Engine 5 underpinning creates a real challenge. Community discussion on <a href="https://www.purexbox.com/news/2026/05/lego-batman-comparison-shows-difference-between-xbox-series-x-and-series-s" target="_blank" rel="noopener">Pure Xbox</a> and elsewhere has highlighted surprise at the 720p native resolution, with readers noting that UE5's demanding rendering pipeline is likely the culprit &mdash; the engine's Nanite and Lumen systems are notoriously resource-intensive, and the Series S's more limited GPU memory and compute budget struggle to run them at higher resolutions.</p>
+
+        <p>The good news is that the 30 fps output is reportedly very stable, and the game is still enjoyable on Series S. The gameplay experience &mdash; combat, puzzles, exploration &mdash; is identical to the more powerful consoles. But if you're choosing between platforms, the Series S is clearly the weakest option in terms of visual presentation for this particular title.</p>
+
+        <div class="tip-box"><strong>Series S owners:</strong> The game is still a great time on this hardware. The lower resolution is most noticeable in large open-world areas of Gotham; interior environments and cutscenes tend to look better due to tighter scene framing.</div>
+
+        <h2>Steam Deck: Playable, but Demanding</h2>
+
+        <div class="platform-card">
+          <h4>Steam Deck</h4>
+          <div class="platform-verdict verdict-mid">&#8776; Moderate Performance</div>
+          <ul>
+            <li>Targets 30 fps, but struggles to maintain it consistently in open-world Gotham</li>
+            <li>CPU-heavy demands from the open-world environment are the primary bottleneck</li>
+            <li>More stable in enclosed mission areas and interiors</li>
+          </ul>
+        </div>
+
+        <p>According to the same <a href="https://twistedvoxel.com/lego-batman-legacy-of-the-dark-knight-ps5-comparison-shows-better-volumetric-lighting-than-xbox-series-x/" target="_blank" rel="noopener">multi-platform analysis by TwistedVoxel</a>, Steam Deck performance is less stable than console options, particularly in Gotham City's open-world sections. The handheld's CPU struggles with the heavy streaming and simulation demands of a large UE5 city environment &mdash; a known pain point for the platform with open-world UE5 titles in general. Frame rates reportedly dip below 30 fps in the densest parts of Gotham.</p>
+
+        <p>Valve's handheld is not an officially verified platform for Legacy of the Dark Knight (TT Games has not published a specific Steam Deck compatibility rating), so performance may improve with future patches or driver updates. Players who want a portable experience may want to wait for more community optimization data before committing.</p>
+
+        <h2>PC: The Best Experience, With the Right Hardware</h2>
+
+        <div class="platform-card">
+          <h4>PC</h4>
+          <div class="platform-verdict verdict-best">&#9733; Best Overall (Hardware Permitting)</div>
+          <ul>
+            <li>Full support for DLSS (NVIDIA), FSR (AMD), and XeSS (Intel) upscaling</li>
+            <li>Frame Generation supported, allowing high frame rates on mid-range hardware</li>
+            <li>RTX 3060 Ti reportedly handles 1440p on High settings with DLSS enabled at 60+ fps</li>
+            <li>Uncapped frame rate for high-refresh-rate monitors</li>
+          </ul>
+        </div>
+
+        <p>The PC version is where Legacy of the Dark Knight can truly shine, provided you have compatible hardware. As reported by <a href="https://videocardz.com/newz/lego-batman-pc-requirements-include-dlss-fsr-or-xess-with-frame-gen" target="_blank" rel="noopener">VideoCardz</a>, the game ships with DLSS, FSR, and XeSS support alongside Frame Generation &mdash; an unusually comprehensive upscaling suite that makes the UE5 engine's demands manageable across a wide range of hardware. An RTX 3060 Ti can reportedly handle 1440p on high settings with DLSS Quality mode enabled, suggesting solid optimization across the mid-range PC segment.</p>
+
+        <p>PC also offers the flexibility to dial settings up or down depending on your hardware, and the uncapped frame rate means 120+ fps is achievable for players with higher-end systems and matching monitors. If Gotham City has ever looked better than it does on a high-end PC running this game, we haven't seen it.</p>
+
+        <h2>The Unreal Engine 5 Factor</h2>
+
+        <p>Much of the performance story for Legacy of the Dark Knight comes down to TT Games' decision to build on Unreal Engine 5. Previous LEGO titles ran on TT Games' proprietary in-house engine, which was nimble and well-understood. UE5 brings vastly better visual capabilities &mdash; Lumen global illumination, Nanite virtualized geometry &mdash; but it's a genuinely demanding system that taxes even modern hardware.</p>
+
+        <p>The Series S situation in particular illustrates this tension. A LEGO game running at 720p native on current-gen hardware surprises many players, but UE5's rendering demands don't make exceptions for the game's brick-built aesthetic. The engine has to render all those volumetric lights, dynamic shadows, and physically-based materials regardless of whether the objects on screen are photorealistic characters or plastic minifigures.</p>
+
+        <div class="highlight-box"><strong>Looking ahead:</strong> TT Games may release performance patches as they optimize further. The game launched on May 22, 2026, and early post-launch patches often address platform-specific performance issues. We'll update this article as new patch notes land.</div>
+
+        <h2>Which Platform Should You Play On?</h2>
+
+        <p>If you own both a PS5 and an Xbox Series X, the PS5 has a marginal visual advantage in atmospheric lighting effects &mdash; though both deliver an excellent experience. Either console in Performance Mode at 60 fps is the sweet spot for gameplay. Xbox Series S owners get the full game but should be prepared for a notably scaled-back visual presentation. Steam Deck players may want to wait for patches or community settings guides. And PC players with a mid-range GPU and upscaling support get what is arguably the definitive version of the game.</p>
+
+        <p>Whatever platform you're on, the core game &mdash; the combat, the open-world Gotham, the Batman fan service, the LEGO humor &mdash; remains the same. Legacy of the Dark Knight's 84 on Metacritic reflects the whole experience, not just its pixels. The best version is whichever one you have access to.</p>
+
+        <div class="highlight-box"><strong>New to the game?</strong> Check out our <a href="/guides/beginners-guide.html">Beginner's Guide</a> for the essential tips that apply on every platform, or see our <a href="/guides/deluxe-edition-explained.html">Deluxe Edition breakdown</a> to decide which version to buy.</div>
+
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Sources</h3>
+        <a href="https://www.purexbox.com/news/2026/05/lego-batman-comparison-shows-difference-between-xbox-series-x-and-series-s" target="_blank" rel="noopener" class="sidebar-link">&#128279; Pure Xbox &mdash; Series X vs S Comparison</a>
+        <a href="https://twistedvoxel.com/lego-batman-legacy-of-the-dark-knight-ps5-comparison-shows-better-volumetric-lighting-than-xbox-series-x/" target="_blank" rel="noopener" class="sidebar-link">&#128279; TwistedVoxel &mdash; PS5 vs Xbox Analysis</a>
+        <a href="https://videocardz.com/newz/lego-batman-pc-requirements-include-dlss-fsr-or-xess-with-frame-gen" target="_blank" rel="noopener" class="sidebar-link">&#128279; VideoCardz &mdash; PC Requirements &amp; Upscaling</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>Latest Posts</h3>
+        <a href="lego-batman-redeem-codes-qr-rewards.html" class="sidebar-link">&#127981; Redeem Codes &amp; QR Rewards Guide</a>
+        <a href="developer-interview-roundup.html" class="sidebar-link">&#127919; Developer Insights: How It Was Built</a>
+        <a href="launch-day-reception.html" class="sidebar-link">&#127942; Launch Day Reception: 84 Metacritic</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="/guides/beginners-guide.html" class="sidebar-link">Beginner's Guide: 10 Tips</a>
+        <a href="/guides/all-characters-unlock.html" class="sidebar-link">All Characters &amp; Unlocks</a>
+        <a href="/guides/deluxe-edition-explained.html" class="sidebar-link">Deluxe Edition Explained</a>
+        <a href="/guides/pc-requirements.html" class="sidebar-link">PC System Requirements</a>
+        <a href="/guides/collectibles-guide.html" class="sidebar-link">Collectibles Guide</a>
+      </div>
+      <div class="sidebar-box" style="border-style: dashed;">
+        <div style="text-align:center; color: var(--text-secondary); font-size: 12px; padding: 30px 0;">Ad Space</div>
+      </div>
+      <div class="sidebar-box">
+        <h3>Game Info</h3>
+        <div style="font-size: 13px; color: var(--text-secondary); line-height: 2;">
+          <div><strong style="color:var(--text);">Developer:</strong> TT Games</div>
+          <div><strong style="color:var(--text);">Publisher:</strong> Warner Bros. Games</div>
+          <div><strong style="color:var(--text);">Engine:</strong> Unreal Engine 5</div>
+          <div><strong style="color:var(--text);">Release:</strong> May 22, 2026</div>
+          <div><strong style="color:var(--text);">Platforms:</strong> PS5, Xbox Series X|S, PC</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+  <script>document.getElementById('menuToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});</script>
+</body>
+</html>

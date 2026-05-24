@@ -1,236 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BNQ7RJDY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F7BNQ7RJDY');
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trophy Guide & Achievements: Roadmap to Platinum - BrickHeroGuide</title>
-  <meta name="description" content="Complete trophy and achievement guide for LEGO Batman: Legacy of the Dark Knight. Detailed roadmap and tips for every trophy.">
-  <meta name="keywords" content="LEGO Batman Legacy trophy guide, achievements, platinum trophy, 100% completion">
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F7BNQ7RJDY');</script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trophy & Achievement Guide — LEGO Batman Legacy of the Dark Knight - BrickHeroGuide</title>
+  <meta name="description" content="Complete trophy and achievement guide for LEGO Batman: Legacy of the Dark Knight. 52 PS5 trophies including Platinum 'I am Batman', 51 Xbox achievements. No missables — full strategy included.">
+  <meta name="keywords" content="LEGO Batman Legacy trophies, achievement guide, platinum trophy I am Batman, PS5 trophies, Xbox achievements, LEGO Batman 2026">
   <link rel="canonical" href="https://brickheroguide.com/guides/trophy-guide.html">
-  <meta property="og:title" content="LEGO Batman Legacy Trophy Guide">
-  <meta property="og:description" content="Roadmap and tips for every trophy and achievement in LEGO Batman: Legacy of the Dark Knight.">
+  <meta property="og:title" content="Trophy & Achievement Guide — LEGO Batman Legacy of the Dark Knight">
+  <meta property="og:description" content="52 PS5 trophies, 51 Xbox achievements, Platinum called 'I am Batman'. No missables. Full strategy inside.">
   <meta property="og:type" content="article">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #0f1117;
-      --bg-card: #1a1d27;
-      --bg-card-hover: #222633;
-      --text: #e8eaed;
-      --text-secondary: #9aa0ab;
-      --accent: #fbbf24;
-      --accent-hover: #f59e0b;
-      --accent-dim: rgba(251,191,36,0.12);
-      --border: #2a2e3a;
-      --max-width: 1100px;
-      --radius: 10px;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-hover); }
-
-    /* Nav */
-    .nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(15,17,23,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-inner {
-      max-width: var(--max-width); margin: 0 auto; padding: 0 20px;
-      display: flex; align-items: center; justify-content: space-between; height: 56px;
-    }
-    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
-    .logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 24px; list-style: none; }
-    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
-    .nav-links a:hover { color: var(--accent); }
-    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
-
-    /* Layout */
-    .page-layout {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 32px 20px 60px;
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 40px;
-    }
-
-    /* Breadcrumb */
-    .breadcrumb {
-      font-size: 13px;
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-    }
-    .breadcrumb a { color: var(--text-secondary); }
-    .breadcrumb a:hover { color: var(--accent); }
-
-    /* Article */
-    .article-header { margin-bottom: 28px; }
-    .article-tag {
-      display: inline-block;
-      font-size: 10px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px;
-      background: #3b82f620; color: #60a5fa; margin-bottom: 10px;
-    }
-    .article-header h1 {
-      font-size: clamp(24px, 4vw, 34px);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 10px;
-    }
-    .article-meta {
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-
-    /* Sidebar */
-    .sidebar { display: flex; flex-direction: column; gap: 20px; }
-    .sidebar-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
-    }
-    .sidebar-box h3 {
-      font-size: 14px; font-weight: 700; margin-bottom: 12px;
-      padding-bottom: 8px; border-bottom: 1px solid var(--border);
-    }
-    .sidebar-link {
-      display: block;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-    .sidebar-link:last-child { border: none; }
-    .sidebar-link:hover { color: var(--accent); }
-
-    /* Footer */
-    .footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 20px;
-      text-align: center;
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
-    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
-    .footer-links a { color: var(--text-secondary); font-size: 13px; }
-    .footer-copy { font-size: 12px; color: var(--text-secondary); }
-    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
-      .menu-toggle { display: block; }
-      .page-layout { grid-template-columns: 1fr; gap: 32px; }
-    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--bg:#0f1117;--bg-card:#1a1d27;--text:#e8eaed;--text-secondary:#9aa0ab;--accent:#fbbf24;--accent-hover:#f59e0b;--accent-dim:rgba(251,191,36,0.12);--border:#2a2e3a;--max-width:1100px;--radius:10px;}
+    html{scroll-behavior:smooth;}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;}
+    a{color:var(--accent);text-decoration:none;}a:hover{color:var(--accent-hover);}
+    .nav{position:sticky;top:0;z-index:100;background:rgba(15,17,23,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .nav-inner{max-width:var(--max-width);margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:56px;}
+    .logo{font-size:18px;font-weight:800;color:var(--text);display:flex;align-items:center;gap:8px;}.logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:24px;list-style:none;}.nav-links a{color:var(--text-secondary);font-size:14px;font-weight:500;}.nav-links a:hover{color:var(--accent);}
+    .menu-toggle{display:none;background:none;border:none;color:var(--text);font-size:24px;cursor:pointer;}
+    .page-layout{max-width:var(--max-width);margin:0 auto;padding:32px 20px 60px;display:grid;grid-template-columns:1fr 280px;gap:40px;}
+    .breadcrumb{font-size:13px;color:var(--text-secondary);margin-bottom:16px;}.breadcrumb a{color:var(--text-secondary);}.breadcrumb a:hover{color:var(--accent);}
+    .article-header{margin-bottom:28px;}
+    .article-tag{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;padding:3px 10px;border-radius:6px;background:#a855f720;color:#c084fc;margin-bottom:10px;}
+    .article-header h1{font-size:clamp(24px,4vw,34px);font-weight:800;line-height:1.2;margin-bottom:10px;}
+    .article-meta{font-size:13px;color:var(--text-secondary);}
+    .quick-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:24px 0;}
+    .stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-align:center;}
+    .stat-value{font-size:26px;font-weight:800;color:var(--accent);}.stat-label{font-size:12px;color:var(--text-secondary);margin-top:4px;}
+    .toc{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px 22px;margin-bottom:28px;}
+    .toc-title{font-size:14px;font-weight:700;margin-bottom:10px;}
+    .toc ol{padding-left:20px;display:flex;flex-direction:column;gap:6px;}.toc li{font-size:14px;}.toc a{color:var(--text-secondary);}.toc a:hover{color:var(--accent);}
+    .content h2{font-size:22px;font-weight:700;margin:36px 0 14px;padding-top:20px;border-top:1px solid var(--border);}
+    .content h3{font-size:17px;font-weight:600;margin:24px 0 10px;color:var(--accent);}
+    .content p{margin-bottom:16px;color:var(--text);font-size:15.5px;}
+    .content ul,.content ol{margin:0 0 16px 20px;display:flex;flex-direction:column;gap:6px;}.content li{font-size:15px;}
+    .tip-box{background:var(--accent-dim);border-left:3px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0;padding:14px 18px;margin:20px 0;font-size:14px;}.tip-box strong{color:var(--accent);}
+    .highlight-box{background:rgba(59,130,246,0.08);border-left:3px solid #3b82f6;border-radius:0 var(--radius) var(--radius) 0;padding:14px 18px;margin:20px 0;font-size:14px;}.highlight-box strong{color:#60a5fa;}
+    .trophy-plat{background:linear-gradient(135deg,#2a1f3d,#1a1d27);border:1px solid #a855f740;border-radius:var(--radius);padding:20px 24px;margin:16px 0;}
+    .trophy-plat h4{font-size:18px;font-weight:800;color:#c084fc;margin-bottom:6px;}
+    .trophy-plat p{font-size:14px;margin-bottom:0;}
+    table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;}
+    th{background:var(--bg-card);color:var(--accent);text-align:left;padding:12px 16px;border-bottom:2px solid var(--border);font-weight:700;}
+    td{padding:12px 16px;border-bottom:1px solid var(--border);}
+    tr:nth-child(even) td{background:rgba(26,29,39,0.5);}
+    .badge{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:4px;margin-right:4px;}
+    .badge-plat{background:#a855f730;color:#c084fc;}
+    .badge-gold{background:#f59e0b20;color:#fbbf24;}
+    .badge-silver{background:#6b728020;color:#9ca3af;}
+    .badge-bronze{background:#92400e20;color:#d97706;}
+    .ad-inline{background:var(--bg-card);border:1px dashed var(--border);border-radius:var(--radius);padding:16px;text-align:center;color:var(--text-secondary);font-size:12px;margin:28px 0;}
+    .sidebar{display:flex;flex-direction:column;gap:20px;}
+    .sidebar-box{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;}
+    .sidebar-box h3{font-size:14px;font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+    .sidebar-link{display:block;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--text-secondary);}.sidebar-link:last-child{border:none;}.sidebar-link:hover{color:var(--accent);}
+    .footer{border-top:1px solid var(--border);padding:32px 20px;text-align:center;max-width:var(--max-width);margin:0 auto;}
+    .footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:16px;flex-wrap:wrap;}.footer-links a{color:var(--text-secondary);font-size:13px;}
+    .footer-copy{font-size:12px;color:var(--text-secondary);}
+    .footer-disclaimer{font-size:11px;color:#555;max-width:600px;margin:12px auto 0;line-height:1.5;}
+    @media(max-width:768px){.nav-links{display:none;}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:56px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:16px 20px;gap:16px;}.menu-toggle{display:block;}.page-layout{grid-template-columns:1fr;gap:32px;}}
   </style>
 </head>
 <body>
+  <nav class="nav"><div class="nav-inner">
+    <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+    <ul class="nav-links" id="navLinks"><li><a href="/#guides">Guides</a></li><li><a href="/#walkthrough">Walkthrough</a></li><li><a href="/#collectibles">Collectibles</a></li><li><a href="/#characters">Characters</a></li><li><a href="/#tips">Tips</a></li><li><a href="/blog/">Blog</a></li></ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+  </div></nav>
 
-  <!-- Nav -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/#guides">Guides</a></li>
-        <li><a href="/#walkthrough">Walkthrough</a></li>
-        <li><a href="/#collectibles">Collectibles</a></li>
-        <li><a href="/#characters">Characters</a></li>
-        <li><a href="/#tips">Tips</a></li>
-        <li><a href="/blog/">Blog</a></li>
-      </ul>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+  <div class="page-layout"><main>
+    <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/#guides">Guides</a> &rsaquo; Trophy &amp; Achievement Guide</div>
+    <div class="article-header">
+      <span class="article-tag">Trophies &amp; Achievements</span>
+      <h1>Trophy &amp; Achievement Guide — LEGO Batman: Legacy of the Dark Knight</h1>
+      <div class="article-meta">Last updated: May 24, 2026 &middot; 7 min read</div>
     </div>
-  </nav>
 
-  <div class="page-layout">
-    <main>
-      <div class="breadcrumb">
-        <a href="/">Home</a> &rsaquo; Achievements &amp; Trophies Overview
+    <div class="quick-stats">
+      <div class="stat-card"><div class="stat-value">52</div><div class="stat-label">PS5 Trophies</div></div>
+      <div class="stat-card"><div class="stat-value">51</div><div class="stat-label">Xbox Achievements</div></div>
+      <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Missable Trophies</div></div>
+      <div class="stat-card"><div class="stat-value">&#127942;</div><div class="stat-label">Platinum Available</div></div>
+    </div>
+
+    <div class="toc"><div class="toc-title">&#128220; Table of Contents</div>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#platinum">Platinum Trophy: "I am Batman"</a></li>
+        <li><a href="#breakdown">Trophy Breakdown by Type</a></li>
+        <li><a href="#categories">Trophy Categories</a></li>
+        <li><a href="#strategy">Recommended Strategy</a></li>
+        <li><a href="#tips">Key Tips</a></li>
+      </ol>
+    </div>
+
+    <div class="content">
+      <p>LEGO Batman: Legacy of the Dark Knight is an excellent game for trophy hunters and achievement chasers. The list has 52 trophies on PS5 (including a Platinum) and 51 achievements on Xbox, with zero missable entries — you can replay any mission or revisit any area to clean up whatever you skipped. The list skews toward open-world completion and collectible hunting rather than skill-based challenges, making it very achievable for dedicated players.</p>
+
+      <h2 id="overview">Overview</h2>
+      <p>The PS5 trophy list breaks down as follows: 1 Platinum, 3 Gold, 4 Silver, and 44 Bronze trophies. There is no difficulty-related trophy — completing the game on Classic earns the same trophy access as Dark Knight mode. This means you can play on any difficulty you prefer without affecting your completion progress. According to multiple post-launch guides including <a href="https://gamerant.com/lego-batman-legacy-dark-knight-all-achievements-trophy-guide/" target="_blank" rel="noopener">Game Rant</a> and <a href="https://happythumbsgaming.com/2026/05/lego-batman-legacy-of-the-dark-knight-trophy-achievement-guide-htg/" target="_blank" rel="noopener">Happy Thumbs Gaming</a>, the list is considered fair and well-suited to the LEGO game format.</p>
+
+      <h2 id="platinum">Platinum Trophy: "I am Batman"</h2>
+      <div class="trophy-plat">
+        <h4>&#127942; "I am Batman" — Platinum</h4>
+        <p>Unlock all other 51 trophies to earn the Platinum. The name is a nod to one of Batman's most iconic lines, fitting for a game that celebrates 85+ years of the Dark Knight across every medium. Estimated completion time based on community guides is 25–40 hours for a thorough first playthrough plus mop-up.</p>
       </div>
 
-      <div class="article-header">
-        <span class="article-tag">Trophies</span>
-        <h1>Achievements &amp; Trophies Overview</h1>
-        <div class="article-meta">
-          Last updated: May 19, 2026
-        </div>
+      <h2 id="breakdown">Trophy Breakdown by Type</h2>
+      <table>
+        <thead><tr><th>Type</th><th>Count (PS5)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td><span class="badge badge-plat">Platinum</span> "I am Batman"</td><td>1</td><td>Unlock all other trophies</td></tr>
+          <tr><td><span class="badge badge-gold">Gold</span></td><td>3</td><td>Major milestones (100% completion, full upgrade tree, etc.)</td></tr>
+          <tr><td><span class="badge badge-silver">Silver</span></td><td>4</td><td>Significant story and open-world achievements</td></tr>
+          <tr><td><span class="badge badge-bronze">Bronze</span></td><td>44</td><td>Story chapters, collectibles, side activities, combat feats</td></tr>
+        </tbody>
+      </table>
+
+      <div class="ad-inline">Advertisement</div>
+
+      <h2 id="categories">Trophy Categories</h2>
+      <h3>Story Trophies</h3>
+      <p>One trophy per story chapter — 6 chapters means 6 automatic story trophies simply by completing the campaign. These cannot be missed and require no additional effort.</p>
+
+      <h3>Open-World &amp; Side Activity Trophies</h3>
+      <p>The majority of the list focuses on Gotham's open world. These include clearing all side activities in a district (zoo animals, AR Trials, Riddler Puzzle Rooms), finding all Gold Bricks from side content, and completing the Batcave's upgrade progression. According to <a href="https://www.thegamer.com/lego-batman-legacy-of-the-dark-knight-achievement-trophy-unlock-guide/" target="_blank" rel="noopener">The Gamer</a>, the harder trophies ask you to clear all Gotham side activities, collect every major collectible, unlock all vehicles, and fully explore the open world.</p>
+
+      <h3>Collectible Trophies</h3>
+      <p>Several trophies are tied to collecting Red Bricks, Batcave Minikits, WayneTech Caches, and reaching specific Stud milestones. See our <a href="collectibles-guide.html">Collectibles Guide</a> for locations.</p>
+
+      <h3>Combat Trophies</h3>
+      <p>A handful of Bronze trophies require specific combat feats — performing stealth takedowns, executing counter chains of a certain length, defeating enemies with particular gadgets, and so on. These can be targeted during free-roam rather than requiring specific missions.</p>
+
+      <h3>Character &amp; Suit Trophies</h3>
+      <p>Some trophies reward unlocking specific characters, equipping film-inspired skins, or filling out the Batcave wardrobe. These overlap naturally with the suit-collection and mission-completion process.</p>
+
+      <h2 id="strategy">Recommended Strategy</h2>
+      <ol>
+        <li><strong>Play through the full story on any difficulty.</strong> Collect casually as you go but do not stress about missing items — nothing is missable. Story completion unlocks all traversal abilities needed for mop-up.</li>
+        <li><strong>Find Stud Multiplier Red Bricks immediately after each chapter.</strong> These dramatically reduce the Stud grind required for shop suits and the remaining Gold and Silver trophies.</li>
+        <li><strong>Tackle open-world activities district by district.</strong> The map clearly shows completion percentage per district. Work through each zone completely before moving on.</li>
+        <li><strong>Replay missions via the Batcomputer</strong> for missed Red Bricks and Gold Brick chapter objectives.</li>
+        <li><strong>Clean up combat trophies during free roam.</strong> The open world provides unlimited opportunities for combat feat trophies without needing to replay specific missions.</li>
+      </ol>
+
+      <h2 id="tips">Key Tips</h2>
+      <div class="tip-box"><strong>No missables at all.</strong> The Batcomputer in your Batcave lets you replay every mission freely. If you finish a mission without a Red Brick or challenge objective, just replay it — there is no penalty and no time limit.</div>
+      <div class="tip-box"><strong>Difficulty does not matter for trophies.</strong> Play on Classic if you want a relaxed experience. Play on Dark Knight if you enjoy a challenge. The Platinum is available either way.</div>
+      <div class="highlight-box"><strong>External resources:</strong> <a href="https://gamerant.com/lego-batman-legacy-dark-knight-all-achievements-trophy-guide/" target="_blank" rel="noopener">Game Rant's full trophy list</a> and <a href="https://www.keengamer.com/articles/guides/lego-batman-legacy-of-the-dark-knight-trophy-list-and-achievements-guide/" target="_blank" rel="noopener">Keen Gamer's trophy guide</a> provide detailed unlock conditions for every individual trophy.</div>
+
+      <h2>Related Guides</h2>
+      <ul>
+        <li><a href="100-percent-completion.html">100% Completion Checklist</a></li>
+        <li><a href="collectibles-guide.html">Complete Collectibles Guide</a></li>
+        <li><a href="stud-farming-guide.html">Stud Farming Guide</a></li>
+        <li><a href="suits-abilities-guide.html">All Suits &amp; How to Unlock</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <aside class="sidebar">
+    <div class="sidebar-box">
+      <h3>Trophy Summary</h3>
+      <div style="font-size:13px;color:var(--text-secondary);line-height:2.2;">
+        <div><strong style="color:var(--text);">PS5 total:</strong> 52 (incl. Platinum)</div>
+        <div><strong style="color:var(--text);">Xbox total:</strong> 51 achievements</div>
+        <div><strong style="color:var(--text);">Platinum:</strong> "I am Batman"</div>
+        <div><strong style="color:var(--text);">Missable:</strong> None</div>
+        <div><strong style="color:var(--text);">Difficulty req:</strong> None</div>
+        <div><strong style="color:var(--text);">Est. time:</strong> 25–40 hrs</div>
       </div>
-
-      <div class="content">
-        <p>The full trophy and achievement list for LEGO Batman: Legacy of the Dark Knight is <strong>not yet available</strong>. Trophy lists typically surface when the game launches and players begin unlocking them on PlayStation Network, Xbox Live, and Steam.</p>
-
-        <h2>When to Expect the Trophy List</h2>
-        <p>With the official launch date set for <strong>May 22, 2026</strong>, the complete trophy/achievement list should become available shortly after launch. Trophy-tracking sites like PSNProfiles, TrueAchievements, and Exophase typically have lists within 24-48 hours of a game's release.</p>
-
-        <h2>What to Expect from a LEGO Game Trophy List</h2>
-        <p>Based on previous LEGO games, the trophy list will likely include:</p>
-        <ul>
-          <li>Story completion trophies (one per mission or chapter)</li>
-          <li>Collectible-related trophies (finding all Minikits, Red Bricks, etc.)</li>
-          <li>100% completion trophy (the "Platinum" for PlayStation players)</li>
-          <li>Character unlock trophies</li>
-          <li>Stud-collection milestones</li>
-        </ul>
-
-        <div class="tip-box"><strong>Check back after May 22:</strong> A complete trophy guide with strategies for every achievement will be published here once the full list is available.</div>
-
-        <h2>Critical Reception</h2>
-        <p>Deluxe Edition early access began on May 19, 2026. With the full launch on May 22, reviews and trophy lists will be available shortly after. Check back for our complete trophy guide once the full list is published.</p>
-
-        <h2>Related Guides</h2>
-        <ul>
-          <li><a href="100-percent-completion.html">100% Completion Overview</a></li>
-          <li><a href="collectibles-guide.html">Collectibles Overview</a></li>
-          <li><a href="all-characters-unlock.html">All Characters &amp; How to Unlock</a></li>
-        </ul>
-      </div>
-    </main>
-
-    <aside class="sidebar">
-      <div class="sidebar-box">
-        <h3>Useful Links</h3>
-        <a href="100-percent-completion.html" class="sidebar-link">100% Roadmap</a>
-        <a href="collectibles-guide.html" class="sidebar-link">Collectibles Guide</a>
-        <a href="all-characters-unlock.html" class="sidebar-link">Character Unlocks</a>
-      </div>
-    </aside>
-  </div>
+    </div>
+    <div class="sidebar-box">
+      <h3>Related Guides</h3>
+      <a href="100-percent-completion.html" class="sidebar-link">100% Completion</a>
+      <a href="collectibles-guide.html" class="sidebar-link">Collectibles Guide</a>
+      <a href="stud-farming-guide.html" class="sidebar-link">Stud Farming</a>
+      <a href="suits-abilities-guide.html" class="sidebar-link">All Suits Guide</a>
+      <a href="beginners-guide.html" class="sidebar-link">Beginner's Guide</a>
+    </div>
+    <div class="sidebar-box" style="border-style:dashed;"><div style="text-align:center;color:var(--text-secondary);font-size:12px;padding:30px 0;">Ad Space</div></div>
+  </aside></div>
 
   <footer class="footer">
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../privacy.html">Privacy Policy</a>
-      <a href="../contact.html">Contact</a>
-    </div>
+    <div class="footer-links"><a href="/">Home</a><a href="../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../contact.html">Contact</a></div>
     <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
   </footer>
-
-  <script>
-    document.getElementById('menuToggle').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-  </script>
-</body>
-</html>
+  <script>document.getElementById('menuToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});</script>
+</body></html>

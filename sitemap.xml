@@ -116,6 +116,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://brickheroguide.com/guides/difficulty-modes-guide.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://brickheroguide.com/guides/gotham-map-guide.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -126,6 +132,12 @@
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brickheroguide.com/guides/mayhem-collection-dlc.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brickheroguide.com/guides/mission-1-walkthrough.html</loc>
@@ -162,6 +174,12 @@
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brickheroguide.com/guides/stud-farming-guide.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brickheroguide.com/guides/suits-abilities-guide.html</loc>

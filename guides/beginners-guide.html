@@ -7,366 +7,438 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-F7BNQ7RJDY');
 </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beginner's Guide: 10 Things to Know Before You Start - BrickHeroGuide</title>
-  <meta name="description" content="New to LEGO Batman: Legacy of the Dark Knight? Here are 10 essential tips every beginner should know before jumping into Gotham City.">
-  <meta name="keywords" content="LEGO Batman Legacy beginner guide, tips, tricks, how to play, getting started">
-  <link rel="canonical" href="https://brickheroguide.com/guides/beginners-guide.html">
-  <meta property="og:title" content="Beginner's Guide: 10 Things to Know - LEGO Batman Legacy">
-  <meta property="og:description" content="10 essential tips every beginner should know before jumping into LEGO Batman: Legacy of the Dark Knight.">
-  <meta property="og:type" content="article">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #0f1117;
-      --bg-card: #1a1d27;
-      --bg-card-hover: #222633;
-      --text: #e8eaed;
-      --text-secondary: #9aa0ab;
-      --accent: #fbbf24;
-      --accent-hover: #f59e0b;
-      --accent-dim: rgba(251,191,36,0.12);
-      --border: #2a2e3a;
-      --max-width: 1100px;
-      --radius: 10px;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-hover); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beginner's Guide - LEGO Batman: Legacy of the Dark Knight | BrickHeroGuide</title>
+<meta name="description" content="Essential beginner tips for LEGO Batman: Legacy of the Dark Knight — difficulty modes explained, Detective Mode, Red Bricks, Grapple Slam, and how to get started the right way.">
+<link rel="canonical" href="https://brickheroguide.com/guides/beginners-guide.html">
+<meta property="og:title" content="Beginner's Guide — LEGO Batman: Legacy of the Dark Knight">
+<meta property="og:description" content="15 essential tips for new players: difficulty modes, Detective Mode, Red Bricks, combat tricks, and how to build your Stud income fast.">
+<meta property="og:url" content="https://brickheroguide.com/guides/beginners-guide.html">
+<meta property="og:type" content="article">
+<style>
+  :root {
+    --bg: #0f1117;
+    --bg-card: #1a1d27;
+    --bg-card2: #1e2130;
+    --accent: #fbbf24;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: #2d3748;
+    --green: #10b981;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+    --red: #ef4444;
+    --orange: #f97316;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .nav-logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 700; font-size: 1.1rem; color: var(--text); }
+  .nav-logo .hero { color: var(--accent); }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
+  .nav-links a:hover { color: var(--accent); }
+  .hamburger { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+  @media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; gap: 1rem; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: block; }
+  }
+  .breadcrumb { padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--text-muted); max-width: 1100px; margin: 0 auto; }
+  .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb span { margin: 0 0.4rem; }
+  .article-header { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 2rem; }
+  .tag { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+  .tag-tips { background: rgba(251,191,36,0.15); color: var(--accent); border: 1px solid rgba(251,191,36,0.3); }
+  .article-header h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+  .article-meta { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+  .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .stat-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; text-align: center; }
+  .stat-box .num { font-size: 1.8rem; font-weight: 800; color: var(--accent); line-height: 1; }
+  .stat-box .lbl { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .page-layout { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 3rem; display: grid; grid-template-columns: 1fr 280px; gap: 2rem; }
+  @media (max-width: 768px) { .page-layout { grid-template-columns: 1fr; } }
+  .content h2 { font-size: 1.4rem; font-weight: 700; margin: 2rem 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+  .content h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; color: var(--accent); }
+  .content p { margin-bottom: 1rem; }
+  .content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+  .content li { margin-bottom: 0.4rem; }
+  .content a { color: var(--accent); text-decoration: none; }
+  .content a:hover { text-decoration: underline; }
+  .toc { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; margin-bottom: 2rem; }
+  .toc h3 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.75rem; }
+  .toc ol { padding-left: 1.25rem; }
+  .toc li { margin-bottom: 0.35rem; }
+  .toc a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+  .toc a:hover { color: var(--accent); }
 
-    /* Nav */
-    .nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(15,17,23,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-inner {
-      max-width: var(--max-width); margin: 0 auto; padding: 0 20px;
-      display: flex; align-items: center; justify-content: space-between; height: 56px;
-    }
-    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
-    .logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 24px; list-style: none; }
-    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
-    .nav-links a:hover { color: var(--accent); }
-    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+  /* DIFFICULTY CARDS */
+  .diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1rem 0 2rem; }
+  .diff-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; }
+  .diff-card.classic { border-top: 3px solid var(--green); }
+  .diff-card.caped { border-top: 3px solid var(--accent); }
+  .diff-card.dark { border-top: 3px solid var(--red); }
+  .diff-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 0.4rem; }
+  .diff-label.classic { color: var(--green); }
+  .diff-label.caped { color: var(--accent); }
+  .diff-label.dark { color: var(--red); }
+  .diff-card h3 { font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 0.5rem; }
+  .diff-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
+  .diff-rec { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border); font-size: 0.78rem; font-weight: 600; }
 
-    /* Layout */
-    .page-layout {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 32px 20px 60px;
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 40px;
-    }
+  /* TIP CARDS */
+  .tip-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--accent); color: #000; border-radius: 50%; font-weight: 800; font-size: 0.85rem; margin-right: 0.6rem; flex-shrink: 0; }
+  .tip-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 0.85rem; display: flex; align-items: flex-start; gap: 0; scroll-margin-top: 70px; }
+  .tip-content { flex: 1; }
+  .tip-content strong { color: var(--text); display: block; margin-bottom: 0.25rem; }
+  .tip-content p { font-size: 0.88rem; color: var(--text-muted); margin: 0; }
 
-    /* Breadcrumb */
-    .breadcrumb {
-      font-size: 13px;
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-    }
-    .breadcrumb a { color: var(--text-secondary); }
-    .breadcrumb a:hover { color: var(--accent); }
+  .highlight-box { background: rgba(251,191,36,0.06); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 0.9rem 1.1rem; margin: 1rem 0; }
+  .highlight-box strong { color: var(--accent); }
+  .highlight-box p { font-size: 0.88rem; margin: 0; color: var(--text-muted); }
 
-    /* Article */
-    .article-header { margin-bottom: 28px; }
-    .article-tag {
-      display: inline-block;
-      font-size: 10px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px;
-      background: #f59e0b20; color: #fbbf24; margin-bottom: 10px;
-    }
-    .article-header h1 {
-      font-size: clamp(24px, 4vw, 34px);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 10px;
-    }
-    .article-meta {
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-
-    /* Table of Contents */
-    .toc {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px 22px;
-      margin-bottom: 28px;
-    }
-    .toc-title {
-      font-size: 14px; font-weight: 700; margin-bottom: 10px;
-      display: flex; align-items: center; gap: 6px;
-    }
-    .toc ol {
-      padding-left: 20px;
-      display: flex; flex-direction: column; gap: 6px;
-    }
-    .toc li { font-size: 14px; }
-    .toc a { color: var(--text-secondary); }
-    .toc a:hover { color: var(--accent); }
-
-    /* Content */
-    .content h2 {
-      font-size: 22px; font-weight: 700;
-      margin: 36px 0 14px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-    }
-    .content h3 {
-      font-size: 17px; font-weight: 600;
-      margin: 24px 0 10px;
-      color: var(--accent);
-    }
-    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
-    .content ul, .content ol {
-      margin: 0 0 16px 20px;
-      display: flex; flex-direction: column; gap: 6px;
-    }
-    .content li { font-size: 15px; }
-
-    .tip-box {
-      background: var(--accent-dim);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      padding: 14px 18px;
-      margin: 20px 0;
-      font-size: 14px;
-    }
-    .tip-box strong { color: var(--accent); }
-
-    .warning-box {
-      background: rgba(239, 68, 68, 0.08);
-      border-left: 3px solid #ef4444;
-      border-radius: 0 var(--radius) var(--radius) 0;
-      padding: 14px 18px;
-      margin: 20px 0;
-      font-size: 14px;
-    }
-    .warning-box strong { color: #ef4444; }
-
-    /* Ad in content */
-    .ad-inline {
-      background: var(--bg-card);
-      border: 1px dashed var(--border);
-      border-radius: var(--radius);
-      padding: 16px;
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 12px;
-      margin: 28px 0;
-    }
-
-    /* Sidebar */
-    .sidebar { display: flex; flex-direction: column; gap: 20px; }
-    .sidebar-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
-    }
-    .sidebar-box h3 {
-      font-size: 14px; font-weight: 700; margin-bottom: 12px;
-      padding-bottom: 8px; border-bottom: 1px solid var(--border);
-    }
-    .sidebar-link {
-      display: block;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-    .sidebar-link:last-child { border: none; }
-    .sidebar-link:hover { color: var(--accent); }
-
-    /* Footer */
-    .footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 20px;
-      text-align: center;
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
-    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
-    .footer-links a { color: var(--text-secondary); font-size: 13px; }
-    .footer-copy { font-size: 12px; color: var(--text-secondary); }
-    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
-      .menu-toggle { display: block; }
-      .page-layout { grid-template-columns: 1fr; gap: 32px; }
-    }
-  </style>
+  .sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  .sidebar-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; }
+  .sidebar-card h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 1rem; }
+  .sidebar-card ul { list-style: none; padding: 0; }
+  .sidebar-card li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
+  .sidebar-card li:last-child { border-bottom: none; }
+  .sidebar-card a { color: var(--text-muted); text-decoration: none; }
+  .sidebar-card a:hover { color: var(--accent); }
+  footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; }
+  footer .footer-links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+  footer a { color: var(--text-muted); text-decoration: none; font-size: 0.88rem; }
+  footer a:hover { color: var(--accent); }
+  footer p { color: var(--text-muted); font-size: 0.8rem; }
+</style>
 </head>
 <body>
 
-  <!-- Nav -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/#guides">Guides</a></li>
-        <li><a href="/#walkthrough">Walkthrough</a></li>
-        <li><a href="/#collectibles">Collectibles</a></li>
-        <li><a href="/#characters">Characters</a></li>
-        <li><a href="/#tips">Tips</a></li>
-        <li><a href="/blog/">Blog</a></li>
-      </ul>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <span>⚙️</span>
+    Brick<span class="hero">Hero</span>Guide
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#guides">Guides</a></li>
+    <li><a href="../blog/index.html">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+</nav>
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a><span>›</span>
+  <a href="../index.html#guides">Guides</a><span>›</span>
+  Beginner's Guide
+</div>
+
+<div class="article-header">
+  <div class="tag tag-tips">💡 Tips &amp; Tricks</div>
+  <h1>Beginner's Guide — LEGO Batman: Legacy of the Dark Knight</h1>
+  <div class="article-meta">
+    <span>📅 Updated May 22, 2026</span>
+    <span>⏱ 9 min read</span>
+    <span>🎮 All Platforms</span>
+  </div>
+  <div class="quick-stats">
+    <div class="stat-box"><div class="num">3</div><div class="lbl">Difficulty Modes</div></div>
+    <div class="stat-box"><div class="num">23</div><div class="lbl">Red Bricks</div></div>
+    <div class="stat-box"><div class="num">R3</div><div class="lbl">Detective Mode Button</div></div>
+    <div class="stat-box"><div class="num">0</div><div class="lbl">Missables</div></div>
+  </div>
+</div>
+
+<div class="page-layout">
+  <div class="content">
+
+    <div class="toc">
+      <h3>📋 Table of Contents</h3>
+      <ol>
+        <li><a href="#difficulty">Choose Your Difficulty Mode</a></li>
+        <li><a href="#detective">Detective Mode — Use It Constantly</a></li>
+        <li><a href="#red-bricks">Red Bricks — Your Priority</a></li>
+        <li><a href="#combat">Combat Fundamentals</a></li>
+        <li><a href="#studs">Building Your Stud Income</a></li>
+        <li><a href="#characters">Character Switching Tips</a></li>
+        <li><a href="#tips15">15 Essential Tips</a></li>
+      </ol>
     </div>
-  </nav>
 
-  <div class="page-layout">
-    <!-- Main Content -->
-    <main>
-      <div class="breadcrumb">
-        <a href="/">Home</a> &rsaquo; <a href="/#guides">Guides</a> &rsaquo; Beginner's Guide
+    <p>LEGO Batman: Legacy of the Dark Knight is the most mechanically ambitious LEGO game TT Games has made — with Arkham-inspired combat, a full open-world Gotham, and a suite of gadgets that feed into environmental puzzles. Here's everything you need to know before you start, to avoid the most common beginner mistakes.</p>
+
+    <h2 id="difficulty">Choose Your Difficulty Mode</h2>
+    <p>When you first start the game, you'll choose one of three difficulty modes. You can change this at any time from the pause menu.</p>
+
+    <div class="diff-grid">
+      <div class="diff-card classic">
+        <div class="diff-label classic">Easiest</div>
+        <h3>⭐ Classic</h3>
+        <p>Infinite respawns. Minimal enemy variety — no shield-bearing or advanced enemy types. Crowd sizes are kept small. The traditional LEGO experience with zero punishment for failing.</p>
+        <div class="diff-rec" style="color: var(--green);">Recommended for: Young players, casual play</div>
       </div>
-
-      <div class="article-header">
-        <span class="article-tag">Tips &amp; Tricks</span>
-        <h1>Beginner's Guide: What to Know Before You Play</h1>
-        <div class="article-meta">
-          Last updated: May 19, 2026 &middot; Based on pre-release coverage and confirmed game details
-        </div>
+      <div class="diff-card caped">
+        <div class="diff-label caped">Default</div>
+        <h3>🦇 Caped Crusader</h3>
+        <p>Unlimited lives but significantly larger crowds with mixed advanced enemy types — shield bearers, counter-specialists, and gadget-required encounters. Combat requires reading enemy indicators.</p>
+        <div class="diff-rec" style="color: var(--accent);">Recommended for: Most players — start here</div>
       </div>
-
-      <!-- Table of Contents -->
-      <div class="toc">
-        <div class="toc-title">&#128220; Table of Contents</div>
-        <ol>
-          <li><a href="#tip1">Understand the Combat System</a></li>
-          <li><a href="#tip2">Master Traversal in Open-World Gotham</a></li>
-          <li><a href="#tip3">Use Each Character's Unique Abilities</a></li>
-          <li><a href="#tip4">Explore the Open World Between Missions</a></li>
-          <li><a href="#tip5">Customize the Batcave</a></li>
-          <li><a href="#tip6">Play Local Co-Op With a Friend</a></li>
-          <li><a href="#tip7">Pay Attention to Character Skins</a></li>
-        </ol>
+      <div class="diff-card dark">
+        <div class="diff-label dark">Hardest</div>
+        <h3>🔥 Dark Knight</h3>
+        <p>No lives safety net. One failed combat scenario means restarting from checkpoint. Enemy variety and crowd density are at maximum. Reviewers note it's still easier than Arkham Knight's standard mode.</p>
+        <div class="diff-rec" style="color: var(--red);">Recommended for: Action game veterans</div>
       </div>
+    </div>
 
-      <!-- Article Content -->
-      <div class="content">
-        <p>Jumping into <strong>LEGO Batman: Legacy of the Dark Knight</strong> for the first time? Unlike previous LEGO games, this fourth installment makes significant changes — a smaller roster of deeply developed characters, Arkham-inspired combat, and an open-world Gotham built in Unreal Engine 5. Here's what you should know before starting.</p>
+    <div class="highlight-box">
+      <p><strong>💡 Pro Tip:</strong> Difficulty does not affect trophies or the Platinum. You can complete everything on Classic and still earn 100% completion. Change freely without penalty.</p>
+    </div>
 
-        <h2 id="tip1">1. Understand the Combat System</h2>
-        <p>Combat in Legacy of the Dark Knight takes heavy inspiration from the Batman: Arkham series' freeflow system, but adapted to be more approachable. Rather than trying to replicate Arkham's technical depth, the game encourages using a <strong>combination of abilities and gadgets</strong> (like batarangs and environmental actions) during fights.</p>
-        <p>If you've played Arkham games, the rhythm will feel familiar but more forgiving. If you haven't, don't worry — the game is designed to be accessible to players of all skill levels.</p>
-        <div class="tip-box"><strong>Tip:</strong> Experiment with different gadgets and environmental interactions during combat. The game rewards creative approaches over button-mashing.</div>
+    <h2 id="detective">Detective Mode — Use It Constantly</h2>
+    <p><strong>Activate Detective Mode by clicking the right stick</strong> (R3 on PlayStation, RS on Xbox). It triggers a sonar pulse that scans the area around you, revealing enemy positions, collectibles, puzzle targets, and hidden secrets through walls and obstacles.</p>
 
-        <h2 id="tip2">2. Master Traversal in Open-World Gotham</h2>
-        <p>Gotham City is a fully open world you can explore freely. Movement around the city uses <strong>grappling hooks, gliding, and vehicles like the Batmobile</strong>. Get comfortable chaining these traversal methods together — grappling to a rooftop, then gliding across the street, then summoning the Batmobile to drive to the next district.</p>
+    <p>Detective Mode operates in three visual sub-modes:</p>
+    <ul>
+      <li><strong>X-Ray mode</strong> — sees through thin walls, reveals hidden enemy positions</li>
+      <li><strong>UV mode</strong> — highlights invisible LEGO textures, Riddler glyph clues, and environmental hints</li>
+      <li><strong>Thermal mode</strong> — detects heat signatures from machines, enemies behind cover, and interactive vents</li>
+    </ul>
 
-        <!-- Mid-article ad -->
-        <div class="ad-inline">
-          Advertisement
-        </div>
+    <p>Detective Mode feeds directly into the stealth system: it shows you enemy patrol routes and awareness cones, letting you plan takedowns before combat starts. Using it before every major encounter is consistently the smarter play than charging in blind.</p>
 
-        <h2 id="tip3">3. Use Each Character's Unique Abilities</h2>
-        <p>Unlike previous LEGO games that offered hundreds of characters with similar movesets, Legacy of the Dark Knight features only <strong>7 playable characters</strong>, each with distinct abilities:</p>
-        <ul>
-          <li><strong>Batman</strong> — Batarangs, grappling hook, gliding, multiple Batsuits</li>
-          <li><strong>Jim Gordon</strong> — Foam gun, police-related interactions</li>
-          <li><strong>Batgirl</strong> — Unique combat and tech abilities</li>
-          <li><strong>Nightwing</strong> — Acrobatic movement, escrima sticks</li>
-          <li><strong>Robin</strong> — Technology and puzzle-solving</li>
-          <li><strong>Catwoman</strong> — Whip, stealth, wall climbing</li>
-          <li><strong>Talia al Ghul</strong> — League of Shadows training</li>
-        </ul>
-        <p>TT Games deliberately chose a smaller roster to make each character feel meaningfully different. Learn what each hero can do — you'll need all of them.</p>
+    <h2 id="red-bricks">Red Bricks — Find These First</h2>
+    <p>Red Bricks unlock game modifiers that make everything else easier or more rewarding. There are 23 Red Bricks total: 14 hidden in the open world and 9 purchasable from the Bat-Mite Store after collecting WayneTech Chips.</p>
 
-        <h2 id="tip4">4. Explore the Open World Between Missions</h2>
-        <p>Between story missions, take time to explore Gotham City's open world. Previews have described the game's scope as significantly larger than previous TT Games titles, with a more immersive city than ever before. Hidden secrets, side activities, and collectibles are scattered throughout the city.</p>
+    <p>Priority Red Bricks to find early:</p>
+    <ul>
+      <li><strong>Stud Multipliers</strong> (×2, ×4, ×6, ×8, ×10) — stack these together for exponential Stud income. Activating all multipliers simultaneously yields ×80 Studs, making the 1 million Stud target for buying suits trivial.</li>
+      <li><strong>Collectible Detector</strong> — shows nearby collectibles on your minimap, dramatically reducing time spent hunting minikits.</li>
+      <li><strong>Invincibility</strong> — eliminates respawn frustration entirely on Dark Knight mode.</li>
+    </ul>
 
-        <h2 id="tip5">5. Customize the Batcave</h2>
-        <p>Your home base, the Batcave, can be customized with <strong>vehicles, Batsuits, trophies, and collectibles</strong> found throughout the game. It serves as your hub between missions and reflects your progress. Check in regularly to see what new customization options are available.</p>
+    <div class="highlight-box">
+      <p><strong>💡 Tip:</strong> Red Bricks have a compounding benefit — the earlier you activate Stud Multipliers, the more Studs you accumulate during the rest of your playthrough. Prioritize finding them in Chapters 1–2 if possible.</p>
+    </div>
 
-        <h2 id="tip6">6. Play Local Co-Op With a Friend</h2>
-        <p>The game supports <strong>local couch co-op</strong> (two players on the same screen). There is <strong>no online multiplayer</strong>. If you have a friend or family member who wants to join, grab a second controller — LEGO games are known for being great co-op experiences.</p>
+    <h2 id="combat">Combat Fundamentals</h2>
+    <p>The combat system is Arkham-inspired with free-flow combos. A few things to learn immediately:</p>
 
-        <!-- Mid-article ad -->
-        <div class="ad-inline">
-          Advertisement
-        </div>
+    <ul>
+      <li><strong>Counter prompt</strong> — the blue flash above an enemy's head means they're about to attack. Hit the counter button to deflect and chain into your combo.</li>
+      <li><strong>Grapple Slam</strong> — the single most important move against shield enemies. Hold the grapple button to vault over a shielded enemy, then tap the attack button to slam them to the ground, bypassing their shield completely. Unlock this upgrade from Batman's skill tree as soon as possible.</li>
+      <li><strong>Gadgets in combat</strong> — Jim Gordon's Foam Sprayer freezes enemies for easy combos. Batgirl's Hackarang stuns electronic enemies. Talia's Blowdarts put guards to sleep without triggering combat at all.</li>
+      <li><strong>Environmental interactions</strong> — look for glowing LEGO objects near enemy groups. Pulling a barrel with the Batclaw or detonating Explosive Gel near a cluster is faster than fighting individually.</li>
+    </ul>
 
-        <h2 id="tip7">7. Pay Attention to Character Skins</h2>
-        <p>The game features character skins inspired by Batman actors across film history, including Michelle Pfeiffer's Catwoman (Batman Returns), Heath Ledger's Joker (The Dark Knight), Danny DeVito's Penguin (Batman Returns), and Jeffrey Wright's Jim Gordon (The Batman). These aren't just cosmetic — they reflect the game's celebration of the entire Batman franchise.</p>
+    <h2 id="studs">Building Your Stud Income</h2>
+    <p>Studs are the main currency for purchasing suits from the Bat-Mite Store. You need over 1 million Studs to buy all 101 base suits. Tips to accumulate faster:</p>
 
-        <h2>What's Next?</h2>
-        <p>Ready to learn more about the game?</p>
-        <ul>
-          <li><a href="all-characters-unlock.html">All 7 Playable Characters &amp; Their Abilities</a></li>
-          <li><a href="release-date-platforms.html">Release Date, Platforms &amp; Timeline</a></li>
-          <li><a href="deluxe-edition-explained.html">Deluxe Edition Explained</a></li>
-          <li><a href="batcave-hub-guide.html">Batcave Hub Guide</a></li>
-        </ul>
+    <ul>
+      <li>Smash everything in the environment — furniture, vehicles, bins, and LEGO objects all drop Studs.</li>
+      <li>Activate Stud Multiplier Red Bricks as early as possible and stack them.</li>
+      <li>Replay completed missions in Free Play — missions with dense enemy encounters generate the most Studs per minute.</li>
+      <li>Gold Bricks from missions can be exchanged at the Bat-Cave for bonus Stud payouts.</li>
+    </ul>
+
+    <h2 id="characters">Character Switching Tips</h2>
+    <p>Switch your Player 2 companion freely in the Bat-Cave between missions. The most common beginner mistake is staying with Jim Gordon for too long into Chapter 2 and 3 — once Catwoman unlocks, her wall climbing, glass cutting, and Call Kitty abilities solve puzzles Gordon simply cannot.</p>
+
+    <p>If you hit a puzzle that feels stuck, the answer is usually a character ability you haven't tried yet. Check which character's gadget applies before searching online.</p>
+
+    <h2 id="tips15">15 Essential Tips</h2>
+
+    <div class="tip-item">
+      <span class="tip-number">1</span>
+      <div class="tip-content">
+        <strong>Start on Caped Crusader</strong>
+        <p>Classic mode strips out too much of the combat depth that makes this game interesting. Caped Crusader is the designed experience — unlimited lives with real combat stakes.</p>
       </div>
-    </main>
+    </div>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-box">
-        <h3>Popular Guides</h3>
-        <a href="all-characters-unlock.html" class="sidebar-link">All Characters &amp; Unlocks</a>
-        <a href="mission-1-walkthrough.html" class="sidebar-link">Mission 1 Walkthrough</a>
-        <a href="all-characters-unlock.html" class="sidebar-link">All Characters Guide</a>
-        <a href="release-date-platforms.html" class="sidebar-link">Release Date &amp; Platforms</a>
-        <a href="deluxe-edition-explained.html" class="sidebar-link">Deluxe Edition Guide</a>
-        <a href="batcave-hub-guide.html" class="sidebar-link">Batcave Hub Guide</a>
+    <div class="tip-item">
+      <span class="tip-number">2</span>
+      <div class="tip-content">
+        <strong>Click R3 before every puzzle</strong>
+        <p>Detective Mode scans the area for interactive objects. Most puzzles have their solution highlighted in UV or X-Ray mode if you scan first.</p>
       </div>
+    </div>
 
-      <!-- Sidebar Ad -->
-      <div class="sidebar-box" style="border-style: dashed;">
-        <div style="text-align:center; color: var(--text-secondary); font-size: 12px; padding: 30px 0;">
-          <!-- AdSense sidebar ad -->
-          Ad Space
-        </div>
+    <div class="tip-item">
+      <span class="tip-number">3</span>
+      <div class="tip-content">
+        <strong>Upgrade Grapple Slam immediately</strong>
+        <p>Shield enemies appear from Chapter 2 onwards. Grapple Slam bypasses shields instantly. Without it, shield encounters are unnecessarily frustrating.</p>
       </div>
+    </div>
 
-      <div class="sidebar-box">
-        <h3>Quick Links</h3>
-        <a href="/#walkthrough" class="sidebar-link">All Walkthroughs</a>
-        <a href="/#collectibles" class="sidebar-link">Collectibles Tracker</a>
-        <a href="pc-requirements.html" class="sidebar-link">PC Requirements</a>
-        <a href="is-it-good-for-kids.html" class="sidebar-link">Is It Good for Kids?</a>
+    <div class="tip-item">
+      <span class="tip-number">4</span>
+      <div class="tip-content">
+        <strong>Don't stress about collectibles on first playthrough</strong>
+        <p>Many collectibles require abilities from characters you haven't unlocked yet. Play the story first, then revisit in Free Play with the full roster available.</p>
       </div>
-    </aside>
+    </div>
+
+    <div class="tip-item">
+      <span class="tip-number">5</span>
+      <div class="tip-content">
+        <strong>Activate Stud Multipliers as early as possible</strong>
+        <p>Red Brick Stud Multipliers stack multiplicatively. All five active simultaneously gives ×80 Studs. This single action changes the economy of the whole game.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <span class="tip-number">6</span>
+      <div class="tip-content">
+        <strong>Smash everything in the environment</strong>
+        <p>LEGO Batman's environments are dense with breakable objects. Smashing environment objects before every combat encounter tops up your Stud count fast.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <span class="tip-number">7</span>
+      <div class="tip-content">
+        <strong>Counter the blue flash, not the attack animation</strong>
+        <p>The counter window opens on the blue flash above an enemy's head — not when they swing. Countering on the flash chains into combo multipliers; countering late just blocks.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <span class="tip-number">8</span>
+      <div class="tip-content">
+        <strong>Use Catwoman's Call Kitty for any tight-space puzzle</strong>
+        <p>If you can see a vent opening but can't enter, switch to Catwoman and use Call Kitty. The cat navigates any duct the game marks — look for the small paw icon.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <span class="tip-number">9</span>
+      <div class="tip-content">
+        <strong>Orange glow = Explosive Gel</strong>
+        <p>Cracked LEGO walls glow faintly orange when Batman is nearby. These are always solved with Explosive Gel — if you see orange, that's your cue.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <span class="tip-number">10</span>
+      <div class="tip-content">
+        <strong>Complete early side activities before Chapter 3</strong>
+        <p>Side activities in Gotham unlock Batmobile upgrades and Gold Bricks. Doing 2–3 side activities per chapter before moving on keeps Batman's vehicle options expanded.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <span class="tip-number">11</span>
+      <div class="tip-content">
+        <strong>Talia is your best Free Play character</strong>
+        <p>For mission replay in Free Play, Talia's Ninja Dash lets her skip platforming challenges other characters must navigate carefully. She dramatically cuts replay time.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <span class="tip-number">12</span>
+      <div class="tip-content">
+        <strong>Red Bricks have compounding value — prioritize them</strong>
+        <p>Every Red Brick you find early applies to everything you do after. A Stud Multiplier found in Chapter 1 earns you far more than the same multiplier found in Chapter 5.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <span class="tip-number">13</span>
+      <div class="tip-number" style="display:none"></span>
+      <span class="tip-number">13</span>
+      <div class="tip-content">
+        <strong>Gold Bricks unlock character skill upgrades</strong>
+        <p>Gold Bricks earned from completing missions fund character skill upgrades in the Bat-Cave. Prioritize Batman's combat upgrades and Catwoman's passive ability extensions first.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <span class="tip-number">14</span>
+      <div class="tip-content">
+        <strong>There are no missable collectibles</strong>
+        <p>Nothing is missable. Every collectible, Red Brick, and suit can be obtained via Free Play after the story ends. Play the story naturally without anxiety about missing things.</p>
+      </div>
+    </div>
+
+    <div class="tip-item">
+      <span class="tip-number">15</span>
+      <div class="tip-content">
+        <strong>The Bat-Cave is your hub — visit between every mission</strong>
+        <p>The Bat-Cave is where you swap characters, unlock Red Brick modifiers, purchase suits, apply Gold Brick upgrades, and access the Bat-Mite Store. Check it between missions to apply any newly unlocked Red Bricks before continuing.</p>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../privacy.html">Privacy Policy</a>
-      <a href="../contact.html">Contact</a>
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h3>🎮 Difficulty Quick Guide</h3>
+      <ul>
+        <li>⭐ Classic — infinite lives, few enemies</li>
+        <li>🦇 Caped Crusader — default, recommended</li>
+        <li>🔥 Dark Knight — no safety net</li>
+        <li>Change anytime in Pause menu</li>
+        <li>Difficulty doesn't affect Platinum</li>
+      </ul>
     </div>
-    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
-    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
-  </footer>
 
-  <script>
-    document.getElementById('menuToggle').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-  </script>
+    <div class="sidebar-card">
+      <h3>🔑 Priority Actions</h3>
+      <ul>
+        <li>1. Pick Caped Crusader difficulty</li>
+        <li>2. Unlock Grapple Slam early</li>
+        <li>3. Find Stud Multiplier Red Bricks</li>
+        <li>4. Use Detective Mode (R3) constantly</li>
+        <li>5. Explore Gotham between missions</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>🔗 Next Guides</h3>
+      <ul>
+        <li><a href="all-characters-unlock.html">All Characters Guide</a></li>
+        <li><a href="collectibles-guide.html">Red Bricks Guide</a></li>
+        <li><a href="suits-abilities-guide.html">All Suits Guide</a></li>
+        <li><a href="trophy-guide.html">Trophy Guide</a></li>
+        <li><a href="100-percent-completion.html">100% Completion</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>🕹️ Key Controls</h3>
+      <ul>
+        <li>R3 — Detective Mode</li>
+        <li>Start → R1/RB → □/X — Suit change</li>
+        <li>Grapple + Attack — Grapple Slam</li>
+        <li>Counter — on blue flash indicator</li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../contact.html">Contact</a>
+  </div>
+  <p>BrickHeroGuide.com is a fan site and is not affiliated with LEGO, DC Comics, TT Games, or Warner Bros. Entertainment.</p>
+  <p style="margin-top:0.4rem">© 2026 BrickHeroGuide.com</p>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
 </body>
 </html>

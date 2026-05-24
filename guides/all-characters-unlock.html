@@ -7,340 +7,608 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-F7BNQ7RJDY');
 </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All 7 Playable Characters & How to Unlock Them - BrickHeroGuide</title>
-  <meta name="description" content="Complete guide to all 7 playable characters in LEGO Batman: Legacy of the Dark Knight. Learn each character's unique abilities and how to unlock them.">
-  <meta name="keywords" content="LEGO Batman Legacy characters, unlock characters, Batman, Robin, Batgirl, Nightwing, playable characters">
-  <link rel="canonical" href="https://brickheroguide.com/guides/all-characters-unlock.html">
-  <meta property="og:title" content="All 7 Characters & How to Unlock - LEGO Batman Legacy">
-  <meta property="og:description" content="Complete roster of all playable characters, their unique abilities, and unlock conditions in LEGO Batman: Legacy of the Dark Knight.">
-  <meta property="og:type" content="article">
-  <meta name="robots" content="index, follow">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
-      --text: #e8eaed; --text-secondary: #9aa0ab;
-      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
-      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-hover); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Characters & How to Unlock Them - LEGO Batman: Legacy of the Dark Knight | BrickHeroGuide</title>
+<meta name="description" content="Complete guide to all 7 playable characters in LEGO Batman: Legacy of the Dark Knight. Learn when each character unlocks, their unique gadgets, and how to use their abilities.">
+<link rel="canonical" href="https://brickheroguide.com/guides/all-characters-unlock.html">
+<meta property="og:title" content="All Characters & How to Unlock Them - LEGO Batman Legacy">
+<meta property="og:description" content="Complete guide to all 7 playable characters in LEGO Batman: Legacy of the Dark Knight — Batman, Jim Gordon, Catwoman, Robin, Batgirl, Nightwing, and Talia al Ghul.">
+<meta property="og:url" content="https://brickheroguide.com/guides/all-characters-unlock.html">
+<meta property="og:type" content="article">
+<style>
+  :root {
+    --bg: #0f1117;
+    --bg-card: #1a1d27;
+    --bg-card2: #1e2130;
+    --accent: #fbbf24;
+    --accent-dim: #92400e;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: #2d3748;
+    --green: #10b981;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+    --red: #ef4444;
+    --orange: #f97316;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; }
 
-    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
-    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
-    .logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 24px; list-style: none; }
-    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
-    .nav-links a:hover { color: var(--accent); }
-    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .nav-logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 700; font-size: 1.1rem; color: var(--text); }
+  .nav-logo .gear { font-size: 1.3rem; }
+  .nav-logo .hero { color: var(--accent); }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
+  .nav-links a:hover { color: var(--accent); }
+  .hamburger { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+  @media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; gap: 1rem; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: block; }
+  }
 
-    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
-    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
-    .breadcrumb a { color: var(--text-secondary); }
-    .breadcrumb a:hover { color: var(--accent); }
-    .article-header { margin-bottom: 28px; }
-    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; background: #3b82f620; color: #60a5fa; margin-bottom: 10px; }
-    .article-header h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
-    .article-meta { font-size: 13px; color: var(--text-secondary); }
+  /* BREADCRUMB */
+  .breadcrumb { padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--text-muted); max-width: 1100px; margin: 0 auto; }
+  .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb span { margin: 0 0.4rem; }
 
-    .toc { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin-bottom: 28px; }
-    .toc-title { font-size: 14px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
-    .toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
-    .toc li { font-size: 14px; }
-    .toc a { color: var(--text-secondary); }
-    .toc a:hover { color: var(--accent); }
+  /* HEADER */
+  .article-header { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 2rem; }
+  .tag { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+  .tag-characters { background: rgba(139,92,246,0.15); color: #a78bfa; border: 1px solid rgba(139,92,246,0.3); }
+  .article-header h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+  .article-meta { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+  .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .stat-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; text-align: center; }
+  .stat-box .num { font-size: 1.8rem; font-weight: 800; color: var(--accent); line-height: 1; }
+  .stat-box .lbl { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em; }
 
-    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
-    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
-    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
-    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
-    .content li { font-size: 15px; }
+  /* LAYOUT */
+  .page-layout { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 3rem; display: grid; grid-template-columns: 1fr 280px; gap: 2rem; }
+  @media (max-width: 768px) { .page-layout { grid-template-columns: 1fr; } }
 
-    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
-    .tip-box strong { color: var(--accent); }
-    .warning-box { background: rgba(239, 68, 68, 0.08); border-left: 3px solid #ef4444; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
-    .warning-box strong { color: #ef4444; }
+  /* CONTENT */
+  .content h2 { font-size: 1.4rem; font-weight: 700; margin: 2rem 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+  .content h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; color: var(--accent); }
+  .content p { margin-bottom: 1rem; color: var(--text); }
+  .content ul, .content ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+  .content li { margin-bottom: 0.4rem; }
+  .content a { color: var(--accent); text-decoration: none; }
+  .content a:hover { text-decoration: underline; }
 
-    .char-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin: 16px 0; }
-    .char-card h3 { margin-top: 0; font-size: 19px; }
-    .char-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0; font-size: 14px; }
-    .char-stats dt { color: var(--text-secondary); }
-    .char-stats dd { color: var(--text); font-weight: 600; }
-    .char-unlock { background: var(--accent-dim); border-radius: 8px; padding: 10px 14px; font-size: 14px; margin-top: 12px; }
-    .char-unlock strong { color: var(--accent); }
+  /* TOC */
+  .toc { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; margin-bottom: 2rem; }
+  .toc h3 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.75rem; }
+  .toc ol { padding-left: 1.25rem; }
+  .toc li { margin-bottom: 0.35rem; }
+  .toc a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+  .toc a:hover { color: var(--accent); }
 
-    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+  /* CHARACTER CARDS */
+  .char-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; scroll-margin-top: 70px; }
+  .char-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+  .char-icon { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0; }
+  .char-icon.batman { background: rgba(251,191,36,0.1); border: 2px solid var(--accent); }
+  .char-icon.gordon { background: rgba(59,130,246,0.1); border: 2px solid var(--blue); }
+  .char-icon.catwoman { background: rgba(239,68,68,0.1); border: 2px solid var(--red); }
+  .char-icon.robin { background: rgba(16,185,129,0.1); border: 2px solid var(--green); }
+  .char-icon.batgirl { background: rgba(249,115,22,0.1); border: 2px solid var(--orange); }
+  .char-icon.nightwing { background: rgba(59,130,246,0.1); border: 2px solid var(--blue); }
+  .char-icon.talia { background: rgba(139,92,246,0.1); border: 2px solid var(--purple); }
+  .char-title { flex: 1; }
+  .char-title h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.2rem; border: none; padding: 0; }
+  .char-title .char-subtitle { font-size: 0.85rem; color: var(--text-muted); }
+  .unlock-badge { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3); color: var(--accent); white-space: nowrap; }
+  .gadget-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+  .gadget-pill { display: inline-flex; align-items: center; gap: 0.3rem; background: var(--bg-card2); border: 1px solid var(--border); border-radius: 6px; padding: 0.3rem 0.7rem; font-size: 0.82rem; font-weight: 600; color: var(--text); }
+  .ability-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; margin-top: 0.75rem; }
+  .ability-item { background: var(--bg-card2); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem; }
+  .ability-item .ability-name { font-size: 0.8rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .ability-item .ability-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
 
-    .sidebar { display: flex; flex-direction: column; gap: 20px; }
-    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
-    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
-    .sidebar-link:last-child { border: none; }
-    .sidebar-link:hover { color: var(--accent); }
+  /* OVERVIEW TABLE */
+  .char-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: 0.87rem; }
+  .char-table th { background: var(--bg-card); padding: 0.75rem 1rem; text-align: left; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); border-bottom: 2px solid var(--border); }
+  .char-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .char-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .chapter-tag { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; background: rgba(251,191,36,0.1); color: var(--accent); border: 1px solid rgba(251,191,36,0.25); }
 
-    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
-    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
-    .footer-links a { color: var(--text-secondary); font-size: 13px; }
-    .footer-copy { font-size: 12px; color: var(--text-secondary); }
-    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+  /* DLC BANNER */
+  .dlc-banner { background: linear-gradient(135deg, rgba(139,92,246,0.1), rgba(239,68,68,0.1)); border: 1px solid rgba(139,92,246,0.3); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .dlc-banner h3 { color: #a78bfa; font-size: 1rem; margin-bottom: 0.5rem; }
+  .dlc-banner p { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
 
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
-      .menu-toggle { display: block; }
-      .page-layout { grid-template-columns: 1fr; gap: 32px; }
-      .char-stats { grid-template-columns: 1fr; }
-    }
-  </style>
+  /* TIP BOX */
+  .tip-box { background: rgba(251,191,36,0.06); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 0.9rem 1.1rem; margin: 1rem 0; }
+  .tip-box strong { color: var(--accent); }
+  .tip-box p { font-size: 0.88rem; margin: 0; color: var(--text-muted); }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  .sidebar-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; }
+  .sidebar-card h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 1rem; }
+  .sidebar-card ul { list-style: none; padding: 0; }
+  .sidebar-card li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
+  .sidebar-card li:last-child { border-bottom: none; }
+  .sidebar-card a { color: var(--text-muted); text-decoration: none; }
+  .sidebar-card a:hover { color: var(--accent); }
+
+  /* FOOTER */
+  footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; }
+  footer .footer-links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+  footer a { color: var(--text-muted); text-decoration: none; font-size: 0.88rem; }
+  footer a:hover { color: var(--accent); }
+  footer p { color: var(--text-muted); font-size: 0.8rem; }
+</style>
 </head>
 <body>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/#guides">Guides</a></li>
-        <li><a href="/#walkthrough">Walkthrough</a></li>
-        <li><a href="/#collectibles">Collectibles</a></li>
-        <li><a href="/#characters">Characters</a></li>
-        <li><a href="/#tips">Tips</a></li>
-        <li><a href="/blog/">Blog</a></li>
-      </ul>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <span class="gear">⚙️</span>
+    Brick<span class="hero">Hero</span>Guide
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#guides">Guides</a></li>
+    <li><a href="../blog/index.html">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+</nav>
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a>
+  <span>›</span>
+  <a href="../index.html#guides">Guides</a>
+  <span>›</span>
+  All Characters &amp; Unlock Guide
+</div>
+
+<div class="article-header">
+  <div class="tag tag-characters">👤 Characters</div>
+  <h1>All Characters &amp; How to Unlock Them in LEGO Batman: Legacy of the Dark Knight</h1>
+  <div class="article-meta">
+    <span>📅 Updated May 22, 2026</span>
+    <span>⏱ 8 min read</span>
+    <span>🎮 All Platforms</span>
+  </div>
+  <div class="quick-stats">
+    <div class="stat-box"><div class="num">7</div><div class="lbl">Launch Characters</div></div>
+    <div class="stat-box"><div class="num">9</div><div class="lbl">Total with DLC</div></div>
+    <div class="stat-box"><div class="num">5</div><div class="lbl">Story Chapters</div></div>
+    <div class="stat-box"><div class="num">Sep 2026</div><div class="lbl">DLC Release</div></div>
+  </div>
+</div>
+
+<div class="page-layout">
+  <div class="content">
+
+    <div class="toc">
+      <h3>📋 Table of Contents</h3>
+      <ol>
+        <li><a href="#overview">Character Overview</a></li>
+        <li><a href="#batman">Batman (Bruce Wayne)</a></li>
+        <li><a href="#gordon">Jim Gordon</a></li>
+        <li><a href="#catwoman">Catwoman (Selina Kyle)</a></li>
+        <li><a href="#robin">Robin (Dick Grayson)</a></li>
+        <li><a href="#batgirl">Batgirl (Barbara Gordon)</a></li>
+        <li><a href="#nightwing">Nightwing</a></li>
+        <li><a href="#talia">Talia al Ghul</a></li>
+        <li><a href="#dlc">DLC Characters</a></li>
+        <li><a href="#tips">Character Tips</a></li>
+      </ol>
     </div>
-  </nav>
 
-  <div class="page-layout">
-    <main>
-      <div class="breadcrumb">
-        <a href="/">Home</a> &rsaquo; <a href="/#guides">Guides</a> &rsaquo; All Characters &amp; Unlocks
+    <p>Unlike traditional LEGO games where you can pick from dozens of characters freely, <em>LEGO Batman: Legacy of the Dark Knight</em> takes a more focused approach — you unlock 7 handcrafted characters across the game's 5 story chapters, each with a distinct gadget set and playstyle. This guide covers every character's unlock condition, gadgets, passive abilities, and best uses.</p>
+
+    <h2 id="overview">Character Overview</h2>
+    <p>All 7 characters unlock automatically through story progression — you cannot miss any of them. Batman is always locked to Player 1 and cannot be swapped out. All other characters occupy the Player 2 slot and can be freely switched in the Bat-Cave between missions.</p>
+
+    <table class="char-table">
+      <thead>
+        <tr>
+          <th>Character</th>
+          <th>Unlocks At</th>
+          <th>Gadget 1</th>
+          <th>Gadget 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Batman</strong></td>
+          <td><span class="chapter-tag">Prologue</span></td>
+          <td>Batarang</td>
+          <td>Batclaw</td>
+        </tr>
+        <tr>
+          <td><strong>Jim Gordon</strong></td>
+          <td><span class="chapter-tag">Chapter 1</span></td>
+          <td>Foam Sprayer</td>
+          <td>Rebound Launcher</td>
+        </tr>
+        <tr>
+          <td><strong>Catwoman</strong></td>
+          <td><span class="chapter-tag">Chapter 2</span></td>
+          <td>Whip</td>
+          <td>Call Kitty</td>
+        </tr>
+        <tr>
+          <td><strong>Robin</strong></td>
+          <td><span class="chapter-tag">Chapter 3</span></td>
+          <td>Birdarang</td>
+          <td>Cable Launcher</td>
+        </tr>
+        <tr>
+          <td><strong>Batgirl</strong></td>
+          <td><span class="chapter-tag">Chapter 4 Start</span></td>
+          <td>Hackarang</td>
+          <td>Drone</td>
+        </tr>
+        <tr>
+          <td><strong>Nightwing</strong></td>
+          <td><span class="chapter-tag">Chapter 4 Final</span></td>
+          <td>Electrorang</td>
+          <td>Electric Cable Launcher</td>
+        </tr>
+        <tr>
+          <td><strong>Talia al Ghul</strong></td>
+          <td><span class="chapter-tag">Chapter 5</span></td>
+          <td>Blowdarts</td>
+          <td>Ninja Dash</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- BATMAN -->
+    <div class="char-card" id="batman">
+      <div class="char-header">
+        <div class="char-icon batman">🦇</div>
+        <div class="char-title">
+          <h2>Batman (Bruce Wayne)</h2>
+          <div class="char-subtitle">The Dark Knight — always Player 1</div>
+        </div>
+        <div class="unlock-badge">🔓 Prologue / Chapter 1</div>
       </div>
 
-      <div class="article-header">
-        <span class="article-tag">Characters</span>
-        <h1>All 7 Playable Characters &amp; Their Confirmed Abilities</h1>
-        <div class="article-meta">Last updated: May 19, 2026 &middot; Based on official announcements, developer interviews, and early reviews</div>
+      <p>You'll play as young Bruce Wayne in the Prologue's flashback sections, but Batman's cowl and full gadget set don't appear until Chapter 1 begins. Batman is permanently locked to the Player 1 slot — he cannot be swapped out.</p>
+
+      <p>Batman's combat is Arkham-inspired: counter-attacks, grapple slams, and a free-flow combo system that rewards timing over button mashing. He also gains access to a rotating fleet of Batmobiles as you progress through the story.</p>
+
+      <p><strong>Gadgets:</strong></p>
+      <div class="gadget-list">
+        <span class="gadget-pill">🪃 Batarang</span>
+        <span class="gadget-pill">🪝 Batclaw</span>
+        <span class="gadget-pill">💥 Explosive Gel</span>
+        <span class="gadget-pill">🔍 Detective Vision</span>
       </div>
 
-      <div class="toc">
-        <div class="toc-title">&#128220; Table of Contents</div>
-        <ol>
-          <li><a href="#overview">Character Overview</a></li>
-          <li><a href="#batman">Batman (Bruce Wayne)</a></li>
-          <li><a href="#gordon">Jim Gordon</a></li>
-          <li><a href="#batgirl">Batgirl (Barbara Gordon)</a></li>
-          <li><a href="#nightwing">Nightwing (Dick Grayson)</a></li>
-          <li><a href="#robin">Robin (Tim Drake)</a></li>
-          <li><a href="#catwoman">Catwoman (Selina Kyle)</a></li>
-          <li><a href="#talia">Talia al Ghul</a></li>
-          <li><a href="#allies">Ally Characters (Non-Playable)</a></li>
-          <li><a href="#villains">Villains</a></li>
-        </ol>
+      <div class="ability-grid">
+        <div class="ability-item">
+          <div class="ability-name">Batarang</div>
+          <div class="ability-desc">Standard throw for activating switches, hitting enemies, and triggering LEGO targets at range.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Batclaw</div>
+          <div class="ability-desc">Pulls grapple points and LEGO objects, used in platforming and puzzle interactions.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Explosive Gel</div>
+          <div class="ability-desc">Breaches cracked LEGO walls — look for the orange-glow texture to know where to apply it.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Detective Vision</div>
+          <div class="ability-desc">X-ray, UV, and Thermal modes reveal hidden clues, enemies through walls, and heat signatures.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JIM GORDON -->
+    <div class="char-card" id="gordon">
+      <div class="char-header">
+        <div class="char-icon gordon">🔦</div>
+        <div class="char-title">
+          <h2>Jim Gordon</h2>
+          <div class="char-subtitle">Commissioner of the GCPD</div>
+        </div>
+        <div class="unlock-badge">🔓 Complete Prologue</div>
       </div>
 
-      <div class="content">
-        <p><strong>LEGO Batman: Legacy of the Dark Knight</strong> features 7 playable characters — a deliberate departure from previous LEGO games that offered hundreds of characters. According to IGN, the developers explained the small roster allows each character to be "more differentiated with much deeper gameplay." The game features a total of <strong>21 DC characters</strong> across the full roster. Batman is voiced by <strong>Shai Matheson</strong>.</p>
+      <p>Jim Gordon is your default Player 2 companion throughout all of Chapter 1. He's the Bat-Family's liaison with law enforcement and brings a utility-focused gadget kit focused on crowd control and puzzle solving rather than pure combat.</p>
 
-        <div class="tip-box"><strong>Source:</strong> The 7-character roster was confirmed at Gamescom 2025 and on the official game website. The 21-character total was reported by The Direct (November 2025). Developer comments on character depth from IGN (February 2026).</div>
-
-        <h2 id="overview">Character Overview</h2>
-        <p>The 7 playable characters are: <strong>Batman, Jim Gordon, Batgirl, Nightwing, Robin, Catwoman,</strong> and <strong>Talia al Ghul</strong>. Each possesses unique skills and gadgets that the player will need to use throughout the game's open-world Gotham City and story missions.</p>
-
-        <h2 id="batman">1. Batman (Bruce Wayne)</h2>
-        <div class="char-card">
-          <h3>&#129415; Batman</h3>
-          <dl class="char-stats">
-            <dt>Voice Actor:</dt><dd>Shai Matheson</dd>
-            <dt>Role:</dt><dd>All-Rounder / Combat</dd>
-            <dt>Availability:</dt><dd>Available from start</dd>
-            <dt>Traversal:</dt><dd>Grappling Hook, Gliding</dd>
-          </dl>
-          <h3>Confirmed Details</h3>
-          <ul>
-            <li><strong>Grappling Hook &amp; Gliding</strong> — Traversal across Gotham City's open world is done through grappling hooks and gliding. Batman can also use the Batmobile.</li>
-            <li><strong>Batarangs &amp; Gadgets</strong> — The combat system encourages using a combination of abilities and gadgets like batarangs alongside environmental actions, inspired by the Arkham series' freeflow combat (but more approachable).</li>
-            <li><strong>Multiple Batsuits</strong> — Batman can wear different Batsuits inspired by various Batman media, including skins based on the likeness of actors who have played the character in films.</li>
-          </ul>
-          <div class="char-unlock"><strong>Available from the start of the game.</strong></div>
-        </div>
-
-        <h2 id="gordon">2. Jim Gordon</h2>
-        <div class="char-card">
-          <h3>&#128110; Jim Gordon</h3>
-          <dl class="char-stats">
-            <dt>Based on:</dt><dd>Jeffrey Wright's portrayal (The Batman, 2022)</dd>
-            <dt>Role:</dt><dd>Ranged / Utility</dd>
-            <dt>Signature Gear:</dt><dd>Foam Gun</dd>
-          </dl>
-          <h3>Confirmed Details</h3>
-          <ul>
-            <li><strong>Foam Gun</strong> — Gordon carries a gun that sprays foam, a non-lethal weapon consistent with the LEGO games' family-friendly approach.</li>
-            <li><strong>GCPD Connection</strong> — As Gotham's police commissioner, Gordon likely has access to police-related interactions and areas within the city.</li>
-            <li>The character model is based on Jeffrey Wright's likeness from the 2022 film <em>The Batman</em>.</li>
-          </ul>
-          <div class="char-unlock"><strong>Unlock conditions have not been detailed in pre-release coverage.</strong> Likely unlocked early in the story.</div>
-        </div>
-
-        <h2 id="batgirl">3. Batgirl (Barbara Gordon)</h2>
-        <div class="char-card">
-          <h3>&#129464; Batgirl</h3>
-          <dl class="char-stats">
-            <dt>Role:</dt><dd>Combat / Tech</dd>
-            <dt>Identity:</dt><dd>Barbara Gordon</dd>
-          </dl>
-          <h3>Confirmed Details</h3>
-          <ul>
-            <li>Batgirl is one of the core Bat-Family members in the roster. Specific gameplay abilities have not been detailed in pre-release coverage, but she is expected to share some traversal and combat capabilities with Batman while having her own unique tools.</li>
-          </ul>
-          <div class="char-unlock"><strong>Unlock conditions TBD.</strong> More details will be added after the game's full release.</div>
-        </div>
-
-        <h2 id="nightwing">4. Nightwing (Dick Grayson)</h2>
-        <div class="char-card">
-          <h3>&#128374; Nightwing</h3>
-          <dl class="char-stats">
-            <dt>Role:</dt><dd>Agility / Acrobatics</dd>
-            <dt>Identity:</dt><dd>Dick Grayson (former Robin)</dd>
-          </dl>
-          <h3>Confirmed Details</h3>
-          <ul>
-            <li>Nightwing, the original Robin who became his own hero, is a playable character. His acrobatic background from his circus days and his independent crimefighting career in Bludhaven are expected to inform his gameplay style.</li>
-          </ul>
-          <div class="char-unlock"><strong>Unlock conditions TBD.</strong></div>
-        </div>
-
-        <h2 id="robin">5. Robin (Tim Drake)</h2>
-        <div class="char-card">
-          <h3>&#129464; Robin</h3>
-          <dl class="char-stats">
-            <dt>Role:</dt><dd>Tech Specialist</dd>
-            <dt>Identity:</dt><dd>Tim Drake</dd>
-          </dl>
-          <h3>Confirmed Details</h3>
-          <ul>
-            <li>Tim Drake, the third Robin in DC Comics continuity, is the game's Robin. In the comics, Tim is known for his detective skills and technological prowess, which may translate into unique puzzle-solving abilities.</li>
-          </ul>
-          <div class="char-unlock"><strong>Unlock conditions TBD.</strong></div>
-        </div>
-
-        <h2 id="catwoman">6. Catwoman (Selina Kyle)</h2>
-        <div class="char-card">
-          <h3>&#128049; Catwoman</h3>
-          <dl class="char-stats">
-            <dt>Based on:</dt><dd>Michelle Pfeiffer's portrayal (Batman Returns, 1992)</dd>
-            <dt>Role:</dt><dd>Stealth / Agility</dd>
-            <dt>Signature Gear:</dt><dd>Whip</dd>
-          </dl>
-          <h3>Confirmed Details</h3>
-          <ul>
-            <li><strong>Whip</strong> — Catwoman uses a whip as a weapon. It may also serve as a traversal tool or for interacting with specific objects in the environment.</li>
-            <li>Her character skin is based on Michelle Pfeiffer's iconic portrayal from Tim Burton's <em>Batman Returns</em> (1992).</li>
-          </ul>
-          <div class="char-unlock"><strong>Unlock conditions TBD.</strong></div>
-        </div>
-
-        <div class="ad-inline"><!-- AdSense mid-article ad unit -->Advertisement</div>
-
-        <h2 id="talia">7. Talia al Ghul</h2>
-        <div class="char-card">
-          <h3>&#128135; Talia al Ghul</h3>
-          <dl class="char-stats">
-            <dt>Role:</dt><dd>Stealth / Combat</dd>
-            <dt>Affiliation:</dt><dd>League of Shadows (initially)</dd>
-          </dl>
-          <h3>Confirmed Details</h3>
-          <ul>
-            <li>Talia al Ghul is the daughter of Ra's al Ghul. Given the game's premise retells Batman's origin from his time training with the League of Shadows, Talia likely plays a significant role in the story — potentially starting as an antagonist before becoming playable.</li>
-          </ul>
-          <div class="char-unlock"><strong>Likely unlocked later in the story.</strong> Exact trigger TBD.</div>
-        </div>
-
-        <h2 id="allies">Ally Characters (Non-Playable)</h2>
-        <p>Not every member of the Bat-Family is playable. The following characters appear in the game but <strong>are not part of the 7-character playable roster</strong>:</p>
-        <ul>
-          <li><strong>Alfred Pennyworth</strong> — Bruce Wayne's loyal butler, provides guidance from the Batcave.</li>
-          <li><strong>Lucius Fox</strong> — Wayne Enterprises executive, likely involved in tech and gadget development.</li>
-        </ul>
-
-        <h2 id="villains">Villains</h2>
-        <p>Batman's rogues gallery features prominently in the game. Confirmed villain characters include:</p>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 16px 0;">
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#129504; The Riddler</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#127752; Poison Ivy</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#128128; Bane (voiced by Matt Berry)</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#129416; The Penguin</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#128520; The Joker (Heath Ledger-inspired)</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#10052; Mr. Freeze</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#128293; Firefly</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#127855; Condiment King</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#128123; Ra's al Ghul</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#128299; Two-Face</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#129327; Egghead</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#127748; Kite Man</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#129297; Carmine Falcone</div>
-          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px;">&#128127; Sofia Falcone</div>
-        </div>
-        <p>Additional characters include Thomas and Martha Wayne, Gillian B. Loeb, and the reality-warping imp <strong>Bat-Mite</strong>.</p>
-
-        <div class="tip-box"><strong>&#128161; Why only 7 characters?</strong> The developers made a deliberate choice to feature a smaller roster compared to previous LEGO games. According to developer interviews with IGN, this allowed them to focus on deeper gameplay systems with each character being "more differentiated with much deeper gameplay," rather than hundreds of characters with similar movesets.</div>
-
-        <h2>What's Next?</h2>
-        <p>Now that you know the character roster, explore more about the game:</p>
-        <ul>
-          <li><a href="release-date-platforms.html">Release Date &amp; Platforms: Full Launch Details</a></li>
-          <li><a href="deluxe-edition-explained.html">Deluxe Edition: What's Included</a></li>
-          <li><a href="batcave-hub-guide.html">Batcave Hub Guide</a></li>
-          <li><a href="suits-abilities-guide.html">Confirmed Batsuits &amp; Character Skins</a></li>
-        </ul>
+      <div class="gadget-list">
+        <span class="gadget-pill">🧴 Foam Sprayer</span>
+        <span class="gadget-pill">🏀 Rebound Launcher</span>
       </div>
-    </main>
 
-    <aside class="sidebar">
-      <div class="sidebar-box">
-        <h3>Popular Guides</h3>
-        <a href="beginners-guide.html" class="sidebar-link">Beginner's Guide: 10 Tips</a>
-        <a href="mission-1-walkthrough.html" class="sidebar-link">Mission 1 Walkthrough</a>
-        <a href="release-date-platforms.html" class="sidebar-link">Release Date &amp; Platforms</a>
-        <a href="pc-requirements.html" class="sidebar-link">PC System Requirements</a>
-        <a href="deluxe-edition-explained.html" class="sidebar-link">Deluxe Edition Guide</a>
-        <a href="batcave-hub-guide.html" class="sidebar-link">Batcave Hub Guide</a>
+      <div class="ability-grid">
+        <div class="ability-item">
+          <div class="ability-name">Foam Sprayer</div>
+          <div class="ability-desc">Seals pipes, stops active machinery, and traps enemies in place with sticky foam. Used constantly in Chapter 1 puzzles.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Rebound Launcher</div>
+          <div class="ability-desc">Fires a projectile that bounces off surfaces — useful for hitting targets around corners and behind cover.</div>
+        </div>
       </div>
-      <div class="sidebar-box" style="border-style: dashed;">
-        <div style="text-align:center; color: var(--text-secondary); font-size: 12px; padding: 30px 0;"><!-- AdSense sidebar ad -->Ad Space</div>
+
+      <div class="tip-box">
+        <p><strong>💡 Tip:</strong> Gordon's Foam Sprayer is surprisingly powerful as a crowd-control tool in combat — freezing enemies in place gives Batman easy combo opportunities.</p>
       </div>
-      <div class="sidebar-box">
-        <h3>Quick Links</h3>
-        <a href="/#walkthrough" class="sidebar-link">All Walkthroughs</a>
-        <a href="/#collectibles" class="sidebar-link">Collectibles Tracker</a>
-        <a href="is-it-good-for-kids.html" class="sidebar-link">Is It Good for Kids?</a>
-        <a href="deluxe-edition-explained.html" class="sidebar-link">Deluxe Edition</a>
+    </div>
+
+    <!-- CATWOMAN -->
+    <div class="char-card" id="catwoman">
+      <div class="char-header">
+        <div class="char-icon catwoman">🐱</div>
+        <div class="char-title">
+          <h2>Catwoman (Selina Kyle)</h2>
+          <div class="char-subtitle">The Cat Burglar of Gotham</div>
+        </div>
+        <div class="unlock-badge">🔓 Chapter 2 — "Mines" Mission</div>
       </div>
-    </aside>
+
+      <p>Catwoman makes her entrance during the <em>Mines</em> mission in Chapter 2 — she's impossible to miss. She arrives in style by stealing Jim Gordon's Batclaw, which gives you a hint at her thieving nature. Catwoman has the most passive abilities of any character, making her uniquely flexible in both combat and exploration.</p>
+
+      <div class="gadget-list">
+        <span class="gadget-pill">🪢 Whip</span>
+        <span class="gadget-pill">🐱 Call Kitty</span>
+        <span class="gadget-pill">🧗 Wall Climbing</span>
+        <span class="gadget-pill">🪟 Glass Cutter</span>
+        <span class="gadget-pill">🔐 Safe Cracker</span>
+      </div>
+
+      <div class="ability-grid">
+        <div class="ability-item">
+          <div class="ability-name">Whip</div>
+          <div class="ability-desc">Rotates special LEGO screws and LEGO bricks, pulls distant objects, and can whip-grab enemies in combat.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Call Kitty</div>
+          <div class="ability-desc">Summons a LEGO cat to crawl through small vents and tight spaces inaccessible to other characters.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Wall Climbing</div>
+          <div class="ability-desc">Passive ability — Catwoman can scale special textured walls marked with cat-claw scratch marks.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Glass Cutter (Passive)</div>
+          <div class="ability-desc">Can slice through reinforced glass panels that block other characters.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Safe Cracker (Passive)</div>
+          <div class="ability-desc">Opens locked safes found throughout Gotham — often containing Studs, collectibles, or Bat-Family tokens.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROBIN -->
+    <div class="char-card" id="robin">
+      <div class="char-header">
+        <div class="char-icon robin">🐦</div>
+        <div class="char-title">
+          <h2>Robin (Dick Grayson)</h2>
+          <div class="char-subtitle">The Boy Wonder</div>
+        </div>
+        <div class="unlock-badge">🔓 Enter Chapter 3</div>
+      </div>
+
+      <p>Robin unlocks automatically when you begin Chapter 3 and visit Haley's Circus. Dick Grayson starts the chapter in civilian clothes, but after a training montage the Dynamic Duo is officially born. Robin plays similarly to Batman but with key multi-target and mobility upgrades.</p>
+
+      <div class="gadget-list">
+        <span class="gadget-pill">🪃 Birdarang</span>
+        <span class="gadget-pill">🪢 Cable Launcher</span>
+      </div>
+
+      <div class="ability-grid">
+        <div class="ability-item">
+          <div class="ability-name">Birdarang</div>
+          <div class="ability-desc">Like the Batarang, but can target multiple enemies or switches in a single throw — great for clearing groups and activating twin-target puzzles.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Cable Launcher</div>
+          <div class="ability-desc">Creates a tightrope-style cable between two anchor points — walk across it to reach platforms or use it as a zipline in combat.</div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <p><strong>💡 Tip:</strong> The Cable Launcher solves several puzzles where you need to create a crossing between two buildings. If you see two glowing anchor points across a gap, that's Robin's cue.</p>
+      </div>
+    </div>
+
+    <!-- BATGIRL -->
+    <div class="char-card" id="batgirl">
+      <div class="char-header">
+        <div class="char-icon batgirl">💻</div>
+        <div class="char-title">
+          <h2>Batgirl (Barbara Gordon)</h2>
+          <div class="char-subtitle">Tech genius of the Bat-Family</div>
+        </div>
+        <div class="unlock-badge">🔓 Enter Chapter 4</div>
+      </div>
+
+      <p>Batgirl joins the team at the very start of Chapter 4 — without her father Jim Gordon's knowledge. Her gadget set is the most technology-focused of the roster, opening up puzzle solutions that no other character can access. She fights in a style similar to Batman and Robin but with a more technical edge.</p>
+
+      <div class="gadget-list">
+        <span class="gadget-pill">💻 Hackarang</span>
+        <span class="gadget-pill">🚁 Drone</span>
+      </div>
+
+      <div class="ability-grid">
+        <div class="ability-item">
+          <div class="ability-name">Hackarang</div>
+          <div class="ability-desc">A tech-enhanced batarang that interfaces with electronic panels, overloads enemy tech, and distracts robot or electronic enemies.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Drone</div>
+          <div class="ability-desc">Deploys a flying drone to scan areas from above, navigate arrow-marked drone paths, and reach switches in inaccessible locations.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NIGHTWING -->
+    <div class="char-card" id="nightwing">
+      <div class="char-header">
+        <div class="char-icon nightwing">⚡</div>
+        <div class="char-title">
+          <h2>Nightwing</h2>
+          <div class="char-subtitle">Dick Grayson — grown up and electric</div>
+        </div>
+        <div class="unlock-badge">🔓 Chapter 4 — "Mr. Freeze" Final Mission</div>
+      </div>
+
+      <p>Nightwing is Dick Grayson's evolution as a hero — he unlocks as a separate character during the final mission of Chapter 4. You still retain Robin as a swappable option. Nightwing's gadgets are electrified upgrades to Robin's toolkit, letting him jumpstart electronics and create electrified cables for puzzle solving.</p>
+
+      <div class="gadget-list">
+        <span class="gadget-pill">⚡ Electrorang</span>
+        <span class="gadget-pill">🔌 Electric Cable Launcher</span>
+      </div>
+
+      <div class="ability-grid">
+        <div class="ability-item">
+          <div class="ability-name">Electrorang</div>
+          <div class="ability-desc">An electrified Birdarang that can activate electrical panels, stun enemies, and charge LEGO machinery that Robin's version cannot.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Electric Cable Launcher</div>
+          <div class="ability-desc">Creates a live electrical conduit between two anchor points — conducts power across the cable to charge distant devices.</div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <p><strong>💡 Tip:</strong> Nightwing's electric gadgets are the only way to power certain machines in Chapter 4 and 5 puzzles. If Robin's Cable Launcher didn't solve it, try switching to Nightwing.</p>
+      </div>
+    </div>
+
+    <!-- TALIA -->
+    <div class="char-card" id="talia">
+      <div class="char-header">
+        <div class="char-icon talia">🥷</div>
+        <div class="char-title">
+          <h2>Talia al Ghul</h2>
+          <div class="char-subtitle">League of Shadows — the stealth specialist</div>
+        </div>
+        <div class="unlock-badge">🔓 Enter Chapter 5</div>
+      </div>
+
+      <p>Talia is briefly playable during the Prologue in flashback training sequences, but she doesn't become a permanent roster character until Chapter 5 begins. She's the most mechanically distinct character in the game — the only one built around stealth rather than combat, and the only one who doesn't fit the "bat-gadget" template.</p>
+
+      <div class="gadget-list">
+        <span class="gadget-pill">💨 Blowdarts</span>
+        <span class="gadget-pill">🥷 Ninja Dash</span>
+      </div>
+
+      <div class="ability-grid">
+        <div class="ability-item">
+          <div class="ability-name">Blowdarts</div>
+          <div class="ability-desc">Puts enemies to sleep silently — essential for stealth sections where alerting guards triggers a combat restart.</div>
+        </div>
+        <div class="ability-item">
+          <div class="ability-name">Ninja Dash</div>
+          <div class="ability-desc">A short-range teleport ability — lets Talia cross gaps, dodge attacks, and reach platform positions the other characters can't jump to.</div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <p><strong>💡 Tip:</strong> Talia is the best character for Free Play stealth sections. Her Ninja Dash means she can bypass many platforming challenges entirely, saving time during mission replay for collectibles.</p>
+      </div>
+    </div>
+
+    <!-- DLC -->
+    <h2 id="dlc">DLC Characters — Mayhem Collection (September 2026)</h2>
+
+    <div class="dlc-banner">
+      <h3>🃏 Joker &amp; Harley Quinn — Coming September 2026</h3>
+      <p>The Mayhem Collection DLC will add The Joker and Harley Quinn as fully playable characters with their own gadget sets. The Joker is expected to bring chaos-themed abilities, while Harley Quinn's acrobatic fighting style was teased in pre-launch materials. DLC purchasers will also receive exclusive villain-themed suit skins for the base roster.</p>
+    </div>
+
+    <p>Players who own the Deluxe Edition or Season Pass will receive the Mayhem Collection at no additional cost. A standalone purchase price has not yet been confirmed.</p>
+
+    <!-- TIPS -->
+    <h2 id="tips">Character Tips &amp; Best Practices</h2>
+
+    <p><strong>Switching characters:</strong> In Free Roam, open the Start menu → navigate to the Character tab → select your Player 2 companion. In co-op, each player controls their own character slot independently.</p>
+
+    <p><strong>Batman is always Player 1:</strong> You cannot remove Batman from the Player 1 slot. All story missions and collectibles are designed around Batman being present at all times.</p>
+
+    <p><strong>Gadget synergies in co-op:</strong> The game rewards character pairing. Batman + Catwoman is the most versatile duo for exploration (his Explosive Gel + her Call Kitty covers most puzzle types). Robin + Batgirl is ideal for tech-heavy Chapter 4 missions. Nightwing + Talia is the stealth powerhouse for Chapter 5.</p>
+
+    <p><strong>No missable unlocks:</strong> All 7 characters unlock through mandatory story progression. You can complete all character-specific puzzles in Free Play after the credits roll if you missed any during your first playthrough.</p>
+
   </div>
 
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../privacy.html">Privacy Policy</a>
-      <a href="../contact.html">Contact</a>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h3>🔗 Related Guides</h3>
+      <ul>
+        <li><a href="suits-abilities-guide.html">All 101 Suits &amp; Abilities</a></li>
+        <li><a href="collectibles-guide.html">Red Bricks &amp; Collectibles</a></li>
+        <li><a href="trophy-guide.html">Trophy &amp; Achievement Guide</a></li>
+        <li><a href="100-percent-completion.html">100% Completion Guide</a></li>
+        <li><a href="beginners-guide.html">Beginner's Guide</a></li>
+      </ul>
     </div>
-    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
-    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
-  </footer>
 
-  <script>
-    document.getElementById('menuToggle').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-  </script>
+    <div class="sidebar-card">
+      <h3>👥 7 Launch Characters</h3>
+      <ul>
+        <li>🦇 Batman — Prologue</li>
+        <li>🔦 Jim Gordon — Ch. 1</li>
+        <li>🐱 Catwoman — Ch. 2</li>
+        <li>🐦 Robin — Ch. 3</li>
+        <li>💻 Batgirl — Ch. 4</li>
+        <li>⚡ Nightwing — Ch. 4</li>
+        <li>🥷 Talia al Ghul — Ch. 5</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>📊 Quick Facts</h3>
+      <ul>
+        <li>Batman always = Player 1</li>
+        <li>All unlocks are story-automatic</li>
+        <li>0 missable characters</li>
+        <li>2 DLC chars in Sep 2026</li>
+        <li>Swap P2 freely in Bat-Cave</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>🎮 Best Character Pairings</h3>
+      <ul>
+        <li>🦇+🐱 Exploration &amp; puzzles</li>
+        <li>🦇+🐦 Early game all-rounder</li>
+        <li>🦇+💻 Tech puzzle solver</li>
+        <li>🦇+⚡ Electrical puzzles</li>
+        <li>🦇+🥷 Stealth &amp; speedrun</li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../contact.html">Contact</a>
+  </div>
+  <p>BrickHeroGuide.com is a fan site and is not affiliated with LEGO, DC Comics, TT Games, or Warner Bros. Entertainment.</p>
+  <p style="margin-top:0.4rem">© 2026 BrickHeroGuide.com</p>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
 </body>
 </html>

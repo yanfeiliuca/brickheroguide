@@ -1,5 +1,31 @@
 # BrickHeroGuide — Work Log
 
+## Session: May 24, 2026 (Part 3 — 定时任务升级)
+
+### Context
+完成全部页面更新后，对每日定时任务进行了升级，将单纯的 Blog 更新扩展为全站内容审计 + SEO 优先修改的完整工作流，并加入自动 git push。
+
+### Completed Work
+
+#### 每日定时任务升级（brickheroguide-daily-blog）
+- **任务描述更新：** 从"每日 Blog 更新"升级为"每日全站更新：Blog 新文章 + 内容审计 + SEO 优先修改 Top 3"
+- **新增阶段二：现有页面内容审计**
+  - 每次运行扫描所有 `guides/*.html` 页面
+  - 对比网上最新信息，找出内容过时/数据有误/缺失关键板块的页面
+  - 按 4 个维度打分：搜索意图强度（3分）、内容准确性差距（3分）、SEO 结构（2分）、内容完整性（2分）
+  - 选出 Top 3 优先级最高的页面进行更新（最多修改3个现有页面，或新建最多3个页面）
+- **新增步骤 13：自动 git commit + push**
+  - 所有文件写入完成后自动执行 `git add -A` → `git commit` → `git push origin main`
+  - 加入 `index.lock` 自动清理逻辑（检测到残留锁文件时先删除再继续）
+  - 如 push 失败，在 Cowork 聊天中报告并提示手动运行 `auto-push.bat`
+
+### Verification Checklist
+- [x] 定时任务 prompt 已更新（含阶段二审计流程 + git push）
+- [x] 任务描述已更新
+- [x] PROGRESS.md 已追加
+
+---
+
 ## Session: May 24, 2026 (Continuation — Context Compacted)
 
 ### Context

@@ -5,6 +5,10 @@
 .env*
 !.env.example
 
+# Auto-push script (contains local config, not for GitHub)
+auto-push.bat
+push-log.txt
+
 # Chinese documentation — not for production
 *.md
 !CLAUDE.md

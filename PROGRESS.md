@@ -75,3 +75,28 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - `deluxe-edition-explained.html` — Full rewrite with DLC breakdown, Legacy Collection, Arkham Trilogy Pack, Batman Beyond Pack, Mayhem Collection info
 - `pc-requirements.html` — Full rewrite with confirmed specs (3 tiers), upscaling table (DLSS 3/FSR 3/XeSS), SSD mandatory note, Steam Deck compatibility
 - `beginners-guide.html` — Full rewrite with 3 difficulty mode cards, Detective Mode, Red Bricks, 15 tip cards, stud multiplier math
+
+---
+
+## 2026-05-25 — Daily Automated Update: Blog + Guide Audit
+
+### 阶段一：Blog 更新
+- **`blog/mayhem-collection-dlc-leak.html`** — New blog post: "Mayhem Collection DLC Leak: 13 Suicide Squad Characters Datamined for LEGO Batman Legacy." Covers datamined Task Force X character list (Deadshot, King Shark, Captain Boomerang, Deathstroke, Killer Croc, Katana + 7 more), confirmed Joker/Harley Mayhem Mode details, leaked Mayhem Hideout hub, separate currency system, and Bud & Lou hyenas. Sources: Game Rant, Brick Fanatics, GamingBolt, ExpansiveDLC. Image: `og-image.BcIYb3Fq.jpg` (official key art).
+- **`blog/index.html`** — New post card inserted at top of `.blog-list`; Latest Posts sidebar updated (new post added, oldest removed, 3 kept).
+
+### 阶段二：内容审计结果
+**审计页面数：** 21 guide pages
+**SEO Top 3 更新：**
+1. **`all-characters-unlock.html`** — DLC section updated: replaced vague pre-release Joker/Harley speculation with confirmed TT Games DLC description + datamine rumor section with link to blog post (Score: 9/10)
+2. **`mayhem-collection-dlc.html`** — Added new "Rumored Content (Datamine)" section with full leaked character list and gameplay details (clearly labeled as unconfirmed); updated TBA language and TOC (Score: 8/10)
+3. **`mission-1-walkthrough.html`** — Updated TOC "Coming Soon" link to "More Guides"; updated Matt Berry "expected to create" tip box to post-launch confirmed language; updated "walkthroughs will be added" section (Score: 7/10)
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`blog/mayhem-collection-dlc-leak.html`)
+- [x] `blog/index.html` 已更新（卡片+侧边栏）
+- [x] 内容审计已完成（21个guide页面）
+- [x] SEO Top 3 更新已执行
+- [x] `index.html` 无需更新（未新建guide页面）
+- [x] `sitemap.xml` 已重新生成（34页）
+- [x] `PROGRESS.md` 已追加
+- [x] Git commit + push 已完成

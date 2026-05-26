@@ -5,12 +5,15 @@
 .env*
 !.env.example
 
-# Auto-push script (contains local config, not for GitHub)
+# Developer scripts and local tools
 auto-push.bat
 push-log.txt
+scripts/
 
-# Chinese documentation — not for production
-*.md
-!CLAUDE.md
-!PROGRESS.md
-!guides/*.md
+# Claude AI working files — keep local only, not for GitHub
+CLAUDE.md
+PROGRESS.md
+.claude/
+
+# Garbage / accidental files
+-w

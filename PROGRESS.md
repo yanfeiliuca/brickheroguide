@@ -1,5 +1,36 @@
 # BrickHeroGuide — Work Log
 
+## 2026-05-26 — AdSense integration (manual session) + CLAUDE.md / PROGRESS.md updates
+
+### AdSense 全站集成
+- **Publisher ID：** `ca-pub-1971262808837870`
+- **覆盖范围：** 全站 35 个 HTML 页面（guides/ × 21、blog/ × 9、根目录 × 5）
+- **做了什么：**
+  - 每个页面 `<head>` 里 GA 脚本之后插入 AdSense 脚本标签（Auto Ads 驱动）
+  - 所有 `<div class="ad-inline">Advertisement</div>` 占位符 → 替换为标准 `<ins class="adsbygoogle">` 响应式广告单元
+  - 所有侧边栏虚线 "Ad Space" 占位框 → 替换为标准 `<ins>` 广告单元
+  - `index.html` 的 `.ad-slot` 占位块 → 替换为标准 `<ins>` 广告单元
+  - 已推送至 GitHub（commit: `9a6956c`）
+- **AdSense 后台状态：** 审核进行中（"Getting ready to show ads"）。审核通过后在 AdSense → 广告 → 按网站 → 开启 Auto Ads 即可。
+- **注意：** 新建页面以现有模板为基础，天然包含 AdSense 代码，无需额外操作。
+
+### 文档更新
+- **`CLAUDE.md`** — 更新以下内容：
+  - "Shared boilerplate" 章节新增 AdSense 脚本为必填项（第2条）
+  - 新增 "Ad unit placement" 章节，说明 inline 和 sidebar 广告单元的标准 HTML 结构
+  - Image Library 表格更新：clues-2 → redeem-codes、og-image → mayhem-dlc、gear-3 → steam-player-count；family / fight-3 / clan.fastly 标记 *available*
+  - Git Conventions 新增两条注意事项：① PAT 无 workflow scope，commit 时不得包含 `.github/workflows/` 文件；② stale lock 文件用 `mv` 而非 `rm` 移除
+- **`PROGRESS.md`** — 本条记录
+
+### Verification Checklist
+- [x] 全站 35 个页面均含 AdSense 脚本
+- [x] 所有 ad-inline 和 sidebar 占位符已替换为 `<ins>` 块
+- [x] 已推送至 GitHub main
+- [x] CLAUDE.md boilerplate / image table / git notes 已更新
+- [x] PROGRESS.md 已追加
+
+---
+
 ## 2026-05-26 — Daily automated update: blog + guide audit
 
 ### 阶段一：Blog 更新
@@ -104,25 +135,4 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ---
 
-## 2026-05-25 — Daily Automated Update: Blog + Guide Audit
-
-### 阶段一：Blog 更新
-- **`blog/mayhem-collection-dlc-leak.html`** — New blog post: "Mayhem Collection DLC Leak: 13 Suicide Squad Characters Datamined for LEGO Batman Legacy." Covers datamined Task Force X character list (Deadshot, King Shark, Captain Boomerang, Deathstroke, Killer Croc, Katana + 7 more), confirmed Joker/Harley Mayhem Mode details, leaked Mayhem Hideout hub, separate currency system, and Bud & Lou hyenas. Sources: Game Rant, Brick Fanatics, GamingBolt, ExpansiveDLC. Image: `og-image.BcIYb3Fq.jpg` (official key art).
-- **`blog/index.html`** — New post card inserted at top of `.blog-list`; Latest Posts sidebar updated (new post added, oldest removed, 3 kept).
-
-### 阶段二：内容审计结果
-**审计页面数：** 21 guide pages
-**SEO Top 3 更新：**
-1. **`all-characters-unlock.html`** — DLC section updated: replaced vague pre-release Joker/Harley speculation with confirmed TT Games DLC description + datamine rumor section with link to blog post (Score: 9/10)
-2. **`mayhem-collection-dlc.html`** — Added new "Rumored Content (Datamine)" section with full leaked character list and gameplay details (clearly labeled as unconfirmed); updated TBA language and TOC (Score: 8/10)
-3. **`mission-1-walkthrough.html`** — Updated TOC "Coming Soon" link to "More Guides"; updated Matt Berry "expected to create" tip box to post-launch confirmed language; updated "walkthroughs will be added" section (Score: 7/10)
-
-### Verification Checklist
-- [x] Blog 新文章已写入 (`blog/mayhem-collection-dlc-leak.html`)
-- [x] `blog/index.html` 已更新（卡片+侧边栏）
-- [x] 内容审计已完成（21个guide页面）
-- [x] SEO Top 3 更新已执行
-- [x] `index.html` 无需更新（未新建guide页面）
-- [x] `sitemap.xml` 已重新生成（34页）
-- [x] `PROGRESS.md` 已追加
-- [x] Git commit + push 已完成
+## 2026-05-25 — Daily Au

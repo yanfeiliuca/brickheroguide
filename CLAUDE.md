@@ -23,8 +23,28 @@ Every page is fully self-contained: inline `<style>`, inline `<script>`, no exte
 
 ### Shared boilerplate on every page
 1. **Google Analytics** (`G-F7BNQ7RJDY`) — the `<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BNQ7RJDY">` block must be at the top of `<head>`
-2. **Sticky nav** — logo "BrickHeroGuide" (gear icon + yellow "Hero"), nav links, mobile hamburger
-3. **Footer** — links to Home/About/Privacy/Contact, copyright, fan-site disclaimer (not affiliated with LEGO/DC/Warner Bros.)
+2. **Google AdSense** (`ca-pub-1971262808837870`) — immediately after the GA closing `</script>`, add:
+   ```html
+   <!-- Google AdSense -->
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+   ```
+   This enables Auto Ads site-wide. All 35 existing pages already have this. New pages must include it too.
+3. **Sticky nav** — logo "BrickHeroGuide" (gear icon + yellow "Hero"), nav links, mobile hamburger
+4. **Footer** — links to Home/About/Privacy/Contact, copyright, fan-site disclaimer (not affiliated with LEGO/DC/Warner Bros.)
+
+### Ad unit placement (guides and blog pages)
+Inline ad positions use `.ad-inline` divs containing a responsive `<ins class="adsbygoogle">` block:
+```html
+<div class="ad-inline">
+  <ins class="adsbygoogle"
+       style="display:block;text-align:center"
+       data-ad-client="ca-pub-1971262808837870"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+```
+Sidebar ad positions use a dashed `.sidebar-box` with the same `<ins>` structure. Copy from any existing guide page — do not use plain text "Advertisement" placeholders.
 
 ### Directory Structure
 - `index.html` — homepage: hero stats, guide category cards, article list, collectibles section, tips section
@@ -117,28 +137,8 @@ All images are official promotional screenshots from `legobatmangame.com` — ©
 | `https://legobatmangame.com/_astro/foes.CtQfCF5a_1k24YI.webp` | Batman holds Joker up by the shirt | easter-eggs-hidden-references.html |
 | `https://legobatmangame.com/_astro/fight-2.BFd6neBb_2adSpB.webp` | Red Hood Gang member vs Batman face-off in industrial room | launch-day-reception.html |
 | `https://legobatmangame.com/_astro/postfooter.Bp36eHDB_Z2cb3ek.webp` | Red Hood reaches from acid vat, Joker card floating nearby | developer-interview-roundup.html |
-| `https://legobatmangame.com/_astro/clues-2.D9jQ9zQy_Z12vcyH.webp` | Gotham City at night — neon lights, billboards, Bat-Signal in sky | *available* |
+| `https://legobatmangame.com/_astro/clues-2.D9jQ9zQy_Z12vcyH.webp` | Gotham City at night — neon lights, billboards, Bat-Signal in sky | lego-batman-redeem-codes-qr-rewards.html |
+| `https://legobatmangame.com/_astro/og-image.BcIYb3Fq.jpg` | Official OG image (key art, horizontal) | mayhem-collection-dlc-leak.html |
+| `https://legobatmangame.com/_astro/gear-3.5F2kKy0I_1z9tbe.webp` | Batman rides Batcycle through Gotham City streets | steam-player-count-analysis.html |
 | `https://legobatmangame.com/_astro/family.CQW_jlFK_2qvCfg.webp` | Commissioner Gordon and Catwoman smiling (Bat-Family) | *available* |
-| `https://legobatmangame.com/_astro/fight-3.KeK453wH_Z23bgKb.webp` | Mr. Freeze sits in his Freeze Truck, grinning | *available* |
-| `https://legobatmangame.com/_astro/gear-3.5F2kKy0I_1z9tbe.webp` | Batman rides Batcycle through Gotham City streets | *available* |
-| `https://legobatmangame.com/_astro/og-image.BcIYb3Fq.jpg` | Official OG image (key art, horizontal) | *available* |
-| `https://clan.fastly.steamstatic.com/images/45746841/c84e906c37b4bf2fd1c6297b933f31a2479fd477.png` | Heroes & Villains Trailer promo image (Steam) | *available* |
-
-When all images in the table are used, cycle back to ones with the oldest posts, or search for new official screenshots.
-
-### Blog Post Ideas
-- Review roundups (Metacritic scores, critic quotes with sources)
-- New DLC or update announcements
-- Community discoveries (Easter eggs, speedrun records, hidden secrets)
-- Sales milestones or player count announcements
-- Comparisons with other LEGO games
-- Character/suit deep dives based on post-launch gameplay
-
-## Session Work Tracking
-
-At the end of every session, update `PROGRESS.md` with a summary of all work completed during that session. Follow the existing format: date heading, context, completed work sections, and a verification checklist. This file is the authoritative work log for the project.
-
-## Git Conventions
-
-- Branch: `main` only (no PR workflow)
-- Commit messages: past-tense, brief ("Added Blog page", "Added Mission 3-4")
+| `https://legobatmangame.com/_astro/fight-3.KeK453wH_Z23bgKb.webp` | Mr. Freeze

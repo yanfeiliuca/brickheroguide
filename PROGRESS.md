@@ -1,5 +1,31 @@
 # BrickHeroGuide — Work Log
 
+## 2026-05-26 — Daily automated update: blog + guide audit
+
+### 阶段一：Blog 更新
+- **`blog/steam-player-count-analysis.html`** — New analysis post: "33K Steam Peak: LEGO Batman Legacy Dethrones Arkham Knight — But Skywalker Saga Still Reigns Supreme". Covers the game's all-time Steam peak of 33,449 vs Batman: Arkham Knight (27,432) and LEGO Star Wars: Skywalker Saga (82,517). Sources: SteamCharts, Steambase, TheGamer. Image: gear-3 (Batman on Batcycle, previously unused).
+- **`blog/index.html`** — New card added at top of blog-list; sidebar "Latest Posts" updated to show new article.
+
+### 阶段二：内容审计结果
+**审计页面数：** 21 个 guide 页面  
+**SEO Top 3 更新：**
+1. **`guides/mission-3-walkthrough.html`** (Open-World Gotham City Guide) — 移除预发行免责声明，将"expected to"措辞改为确认描述，将"Full walkthroughs coming soon"替换为正式关联指南链接。（评分：9/10）
+2. **`guides/mission-2-walkthrough.html`** (Combat & Gameplay Guide) — 移除预发行免责声明，更新Boss encounter描述为发售后确认信息，将"coming soon"底部替换为关联指南链接。（评分：8/10）
+3. **`guides/mission-4-walkthrough.html`** (Characters & Villains Guide) — 移除预发行免责声明，替换为发售后更新提示，"More Guides Coming Soon"替换为真实指南链接。（评分：8/10）
+**新建页面：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（新卡片在顶部，侧边栏已更新）
+- [x] 内容审计已完成（21个页面扫描）
+- [x] SEO Top 3 更新已执行（mission-2/3/4 walkthrough）
+- [x] index.html 链接已更新（无新建页面，无需更新）
+- [x] sitemap.xml 已重新生成（共 35 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+---
+
 ## Session: May 24, 2026 (Part 3 — 定时任务升级)
 
 ### Context

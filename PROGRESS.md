@@ -41,6 +41,21 @@
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成（两次推送：每日更新 + canonical修复）
 
+### 补充：Git锁文件彻底修复流程（2026-05-30下午）
+
+沙盒的git锁文件长期积累导致GitHub Desktop也无法commit，最终在Windows PowerShell（管理员）用两步彻底解决：
+
+```powershell
+# 步骤1：删除所有锁文件
+cd "C:\Users\yanfe\OneDrive\Desktop\brickheroguide"
+Get-ChildItem .git -Recurse -Filter "*.lock*" | Remove-Item -Force
+
+# 步骤2：修复损坏的分支引用（写入最新commit SHA）
+"7c8f54edb1e7d424b3a46fc421bb3d7d79af8f6b" | Out-File -FilePath ".git\refs\heads\main" -Encoding ascii -NoNewline
+```
+
+执行后GitHub Desktop恢复正常（分支从"unknown"→"main"，0 changed files）。**结论：以后遇到git锁文件报错，直接用PowerShell管理员模式处理，比沙盒操作可靠。**
+
 ---
 
 ## 2026-05-29 — Daily Blog Update + Guide SEO Audit

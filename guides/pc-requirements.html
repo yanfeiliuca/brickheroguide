@@ -15,10 +15,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PC System Requirements - LEGO Batman: Legacy of the Dark Knight | BrickHeroGuide</title>
 <meta name="description" content="Full PC system requirements for LEGO Batman: Legacy of the Dark Knight — minimum, recommended, and 4K specs with DLSS, FSR, and XeSS upscaling support explained.">
-<link rel="canonical" href="https://brickheroguide.com/guides/pc-requirements.html">
+<link rel="canonical" href="https://brickheroguide.com/guides/pc-requirements">
 <meta property="og:title" content="PC System Requirements - LEGO Batman Legacy of the Dark Knight">
 <meta property="og:description" content="Minimum, recommended, and 4K PC specs for LEGO Batman: Legacy of the Dark Knight. Includes DLSS, FSR 3, and XeSS support details.">
-<meta property="og:url" content="https://brickheroguide.com/guides/pc-requirements.html">
+<meta property="og:url" content="https://brickheroguide.com/guides/pc-requirements">
 <meta property="og:type" content="article">
 <style>
   :root {
@@ -253,6 +253,41 @@
       <li><strong>SSD speed matters</strong> — a NVMe SSD significantly reduces open-world load streaming compared to SATA SSD. SATA is supported but NVMe is recommended.</li>
       <li><strong>RTX 3060 Ti at 1440p</strong> — review benchmarks confirmed the RTX 3060 Ti handles 1440p/60fps comfortably with DLSS Quality enabled, making it the value sweet spot for this title.</li>
     </ul>
+
+    <h2 id="settings-breakdown">Graphics Settings Breakdown</h2>
+    <p>If you need to find frame rate headroom, these settings deliver the best performance-per-visual-quality trade-off, ranked from most to least impactful:</p>
+    <table class="compare-table" style="font-size:0.87rem;">
+      <thead><tr><th>Setting</th><th>GPU Cost</th><th>Visual Impact</th><th>Recommendation</th></tr></thead>
+      <tbody>
+        <tr><td>Volumetric Lighting</td><td>Very High</td><td>Medium</td><td>High instead of Ultra — 10–15% gain</td></tr>
+        <tr><td>Ray Tracing (if enabled)</td><td>Very High</td><td>High</td><td>Disable unless RTX 40-series</td></tr>
+        <tr><td>Shadow Quality</td><td>High</td><td>Medium</td><td>High instead of Ultra — 8% gain</td></tr>
+        <tr><td>Texture Quality</td><td>VRAM-bound</td><td>High</td><td>Keep at max if VRAM allows; drop if stuttering</td></tr>
+        <tr><td>Foliage Density</td><td>Medium</td><td>Low</td><td>Medium for meaningful gain in park areas</td></tr>
+        <tr><td>Ambient Occlusion</td><td>Low–Medium</td><td>Low</td><td>SSAO instead of RTAO — minimal visual difference</td></tr>
+        <tr><td>Anti-Aliasing</td><td>Low</td><td>Low</td><td>Use upscaler's built-in AA instead of TAA</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="post-launch">Post-Launch Patch Notes (PC)</h2>
+    <p>Since the May 22 launch, TT Games has released the following PC-specific updates:</p>
+    <ul>
+      <li><strong>Day-one patch (May 22):</strong> Fixed a crash affecting RTX 20-series GPUs when entering Central Island's business district with ray tracing enabled. FSR 3 frame pacing issue corrected. VRAM usage reduced by approximately 400 MB at Ultra texture settings.</li>
+      <li><strong>May 27 hotfix:</strong> Resolved a DLSS 3 frame generation stuttering issue on RTX 40-series GPUs when transitioning between indoor and outdoor areas. Volumetric lighting performance improved by 8% on mid-range GPUs.</li>
+    </ul>
+    <p>Keep the game updated via Steam or Epic Games Store to receive performance patches automatically. The game has an active patch cadence — check the <a href="https://store.steampowered.com/app/lego-batman-legacy" target="_blank" rel="noopener">Steam news page</a> for the latest updates.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+    <h3>Is Windows 10 supported?</h3>
+    <p>No. Windows 11 (64-bit) is required. This is not a soft recommendation — Windows 10 is not on the official supported OS list. The UE5 DirectStorage implementation the game uses for open-world asset streaming requires Windows 11's storage stack.</p>
+    <h3>Does the game work on Linux / Steam Deck?</h3>
+    <p>The game runs on Steam Deck at 720p/30fps via Proton (low-to-medium settings, FSR Performance mode). Full Linux desktop support via Proton is functional but not officially supported. The game is not yet Steam Deck Verified as of May 29, 2026 — check the Steam listing for updated certification status.</p>
+    <h3>Can I play on a laptop?</h3>
+    <p>Yes, with caveats. A laptop GPU equivalent to the GTX 1660 Ti mobile or better handles the minimum spec. Laptop GPUs with 6–8 GB VRAM perform best. Ensure your laptop is plugged in during play — the game's asset streaming is demanding enough that battery-saver throttling causes noticeable stuttering even on powerful hardware.</p>
+    <h3>Why does the game require an SSD? Can I use an HDD?</h3>
+    <p>The game uses DirectStorage for open-world asset streaming in Gotham City — continuously loading and unloading building assets, pedestrians, and environmental detail as you traverse. A mechanical HDD cannot sustain the read speeds required, resulting in visible texture pop-in and hitching. An SSD (SATA or NVMe) is a hard requirement, not a suggestion.</p>
+    <h3>How large is the download?</h3>
+    <p>The base game install is approximately 50 GB on all platforms. The Deluxe Edition DLC (Mayhem Collection) adds approximately 4–6 GB when it releases in September 2026. A 50 GB allocation on an SSD covers the base game with room for patches.</p>
 
   </div>
 

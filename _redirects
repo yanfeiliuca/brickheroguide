@@ -1,0 +1,44 @@
+# Redirect .html URLs to clean URLs (301 permanent)
+# Guides
+/guides/100-percent-completion.html /guides/100-percent-completion 301
+/guides/all-characters-unlock.html /guides/all-characters-unlock 301
+/guides/all-villains-guide.html /guides/all-villains-guide 301
+/guides/batcave-hub-guide.html /guides/batcave-hub-guide 301
+/guides/beginners-guide.html /guides/beginners-guide 301
+/guides/best-characters-each-mission.html /guides/best-characters-each-mission 301
+/guides/collectibles-guide.html /guides/collectibles-guide 301
+/guides/deluxe-edition-explained.html /guides/deluxe-edition-explained 301
+/guides/difficulty-modes-guide.html /guides/difficulty-modes-guide 301
+/guides/gotham-map-guide.html /guides/gotham-map-guide 301
+/guides/is-it-good-for-kids.html /guides/is-it-good-for-kids 301
+/guides/mayhem-collection-dlc.html /guides/mayhem-collection-dlc 301
+/guides/mission-1-walkthrough.html /guides/mission-1-walkthrough 301
+/guides/mission-2-walkthrough.html /guides/mission-2-walkthrough 301
+/guides/mission-3-walkthrough.html /guides/mission-3-walkthrough 301
+/guides/mission-4-walkthrough.html /guides/mission-4-walkthrough 301
+/guides/pc-requirements.html /guides/pc-requirements 301
+/guides/release-date-platforms.html /guides/release-date-platforms 301
+/guides/stud-farming-guide.html /guides/stud-farming-guide 301
+/guides/suits-abilities-guide.html /guides/suits-abilities-guide 301
+/guides/tips-for-new-players.html /guides/tips-for-new-players 301
+/guides/trophy-guide.html /guides/trophy-guide 301
+
+# Blog posts
+/blog/all-characters-unlock-guide.html /blog/all-characters-unlock-guide 301
+/blog/best-pc-mods-lego-batman-legacy.html /blog/best-pc-mods-lego-batman-legacy 301
+/blog/developer-interview-roundup.html /blog/developer-interview-roundup 301
+/blog/easter-eggs-hidden-references.html /blog/easter-eggs-hidden-references 301
+/blog/highest-rated-lego-game-metacritic.html /blog/highest-rated-lego-game-metacritic 301
+/blog/launch-day-reception.html /blog/launch-day-reception 301
+/blog/lego-batman-legacy-launch-preview.html /blog/lego-batman-legacy-launch-preview 301
+/blog/lego-batman-redeem-codes-qr-rewards.html /blog/lego-batman-redeem-codes-qr-rewards 301
+/blog/lego-batman-series-visual-evolution.html /blog/lego-batman-series-visual-evolution 301
+/blog/mayhem-collection-dlc-leak.html /blog/mayhem-collection-dlc-leak 301
+/blog/platform-performance-comparison.html /blog/platform-performance-comparison 301
+/blog/ps-share-of-the-week-community-screenshots.html /blog/ps-share-of-the-week-community-screenshots 301
+/blog/steam-player-count-analysis.html /blog/steam-player-count-analysis 301
+
+# Static pages
+/about.html /about 301
+/contact.html /contact 301
+/privacy.html /privacy 301

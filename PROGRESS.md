@@ -13,14 +13,33 @@
 3. **`guides/all-villains-guide.html`** — Replaced internal "Search Console insight" tip box with player-friendly DLC navigation tip. Updated meta description to remove pre-release "confirmed" language. (SEO score: 7/10)
 **新建页面：** none (blog post only)
 
+### 阶段三：Canonical URL 全站修复（Search Console 问题）
+
+**触发原因：** Google Search Console 显示4个页面被标为 "Alternate page with proper canonical tag"，未被索引：
+- `https://brickheroguide.com/guides/is-it-good-for-kids`
+- `https://brickheroguide.com/guides/mission-4-walkthrough`
+- `https://brickheroguide.com/guides/tips-for-new-players`
+- `http://brickheroguide.com/`（HTTP版本）
+
+**根本原因：** Cloudflare Pages 同时响应带和不带 `.html` 后缀的URL，Google爬到了无后缀版本，但canonical标签指向 `.html` 版本，导致重复页面问题。
+
+**修复内容：**
+1. **新建 `_redirects` 文件** — 所有带 `.html` 的URL 301重定向至干净URL（覆盖全部22个guide页面 + 13个blog页面 + 3个静态页面）
+2. **批量更新canonical标签** — 全站35个页面的 `rel="canonical"` 和 `og:url` 全部改为无 `.html` 后缀的干净URL
+3. **更新 sitemap.xml** — 所有40个URL同步改为干净URL
+
+**预期效果：** 1-2周后 Search Console 中4个 "Alternate page" 问题消失，这些页面转为正常索引。可点击 "Validate Fix" 告知Google重新检查。
+
 ### Verification Checklist
 - [x] Blog 新文章已写入 (best-pc-mods-lego-batman-legacy.html)
 - [x] blog/index.html 已更新（新卡片 + 侧边栏Latest Posts）
 - [x] 内容审计已完成（10 guide pages）
 - [x] SEO Top 3 更新已执行
-- [x] sitemap.xml 已重新生成（40页，含新Blog文章）
+- [x] _redirects 文件已创建（全站.html → 干净URL）
+- [x] 全站35页 canonical 标签已更新（去除.html后缀）
+- [x] sitemap.xml 已更新为干净URL（40页）
 - [x] PROGRESS.md 已追加
-- [x] Git commit + push 已完成
+- [x] Git commit + push 已完成（两次推送：每日更新 + canonical修复）
 
 ---
 

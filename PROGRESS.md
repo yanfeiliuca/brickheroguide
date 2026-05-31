@@ -376,14 +376,4 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 2. **`best-characters-each-mission.html`** — Replaced pre-release placeholder ("will be published after May 22 launch") with full mission-by-mission chapter breakdown and character recommendations for all 6 chapters + Prologue. Confirmed mission names from Push Square. (Score: 8/10)
 3. **`mayhem-collection-dlc.html`** — Removed "not yet confirmed" language from three locations; updated standalone pricing TBA text and trophy note to post-launch hedged language. (Score: 7/10)
 
-**新建页面（如有）：** None (blog post only)
-
-### Verification Checklist
-- [x] Blog 新文章已写入 (`blog/highest-rated-lego-game-metacritic.html`)
-- [x] `blog/index.html` 已更新（卡片+侧边栏）
-- [x] 内容审计已完成（22个guide页面）
-- [x] SEO Top 3 更新已执行
-- [x] `index.html` 无需更新（未新建guide页面）
-- [x] `sitemap.xml` 已重新生成（38页）
-- [x] `PROGRESS.md` 已追加
-- [x] Git commit + push 已完成
+**新建页面（如有）：** None (blog pos

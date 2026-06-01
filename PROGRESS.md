@@ -376,4 +376,66 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 2. **`best-characters-each-mission.html`** — Replaced pre-release placeholder ("will be published after May 22 launch") with full mission-by-mission chapter breakdown and character recommendations for all 6 chapters + Prologue. Confirmed mission names from Push Square. (Score: 8/10)
 3. **`mayhem-collection-dlc.html`** — Removed "not yet confirmed" language from three locations; updated standalone pricing TBA text and trophy note to post-launch hedged language. (Score: 7/10)
 
+<<<<<<< Updated upstream
 **新建页面（如有）：** None (blog pos
+=======
+**新建页面（如有）：** None (blog post only)
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`blog/highest-rated-lego-game-metacritic.html`)
+- [x] `blog/index.html` 已更新（卡片+侧边栏）
+- [x] 内容审计已完成（22个guide页面）
+- [x] SEO Top 3 更新已执行
+- [x] `index.html` 无需更新（未新建guide页面）
+- [x] `sitemap.xml` 已重新生成（38页）
+- [x] `PROGRESS.md` 已追加
+- [x] Git commit + push 已完成
+
+## 2026-05-31 — Daily Update: Legacy Collection DLC Blog + Guide Audit
+
+### 阶段一：Blog 更新
+- **`blog/legacy-collection-dlc-breakdown.html`** — Full breakdown of the Legacy Collection DLC included with the Deluxe Edition: 21 suits across Arkham Trilogy, Batman Beyond, and Party Music packs; 3 Batmobiles; 15 Batcave props. Sources: Steam Deluxe Edition listing, legobatmangame.com. Image: `origin.DSZma2rC_2hKTV2.webp` (cycled from earliest post).
+
+### 阶段二：内容审计结果
+**审计页面数：** 22 guide pages
+**SEO Top 3 更新：**
+1. **`guides/suits-abilities-guide.html`** — Fixed DLC suit count from 126 → 129 (Legacy Collection = 21 suits + Sinister Pack = 7). Updated quick-stats, intro paragraph, DLC highlight box, and sidebar stat. Added detailed Legacy Collection pack breakdown with link to new blog post. (评分：8/10)
+2. **`guides/all-characters-unlock.html`** — Added Legacy Collection cross-reference in the Mayhem DLC section: 21 suits across 3 themed packs, with link to new Legacy Collection blog post. (评分：7/10)
+3. **`guides/stud-farming-guide.html`** — Added tip box clarifying that Legacy Collection (21 suits) and Mayhem Sinister Pack (7 suits) unlock without Stud cost, so Stud farming only applies to 101 base-game suits. Cross-link to Legacy Collection blog post. (评分：7/10)
+**新建页面：** なし
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新
+- [x] 内容审计已完成
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（如有）
+- [x] sitemap.xml 已重新生成（41 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+>>>>>>> Stashed changes
+
+---
+
+## 2026-06-01 — Daily blog + guide audit (patch tracker focus)
+
+### 阶段一：Blog 更新
+- **`blog/post-launch-patch-tracker.html`** — New post: "Post-Launch Patch Tracker: Every Fix in LEGO Batman: Legacy of the Dark Knight". Covers pre-load build 23314029, Day 1 patch 1.005 (stability/crash fixes), suits progress bug fix (100/101 at 99.8% — patched), and a full known-bugs table with 6 community-reported issues and their current status. 600+ words. Image: `origin.DSZma2rC` (recycled — all images exhausted). Sources: UpdateCrazy, SteamDB, JayShockblast/X, Steam community.
+
+### 阶段二：内容审计结果
+**审计页面数：** 22 guide pages
+**SEO Top 3 更新：**
+1. **`suits-abilities-guide.html`** — Added tip box about the suits progress bug fix (100/101 at 99.8% now patched) with link to new patch tracker. (Score: 9/10)
+2. **`100-percent-completion.html`** — Added known bugs warning box at top of content: disappearing Tricorner chest (pending fix) + suits counter bug (patched). Links to patch tracker. (Score: 8/10)
+3. **`mission-3-walkthrough.html`** — Removed dead "Full Walkthroughs Coming Soon" TOC link, replaced with correct `#more-guides` anchor. (Score: 7/10)
+**新建页面：** none
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新
+- [x] 内容审计已完成
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（如有）
+- [x] sitemap.xml 已重新生成（42 pages）
+- [x] PROGRESS.md 已追加
+- [ ] Git commit + push 已完成

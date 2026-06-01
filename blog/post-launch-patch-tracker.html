@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BNQ7RJDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F7BNQ7RJDY');
+</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post-Launch Patch Tracker: Every Fix in LEGO Batman Legacy of the Dark Knight - BrickHeroGuide</title>
+  <meta name="description" content="Track every post-launch patch for LEGO Batman: Legacy of the Dark Knight. Day 1 patch notes, suits progress bug fix, known bugs, and what TT Games still needs to address.">
+  <meta name="keywords" content="LEGO Batman Legacy Dark Knight patch notes, LEGO Batman bugs, LEGO Batman fixes, update 1.005, suits bug, 100 percent completion bug">
+  <link rel="canonical" href="https://brickheroguide.com/blog/post-launch-patch-tracker">
+  <meta property="og:title" content="Post-Launch Patch Tracker: Every Fix in LEGO Batman: Legacy of the Dark Knight">
+  <meta property="og:description" content="A running log of every patch TT Games has released for LEGO Batman: Legacy of the Dark Knight — plus known community-reported bugs still awaiting fixes.">
+  <meta property="og:image" content="https://legobatmangame.com/_astro/origin.DSZma2rC_2hKTV2.webp">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
+      --text: #e8eaed; --text-secondary: #9aa0ab;
+      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .article-header { margin-bottom: 28px; }
+    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; margin-bottom: 10px; margin-right: 6px; }
+    .tag-news { background: #3b82f620; color: #60a5fa; }
+    .tag-analysis { background: #eab30820; color: #fbbf24; }
+    .article-header h1 { font-size: clamp(22px, 4vw, 32px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 24px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .tip-box strong { color: var(--accent); }
+    .highlight-box { background: rgba(59, 130, 246, 0.08); border-left: 3px solid #3b82f6; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .highlight-box strong { color: #60a5fa; }
+    .warning-box { background: rgba(239, 68, 68, 0.08); border-left: 3px solid #ef4444; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .warning-box strong { color: #f87171; }
+    .patch-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin: 16px 0; }
+    .patch-card .patch-version { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 6px; margin-bottom: 8px; }
+    .patch-card .patch-date { font-size: 12px; color: var(--text-secondary); margin-bottom: 12px; }
+    .patch-card h3 { font-size: 16px; font-weight: 700; margin: 0 0 10px; color: var(--text); }
+    .patch-card ul { margin: 0 0 0 20px; }
+    .patch-card li { font-size: 14px; color: var(--text-secondary); margin-bottom: 4px; }
+    .bug-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .bug-table th { background: var(--bg-card); padding: 10px 12px; text-align: left; border: 1px solid var(--border); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-secondary); }
+    .bug-table td { padding: 10px 12px; border: 1px solid var(--border); vertical-align: top; }
+    .status-fixed { color: #34d399; font-weight: 600; }
+    .status-pending { color: #f87171; font-weight: 600; }
+    .status-workaround { color: #fbbf24; font-weight: 600; }
+    .featured-image { margin: 24px 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .featured-image img { width: 100%; display: block; }
+    .featured-image figcaption { padding: 10px 16px; font-size: 12px; color: var(--text-secondary); background: var(--bg-card); }
+    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+      .bug-table { font-size: 13px; }
+      .bug-table th, .bug-table td { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Post-Launch Patch Tracker
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag tag-news">News</span>
+        <span class="article-tag tag-analysis">Analysis</span>
+        <h1>Post-Launch Patch Tracker: Every Fix in LEGO Batman: Legacy of the Dark Knight</h1>
+        <p class="article-meta">&#128197; June 1, 2026 &nbsp;|&nbsp; &#9201; 6 min read &nbsp;|&nbsp; BrickHeroGuide</p>
+      </div>
+
+      <figure class="featured-image">
+        <img src="https://legobatmangame.com/_astro/origin.DSZma2rC_2hKTV2.webp" alt="Young Bruce Wayne ascending a cliffside at dusk, and Batman standing in moonlight — origin diptych from LEGO Batman: Legacy of the Dark Knight" loading="lazy">
+        <figcaption>From the game's origin chapter — the journey from Bruce Wayne to Batman. Image: &copy; TT Games / Warner Bros. Games. Official promotional screenshot via <a href="https://legobatmangame.com" target="_blank" rel="noopener">legobatmangame.com</a>, used for editorial purposes.</figcaption>
+      </figure>
+
+      <div class="content">
+
+        <p><em>LEGO Batman: Legacy of the Dark Knight</em> launched to near-universal acclaim on May 22, 2026, and for most players the experience has been smooth and joyful. But no open-world game ships without rough edges, and TT Games has already begun rolling out fixes in the first weeks post-launch. At the same time, the Steam community and speedrunning community have catalogued a handful of bugs that are still outstanding as of June 2026.</p>
+
+        <p>This page tracks every confirmed patch, every known community-reported bug, and the current fix status — so you know exactly what's been addressed and what to watch out for on your playthrough.</p>
+
+        <div class="tip-box">
+          <strong>&#128204; Last Updated:</strong> June 1, 2026. This tracker will be updated as TT Games releases new patches. Bookmark it if you're mid-playthrough and want to know whether a specific bug has been resolved.
+        </div>
+
+        <h2>Patch History</h2>
+
+        <p>Since launch, TT Games has pushed two confirmed updates to all platforms. Here's what each one addressed.</p>
+
+        <div class="patch-card">
+          <span class="patch-version">Build 23314029 — Pre-Load Patch</span>
+          <div class="patch-date">May 21, 2026 &nbsp;·&nbsp; All Platforms</div>
+          <h3>Pre-Launch Stability Prep</h3>
+          <ul>
+            <li>Silent infrastructure patch pushed ahead of the May 22 general release</li>
+            <li>No official patch notes published; depot file changes logged on <a href="https://steamdb.info/patchnotes/23314029/" target="_blank" rel="noopener noreferrer">SteamDB</a></li>
+            <li>Likely addressed pre-load configuration and initial server readiness</li>
+          </ul>
+        </div>
+
+        <div class="patch-card">
+          <span class="patch-version">Update 1.005 (1.005.000) — Day 1 Patch</span>
+          <div class="patch-date">May 22, 2026 &nbsp;·&nbsp; PS5 / Xbox Series X|S / PC</div>
+          <h3>Quality of Life &amp; Crash Fixes</h3>
+          <ul>
+            <li>General stability improvements across all platforms</li>
+            <li>Gameplay performance optimizations</li>
+            <li>Addressed multiple crash-to-desktop scenarios</li>
+            <li>Other minor tweaks (specifics not detailed in official notes)</li>
+          </ul>
+        </div>
+
+        <div class="patch-card">
+          <span class="patch-version">Unnamed Patch — Suits Progress Fix</span>
+          <div class="patch-date">Late May 2026 &nbsp;·&nbsp; All Platforms (reported)</div>
+          <h3>100% Completion Counter Correction</h3>
+          <ul>
+            <li>Fixed a bug where players with 100 out of 101 suits unlocked displayed an incorrect progress percentage of 99.8% instead of the correct value</li>
+            <li>Players affected by this bug should now see accurate progress on the suits collection screen</li>
+            <li>Reported and confirmed by <a href="https://x.com/JayShockblast/status/2057596073841971687" target="_blank" rel="noopener noreferrer">JayShockblast on X</a>: "If you had 100/101 suits and progress was at 99.8, it is now correct. I am sure there are plenty of other fixes."</li>
+          </ul>
+        </div>
+
+        <div class="ad-inline">
+          <ins class="adsbygoogle"
+               style="display:block;text-align:center"
+               data-ad-client="ca-pub-1971262808837870"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <h2>Known Bugs: Current Status</h2>
+
+        <p>The following bugs have been reported by the Steam community and are either confirmed fixed, still pending, or have a known workaround. This list is based on player reports in <a href="https://steamcommunity.com/app/2215200/discussions/" target="_blank" rel="noopener noreferrer">Steam Discussions</a> and is not an official TT Games bug list.</p>
+
+        <table class="bug-table">
+          <thead>
+            <tr>
+              <th>Bug</th>
+              <th>Platform</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Suits progress percentage incorrect (99.8% at 100/101)</strong><br><span style="font-size:12px;color:var(--text-secondary)">Completion counter showed wrong %</span></td>
+              <td>All</td>
+              <td class="status-fixed">&#9989; Fixed</td>
+            </tr>
+            <tr>
+              <td><strong>Disappearing world chest (Tricorner wayne tech, 139/181)</strong><br><span style="font-size:12px;color:var(--text-secondary)">Chest and camera interaction node vanish; required for 100% open world</span></td>
+              <td>PC (confirmed)</td>
+              <td class="status-pending">&#10060; Pending fix</td>
+            </tr>
+            <tr>
+              <td><strong>Wonder chests not giving open prompt</strong><br><span style="font-size:12px;color:var(--text-secondary)">Multiple reports of chests with missing interaction trigger</span></td>
+              <td>PC / PS5</td>
+              <td class="status-pending">&#10060; Pending fix</td>
+            </tr>
+            <tr>
+              <td><strong>Character input swap disappears</strong><br><span style="font-size:12px;color:var(--text-secondary)">Tab key / character switch input stops responding mid-session; requires settings reset workaround</span></td>
+              <td>PC</td>
+              <td class="status-workaround">&#9888;&#65039; Workaround available</td>
+            </tr>
+            <tr>
+              <td><strong>Soft-lock on beginning mission</strong><br><span style="font-size:12px;color:var(--text-secondary)">Game treats mission as incomplete despite no enemies remaining; skipping resolves it</span></td>
+              <td>PC (reported)</td>
+              <td class="status-pending">&#10060; Pending fix</td>
+            </tr>
+            <tr>
+              <td><strong>Player character gets stuck inside wonder chests</strong><br><span style="font-size:12px;color:var(--text-secondary)">Character floats/becomes trapped in chest collision geometry</span></td>
+              <td>PC / Xbox</td>
+              <td class="status-pending">&#10060; Pending fix</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="warning-box">
+          <strong>&#9888; 100% Completion Warning:</strong> The disappearing Tricorner world chest at coordinates 139/181 is the most serious outstanding bug for completionists. Players have reported it as the final item needed for open-world 100%. If you're affected, hold off on that area until a patch is confirmed — re-entering the chapter after a game restart may restore the chest for some users, according to community reports.
+        </div>
+
+        <h2>Workaround for the Character Input Swap Bug</h2>
+
+        <p>The most frequently reported gameplay-disrupting bug (outside of the chest issues) is the character input swap disappearing on PC. This affects left-handed players and custom control configurations especially, since Tab is the default switch key and may not work in all setups. Here's how players have been resolving it:</p>
+
+        <ul>
+          <li>Open the in-game settings menu</li>
+          <li>Navigate to Controls</li>
+          <li>Select "Reset to Default"</li>
+          <li>Re-apply your preferred input changes</li>
+          <li>The input prompt should reappear for the current session</li>
+        </ul>
+
+        <p>This is a session-level workaround only — the bug may recur after a few hours of play. TT Games has not issued a fix for this issue as of June 1, 2026.</p>
+
+        <h2>What's Still Needed</h2>
+
+        <p>The overall bug picture is relatively mild for a major open-world launch. The Day 1 patch addressed crash stability, and the suits progress fix came quickly — both are signs that TT Games is actively monitoring feedback. The more persistent issues (disappearing chests, wonder chest soft-locks) affect a smaller subset of players but are particularly frustrating for those pursuing 100% completion.</p>
+
+        <p>Looking ahead, the next major content update will be the <strong>Mayhem Collection DLC</strong>, slated for September 2026 as part of the Deluxe Edition. That update will introduce Joker and Harley Quinn as playable characters with their own story mission. It's likely that a broader bug-fix pass will accompany that release, which is standard practice for LEGO game post-launch support.</p>
+
+        <div class="highlight-box">
+          <strong>&#128203; About the Nintendo Switch 2 Version:</strong> The Switch 2 version of the game is planned for a later 2026 release and has not yet launched. Bug reports on this page pertain to the PS5, Xbox Series X|S, and PC versions only.
+        </div>
+
+        <h2>How to Report Bugs to TT Games</h2>
+
+        <p>If you've encountered a bug not listed here, TT Games accepts player reports through the <a href="https://steamcommunity.com/app/2215200/discussions/" target="_blank" rel="noopener noreferrer">Steam Discussions board</a> for PC players, and through official support channels linked on the <a href="https://legobatmangame.com" target="_blank" rel="noopener noreferrer">official game site</a>. Including your platform, game version, and a brief description of the steps to reproduce will help the team prioritize fixes.</p>
+
+        <p>We'll keep this page updated as new patches drop. If you've confirmed a fix that isn't reflected here, or found a workaround for an open bug, let us know through the contact page.</p>
+
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>&#128196; Sources</h3>
+        <a href="https://updatecrazy.com/lego-batman-legacy-of-the-dark-knight-update-1-005-patch-notes-day-1-patch/" target="_blank" rel="noopener noreferrer" class="sidebar-link">Update 1.005 Patch Notes — UpdateCrazy</a>
+        <a href="https://steamdb.info/app/2215200/patchnotes/" target="_blank" rel="noopener noreferrer" class="sidebar-link">Full Patch History — SteamDB</a>
+        <a href="https://x.com/JayShockblast/status/2057596073841971687" target="_blank" rel="noopener noreferrer" class="sidebar-link">Suits Bug Fix — JayShockblast (X)</a>
+        <a href="https://steamcommunity.com/app/2215200/discussions/0/840628770843026109/" target="_blank" rel="noopener noreferrer" class="sidebar-link">Community Bug Reports — Steam</a>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>&#128197; Latest Posts</h3>
+        <a href="steam-player-count-analysis.html" class="sidebar-link">Steam Player Count: One Week In</a>
+        <a href="platform-performance-comparison.html" class="sidebar-link">Platform Performance: PS5 vs Xbox vs PC</a>
+        <a href="launch-day-reception.html" class="sidebar-link">Launch Day: 84 Metacritic, 97% Steam</a>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>&#127918; Popular Guides</h3>
+        <a href="/guides/collectibles-guide.html" class="sidebar-link">All Collectibles Guide</a>
+        <a href="/guides/100-percent-completion.html" class="sidebar-link">100% Completion Checklist</a>
+        <a href="/guides/character-unlock-guide.html" class="sidebar-link">Unlock All Characters</a>
+        <a href="/guides/trophy-guide.html" class="sidebar-link">Trophy &amp; Achievement Guide</a>
+      </div>
+
+      <div class="sidebar-box" style="border: 1px dashed var(--border);">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1971262808837870"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/blog/">Blog</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 BrickHeroGuide.com</p>
+      <p class="footer-disclaimer">BrickHeroGuide is an unofficial fan site and is not affiliated with, endorsed by, or connected to LEGO, TT Games, DC Comics, or Warner Bros. Games. LEGO, the LEGO logo, and LEGO Batman are trademarks of The LEGO Group. Batman and all related characters are trademarks of DC Comics.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BNQ7RJDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F7BNQ7RJDY');
+</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan Smith on Making LEGO Batman Feel New Again — Post-Launch Interview - BrickHeroGuide</title>
+  <meta name="description" content="TT Games head of development Jonathan Smith explains how the studio tackled 80 years of Batman history, reinvented LEGO combat, and built Gotham as a city worth exploring.">
+  <meta name="keywords" content="Jonathan Smith TT Games interview, LEGO Batman Legacy developer, LEGO Batman combat system, TT Games Gotham design, LEGO Batman post-launch interview">
+  <link rel="canonical" href="https://brickheroguide.com/blog/jonathan-smith-post-launch-interview">
+  <meta property="og:title" content="Jonathan Smith on Making LEGO Batman Feel New Again — Post-Launch Interview">
+  <meta property="og:description" content="TT Games' head of development opens up about representing 80 years of Batman history, reinventing LEGO combat, and building Gotham as a city worth exploring.">
+  <meta property="og:image" content="https://brickheroguide.com/images/lego-batman-legacy-cover.jpg">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
+      --text: #e8eaed; --text-secondary: #9aa0ab;
+      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .article-header { margin-bottom: 28px; }
+    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; margin-bottom: 10px; margin-right: 6px; }
+    .tag-analysis { background: #f59e0b20; color: #fbbf24; }
+    .tag-news { background: #3b82f620; color: #60a5fa; }
+    .article-header h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+    .quote-box { background: var(--bg-card); border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin: 24px 0; }
+    .quote-box p { font-size: 15px; font-style: italic; color: var(--text); margin-bottom: 8px; }
+    .quote-box cite { font-size: 12px; color: var(--text-secondary); font-style: normal; }
+    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .tip-box strong { color: var(--accent); }
+    .highlight-box { background: rgba(59, 130, 246, 0.08); border-left: 3px solid #3b82f6; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .highlight-box strong { color: #60a5fa; }
+    .featured-image { margin: 24px 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .featured-image img { width: 100%; display: block; }
+    .featured-image figcaption { padding: 10px 16px; font-size: 12px; color: var(--text-secondary); background: var(--bg-card); }
+    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Jonathan Smith Interview
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag tag-analysis">Analysis</span>
+        <span class="article-tag tag-news">News</span>
+        <h1>Jonathan Smith on Making LEGO Batman Feel New Again — Post-Launch Reflections</h1>
+        <div class="article-meta">Published: June 2, 2026 &middot; 6 min read &middot; Source: <a href="https://darkknightnews.com/2026/06/01/head-of-development-dishes-about-lego-batman-legacy-of-the-dark-knight/" target="_blank" rel="noopener">Dark Knight News</a></div>
+      </div>
+
+      <div class="content">
+
+        <p>With <em>LEGO Batman: Legacy of the Dark Knight</em> now nearly two weeks into its life on shelves, TT Games' strategic director and head of development Jonathan Smith sat down with Dark Knight News on June 1 to reflect on the creative challenges behind the project. The interview, drawn from a wider conversation with <a href="https://deadline.com/2026/05/lego-batman-legacy-of-the-dark-knight-game-interview-jonathan-smith-1236919817/" target="_blank" rel="noopener">Deadline</a>, reveals how the studio thought about representing 80 years of Batman history, why every aspect of LEGO gameplay needed a rethink, and what makes traversal in this game unlike anything TT Games has shipped before.</p>
+
+        <figure class="featured-image">
+          <img src="/images/lego-batman-legacy-cover.jpg" alt="LEGO Batman: Legacy of the Dark Knight official cover art" loading="lazy">
+          <figcaption>LEGO Batman: Legacy of the Dark Knight official cover art. Image: &copy; TT Games / Warner Bros. Games. Source: <a href="https://en.wikipedia.org/wiki/File:Lego_Batman_Legacy_of_the_Dark_Knight_cover_art.jpg" target="_blank" rel="noopener noreferrer">Wikipedia</a> &mdash; used for editorial identification under fair use.</figcaption>
+        </figure>
+
+        <h2>Nothing Was Off-Limits — Not Even Batman &amp; Robin</h2>
+
+        <p>Adapting nearly eight decades of Batman mythology is a daunting brief. Smith describes the team's approach as a form of loving obsession: weeks and months spent rewatching films, replaying games, and rereading comics before a single pixel was placed.</p>
+
+        <div class="quote-box">
+          <p>"The history is iconic with such richness and history of fantastic creators who have seared Batman into our imaginations. It is unbelievable that we get to play with that character, to spend weeks and months rewatching those films and series and replaying those games and rereading those comic books and then talking with each other."</p>
+          <cite>&mdash; Jonathan Smith, Strategic Director &amp; Head of Development, TT Games (via Dark Knight News / Deadline, June 2026)</cite>
+        </div>
+
+        <p>The studio's intent, according to Smith, was to represent "a little bit of all Batman history" &mdash; and that commitment extended well beyond the obvious crowd-pleasers. Popular adaptations like Christopher Nolan's <em>The Dark Knight</em> trilogy and Tim Burton's 1989 <em>Batman</em> were natural inclusions. But TT Games also reached further, folding in media that typically gets overlooked or outright mocked. Smith name-dropped <em>Batman and Robin</em> (1997) &mdash; the George Clooney entry notorious for bat-nipples and Arnold Schwarzenegger's ice puns &mdash; as a deliberate inclusion. In LEGO form, its campy excess becomes a feature rather than a flaw.</p>
+
+        <p>This philosophy echoes what Smith told <a href="https://variety.com/2026/gaming/news/lego-batman-legacy-dark-knight-1236755243/" target="_blank" rel="noopener">Variety</a> at launch about LEGO acting as "a universal solvent for the imagination" &mdash; a medium uniquely capable of holding contradictory Batman eras together without one undermining another. The challenge, then, was less about what to include and more about shaping all of it into a coherent experience for a wide audience.</p>
+
+        <div class="ad-inline">
+          <ins class="adsbygoogle"
+               style="display:block;text-align:center"
+               data-ad-client="ca-pub-1971262808837870"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <h2>Reinventing the LEGO Gameplay Formula</h2>
+
+        <p>For all its ambition in licensed content, the LEGO game formula had grown familiar over two decades: smash bricks, collect studs, solve a platforming or character-swap puzzle, move on. Smith is candid that Legacy of the Dark Knight set out to break that pattern at a mechanical level.</p>
+
+        <div class="quote-box">
+          <p>"We've set out here to create dramatically new gameplay for a Lego game. It's similar to the other Lego games that you know and love, but we've brought every aspect of that up to date and modernised it. And we've innovated in all areas."</p>
+          <cite>&mdash; Jonathan Smith, via Dark Knight News / Deadline, June 2026</cite>
+        </div>
+
+        <p>The most visible change is combat. Previous LEGO games shared a nearly identical combat loop regardless of character &mdash; light attack, heavy attack, special move, repeat. Legacy of the Dark Knight replaces that with a system where Batman, his allies, and his enemies all behave distinctly. Batman plays one way; Catwoman plays another; Batgirl brings different tools entirely. Enemy types, too, have been substantially redesigned. "The different enemy types and the weapons they'll use against you are much more rich than anything we've delivered before," Smith said.</p>
+
+        <p>This is the direct influence of Rocksteady's Arkham Trilogy, which served as a co-development partner on the project. But Smith is careful to draw a line: the Arkham DNA is present in the mechanical ambition, not in tone. Legacy of the Dark Knight maintains "commitment to accessibility and fun for all ages" alongside the increased depth &mdash; a difficult balance that early reviews suggest the studio mostly achieved, given its <a href="/blog/highest-rated-lego-game-metacritic.html">84 Metacritic score</a>.</p>
+
+        <div class="tip-box"><strong>Want to feel the difference?</strong> Check the <a href="/guides/character-unlock-guide.html">Character Unlock Guide</a> to see when each Bat-Family member joins your roster and what unique gadgets they bring to combat.</div>
+
+        <h2>Building a Gotham Worth Exploring</h2>
+
+        <p>Beyond combat, Smith highlights traversal and world design as the areas of sharpest improvement. Gotham City in Legacy of the Dark Knight is described as "aesthetically much deeper and immersive and more full of things to play with" than anything the studio has created before &mdash; an environment designed to reward exploration rather than simply funnel players between objectives.</p>
+
+        <p>The specific mechanics Smith singles out are grappling and gliding. Both existed in earlier LEGO Batman games in rudimentary form, but Legacy of the Dark Knight's versions are described as "leaps ahead of anything we've done." The addition of new vehicles &mdash; including multiple Batmobiles and the Bat-cycle &mdash; gives players further options for crossing the open city, each with distinct handling characteristics.</p>
+
+        <p>This matters for players who want to experience the game beyond its main story. Gotham is not just a backdrop in this entry; Smith frames it as an environment built for "exploratory traversal and just fooling around" &mdash; language that suggests the free-roam experience is a meaningful part of the game's design, not an afterthought. If you haven't spent time simply moving through Gotham outside of missions, that's worth trying.</p>
+
+        <h2>The Broader Picture: Why This Moment Mattered</h2>
+
+        <p>What comes through clearly in Smith's post-launch reflections is a sense of genuine creative investment that goes beyond a licensed product delivery. The team spent real time with Batman's history &mdash; not just skimming it for recognizable reference points but engaging with it deeply enough to have opinions about what belongs and why.</p>
+
+        <p>The result is a game that <a href="/blog/launch-day-reception.html">critics described</a> as the strongest LEGO title since The Skywalker Saga, and in some respects the most ambitious the studio has attempted. Legacy of the Dark Knight carries the weight of decades of Batman mythology and tries to honor all of it &mdash; the beloved, the divisive, and the campy alike. According to Smith, that was always the plan. "It's been such a pleasure to be able to talk with other people who care as deeply about all these little details and then try to shape that into an experience that will reach a new, wide audience."</p>
+
+        <div class="highlight-box"><strong>Further reading:</strong> The Dark Knight News interview draws from a longer conversation published by <a href="https://deadline.com/2026/05/lego-batman-legacy-of-the-dark-knight-game-interview-jonathan-smith-1236919817/" target="_blank" rel="noopener">Deadline</a>. For Smith's earlier pre-launch comments on the game's creative vision, see our <a href="/blog/developer-interview-roundup.html">launch week developer interview roundup</a>.</div>
+
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>&#128240; Sources</h3>
+        <a href="https://darkknightnews.com/2026/06/01/head-of-development-dishes-about-lego-batman-legacy-of-the-dark-knight/" target="_blank" rel="noopener noreferrer" class="sidebar-link">Dark Knight News &mdash; June 1, 2026</a>
+        <a href="https://deadline.com/2026/05/lego-batman-legacy-of-the-dark-knight-game-interview-jonathan-smith-1236919817/" target="_blank" rel="noopener noreferrer" class="sidebar-link">Deadline &mdash; Jonathan Smith Interview</a>
+        <a href="https://variety.com/2026/gaming/news/lego-batman-legacy-dark-knight-1236755243/" target="_blank" rel="noopener noreferrer" class="sidebar-link">Variety &mdash; Universal Solvent Interview</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>&#127942; Latest Posts</h3>
+        <a href="/blog/post-launch-patch-tracker.html" class="sidebar-link">Post-Launch Patch Tracker</a>
+        <a href="/blog/legacy-collection-dlc-breakdown.html" class="sidebar-link">Legacy Collection DLC Breakdown</a>
+        <a href="/blog/developer-interview-roundup.html" class="sidebar-link">Launch Week Developer Interviews</a>
+      </div>
+      <div class="sidebar-box" style="border-style: dashed; padding: 0; overflow: hidden;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1971262808837870"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+      <div class="sidebar-box">
+        <h3>&#128218; Popular Guides</h3>
+        <a href="/guides/beginners-guide.html" class="sidebar-link">Beginner's Guide: 10 Tips</a>
+        <a href="/guides/all-characters-unlock.html" class="sidebar-link">All Characters &amp; Unlocks</a>
+        <a href="/guides/collectibles-guide.html" class="sidebar-link">Collectibles Guide</a>
+        <a href="/guides/trophy-guide.html" class="sidebar-link">Trophy &amp; Achievement Guide</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>Game Info</h3>
+        <div style="font-size: 13px; color: var(--text-secondary); line-height: 2;">
+          <div><strong style="color:var(--text);">Developer:</strong> TT Games</div>
+          <div><strong style="color:var(--text);">Publisher:</strong> Warner Bros. Games</div>
+          <div><strong style="color:var(--text);">Engine:</strong> Unreal Engine 5</div>
+          <div><strong style="color:var(--text);">Release:</strong> May 22, 2026</div>
+          <div><strong style="color:var(--text);">Platforms:</strong> PS5, Xbox, PC</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+  <script>document.getElementById('menuToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});</script>
+</body>
+</html>

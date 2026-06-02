@@ -1,5 +1,30 @@
 # BrickHeroGuide — Work Log
 
+## 2026-06-02 — Daily Blog Update + Guide SEO Audit
+
+### 阶段一：Blog 更新
+- **`blog/jonathan-smith-post-launch-interview.html`** — New blog post: "Jonathan Smith on Making LEGO Batman Feel New Again — Post-Launch Reflections." Covers the June 1, 2026 Dark Knight News / Deadline interview with TT Games head of development, focusing on representing all Batman history (incl. Batman & Robin), reinvented combat mechanics, and Gotham world design. 600+ words, sourced from verified interviews. Image: cover art (cycling back from oldest post — lego-batman-series-visual-evolution.html, May 19). Sources: Dark Knight News (June 1, 2026), Deadline.
+
+### 阶段二：内容审计结果
+**审计页面数：** 22 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/pc-requirements.html`** — Fixed critical factual error: page said "not yet Steam Deck Verified as of May 29, 2026" but the game received official Steam Deck Verified status on May 12, 2026 (before launch). Updated both the main Steam Deck section and the FAQ entry. Added accurate performance data (30–60fps depending on area, 720p + FSR3 Performance mode) and links to Steam announcement and Steam Deck HQ. Updated date to June 2. (Score: 9/10)
+2. **`guides/release-date-platforms.html`** — Updated "as of May 29" language to June 2, 2026. Added Nintendo.com Switch 2 store listing link. Added verified post-launch data: 84 Metacritic, 33K Steam peak, patch 1.005, Steam Deck Verified status. (Score: 8/10)
+3. **`guides/batcave-hub-guide.html`** — Updated date from May 19 to June 2 (oldest guide). Added DLC suit count for Deluxe Edition owners (122 total: 101 base + 21 Legacy Collection). Added cross-link to Suits & Abilities Guide in Wardrobe section. (Score: 6/10)
+**新建页面：** none (blog post only)
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (jonathan-smith-post-launch-interview.html, 600+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Featured Posts 更新）
+- [x] 内容审计已完成（22 guide pages）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新建guide，不需要）
+- [x] sitemap.xml 已重新生成（43页，含新blog post）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+---
+
 ## 2026-05-30 — Daily Blog Update + Guide SEO Audit
 
 ### 阶段一：Blog 更新

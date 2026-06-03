@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BNQ7RJDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F7BNQ7RJDY');
+</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGO Batman Legacy Update 1.006 Patch Notes: Stability Fixes & What's Still Broken - BrickHeroGuide</title>
+  <meta name="description" content="LEGO Batman Legacy of the Dark Knight update 1.006 landed June 2, 2026. Here's every confirmed fix — stuttering, crashes, performance — and what TT Games still needs to address.">
+  <meta name="keywords" content="LEGO Batman Legacy update 1.006, LEGO Batman patch notes June 2026, LEGO Batman fix stuttering, LEGO Batman crash fix, LEGO Batman Legacy Dark Knight patch">
+  <link rel="canonical" href="https://brickheroguide.com/blog/update-1-006-patch-notes-june-2026">
+  <meta property="og:title" content="LEGO Batman Legacy Update 1.006: What TT Games Fixed (and What's Still on the List)">
+  <meta property="og:description" content="Update 1.006 dropped June 2, addressing stuttering, crashes, and performance. Here's the full breakdown of every fix — and what players are still waiting for.">
+  <meta property="og:image" content="https://legobatmangame.com/_astro/origin.DSZma2rC_2hKTV2.webp">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
+      --text: #e8eaed; --text-secondary: #9aa0ab;
+      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .article-header { margin-bottom: 28px; }
+    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; margin-bottom: 10px; margin-right: 6px; }
+    .tag-news { background: #3b82f620; color: #60a5fa; }
+    .tag-analysis { background: #f59e0b20; color: #fbbf24; }
+    .article-header h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .tip-box strong { color: var(--accent); }
+    .highlight-box { background: rgba(59, 130, 246, 0.08); border-left: 3px solid #3b82f6; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .highlight-box strong { color: #60a5fa; }
+    .patch-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin: 20px 0; }
+    .patch-box .patch-version { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 6px; }
+    .patch-box .patch-date { font-size: 12px; color: var(--text-secondary); margin-bottom: 14px; }
+    .patch-box ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .patch-box li { font-size: 14px; padding-left: 20px; position: relative; }
+    .patch-box li::before { content: "✓"; position: absolute; left: 0; color: #34d399; font-weight: 700; }
+    .patch-box li.pending::before { content: "⏳"; }
+    .featured-image { margin: 24px 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .featured-image img { width: 100%; display: block; }
+    .featured-image figcaption { padding: 10px 16px; font-size: 12px; color: var(--text-secondary); background: var(--bg-card); }
+    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Update 1.006 Patch Notes
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag tag-news">News</span>
+        <h1>LEGO Batman Legacy Update 1.006: What TT Games Fixed (and What's Still on the List)</h1>
+        <div class="article-meta">Published: June 3, 2026 &middot; 5 min read</div>
+      </div>
+
+      <div class="content">
+        <p>Less than two weeks after launch, TT Games pushed out its second post-launch patch for <em>LEGO Batman: Legacy of the Dark Knight</em>. Update 1.006 — version 1.006.000 — arrived on June 2, 2026 for PlayStation 5, Xbox Series X|S, and PC simultaneously. While the patch is light on dramatic new content, it addresses several quality-of-life issues and stability problems that have been frustrating players since the Day 1 patch.</p>
+
+        <p>Here's a complete breakdown of everything confirmed in the update, what it means in practice, and what the community is still waiting on.</p>
+
+        <figure class="featured-image">
+          <img src="https://legobatmangame.com/_astro/origin.DSZma2rC_2hKTV2.webp" alt="Young Bruce Wayne ascending a cliffside, alongside Batman in moonlight — LEGO Batman Legacy of the Dark Knight" loading="lazy">
+          <figcaption>LEGO Batman: Legacy of the Dark Knight — Batman's origin story, rebuilt in Unreal Engine 5. Image: &copy; TT Games / Warner Bros. Games. Official promotional screenshot via <a href="https://legobatmangame.com" target="_blank" rel="noopener">legobatmangame.com</a>, used for editorial purposes.</figcaption>
+        </figure>
+
+        <h2>Update 1.006 Full Patch Notes</h2>
+
+        <p>According to the official patch notes published on June 2, 2026, update 1.006 focuses on stability and performance improvements across all platforms. The full list of confirmed changes is as follows:</p>
+
+        <div class="patch-box">
+          <div class="patch-version">Update 1.006 (1.006.000)</div>
+          <div class="patch-date">Released: June 2, 2026 &mdash; PS5, Xbox Series X|S, PC</div>
+          <ul>
+            <li>Added general stability fixes</li>
+            <li>Added gameplay performance improvements</li>
+            <li>Addressed game stuttering issues</li>
+            <li>Fixed game loading crashes</li>
+            <li>Addressed game crashing issues</li>
+            <li>Other minor tweaks</li>
+          </ul>
+        </div>
+
+        <p>TT Games has noted that a full changelog will be made available in the coming days, suggesting the notes above represent only a summary of the most significant changes. It is common for console certification requirements to delay granular patch documentation.</p>
+
+        <h2>What Does This Actually Fix?</h2>
+
+        <h3>Stuttering — The Biggest Win</h3>
+        <p>The stuttering fix is the headline change for most players. Since launch, a portion of the player base on PC and PS5 reported frame-rate hitches during open-world traversal — particularly in densely packed areas of Gotham City like the Narrows and the Financial District. According to community reports on Reddit and the Steam forums, the stuttering appeared most pronounced during the first visit to new areas, consistent with shader compilation or streaming behaviour on Unreal Engine 5 titles.</p>
+
+        <p>Whether 1.006 fully resolves the issue or merely reduces its frequency remains to be confirmed by the wider community as players test the patch over the coming days. Reports so far are cautiously positive, with several players on the BatmanArkham subreddit noting improved open-world smoothness on mid-range PC hardware.</p>
+
+        <h3>Crash Fixes — Two Categories Addressed</h3>
+        <p>The patch addresses two distinct types of crashes: loading crashes and general gameplay crashes. Loading crashes — where the game would hang or freeze during area transitions — were the more commonly reported of the two, particularly on Xbox Series X|S. Gameplay crashes were less frequent but reported during certain combat encounters late in the story. Both categories are listed as "addressed" rather than "fixed," which is typical patch note hedging language indicating the issues have been reduced, not necessarily eliminated in all cases.</p>
+
+        <h3>Performance Improvements</h3>
+        <p>Beyond stuttering, the patch notes list general "gameplay performance improvements." This is the vaguest entry on the list, but community testing on Digital Foundry's Discord and Reddit's r/PS5 community suggests this may relate to dynamic resolution scaling behaviour on PS5 — specifically, the game's tendency to drop resolution aggressively during large combat sequences. Post-patch reports indicate more stable rendering on console, though this remains unconfirmed by Digital Foundry at time of writing.</p>
+
+        <div class="ad-inline">
+          <ins class="adsbygoogle"
+               style="display:block;text-align:center"
+               data-ad-client="ca-pub-1971262808837870"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <h2>What Players Are Still Waiting For</h2>
+
+        <p>Update 1.006 is a welcome stability push, but it does not appear to address several issues that players have flagged as high priority since launch. Based on community reports across Steam, Reddit, and PlayStation forums, the following known issues remain outstanding:</p>
+
+        <h3>Collectible Tracker Inconsistencies</h3>
+        <p>A number of players have reported that the in-game collectible counter occasionally fails to update after collecting certain Batarangs and evidence tokens in the open world. The counter corrects itself on the next area load, but the visual mismatch is confusing — particularly for players working toward 100% completion. This was not mentioned in the 1.006 notes and appears to remain unaddressed. For more on collectible locations, see our <a href="/guides/collectibles-guide.html">complete collectibles guide</a>.</p>
+
+        <h3>Co-op Stability</h3>
+        <p>Split-screen co-op on PS5 has generated reports of increased crash frequency compared to single-player — a regression introduced sometime after the Day 1 patch. TT Games acknowledged the issue informally through a community manager post on the game's Discord server, but it is not mentioned in the 1.006 notes. A dedicated fix may arrive in a future update.</p>
+
+        <h3>Specific Character Unlock States Not Saving</h3>
+        <p>A smaller subset of players has reported that certain character unlocks — particularly for characters earned through Riddler challenges — occasionally fail to persist after the game closes. This appears to be a save-data edge case rather than a widespread bug, but it is frustrating for affected players. No mention of this in the current patch.</p>
+
+        <div class="highlight-box"><strong>Note on the Day 1 Patch (1.005):</strong> For context on where the game stood at launch, our <a href="/blog/post-launch-patch-tracker.html">Post-Launch Patch Tracker</a> covers everything that was addressed in update 1.005, including the suits display bug and various narrative cutscene glitches.</div>
+
+        <h2>How to Download Update 1.006</h2>
+
+        <p>The update downloads automatically when your console or PC is connected to the internet and auto-updates are enabled. On PS5, you can manually check for updates by highlighting the game tile, pressing the Options button, and selecting "Check for Update." On PC via Steam, the game updates automatically when you launch the client; you can force-check by right-clicking the game in your library and selecting "Properties &gt; Updates."</p>
+
+        <p>The update is required to play online and is applied to both the Standard and Deluxe Edition versions of the game. PC file size varies by platform but is reported at approximately 1.2 GB on Steam.</p>
+
+        <h2>What Comes Next?</h2>
+
+        <p>TT Games has not announced a specific date for update 1.007, but the cadence of post-launch patches suggests another update within two to three weeks. The developer's focus is likely to turn toward the remaining known issues — co-op stability and the collectible tracker inconsistencies — as well as any new problems surfaced by 1.006 itself.</p>
+
+        <p>On the content front, the Mayhem Collection DLC remains on track for September 2026 as previously announced. This expansion will introduce a playable Joker and Harley Quinn in a dedicated Mayhem Mode, along with a new story mission, villain-themed suits, a new Batmobile, and Batcave decoration items. Deluxe Edition owners will receive it as part of their purchase; it will also be available separately for Standard Edition players.</p>
+
+        <p>In the meantime, players looking to make the most of the current build can check our <a href="/guides/beginners-guide.html">Beginner's Guide</a>, which is kept up to date with tips that account for the latest patch state. For trophy hunters, our <a href="/guides/trophies-achievements.html">Trophies &amp; Achievements Guide</a> breaks down which collectibles are easiest to clean up first.</p>
+
+        <div class="tip-box"><strong>Community tip:</strong> If you're still experiencing stuttering after applying 1.006 on PC, try verifying game files through Steam (right-click &rarr; Properties &rarr; Local Files &rarr; "Verify integrity of game files"). Several players have reported this resolves persistent shader stuttering unrelated to the engine-level fix in the patch.</div>
+
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Sources</h3>
+        <a href="https://updatecrazy.com/lego-batman-legacy-of-the-dark-knight-update-1-006-patch-notes/" target="_blank" rel="noopener" class="sidebar-link">Update 1.006 Patch Notes — UpdateCrazy</a>
+        <a href="https://steamdb.info/patchnotes/23314029/" target="_blank" rel="noopener" class="sidebar-link">SteamDB — Patch Notes</a>
+        <a href="https://www.keengamer.com/games/lego-batman-legacy-of-the-dark-knight/news/" target="_blank" rel="noopener" class="sidebar-link">KeenGamer — Updates &amp; News</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>Latest Posts</h3>
+        <a href="/blog/update-1-006-patch-notes-june-2026.html" class="sidebar-link">Update 1.006: What TT Games Fixed</a>
+        <a href="/blog/ps-share-of-the-week-community-screenshots.html" class="sidebar-link">PS Share of the Week: Community Screenshots</a>
+        <a href="/blog/post-launch-patch-tracker.html" class="sidebar-link">Post-Launch Patch Tracker</a>
+      </div>
+      <div class="sidebar-box" style="border-style: dashed; padding: 0; overflow: hidden;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1971262808837870"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="/guides/beginners-guide.html" class="sidebar-link">Beginner's Guide: 10 Tips</a>
+        <a href="/guides/collectibles-guide.html" class="sidebar-link">Collectibles Guide</a>
+        <a href="/guides/trophies-achievements.html" class="sidebar-link">Trophies &amp; Achievements</a>
+        <a href="/guides/all-characters-unlock.html" class="sidebar-link">All Characters &amp; Unlocks</a>
+        <a href="/guides/100-percent-completion.html" class="sidebar-link">100% Completion Guide</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+  <script>document.getElementById('menuToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});</script>
+</body>
+</html>

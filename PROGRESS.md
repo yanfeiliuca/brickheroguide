@@ -1,5 +1,30 @@
 # BrickHeroGuide — Work Log
 
+## 2026-06-03 — Daily Blog Update + Guide SEO Audit
+
+### 阶段一：Blog 更新
+- **`blog/update-1-006-patch-notes-june-2026.html`** — New blog post: "LEGO Batman Legacy Update 1.006: What TT Games Fixed (and What's Still on the List)." Covers patch 1.006 released June 2, 2026 — stuttering fix, crash fixes, performance improvements — plus known outstanding bugs (co-op crash, Riddler unlock save issue, chest tracker). 750+ words. Image: origin.webp (cycling back to launch-preview's image). Sources: UpdateCrazy (June 2, 2026), SteamDB, KeenGamer.
+
+### 阶段二：内容审计结果
+**审计页面数：** 22 guide pages scanned
+**SEO Top 3 更新：**
+1. **`blog/post-launch-patch-tracker.html`** — Added Update 1.006 patch card (June 2, 2026) with full notes and styled highlight. Added 4 new rows to bug status table (stuttering ✅ fixed, loading crashes ✅ fixed, co-op crash ❌ pending, Riddler saves ❌ pending). Updated meta description and keywords to include 1.006. (Score: 9/10)
+2. **`guides/all-characters-unlock.html`** — Updated DLC pricing note: replaced "not yet announced" with accurate info about Deluxe Edition upgrade availability on Steam and console stores. More actionable for Standard Edition players. (Score: 7.5/10)
+3. **`guides/mayhem-collection-dlc.html`** — Fixed two speculative statements: trophy/achievement callout now cites confirmed base game platinum count (52 PS5 / 51 Xbox) and properly hedges the DLC trophy list as unconfirmed. Updated 100% completion paragraph to correctly state no DLC required for base platinum. (Score: 7/10)
+**新建页面：** none (blog post only)
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (update-1-006-patch-notes-june-2026.html, 750+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Featured Posts 更新）
+- [x] 内容审计已完成（22 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新建guide，不需要）
+- [x] sitemap.xml 已重新生成（44页，含新blog post）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+---
+
 ## 2026-06-02 — Daily Blog Update + Guide SEO Audit
 
 ### 阶段一：Blog 更新

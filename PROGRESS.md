@@ -1,5 +1,30 @@
 # BrickHeroGuide — Work Log
 
+## 2026-06-04 — Nintendo Switch 2 Date Announcement + Guide Accuracy Updates
+
+### 阶段一：Blog 更新
+- **`blog/switch-2-release-date-september-2026.html`** — New blog post: "LEGO Batman: Legacy of the Dark Knight Confirmed for Nintendo Switch 2 on September 18." Covers the June 3, 2026 Warner Bros. Games official press release confirming the Switch 2 launch date, simultaneous Mayhem Collection DLC release on all platforms, Switch 2 Deluxe Edition content breakdown, pre-order bonus (*The Dark Knight Returns* Batsuit), account-linked free Batsuits, and LEGO set tie-ins. 700+ words. Image: Steam Heroes & Villains Trailer promo image (first use). Sources: WB Games Press Room, Nintendo Everything, Nintendo.com eShop.
+
+### 阶段二：内容审计结果
+**审计页面数：** 22 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/release-date-platforms.html`** — Fixed critical "TBA" entries: Switch 2 date now shows confirmed September 18, 2026 in the platforms table, platform differences table, post-launch bullet, and development history. Added pre-order pricing and pre-order bonus detail. (Score: 9/10)
+2. **`guides/mayhem-collection-dlc.html`** — Updated release window from "September 2026 (exact date TBA)" to confirmed September 18, 2026. Updated overview paragraph to note simultaneous Switch 2 launch. Added confirmed $24.99 Deluxe Edition upgrade price. Updated sidebar summary. (Score: 8/10)
+3. **`guides/deluxe-edition-explained.html`** — Updated all "September 2026" references to "September 18, 2026" (5 occurrences including TOC, section header, badge, and prose). Added $24.99 upgrade price confirmation and Switch 2 context to the Mayhem Collection note. (Score: 7/10)
+**新建页面：** none (blog post only)
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (switch-2-release-date-september-2026.html, 700+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Featured Posts 更新）
+- [x] 内容审计已完成（22 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新建guide，不需要）
+- [x] sitemap.xml 已重新生成（45页，含新blog post）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+---
+
 ## 2026-06-03 — Daily Blog Update + Guide SEO Audit
 
 ### 阶段一：Blog 更新

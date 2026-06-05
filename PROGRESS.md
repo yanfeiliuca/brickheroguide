@@ -21,7 +21,8 @@
 - [x] index.html 链接已更新（无新建guide，不需要）
 - [x] sitemap.xml 已重新生成（45页，含新blog post）
 - [x] PROGRESS.md 已追加
-- [x] Git commit + push 已完成
+- [x] Git commit + push 已完成 (828716a)
+- [x] Follow-up: 8 pages structural fixes — completed missing footers, sidebars, and hamburger JS (f4066c3)
 
 ---
 
@@ -512,5 +513,28 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] SEO Top 3 更新已执行
 - [x] index.html 链接已更新（如有）
 - [x] sitemap.xml 已重新生成（42 pages）
+- [x] PROGRESS.md 已追加
+- [ ] Git commit + push 已完成
+
+## 2026-06-05 — How Long to Beat Blog Post + DLC Date Accuracy Pass
+
+### 阶段一：Blog 更新
+- **`blog/how-long-to-beat-lego-batman-legacy.html`** — New blog post: "How Long to Beat LEGO Batman: Legacy of the Dark Knight — Story, 100%, and Free Play Times." Covers story-only runtime (10–15 hrs), average playthrough (~16 hrs), 100% completion (25–35 hrs), and full completionist time (~50 hrs). Includes comparison table vs other LEGO games, tips on Stud Multipliers for efficiency, and links to collectibles/completion guides. 600+ words. Image: official cover art (cycled back to oldest post). Sources: GamesRadar, VGC, Insider Gaming, Game8, TrueAchievements, Brick Fanatics.
+
+### 阶段二：内容审计结果
+**审计页面数：** 22 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/all-characters-unlock.html`** — Updated DLC section heading and banner from "September 2026" to "September 18, 2026". Added confirmed $24.99 Deluxe Edition upgrade pricing for Standard Edition owners. Clarified that standalone Mayhem Collection listing has not yet appeared on storefronts. (Score: 8/10)
+2. **`guides/mayhem-collection-dlc.html`** — Updated quick stat from "Sep 2026" to "Sep 18". Updated "Is It Worth Buying" section to reference Sept 18 as confirmed date with pre-orders live. Updated Platinum note to reference "September 18, 2026" instead of vague "September 2026". (Score: 7.5/10)
+3. **`guides/trophy-guide.html`** — Added new "Mayhem Collection DLC Trophies (September 18, 2026)" section. Notes that base Platinum requires no DLC, explains why DLC trophy list may or may not exist, and adds Mayhem Collection DLC Guide to Related Guides list. (Score: 7.5/10)
+**新建页面：** none (blog post only)
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (how-long-to-beat-lego-batman-legacy.html, 600+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Featured Posts 更新）
+- [x] 内容审计已完成（22 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新建页面）
+- [x] sitemap.xml 已重新生成（46 pages）
 - [x] PROGRESS.md 已追加
 - [ ] Git commit + push 已完成

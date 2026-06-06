@@ -1,5 +1,29 @@
 # BrickHeroGuide — Work Log
 
+## 2026-06-06 — Speedrun Community Blog + Chapter 1 Walkthrough + Mission-1 Fixes
+
+### 阶段一：Blog 更新
+- **`blog/speedrun-leaderboards-opening.html`** — New blog post: "LEGO Batman: Legacy of the Dark Knight Speedrun Leaderboards Open June 7 — What the Community Has Built." Covers the Speedrun.com embargo ending on June 7, 68 followers, 6 moderators, 18 individual level boards, community Discord and Twitch. Discusses expected categories (Any%, 100%, IL), routing considerations (character abilities, stud multipliers, open-world hub), and the broader LEGO speedrunning context. 700+ words. Image: origin.DSZma2rC.webp (cycling back). Sources: speedrun.com/LotDK, community Discord.
+
+### 阶段二：内容审计结果
+**审计页面数：** 22 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/mission-1-walkthrough.html`** — Fixed outdated "TBA" Switch 2 date → "September 18, 2026." Removed pre-launch "confirmed so far" language from story section. Updated "More Guides Coming" to "Full Guide Library" with active link to new Chapter 1 walkthrough. Fixed wrong link text for mission-4-walkthrough (was "Characters & Villains Guide", now correct). (Score: 8/10)
+2. **`guides/chapter-1-red-hood-gang-walkthrough.html`** — NEW PAGE. Full Chapter 1 walkthrough covering The Red Hood Gang mission: step-by-step combat/puzzle guide, all 5 Ace Card locations (table), all 5 WayneTech Cache locations (table), Red Brick location (Free Play/Catwoman required), boss section (Red Hood One betrayal + Falcone armored vehicle), quick-stats header, TOC, sidebars. Captures high-intent "LEGO Batman Legacy chapter 1 walkthrough" searches currently returning no on-site content. (Score: 9/10)
+3. **`index.html`** — Added Chapter 1 walkthrough link to the Walkthrough section above the existing Story & Premise row.
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (speedrun-leaderboards-opening.html, 700+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Featured Posts 更新）
+- [x] 内容审计已完成（22 guide pages scanned）
+- [x] SEO Top 3 更新已执行（mission-1 fixes + new Chapter 1 walkthrough）
+- [x] index.html 链接已更新（Chapter 1 walkthrough card added）
+- [x] sitemap.xml 已重新生成（48页，含2新页面）
+- [x] PROGRESS.md 已追加
+- [ ] Git commit + push
+
+---
+
 ## 2026-06-04 — Nintendo Switch 2 Date Announcement + Guide Accuracy Updates
 
 ### 阶段一：Blog 更新

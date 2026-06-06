@@ -176,6 +176,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://brickheroguide.com/guides/batcave-mural-challenges.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://brickheroguide.com/guides/beginners-guide.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -194,6 +200,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://brickheroguide.com/guides/co-op-guide.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://brickheroguide.com/guides/collectibles-guide.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -206,7 +218,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://brickheroguide.com/guides/detective-mode-guide.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://brickheroguide.com/guides/difficulty-modes-guide.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brickheroguide.com/guides/gotham-districts-guide.html</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -222,6 +246,12 @@
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://brickheroguide.com/guides/jim-gordon-guide.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brickheroguide.com/guides/mayhem-collection-dlc.html</loc>
@@ -258,6 +288,12 @@
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://brickheroguide.com/guides/post-game-checklist.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brickheroguide.com/guides/release-date-platforms.html</loc>

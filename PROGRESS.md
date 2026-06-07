@@ -20,7 +20,7 @@
 - [x] index.html 链接已更新（Chapter 1 walkthrough card added）
 - [x] sitemap.xml 已重新生成（48页，含2新页面）
 - [x] PROGRESS.md 已追加
-- [ ] Git commit + push
+- [x] Git commit + push 已完成 (b71b49e)
 
 ---
 
@@ -562,3 +562,26 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（46 pages）
 - [x] PROGRESS.md 已追加
 - [ ] Git commit + push 已完成
+
+## 2026-06-07 — Trophy Platinum Guide + Three-Guide SEO Audit
+
+### 阶段一：Blog 更新
+- **`blog/trophy-guide-platinum-road.html`** — New blog post: "LEGO Batman Legacy Trophy Guide — Road to Platinum 'I am Batman'". Covers all 52 trophies (1 Platinum, 3 Gold, 4 Silver, 44 Bronze), no missables, 3/10 difficulty, recommended two-phase roadmap (Story Mode → Free Play cleanup), tips on Stud Multipliers, and Riddler trophy / True Hero / Batcave prop strategies. 700+ words. Image: origin.DSZma2rC_2hKTV2.webp (cycled back — all images now used). Sources: PowerPyx, PSNProfiles, GameRiv, KeenGamer, HTG.
+
+### 阶段二：内容审计结果
+**审计页面数：** 30 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/trophy-guide.html`** — Updated Platinum time estimate from "25–40 hours" to "40–50 hours" (aligned with verified sources). Added cross-link to new blog post. Updated "Last updated" from May 24 to June 7, 2026. (Score: 8/10)
+2. **`guides/release-date-platforms.html`** — Updated patch reference from 1.005 only to 1.005 + 1.006. Updated "Last updated" from June 2 to June 7, 2026. Updated "nearly two weeks" phrasing to "over two weeks." (Score: 6/10)
+3. **`guides/100-percent-completion.html`** — Updated total time estimate from "25–40 hours" to "25–50 hours." Updated sidebar stat from "25–40 hrs" to "40–50 hrs." Added cross-link to new Platinum blog post. Added sidebar link to Platinum Roadmap. Updated "Last updated" to June 7, 2026. (Score: 7/10)
+**新建页面：** none (blog post only)
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (trophy-guide-platinum-road.html, 700+ words)
+- [x] blog/index.html 已更新（新卡片顶部）
+- [x] 内容审计已完成（30 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新建页面）
+- [x] sitemap.xml 已重新生成（56 pages）
+- [x] PROGRESS.md 已追加
+- [ ] Git comm

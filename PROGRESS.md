@@ -538,7 +538,7 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] index.html 链接已更新（如有）
 - [x] sitemap.xml 已重新生成（42 pages）
 - [x] PROGRESS.md 已追加
-- [ ] Git commit + push 已完成
+- [x] Git commit + push 已完成
 
 ## 2026-06-05 — How Long to Beat Blog Post + DLC Date Accuracy Pass
 
@@ -561,7 +561,7 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] index.html 链接已更新（无新建页面）
 - [x] sitemap.xml 已重新生成（46 pages）
 - [x] PROGRESS.md 已追加
-- [ ] Git commit + push 已完成
+- [x] Git commit + push 已完成
 
 ## 2026-06-07 — Trophy Platinum Guide + Three-Guide SEO Audit
 
@@ -583,5 +583,4 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] SEO Top 3 更新已执行
 - [x] index.html 链接已更新（无新建页面）
 - [x] sitemap.xml 已重新生成（56 pages）
-- [x] PROGRESS.md 已追加
-- [ ] Git comm
+- [x] PROGRESS.md 已

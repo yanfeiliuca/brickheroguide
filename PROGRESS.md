@@ -22,6 +22,29 @@
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成 (b71b49e)
 
+## 2026-06-09 — RDR2 Comparison Blog + DLC / Release Guides Audit
+
+### 阶段一：Blog 更新
+- **`blog/lego-batman-legacy-rdr2-graphics-comparison.html`** — New blog post: "Why Fans Can't Stop Comparing LEGO Batman: Legacy to Red Dead Redemption 2." Covers the viral community trend (Screen Rant, May 25, 2026) of fans comparing Gotham's UE5 rain/snow/lighting effects to RDR2; the LEGO Group's X account acknowledgment; the "Arkham-ification" of LEGO's visual style; and why the comparison isn't entirely fair but still meaningful. 600+ words. Image: origin.DSZma2rC.webp (cycled back from lego-batman-legacy-launch-preview.html). Sources: Screen Rant, OpenCritic.
+
+### 阶段二：内容审计结果
+**审计页面数：** 30 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/mayhem-collection-dlc.html`** — Updated "Rumored Content" section: renamed to "Unconfirmed Extras — Datamine Findings"; updated callout to clearly state that core DLC contents (Joker/Harley, Arkham Breakout, Mayhem Mode, Sinister Pack) are ALL officially confirmed per WB June 3 press release, and this section covers only additional unconfirmed datamined elements. (Score: 9/10)
+2. **`guides/all-characters-unlock.html`** — Updated Sinister Pack description to include officially confirmed specifics: 7 villain-themed suits (one per original character), 5 Batcave decorative items, 1 Batmobile skin — per WB Games June 3, 2026 press release. (Score: 6/10)
+3. **`guides/release-date-platforms.html`** — Fixed Switch 2 performance table row: replaced "technical analysis pending" with accurate "performance analysis will be added after launch" note tied to the confirmed September 18 date. (Score: 5/10)
+**新建页面：** None
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (lego-batman-legacy-rdr2-graphics-comparison.html, 600+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏更新）
+- [x] 内容审计已完成（30 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新建页面）
+- [x] sitemap.xml 已重新生成（58页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
 ---
 
 ## 2026-06-04 — Nintendo Switch 2 Date Announcement + Guide Accuracy Updates
@@ -583,4 +606,33 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] SEO Top 3 更新已执行
 - [x] index.html 链接已更新（无新建页面）
 - [x] sitemap.xml 已重新生成（56 pages）
-- [x] PROGRESS.md 已
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+---
+
+## 2026-06-08 — 每日全站更新：销量分析 blog + 多 guide SEO 修正
+
+### 阶段一：Blog 更新
+- **`blog/cross-platform-sales-breakdown.html`** — New blog post: "LEGO Batman Legacy Sells 1.2 Million Copies in Week One: PS5 Leads, Xbox Beats Steam". Covers Alinea Analytics sales data (PS5: 612K, Xbox: 289K, Steam: 249K), $83M revenue, Xbox vs Steam analysis, Skywalker Saga comparison, Switch 2 wild card. 700+ words. Image: /images/lego-batman-legacy-cover.jpg (cycled back to oldest post). Sources: Alinea Analytics, FRVR, Windows Central.
+- **`blog/index.html`** — Added new card at top; also fixed pre-existing file truncation (file was cut off at line 379 mid-tag — completed missing cards for easter-eggs, launch-preview, visual-evolution, plus full sidebar and footer).
+
+### 阶段二：内容审计结果
+**审计页面数：** 30 guide pages scanned
+**SEO Top 3 更新（+ 批量修正）：**
+1. **`guides/deluxe-edition-explained.html`** — Fixed factual error: suit count 126 → 129 (Sinister Pack is 7 suits not 4); updated meta description; added Switch 2 pre-order bonus callout (Dark Knight Returns Batsuit). (Score: 8/10)
+2. **`guides/all-villains-guide.html`** — Updated all "September 2026" → "September 18, 2026" (5 instances) with confirmed DLC release date. (Score: 7/10)
+3. **`guides/suits-abilities-guide.html`** — Updated Sinister Pack date to September 18, 2026; added Switch 2 pre-order bonus suit entry (Dark Knight Returns Batsuit). (Score: 8/10)
+**批量日期修正（September 2026 → September 18, 2026）：** batcave-hub-guide, pc-requirements, post-game-checklist, release-date-platforms, mayhem-collection-dlc (3×), stud-farming-guide
+**新建页面：** none (blog post only)
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (cross-platform-sales-breakdown.html, 700+ words)
+- [x] blog/index.html 已更新（新卡片顶部，并修复文件截断问题）
+- [x] 内容审计已完成（30 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] 批量日期修正已完成（8个文件，"September 2026" → "September 18, 2026"）
+- [x] index.html 链接已更新（无新建页面）
+- [x] sitemap.xml 已重新生成（57 pages）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

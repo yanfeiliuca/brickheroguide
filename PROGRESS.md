@@ -636,3 +636,25 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（57 pages）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+## 2026-06-10 — Dark Knight Mode Blog + Guide Audit
+
+### 阶段一：Blog 更新
+- **`blog/dark-knight-mode-survival-guide.html`** — New blog post: "Dark Knight Mode Survival Guide: Tips for LEGO Batman's Hardest Difficulty." Covers the lives system, 20% stud death penalty, red flash attack dodge technique, defensive upgrade priority, and co-op aggro-split advantage. 700+ words. Image: origin.DSZma2rC_2hKTV2.webp (cycling back — oldest post). Sources: Neon Lights Media, Games.gg, XModHub, Game Informer (Kotaku), Game8.
+
+### 阶段二：内容審計結果
+**审计页面数：** 30 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/difficulty-modes-guide.html`** — Enhanced Dark Knight tips section: added red flash dodge-roll requirement, 20% stud death penalty warning, co-op aggro-split benefit. Added cross-link to new Dark Knight Mode blog post. (Score: 8/10)
+2. **`guides/waynetech-upgrades-guide.html`** — Added Dark Knight Mode callout box before Priority Phases section: warns about stud death penalty changing upgrade priority, links to Dark Knight Mode Survival Guide. (Score: 7.5/10)
+3. **`guides/100-percent-completion.html`** — Updated bug notice: clarified Tricorner chest bug remains unconfirmed fixed in 1.006 (not in patch notes), added workaround tip. Added Dark Knight Mode stud management warning. (Score: 7/10)
+**新建页面：** none (blog post only)
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (dark-knight-mode-survival-guide.html, 700+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Latest Posts 更新）
+- [x] 内容审计已完成（30 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新建页面）
+- [x] sitemap.xml 已重新生成（59 pages）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

@@ -658,3 +658,25 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（59 pages）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+## 2026-06-11 — Switch 2 Minifigure Blog + DLC / Trophy Guide Audit
+
+### 阶段一：Blog 更新
+- **`blog/switch-2-exclusive-batman-minifigure.html`** — New blog post: "Switch 2 Deluxe Edition Comes with an Exclusive Retro Video Game Batman Minifigure." Covers the physical-only "Retro Video Game Batman" minifigure (based on the 1989 NES Sunsoft game) included with the physical Switch 2 Deluxe Edition ($89.99, Sept 18, 2026); no standalone option; why it matters to LEGO collectors; Switch 2 in-game features; comparison to LEGO Dimensions-era collectibles. 600+ words. Image: /images/lego-batman-legacy-cover.jpg (cycling back — oldest post). Sources: WB Games press release, The Brick Fan, Stonewars, GamesRadar, Brick Fanatics.
+
+### 阶段二：内容审计结果
+**审计页面数：** 30 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/mayhem-collection-dlc.html`** — Updated "TBA" standalone price entries (×2): replaced with confirmed info — no standalone listing exists, only the $24.99 Deluxe Edition upgrade. Updated Quick Facts sidebar and Ownership & Pricing grid. (Score: 9/10)
+2. **`guides/trophy-guide.html`** — Updated DLC trophy uncertainty section: replaced "not yet confirmed" phrasing with "as of June 2026" datestamped language, tightened speculative framing around possible DLC trophy list. (Score: 8/10)
+3. **`guides/all-characters-unlock.html`** — Updated stale "has not yet been listed on storefronts" language in DLC section with confirmed June 2026 datestamp. (Score: 7/10)
+**新建页面：** none (blog post only)
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (switch-2-exclusive-batman-minifigure.html, 600+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Latest Posts 更新）
+- [x] 内容审计已完成（30 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新建页面）
+- [x] sitemap.xml 已重新生成（60 pages）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

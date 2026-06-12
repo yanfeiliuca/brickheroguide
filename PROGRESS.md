@@ -680,3 +680,26 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（60 pages）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-12 — June Mod Roundup + Guide SEO Audit
+
+### 阶段一：Blog 更新
+- **`blog/june-2026-mod-roundup.html`** — New blog post: "LEGO Batman Legacy Mod Roundup: The Best New Mods from June 2–7, 2026." Covers 5 new Nexus Mods released June 2–7: Dark Night Realism Reshade (Jun 2), Dark Knight Returns Battle Damaged skin by CharlesCardy (Jun 6), Dark Knight Suit Retexture by 1Borgir1 (Jun 3), Arkham City Batman by CreamySheev15 (Jun 7), Superbat by SwiftKnight5051 (Jun 7), Superman Legacy of the Man of Steel by SQUALLY242 (Jun 3). 700+ words. Follow-up to existing launch-week mods post. Image: foes.CtQfCF5a (cycling back — used in older easter-eggs post). Sources: Nexus Mods mod pages, SteamDB June 2 build note.
+
+### 阶段二：内容审计结果
+**审计页面数：** 30 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/suits-abilities-guide.html`** — Added new "LEGO Set QR Redemption Suits" section (id="qr-suits") covering the 4 LEGO set redemption codes (#76330–76333), how the wardrobe display works, and cross-link to QR Rewards blog post. Added to TOC. (Score: 9/10 — high search intent for suit unlock guides, clear content gap)
+2. **`guides/collectibles-guide.html`** — Added "Character Requirement Risk Warnings" section (id="risk-warnings") with per-character ability gates: Batgirl Hack, Catwoman Lockpick, Nightwing Wall-Jump, Jim Gordon Rebound Launcher, Talia Shadow Dash. Added to TOC. Per CLAUDE.md long-term upgrade priority. (Score: 8/10)
+3. **`guides/all-villains-guide.html`** — Expanded boss fight tips section from 6 to 9 villains, adding Ra's al Ghul (Lazarus Pit mechanic), The Joker (3-phase final boss), and The Penguin (umbrella rotation + drone phase). Added universal unblockable attack tip. (Score: 7/10)
+**新建页面：** none
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (june-2026-mod-roundup.html, 700+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Latest Posts 更新）
+- [x] 内容审计已完成（30 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新建页面）
+- [x] sitemap.xml 已重新生成（61 pages）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

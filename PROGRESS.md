@@ -1,5 +1,30 @@
 # BrickHeroGuide — Work Log
 
+## 2026-06-13 — Secret Characters Blog + Trophy/Character Guide Updates
+
+### 阶段一：Blog 更新
+- **`blog/secret-bonus-characters-alfred-lucius-bruce-wayne.html`** — New blog post: "3 Secret Playable Characters You Probably Missed: Alfred, Lucius Fox & Bruce Wayne." Covers the community-discovered D-pad trick to unlock 3 bonus characters beyond the advertised roster of 7. Step-by-step instructions for each (Alfred from The Mimes "Home Sweet Home"; Lucius Fox and Bruce Wayne from Wayne Industries "WayneTech R&D"). Also covers Keyboard Cat, Gentleman Ghost, Batcave customization surprises. 700+ words. Image: origin.DSZma2rC_2hKTV2.webp (cycled back from launch-preview post). Source: Brick Fanatics June 10, 2026.
+
+### 阶段二：内容审计结果
+**审计页面数：** 12 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/all-characters-unlock.html`** — Added new "Secret Bonus Characters" section between DLC and Tips headings. Covers Alfred, Lucius Fox, and Bruce Wayne with mission-section details, D-pad unlock method, and per-character ability notes. Links to new blog post. (Score: 9/10)
+2. **`guides/trophy-guide.html`** — Fixed vague "reportedly requires a very large Stud total" language with confirmed specifics: trophy name "Life's been good to me", exact threshold of 1,000,000 Studs, sources linked (Game Rant, Happy Thumbs Gaming). Also renamed the Gold trophy h3 to include trophy name and target. (Score: 7/10)
+3. **`guides/tips-for-new-players.html`** — Added Lucius Fox WayneTech terminal tip to Batcave Tips section. Added all-characters-unlock and new blog post to Related Guides list. (Score: 6/10)
+**New pages:** None
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (secret-bonus-characters-alfred-lucius-bruce-wayne.html, 700+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Latest Posts 更新）
+- [x] 内容审计已完成（12 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（N/A — no new guide pages created）
+- [x] sitemap.xml 已重新生成（62 pages total）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+---
+
 ## 2026-06-06 — Speedrun Community Blog + Chapter 1 Walkthrough + Mission-1 Fixes
 
 ### 阶段一：Blog 更新

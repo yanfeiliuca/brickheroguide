@@ -728,3 +728,27 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（61 pages）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-14 — Batcave Challenges Blog + Falcone Fortunes Guide Updates
+
+### 阶段一：Blog 更新
+- **`blog/batcave-challenges-complete-guide.html`** — New blog post: "All 43 Batcave Challenges in LEGO Batman: Legacy of the Dark Knight — Complete Guide." 900+ words covering all challenge types (combat, stealth, character-specific, exploration, stud/progression), full tables with how-to strategies for each challenge, rewards info (465,000 Studs total, Batcave mural), and tips for efficient completion. Image: origin.DSZma2rC_2hKTV2.webp (cycled back). Sources: GameRant, Destructoid, TheGamer.
+
+### 阶段二：内容审计結果
+**审计页面数：** 10 guide pages scanned
+**发现的内容缺口：** Falcone Fortunes (14 total, 2 WayneTech Chips each) entirely absent from all guide pages
+**SEO Top 3 更新：**
+1. **`guides/collectibles-guide.html`** — Added full Falcone Fortunes section (Score: 9/10): new `<h2 id="falcone">` with c-card overview, why they matter (28 total WayneTech Chips), character requirements (Batman + Catwoman, one needs Batgirl), and all 14 named locations with map coordinates. Also updated meta description and keywords, TOC, and overview list to include Falcone Fortunes.
+2. **`guides/100-percent-completion.html`** — Added Falcone Fortunes as a named bullet in Phase 2 open-world activities list, with reward details and character requirements. Added to the full checklist. (Score: 7/10)
+3. **`guides/post-game-checklist.html`** — Added new checklist item for all 14 Falcone Fortunes with time estimate (2–3 hours), reward note (28 WayneTech Chips), and link to collectibles guide Falcone section. (Score: 6/10)
+**新建页面：** None
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (batcave-challenges-complete-guide.html, 900+ words, 43 challenges covered)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Latest Posts 更新）
+- [x] 内容审计已完成（10 guide pages scanned, Falcone Fortune gap identified）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（64 页，含新 blog 文章）
+- [x] PROGRESS.md 已追加
+- [ ] Git commit + push

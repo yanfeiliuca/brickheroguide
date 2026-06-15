@@ -751,4 +751,27 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] index.html 链接已更新（无新 guide 页面）
 - [x] sitemap.xml 已重新生成（64 页，含新 blog 文章）
 - [x] PROGRESS.md 已追加
-- [ ] Git commit + push
+- [x] Git commit + push
+
+## 2026-06-15 — Stud Farming Blog + Guide Meta/Date Audit
+
+### 阶段一：Blog 更新
+- **`blog/stud-farming-guide-fast-studs.html`** — New blog post: "How to Farm Studs Fast in LEGO Batman: Legacy of the Dark Knight." 700+ words covering: the in-mission Stud Multiplier (x2→x4 via Hyper Combo skill upgrades), The Joker's Funhouse Free Play route (best farming level), the Batcave Stud Cache loop (~30k studs per visit), Jim Gordon's Rebound Launcher room-clearing tip, and skill tree picks (Stealthy Studs, Collectible Detective). Image: origin.DSZma2rC_2hKTV2.webp (cycled back — all library images used). Sources: GamesRadar, VGC, TheGamer, Games.gg.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/tips-for-new-players.html`** — Fixed meta description/OG tags mismatch (Score: 8/10): meta said "Advanced tips and tricks...that go beyond the basics" but page targets new players. Updated to "Essential tips for new players...difficulty modes, Detective Mode, Red Bricks, stud farming, combat basics, and beginner mistakes." Title tag also refined. Keywords updated to beginner-focused terms.
+2. **`guides/release-date-platforms.html`** — Updated dated post-launch section (Score: 7/10): changed "over two weeks" → "nearly four weeks", updated "as of June 7" → "as of June 15, 2026", updated Game Pass note from "as of May 29" → "as of June 15, 2026". Section heading changed from "First Week Reception" → "Reception & Updates" to reflect continued coverage.
+3. **`guides/stud-farming-guide.html`** — Added internal link to new blog post (Score: 5/10): new sidebar link "Blog: Combo Multiplier Tips" pointing to blog/stud-farming-guide-fast-studs.html.
+**新建页面：** None
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (stud-farming-guide-fast-studs.html, 700+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Latest Posts 更新）
+- [x] 内容审计已完成（31 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（65 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

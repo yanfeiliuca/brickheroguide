@@ -775,3 +775,26 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（65 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-16 — Complete Suits Guide Blog + 3 Guide SEO Updates
+
+### 阶段一：Blog 更新
+- **`blog/all-batsuits-unlock-guide.html`** — "All Suits in LEGO Batman: Legacy of the Dark Knight — Complete Unlock Guide". Full character-by-character breakdown of all 101 base-game suits (35 for Batman + 6 supporting characters) with exact unlock requirements per GameRant's post-launch database. Tag: Analysis. Image: legobatmangame.com origin diptych (recycled from oldest post). 7 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**SEO Top 3 更新：**
+1. **`guides/suits-abilities-guide.html`** — Expanded "3 Ways to Unlock Suits" to 7 confirmed methods with specific milestones (WayneTech cache counts, animal milestones, Riddler/Cluemaster requirements, Falcone missions). Added link to new blog post. (评分：8/10)
+2. **`guides/batcave-hub-guide.html`** — Corrected Wardrobe Room section: removed fabricated "11 from Red Brick colour scheme unlocks" claim; replaced with confirmed unlock methods (Main Story, Bat-Mite Store, Zoo Animals, WayneTech Caches, AR Trials, Riddler/Cluemaster, Wanted Posters, Falcone missions). (评分：6/10)
+3. **`guides/mayhem-collection-dlc.html`** — Updated "Mayhem Mode is expected to have its own collectibles" to "includes its own objectives and collectibles according to the June 3, 2026 WB Games announcement". (评分：7/10)
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（66 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

@@ -798,3 +798,26 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（66 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-17 — Co-Op Blog + Beginner Guide Co-Op Section + Release Date Freshening
+
+### 阶段一：Blog 更新
+- **`blog/co-op-multiplayer-guide.html`** — "LEGO Batman: Legacy of the Dark Knight — Complete Co-Op Multiplayer Guide". Covers: how to enable local split-screen co-op (step-by-step), split-screen mechanics, Steam Remote Play Together + PlayStation Share Play online workarounds, best character combos (4 pairings), collectible hunting tips in co-op, and story mode co-op notes. 600+ words. Tag: Guide. Image: `legobatmangame.com/_astro/family.CQW_jlFK_2qvCfg.webp` (Gordon + Catwoman; cycled). Sources: Game Rant, GamesRadar, Nerdschalk. 6 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**SEO Top 3 更新：**
+1. **`guides/beginners-guide.html`** — Added "Playing Co-Op" section (completely missing). Covers: how to drop in second player, split-screen basics, Steam Remote Play Together / PS Share Play note, link to co-op guide. Added co-op guide to sidebar "Next Guides" list. (评分：9/10)
+2. **`guides/co-op-guide.html`** — Added cross-link to new blog post `co-op-multiplayer-guide.html` in sidebar "Related Guides". Strengthens internal linking between authoritative guide and new editorial post. (评分：8/10)
+3. **`guides/release-date-platforms.html`** — Updated "as of June 15" to "June 17". Updated Multiplayer section from vague "preview reports" language to confirmed post-launch co-op details with drop-in instructions and link to co-op guide. (评分：7/10)
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（67 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BNQ7RJDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F7BNQ7RJDY');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGO Batman Legacy of the Dark Knight Co-Op Multiplayer Guide - BrickHeroGuide</title>
+  <meta name="description" content="Complete guide to co-op multiplayer in LEGO Batman: Legacy of the Dark Knight. How to enable split-screen, best character combos, online workarounds, and pro tips for two-player play.">
+  <meta name="keywords" content="LEGO Batman Legacy co-op, LEGO Batman Legacy multiplayer, LEGO Batman split screen, LEGO Batman local co-op, LEGO Batman online multiplayer">
+  <link rel="canonical" href="https://brickheroguide.com/blog/co-op-multiplayer-guide">
+  <meta property="og:title" content="LEGO Batman Legacy of the Dark Knight: Complete Co-Op Multiplayer Guide">
+  <meta property="og:description" content="Everything you need to know about playing co-op in LEGO Batman: Legacy of the Dark Knight — how to set it up, best character pairings, and online workarounds.">
+  <meta property="og:image" content="https://legobatmangame.com/_astro/family.CQW_jlFK_2qvCfg.webp">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
+      --text: #e8eaed; --text-secondary: #9aa0ab;
+      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .article-header { margin-bottom: 28px; }
+    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; margin-bottom: 10px; margin-right: 6px; }
+    .tag-analysis { background: #f59e0b20; color: #fbbf24; }
+    .tag-news { background: #3b82f620; color: #60a5fa; }
+    .article-header h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .tip-box strong { color: var(--accent); }
+    .highlight-box { background: rgba(59, 130, 246, 0.08); border-left: 3px solid #3b82f6; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .highlight-box strong { color: #60a5fa; }
+    .step-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin: 20px 0; }
+    .step-box h4 { font-size: 15px; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+    .step-num { display: inline-block; background: var(--accent); color: #000; font-weight: 800; font-size: 12px; width: 22px; height: 22px; border-radius: 50%; text-align: center; line-height: 22px; margin-right: 8px; }
+    .char-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .char-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+    .char-card h4 { font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+    .char-card p { font-size: 13px; color: var(--text-secondary); margin: 0; }
+    .featured-image { margin: 24px 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .featured-image img { width: 100%; display: block; }
+    .featured-image figcaption { padding: 10px 16px; font-size: 12px; color: var(--text-secondary); background: var(--bg-card); }
+    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+      .char-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Co-Op Guide
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag tag-analysis">Guide</span>
+        <h1>LEGO Batman: Legacy of the Dark Knight — Complete Co-Op Multiplayer Guide</h1>
+        <div class="article-meta">Published: June 17, 2026 &middot; 6 min read</div>
+      </div>
+
+      <div class="content">
+
+        <p>LEGO games have always been better with a friend, and <em>LEGO Batman: Legacy of the Dark Knight</em> is no exception. The game supports local co-op for two players on the same system — but it does <strong>not</strong> include native online multiplayer. Here's everything you need to know: how to get co-op started, the best character pairings, how to make the most of split-screen play, and whether there are any workarounds for playing with a remote friend.</p>
+
+        <figure class="featured-image">
+          <img src="https://legobatmangame.com/_astro/family.CQW_jlFK_2qvCfg.webp" alt="Commissioner Gordon and Catwoman smiling together in LEGO Batman: Legacy of the Dark Knight" loading="lazy">
+          <figcaption>Commissioner Gordon and Catwoman — two of the Bat-Family's key allies. The game's cast is built for co-op teamwork. Image: &copy; TT Games / Warner Bros. Games. Official promotional screenshot via <a href="https://legobatmangame.com" target="_blank" rel="noopener">legobatmangame.com</a>, used for editorial purposes.</figcaption>
+        </figure>
+
+        <h2>Does LEGO Batman: Legacy of the Dark Knight Have Co-Op?</h2>
+
+        <p>Yes — <em>Legacy of the Dark Knight</em> includes <strong>local co-op multiplayer</strong> for two players. Both players use separate controllers on the same system (PS5, Xbox Series X|S, or PC). The screen splits horizontally once Player 2 joins, allowing each player to move freely through the environment at the same time.</p>
+
+        <p>What the game <strong>does not</strong> have is built-in online multiplayer. According to multiple outlets including <a href="https://gamerant.com/lego-batman-legacy-dark-knight-co-op/" target="_blank" rel="noopener noreferrer">Game Rant</a> and <a href="https://www.gamesradar.com/games/adventure/lego-batman-legacy-of-the-dark-knight-co-op-multiplayer/" target="_blank" rel="noopener noreferrer">GamesRadar</a>, there is no native way to play with a friend over the internet through the game itself. However, there are platform-level workarounds — more on those below.</p>
+
+        <h2>How to Enable Co-Op: Step-by-Step</h2>
+
+        <p>Getting co-op running is straightforward. You don't need to reach a specific point in the story — you can drop in as soon as Player 1 has control of a character:</p>
+
+        <div class="step-box">
+          <h4>Enabling Local Co-Op</h4>
+          <p><span class="step-num">1</span> Connect a second controller to your system.</p>
+          <p style="margin-top:10px"><span class="step-num">2</span> With Player 1 in control of a character, press <strong>Pause</strong> (Player 1).</p>
+          <p style="margin-top:10px"><span class="step-num">3</span> In the top-right corner of the pause screen, look for the <strong>drop-in prompt</strong> showing which button Player 2 needs to press.</p>
+          <p style="margin-top:10px"><span class="step-num">4</span> Press that button on the second controller. Player 2 will join immediately in split-screen.</p>
+        </div>
+
+        <p>To leave co-op, Player 2 presses Pause on their controller. The drop-out option appears in the top-right corner of the pause screen — same as the drop-in flow, just in reverse.</p>
+
+        <div class="tip-box"><strong>Tip:</strong> Co-op can be toggled on and off at any point during a session. You don't need to restart a mission or reload a checkpoint. The game handles the transition seamlessly.</div>
+
+        <h2>Split-Screen: What to Expect</h2>
+
+        <p>Once Player 2 joins, the screen divides so both players have their own view of the action. The split is horizontal by default, giving each player roughly half the vertical screen real estate. On a large TV this works beautifully; on smaller screens you may find the view a bit cramped.</p>
+
+        <p>Unlike some co-op games that keep both players locked together on one camera, <em>Legacy of the Dark Knight</em> lets each player move independently. This means Player 1 can be battling enemies in one area while Player 2 scouts ahead for collectibles — a significant advantage for completionists trying to clear a level efficiently.</p>
+
+        <div class="highlight-box"><strong>PC players:</strong> According to <a href="https://nerdschalk.com/multiplayer-in-lego-batman-legacy-of-the-dark-knight-how-to-enable-split-screen-co-op-mode/" target="_blank" rel="noopener noreferrer">Nerdschalk</a>, local co-op on PC requires a gamepad for Player 2. Keyboard + controller combinations are technically possible but may cause input issues depending on your setup.</div>
+
+        <div class="ad-inline">
+    <ins class="adsbygoogle"
+         style="display:block;text-align:center"
+         data-ad-client="ca-pub-1971262808837870"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+        <h2>Online Multiplayer Workarounds</h2>
+
+        <p>No native online co-op means you can't invite a friend directly from the game's menu. But two platform features can bridge the gap for remote play, depending on your platform:</p>
+
+        <h3>Steam Remote Play Together (PC)</h3>
+        <p>Steam's <strong>Remote Play Together</strong> feature streams your local co-op session to a friend over the internet. From your Steam library, right-click the game, select "Remote Play Together," and invite a friend from your friend list. Your friend's inputs are sent to your machine and the game treats them as a local Player 2. The experience depends heavily on your internet connection — a stable connection of 15+ Mbps upload is recommended for smooth play.</p>
+
+        <h3>PlayStation Share Play (PS5)</h3>
+        <p>On PS5, <strong>Share Play</strong> (accessible via the PlayStation Party menu) lets a remote friend join your session as if they were sitting next to you. Like Remote Play Together, this streams your screen to their system. There is a one-hour limit per Share Play session, though you can restart it immediately after.</p>
+
+        <div class="tip-box"><strong>Worth noting:</strong> These workarounds stream your game to your friend rather than running separate game instances, so input latency depends on both players' internet connections. For puzzle-heavy sections, this can sometimes be frustrating — save those for in-person play if possible.</div>
+
+        <h2>Best Character Combos for Co-Op</h2>
+
+        <p>The game's seven playable characters each have distinct abilities, and good co-op play means covering each other's blind spots. Here are the four pairings we recommend:</p>
+
+        <div class="char-grid">
+          <div class="char-card">
+            <h4>Batman + Robin</h4>
+            <p>The classic pairing. Batman handles combat and gadgets while Robin's acrobatics reach platforms Batman can't. Covers the widest range of ability checks.</p>
+          </div>
+          <div class="char-card">
+            <h4>Batgirl + Nightwing</h4>
+            <p>Both are utility specialists. Batgirl's hacking unlocks tech-locked areas; Nightwing's wall-jump reaches high collectibles. Together they clear exploration levels extremely fast.</p>
+          </div>
+          <div class="char-card">
+            <h4>Batman + Catwoman</h4>
+            <p>Strong combat + lockpicking. Catwoman's lockpick ability opens doors Batman can't, and her agility makes chase sequences in co-op feel seamless.</p>
+          </div>
+          <div class="char-card">
+            <h4>Jim Gordon + Any</h4>
+            <p>Gordon is less combat-focused but excels in investigation sequences. Pair him with a combat character (Batman or Nightwing) so one player handles fights while the other pieces together clues.</p>
+          </div>
+        </div>
+
+        <h2>Co-Op Tips for Collectible Hunters</h2>
+
+        <p>Playing co-op specifically to push toward 100% completion? Here's how to use the two-player advantage effectively:</p>
+
+        <p><strong>Divide and conquer during Free Play.</strong> Once you unlock Free Play, both players can control different characters from the roster simultaneously. Split up to cover the map faster — one player pursues Batgirl-specific hacking collectibles while the other tackles Nightwing wall-jump spots.</p>
+
+        <p><strong>Bring ability specialists together.</strong> Some collectibles require two different abilities used in sequence — one player activates a switch while the other simultaneously uses a gadget on the unlocked object. These sequences are much smoother with two players than with the solo AI companion, who has a slight reaction delay.</p>
+
+        <p><strong>Use the split screen for puzzle rooms.</strong> Several puzzle rooms in the game require both characters to be in different positions at the same time. Solo players have to juggle between characters; in co-op, each player handles their side without the camera switching stress.</p>
+
+        <div class="highlight-box"><strong>Stud multiplier note:</strong> Stud earnings are shared between both players in co-op. If you're farming studs, check out our <a href="/blog/stud-farming-guide-fast-studs.html">Stud Farming Guide</a> for the fastest routes — co-op speeds these up significantly since both players can break objects simultaneously.</div>
+
+        <h2>Does Co-Op Affect the Story?</h2>
+
+        <p>No story content is gated behind co-op. All cutscenes, missions, and dialogue play out the same whether you're playing solo or with a partner. Player 2's character defaults to whoever is currently available as the secondary character in the current mission — in story mode, this is typically Robin or Catwoman depending on the chapter.</p>
+
+        <p>In Free Play (available after completing each mission), both players can freely swap into any unlocked character from the roster. This is where co-op shines brightest for completionists, as you can field two specialists at once rather than swapping between them manually.</p>
+
+        <h2>Final Verdict: Is Co-Op Worth It?</h2>
+
+        <p>If you have someone to play with locally, absolutely yes. The game was clearly designed with two-player co-op in mind — puzzles feel more natural with two players, collectible hunting is significantly faster, and some of the combat encounters are simply more fun when you can coordinate abilities in real time. The lack of native online multiplayer is disappointing for players who can't meet up in person, but Steam Remote Play Together is a solid substitute for PC players with good connections.</p>
+
+        <p>For guides on specific missions and collectibles, see our <a href="/guides/beginners-guide.html">Beginner's Guide</a> and <a href="/guides/collectibles-guide.html">Collectibles Guide</a>.</p>
+
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Latest Posts</h3>
+        <a href="/blog/co-op-multiplayer-guide.html" class="sidebar-link">Co-Op Multiplayer Guide</a>
+        <a href="/blog/update-1-006-patch-notes-june-2026.html" class="sidebar-link">Update 1.006: What TT Games Fixed</a>
+        <a href="/blog/ps-share-of-the-week-community-screenshots.html" class="sidebar-link">PS Share of the Week: Community Screenshots</a>
+      </div>
+      <div class="sidebar-box" style="border-style: dashed; padding: 0; overflow: hidden;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1971262808837870"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="/guides/beginners-guide.html" class="sidebar-link">Beginner's Guide: 10 Tips</a>
+        <a href="/guides/collectibles-guide.html" class="sidebar-link">Collectibles Guide</a>
+        <a href="/guides/trophies-achievements.html" class="sidebar-link">Trophies &amp; Achievements</a>
+        <a href="/guides/all-characters-unlock.html" class="sidebar-link">All Characters &amp; Unlocks</a>
+        <a href="/guides/100-percent-completion.html" class="sidebar-link">100% Completion Guide</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>Quick Links</h3>
+        <a href="https://gamerant.com/lego-batman-legacy-dark-knight-co-op/" target="_blank" rel="noopener noreferrer" class="sidebar-link">Game Rant Co-Op Guide ↗</a>
+        <a href="https://www.gamesradar.com/games/adventure/lego-batman-legacy-of-the-dark-knight-co-op-multiplayer/" target="_blank" rel="noopener noreferrer" class="sidebar-link">GamesRadar Co-Op Guide ↗</a>
+        <a href="https://store.steampowered.com/app/2215200/" target="_blank" rel="noopener noreferrer" class="sidebar-link">Steam Store Page ↗</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+  <script>document.getElementById('menuToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});</script>
+</body>
+</html>

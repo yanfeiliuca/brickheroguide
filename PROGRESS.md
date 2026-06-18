@@ -821,3 +821,26 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（67 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-18 — Daily update: Batman mythology tributes blog + 3 guide SEO updates
+
+### 阶段一：Blog 更新
+- **`blog/batman-legacy-tributes-deep-dive.html`** — "Every Batman Movie, BTAS & Comics Tribute in LEGO Batman: Legacy of the Dark Knight" — 700+ words. Based on DC.com's June 8 post-launch feature by Joshua Lapin-Bertone, covering Kevin Conroy tribute billboard, shot-for-shot BTAS Chapter 4 intro, Batman Returns Catwoman recreation, Cesar Romero decoy Joker, Arkham Asylum opening recreation, NES purple Batsuit, Court of Owls Easter eggs, Loeb & Sale's Comic Store. Image: fight-3.KeK453wH_Z23bgKb.webp (Mr. Freeze). Tag: Analysis.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**SEO Top 3 更新：**
+1. **`suits-abilities-guide.html`** — Added "Video Game Legacy Skins" subsection with the confirmed 1990 NES purple Batsuit unlock (sourced from DC.com June 8 article). Previously missing from the guide.（评分：9/10）
+2. **`tips-for-new-players.html`** — Added new "Hidden Interactions & Community Discoveries" section with 5 verified secrets: yak petting in Nanda Parbat, Batusi dance in Chapter 1, throne dialogue Easter egg, Bat-Signal chapter changes, Kevin Conroy billboard. All sourced from DC.com June 8 article.（评分：7/10）
+3. **`all-villains-guide.html`** — Added Cesar Romero decoy Joker Easter egg in Chapter 5 to the Joker villain card (complete with confirmed mustache detail). Sourced from DC.com June 8 article.（评分：7/10）
+**新建页面：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新
+- [x] 内容审计已完成（31 页）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（68 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

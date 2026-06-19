@@ -1,5 +1,27 @@
 # BrickHeroGuide — Work Log
 
+## 2026-06-19 — Community Interactive Maps Blog + 3 Guide SEO Updates
+
+### 阶段一：Blog 更新
+- **`blog/community-interactive-maps-guide.html`** — "The Best Interactive Maps for LEGO Batman: Legacy of the Dark Knight — Every Collectible, Every Secret". 600+ words. Covers 4 community maps (GameRant, Steam community guide, Shacknews, Gamemappers), collectible types table (Riddler Puzzles 121 total, WayneTech Caches 160+40, Batcave Trophies, Red Bricks, Costumes), 4-island Gotham structure, tips for efficient map use. Tags: Community + Tips. Image: `legobatmangame.com/_astro/prefooter-keyart.C5w2I9s1_1Iktj5.jpg` (new URL not previously in library). 6 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**SEO Top 3 更新：**
+1. **`guides/release-date-platforms.html`** — Fixed stale Nintendo Switch 2 performance table row. Replaced "~720p–1080p (estimated) / ~1080p (estimated)" with "720p handheld / up to 1080p docked" based on trailer footage analysis; replaced "performance analysis will be added after launch" placeholder with note that TT Games has not published official specs and full analysis will follow the September 18, 2026 launch. (评分：7/10)
+2. **`guides/gotham-districts-guide.html`** — Added missing `<h2 id="landmarks">Key Landmarks per District</h2>` section that was referenced in the TOC anchor (`#landmarks`) but did not exist in the page body. Added 9 district landmark cards covering key named locations, Batcave challenge tie-ins, character requirements, and collectible context for each district. Fixed broken TOC anchor. (评分：8/10)
+3. **`guides/collectibles-guide.html`** — Expanded "Optimal Collection Route" section per CLAUDE.md ongoing priority. Restructured flat 6-step list into 5 named phases (Story First / Batcave Sweep / WayneTech Upgrades + Multipliers / Open World by Island / Store Red Bricks). Added island-by-island sequence that minimises backtracking, "why this phase first" rationale for each step, bonus finds flagged per island, and upgraded stud multiplier value note. (评分：8/10)
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`community-interactive-maps-guide.html`)
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] sitemap.xml 已重新生成（69 页）
+- [x] PROGRESS.md 已追加
+- [ ] Git commit + push 已完成
+
 ## 2026-06-13 — Secret Characters Blog + Trophy/Character Guide Updates
 
 ### 阶段一：Blog 更新
@@ -808,39 +830,4 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 **审计页面数：** 31 guide 页面
 **SEO Top 3 更新：**
 1. **`guides/beginners-guide.html`** — Added "Playing Co-Op" section (completely missing). Covers: how to drop in second player, split-screen basics, Steam Remote Play Together / PS Share Play note, link to co-op guide. Added co-op guide to sidebar "Next Guides" list. (评分：9/10)
-2. **`guides/co-op-guide.html`** — Added cross-link to new blog post `co-op-multiplayer-guide.html` in sidebar "Related Guides". Strengthens internal linking between authoritative guide and new editorial post. (评分：8/10)
-3. **`guides/release-date-platforms.html`** — Updated "as of June 15" to "June 17". Updated Multiplayer section from vague "preview reports" language to confirmed post-launch co-op details with drop-in instructions and link to co-op guide. (评分：7/10)
-**新建页面（如有）：** 无
-
-### Verification Checklist
-- [x] Blog 新文章已写入
-- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
-- [x] 内容审计已完成（31 个 guide 页面）
-- [x] SEO Top 3 更新已执行
-- [x] index.html 链接已更新（无新 guide 页面）
-- [x] sitemap.xml 已重新生成（67 页）
-- [x] PROGRESS.md 已追加
-- [x] Git commit + push 已完成
-
-## 2026-06-18 — Daily update: Batman mythology tributes blog + 3 guide SEO updates
-
-### 阶段一：Blog 更新
-- **`blog/batman-legacy-tributes-deep-dive.html`** — "Every Batman Movie, BTAS & Comics Tribute in LEGO Batman: Legacy of the Dark Knight" — 700+ words. Based on DC.com's June 8 post-launch feature by Joshua Lapin-Bertone, covering Kevin Conroy tribute billboard, shot-for-shot BTAS Chapter 4 intro, Batman Returns Catwoman recreation, Cesar Romero decoy Joker, Arkham Asylum opening recreation, NES purple Batsuit, Court of Owls Easter eggs, Loeb & Sale's Comic Store. Image: fight-3.KeK453wH_Z23bgKb.webp (Mr. Freeze). Tag: Analysis.
-
-### 阶段二：内容审计结果
-**审计页面数：** 31 guide 页面
-**SEO Top 3 更新：**
-1. **`suits-abilities-guide.html`** — Added "Video Game Legacy Skins" subsection with the confirmed 1990 NES purple Batsuit unlock (sourced from DC.com June 8 article). Previously missing from the guide.（评分：9/10）
-2. **`tips-for-new-players.html`** — Added new "Hidden Interactions & Community Discoveries" section with 5 verified secrets: yak petting in Nanda Parbat, Batusi dance in Chapter 1, throne dialogue Easter egg, Bat-Signal chapter changes, Kevin Conroy billboard. All sourced from DC.com June 8 article.（评分：7/10）
-3. **`all-villains-guide.html`** — Added Cesar Romero decoy Joker Easter egg in Chapter 5 to the Joker villain card (complete with confirmed mustache detail). Sourced from DC.com June 8 article.（评分：7/10）
-**新建页面：** 无
-
-### Verification Checklist
-- [x] Blog 新文章已写入
-- [x] blog/index.html 已更新
-- [x] 内容审计已完成（31 页）
-- [x] SEO Top 3 更新已执行
-- [x] index.html 链接已更新（无新 guide 页面）
-- [x] sitemap.xml 已重新生成（68 页）
-- [x] PROGRESS.md 已追加
-- [x] Git commit + push 已完成
+2. **`guides/co-op-guide.html`** — Added cross-link to new blog post `co-op-multiplayer-guide.html` in sidebar "Related Guides". Strengthens internal linking between

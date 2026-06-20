@@ -1,5 +1,31 @@
 # BrickHeroGuide — Work Log
 
+## 2026-06-20 — Character Rankings Blog + Broken Link Fix + 3 Guide Cross-Links
+
+### 阶段一：Blog 更新
+- **`blog/best-character-ranking-lego-batman-legacy.html`** — "All 7 LEGO Batman: Legacy of the Dark Knight Characters, Ranked — Tier List & Abilities Guide". 700+ words. Full S–C tier table, per-character breakdown cards (abilities, unique strengths, Free Play utility), consensus ranking from Dexerto and COGconnected (June 7, 2026), Free Play team composition guide for 100% completion. Tags: Analysis + Guide. Image: `legobatmangame.com/_astro/family.CQW_jlFK_2qvCfg.webp` (cycled back — oldest prior use was all-characters-unlock-guide.html, May 27). Sources: Dexerto tier list, COGconnected Michael Chow ranking, GamesRadar skills guide. 6 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**关键发现：** Broken internal links — 6 blog pages (batman-legacy-tributes-deep-dive.html, best-character-ranking-lego-batman-legacy.html, index.html, lego-batman-legacy-rdr2-graphics-comparison.html, secret-bonus-characters-alfred-lucius-bruce-wayne.html, switch-2-exclusive-batman-minifigure.html) referenced `/guides/trophy-achievement-guide.html` which does not exist (actual file: `/guides/trophy-guide.html`). Fixed all 6 via sed.
+
+**SEO Top 3 更新：**
+1. **`guides/best-characters-each-mission.html`** — Added tier-list callout box linking to new character ranking blog post; added blog post to Related Guides list and sidebar. Strengthens internal linking for character-search queries. (评分：8/10)
+2. **`guides/jim-gordon-guide.html`** — Added community-reception info-box noting Jim Gordon's surprising #1 ranking by COGconnected despite C-tier objective placement, with source links and cross-link to character ranking post. Adds unique insight that no other guide covers. (评分：7/10)
+3. **`guides/waynetech-upgrades-guide.html`** — Added character ranking blog post link to sidebar Related Guides. Helps users who land on upgrades guide find the tier-list context for which character to upgrade first. (评分：6/10)
+**修复：** 6 broken `/guides/trophy-achievement-guide.html` links → `/guides/trophy-guide.html`
+**新建页面（如有）：** 无新建 guide 页面
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`best-character-ranking-lego-batman-legacy.html`)
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面扫描）
+- [x] 6 个破链已修复（trophy-achievement-guide → trophy-guide）
+- [x] SEO Top 3 更新已执行
+- [x] sitemap.xml 已重新生成（70 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
 ## 2026-06-19 — Community Interactive Maps Blog + 3 Guide SEO Updates
 
 ### 阶段一：Blog 更新
@@ -20,7 +46,7 @@
 - [x] SEO Top 3 更新已执行
 - [x] sitemap.xml 已重新生成（69 页）
 - [x] PROGRESS.md 已追加
-- [ ] Git commit + push 已完成
+- [x] Git commit + push 已完成
 
 ## 2026-06-13 — Secret Characters Blog + Trophy/Character Guide Updates
 
@@ -830,4 +856,39 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 **审计页面数：** 31 guide 页面
 **SEO Top 3 更新：**
 1. **`guides/beginners-guide.html`** — Added "Playing Co-Op" section (completely missing). Covers: how to drop in second player, split-screen basics, Steam Remote Play Together / PS Share Play note, link to co-op guide. Added co-op guide to sidebar "Next Guides" list. (评分：9/10)
-2. **`guides/co-op-guide.html`** — Added cross-link to new blog post `co-op-multiplayer-guide.html` in sidebar "Related Guides". Strengthens internal linking between
+2. **`guides/co-op-guide.html`** — Added cross-link to new blog post `co-op-multiplayer-guide.html` in sidebar "Related Guides". Strengthens internal linking between authoritative guide and new editorial post. (评分：8/10)
+3. **`guides/release-date-platforms.html`** — Updated "as of June 15" to "June 17". Updated Multiplayer section from vague "preview reports" language to confirmed post-launch co-op details with drop-in instructions and link to co-op guide. (评分：7/10)
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（67 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+## 2026-06-18 — Daily update: Batman mythology tributes blog + 3 guide SEO updates
+
+### 阶段一：Blog 更新
+- **`blog/batman-legacy-tributes-deep-dive.html`** — "Every Batman Movie, BTAS & Comics Tribute in LEGO Batman: Legacy of the Dark Knight" — 700+ words. Based on DC.com's June 8 post-launch feature by Joshua Lapin-Bertone, covering Kevin Conroy tribute billboard, shot-for-shot BTAS Chapter 4 intro, Batman Returns Catwoman recreation, Cesar Romero decoy Joker, Arkham Asylum opening recreation, NES purple Batsuit, Court of Owls Easter eggs, Loeb & Sale's Comic Store. Image: fight-3.KeK453wH_Z23bgKb.webp (Mr. Freeze). Tag: Analysis.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**SEO Top 3 更新：**
+1. **`suits-abilities-guide.html`** — Added "Video Game Legacy Skins" subsection with the confirmed 1990 NES purple Batsuit unlock (sourced from DC.com June 8 article). Previously missing from the guide.（评分：9/10）
+2. **`tips-for-new-players.html`** — Added new "Hidden Interactions & Community Discoveries" section with 5 verified secrets: yak petting in Nanda Parbat, Batusi dance in Chapter 1, throne dialogue Easter egg, Bat-Signal chapter changes, Kevin Conroy billboard. All sourced from DC.com June 8 article.（评分：7/10）
+3. **`all-villains-guide.html`** — Added Cesar Romero decoy Joker Easter egg in Chapter 5 to the Joker villain card (complete with confirmed mustache detail). Sourced from DC.com June 8 article.（评分：7/10）
+**新建页面：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新
+- [x] 内容审计已完成（31 页）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（68 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

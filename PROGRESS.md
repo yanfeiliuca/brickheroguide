@@ -703,3 +703,28 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（61 pages）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+---
+
+## 2026-06-20 — Pre-DLC Entry Guide Blog + PC Patch + Character DLC Detail Updates
+
+### 阶段一：Blog 更新
+- **`blog/five-reasons-to-play-lego-batman-legacy-now.html`** — New blog post: "5 Reasons to Start LEGO Batman: Legacy of the Dark Knight Now — Before the September DLC." Covers the ideal timing window before the Mayhem Collection (Sept 18), Update 1.006 performance improvements, the Deluxe Edition upgrade value ($24.99), the thriving mod/speedrun community (1.2M copies sold, 13 active speedrunners, mod scene active), and the 3-month window to 100% before DLC arrives. 700+ words. Image: gear-3.5F2kKy0I_1z9tbe.webp (Batman on Batmobile — previously used in steam-player-count-analysis.html). Sources: Capsule Computers, KeenGamer, Speedrun.com, WB Games press release.
+
+### 阶段二：内容审计结果
+**审计页面数：** 10 guide pages scanned (beginners, all-characters, trophy, waynetech, suits, gotham-map, mayhem-dlc, pc-requirements, gotham-districts, suits-abilities)
+**SEO Top 3 更新：**
+1. **`guides/pc-requirements.html`** — Added Update 1.006 (June 2, 2026) to the Post-Launch Patch Notes section: stuttering fixes, crash fixes, performance improvements. Updated meta description to mention June 2026 patch history. (Score: 8/10)
+2. **`guides/all-characters-unlock.html`** — Expanded DLC section with officially confirmed Joker & Harley Quinn details from the May 12 Deluxe Edition trailer and June 3 WB Games press release: Joker's chaos-focused ability set and Arkham Asylum story leadership; Harley Quinn's confirmed acrobatic combat style; clearer distinction between officially confirmed content and unconfirmed datamine findings. (Score: 7/10)
+3. **`guides/beginners-guide.html`** — Added "Post-Launch Updates & DLC Roadmap" section noting Update 1.006 performance fixes and explaining the Mayhem Collection DLC (Sept 18) for new players, with upgrade cost and DLC guide link. (Score: 7/10)
+**新建页面：** None
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (five-reasons-to-play-lego-batman-legacy-now.html, 700+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Latest Posts 更新）
+- [x] 内容审计已完成（10 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新建页面）
+- [x] sitemap.xml 已重新生成（63 pages）
+- [x] PROGRESS.md 已追加
+- [⚠️] Git push 失败（沙箱无 GitHub 凭据）。锁文件残留：请手动删除 .git/index.lock 和 .git/HEAD.lock，再运行 git add -A && git commit -m "run2" && git push origin main

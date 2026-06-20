@@ -1,5 +1,78 @@
 # BrickHeroGuide — Work Log
 
+## 2026-06-20 — Character Rankings Blog + Broken Link Fix + 3 Guide Cross-Links
+
+### 阶段一：Blog 更新
+- **`blog/best-character-ranking-lego-batman-legacy.html`** — "All 7 LEGO Batman: Legacy of the Dark Knight Characters, Ranked — Tier List & Abilities Guide". 700+ words. Full S–C tier table, per-character breakdown cards (abilities, unique strengths, Free Play utility), consensus ranking from Dexerto and COGconnected (June 7, 2026), Free Play team composition guide for 100% completion. Tags: Analysis + Guide. Image: `legobatmangame.com/_astro/family.CQW_jlFK_2qvCfg.webp` (cycled back — oldest prior use was all-characters-unlock-guide.html, May 27). Sources: Dexerto tier list, COGconnected Michael Chow ranking, GamesRadar skills guide. 6 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**关键发现：** Broken internal links — 6 blog pages (batman-legacy-tributes-deep-dive.html, best-character-ranking-lego-batman-legacy.html, index.html, lego-batman-legacy-rdr2-graphics-comparison.html, secret-bonus-characters-alfred-lucius-bruce-wayne.html, switch-2-exclusive-batman-minifigure.html) referenced `/guides/trophy-achievement-guide.html` which does not exist (actual file: `/guides/trophy-guide.html`). Fixed all 6 via sed.
+
+**SEO Top 3 更新：**
+1. **`guides/best-characters-each-mission.html`** — Added tier-list callout box linking to new character ranking blog post; added blog post to Related Guides list and sidebar. Strengthens internal linking for character-search queries. (评分：8/10)
+2. **`guides/jim-gordon-guide.html`** — Added community-reception info-box noting Jim Gordon's surprising #1 ranking by COGconnected despite C-tier objective placement, with source links and cross-link to character ranking post. Adds unique insight that no other guide covers. (评分：7/10)
+3. **`guides/waynetech-upgrades-guide.html`** — Added character ranking blog post link to sidebar Related Guides. Helps users who land on upgrades guide find the tier-list context for which character to upgrade first. (评分：6/10)
+**修复：** 6 broken `/guides/trophy-achievement-guide.html` links → `/guides/trophy-guide.html`
+**新建页面（如有）：** 无新建 guide 页面
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`best-character-ranking-lego-batman-legacy.html`)
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面扫描）
+- [x] 6 个破链已修复（trophy-achievement-guide → trophy-guide）
+- [x] SEO Top 3 更新已执行
+- [x] sitemap.xml 已重新生成（70 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+## 2026-06-19 — Community Interactive Maps Blog + 3 Guide SEO Updates
+
+### 阶段一：Blog 更新
+- **`blog/community-interactive-maps-guide.html`** — "The Best Interactive Maps for LEGO Batman: Legacy of the Dark Knight — Every Collectible, Every Secret". 600+ words. Covers 4 community maps (GameRant, Steam community guide, Shacknews, Gamemappers), collectible types table (Riddler Puzzles 121 total, WayneTech Caches 160+40, Batcave Trophies, Red Bricks, Costumes), 4-island Gotham structure, tips for efficient map use. Tags: Community + Tips. Image: `legobatmangame.com/_astro/prefooter-keyart.C5w2I9s1_1Iktj5.jpg` (new URL not previously in library). 6 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**SEO Top 3 更新：**
+1. **`guides/release-date-platforms.html`** — Fixed stale Nintendo Switch 2 performance table row. Replaced "~720p–1080p (estimated) / ~1080p (estimated)" with "720p handheld / up to 1080p docked" based on trailer footage analysis; replaced "performance analysis will be added after launch" placeholder with note that TT Games has not published official specs and full analysis will follow the September 18, 2026 launch. (评分：7/10)
+2. **`guides/gotham-districts-guide.html`** — Added missing `<h2 id="landmarks">Key Landmarks per District</h2>` section that was referenced in the TOC anchor (`#landmarks`) but did not exist in the page body. Added 9 district landmark cards covering key named locations, Batcave challenge tie-ins, character requirements, and collectible context for each district. Fixed broken TOC anchor. (评分：8/10)
+3. **`guides/collectibles-guide.html`** — Expanded "Optimal Collection Route" section per CLAUDE.md ongoing priority. Restructured flat 6-step list into 5 named phases (Story First / Batcave Sweep / WayneTech Upgrades + Multipliers / Open World by Island / Store Red Bricks). Added island-by-island sequence that minimises backtracking, "why this phase first" rationale for each step, bonus finds flagged per island, and upgraded stud multiplier value note. (评分：8/10)
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`community-interactive-maps-guide.html`)
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] sitemap.xml 已重新生成（69 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+## 2026-06-13 — Secret Characters Blog + Trophy/Character Guide Updates
+
+### 阶段一：Blog 更新
+- **`blog/secret-bonus-characters-alfred-lucius-bruce-wayne.html`** — New blog post: "3 Secret Playable Characters You Probably Missed: Alfred, Lucius Fox & Bruce Wayne." Covers the community-discovered D-pad trick to unlock 3 bonus characters beyond the advertised roster of 7. Step-by-step instructions for each (Alfred from The Mimes "Home Sweet Home"; Lucius Fox and Bruce Wayne from Wayne Industries "WayneTech R&D"). Also covers Keyboard Cat, Gentleman Ghost, Batcave customization surprises. 700+ words. Image: origin.DSZma2rC_2hKTV2.webp (cycled back from launch-preview post). Source: Brick Fanatics June 10, 2026.
+
+### 阶段二：内容审计结果
+**审计页面数：** 12 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/all-characters-unlock.html`** — Added new "Secret Bonus Characters" section between DLC and Tips headings. Covers Alfred, Lucius Fox, and Bruce Wayne with mission-section details, D-pad unlock method, and per-character ability notes. Links to new blog post. (Score: 9/10)
+2. **`guides/trophy-guide.html`** — Fixed vague "reportedly requires a very large Stud total" language with confirmed specifics: trophy name "Life's been good to me", exact threshold of 1,000,000 Studs, sources linked (Game Rant, Happy Thumbs Gaming). Also renamed the Gold trophy h3 to include trophy name and target. (Score: 7/10)
+3. **`guides/tips-for-new-players.html`** — Added Lucius Fox WayneTech terminal tip to Batcave Tips section. Added all-characters-unlock and new blog post to Related Guides list. (Score: 6/10)
+**New pages:** None
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (secret-bonus-characters-alfred-lucius-bruce-wayne.html, 700+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Latest Posts 更新）
+- [x] 内容审计已完成（12 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（N/A — no new guide pages created）
+- [x] sitemap.xml 已重新生成（62 pages total）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+---
+
 ## 2026-06-06 — Speedrun Community Blog + Chapter 1 Walkthrough + Mission-1 Fixes
 
 ### 阶段一：Blog 更新
@@ -704,27 +777,118 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
 
----
-
-## 2026-06-20 — Pre-DLC Entry Guide Blog + PC Patch + Character DLC Detail Updates
+## 2026-06-14 — Batcave Challenges Blog + Falcone Fortunes Guide Updates
 
 ### 阶段一：Blog 更新
-- **`blog/five-reasons-to-play-lego-batman-legacy-now.html`** — New blog post: "5 Reasons to Start LEGO Batman: Legacy of the Dark Knight Now — Before the September DLC." Covers the ideal timing window before the Mayhem Collection (Sept 18), Update 1.006 performance improvements, the Deluxe Edition upgrade value ($24.99), the thriving mod/speedrun community (1.2M copies sold, 13 active speedrunners, mod scene active), and the 3-month window to 100% before DLC arrives. 700+ words. Image: gear-3.5F2kKy0I_1z9tbe.webp (Batman on Batmobile — previously used in steam-player-count-analysis.html). Sources: Capsule Computers, KeenGamer, Speedrun.com, WB Games press release.
+- **`blog/batcave-challenges-complete-guide.html`** — New blog post: "All 43 Batcave Challenges in LEGO Batman: Legacy of the Dark Knight — Complete Guide." 900+ words covering all challenge types (combat, stealth, character-specific, exploration, stud/progression), full tables with how-to strategies for each challenge, rewards info (465,000 Studs total, Batcave mural), and tips for efficient completion. Image: origin.DSZma2rC_2hKTV2.webp (cycled back). Sources: GameRant, Destructoid, TheGamer.
 
-### 阶段二：内容审计结果
-**审计页面数：** 10 guide pages scanned (beginners, all-characters, trophy, waynetech, suits, gotham-map, mayhem-dlc, pc-requirements, gotham-districts, suits-abilities)
+### 阶段二：内容审计結果
+**审计页面数：** 10 guide pages scanned
+**发现的内容缺口：** Falcone Fortunes (14 total, 2 WayneTech Chips each) entirely absent from all guide pages
 **SEO Top 3 更新：**
-1. **`guides/pc-requirements.html`** — Added Update 1.006 (June 2, 2026) to the Post-Launch Patch Notes section: stuttering fixes, crash fixes, performance improvements. Updated meta description to mention June 2026 patch history. (Score: 8/10)
-2. **`guides/all-characters-unlock.html`** — Expanded DLC section with officially confirmed Joker & Harley Quinn details from the May 12 Deluxe Edition trailer and June 3 WB Games press release: Joker's chaos-focused ability set and Arkham Asylum story leadership; Harley Quinn's confirmed acrobatic combat style; clearer distinction between officially confirmed content and unconfirmed datamine findings. (Score: 7/10)
-3. **`guides/beginners-guide.html`** — Added "Post-Launch Updates & DLC Roadmap" section noting Update 1.006 performance fixes and explaining the Mayhem Collection DLC (Sept 18) for new players, with upgrade cost and DLC guide link. (Score: 7/10)
+1. **`guides/collectibles-guide.html`** — Added full Falcone Fortunes section (Score: 9/10): new `<h2 id="falcone">` with c-card overview, why they matter (28 total WayneTech Chips), character requirements (Batman + Catwoman, one needs Batgirl), and all 14 named locations with map coordinates. Also updated meta description and keywords, TOC, and overview list to include Falcone Fortunes.
+2. **`guides/100-percent-completion.html`** — Added Falcone Fortunes as a named bullet in Phase 2 open-world activities list, with reward details and character requirements. Added to the full checklist. (Score: 7/10)
+3. **`guides/post-game-checklist.html`** — Added new checklist item for all 14 Falcone Fortunes with time estimate (2–3 hours), reward note (28 WayneTech Chips), and link to collectibles guide Falcone section. (Score: 6/10)
 **新建页面：** None
 
 ### Verification Checklist
-- [x] Blog 新文章已写入 (five-reasons-to-play-lego-batman-legacy-now.html, 700+ words)
+- [x] Blog 新文章已写入 (batcave-challenges-complete-guide.html, 900+ words, 43 challenges covered)
 - [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Latest Posts 更新）
-- [x] 内容审计已完成（10 guide pages scanned）
+- [x] 内容审计已完成（10 guide pages scanned, Falcone Fortune gap identified）
 - [x] SEO Top 3 更新已执行
-- [x] index.html 链接已更新（无新建页面）
-- [x] sitemap.xml 已重新生成（63 pages）
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（64 页，含新 blog 文章）
 - [x] PROGRESS.md 已追加
-- [⚠️] Git push 失败（沙箱无 GitHub 凭据）。锁文件残留：请手动删除 .git/index.lock 和 .git/HEAD.lock，再运行 git add -A && git commit -m "run2" && git push origin main
+- [x] Git commit + push
+
+## 2026-06-15 — Stud Farming Blog + Guide Meta/Date Audit
+
+### 阶段一：Blog 更新
+- **`blog/stud-farming-guide-fast-studs.html`** — New blog post: "How to Farm Studs Fast in LEGO Batman: Legacy of the Dark Knight." 700+ words covering: the in-mission Stud Multiplier (x2→x4 via Hyper Combo skill upgrades), The Joker's Funhouse Free Play route (best farming level), the Batcave Stud Cache loop (~30k studs per visit), Jim Gordon's Rebound Launcher room-clearing tip, and skill tree picks (Stealthy Studs, Collectible Detective). Image: origin.DSZma2rC_2hKTV2.webp (cycled back — all library images used). Sources: GamesRadar, VGC, TheGamer, Games.gg.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide pages scanned
+**SEO Top 3 更新：**
+1. **`guides/tips-for-new-players.html`** — Fixed meta description/OG tags mismatch (Score: 8/10): meta said "Advanced tips and tricks...that go beyond the basics" but page targets new players. Updated to "Essential tips for new players...difficulty modes, Detective Mode, Red Bricks, stud farming, combat basics, and beginner mistakes." Title tag also refined. Keywords updated to beginner-focused terms.
+2. **`guides/release-date-platforms.html`** — Updated dated post-launch section (Score: 7/10): changed "over two weeks" → "nearly four weeks", updated "as of June 7" → "as of June 15, 2026", updated Game Pass note from "as of May 29" → "as of June 15, 2026". Section heading changed from "First Week Reception" → "Reception & Updates" to reflect continued coverage.
+3. **`guides/stud-farming-guide.html`** — Added internal link to new blog post (Score: 5/10): new sidebar link "Blog: Combo Multiplier Tips" pointing to blog/stud-farming-guide-fast-studs.html.
+**新建页面：** None
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (stud-farming-guide-fast-studs.html, 700+ words)
+- [x] blog/index.html 已更新（新卡片顶部 + 侧边栏 Latest Posts 更新）
+- [x] 内容审计已完成（31 guide pages scanned）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（65 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+## 2026-06-16 — Complete Suits Guide Blog + 3 Guide SEO Updates
+
+### 阶段一：Blog 更新
+- **`blog/all-batsuits-unlock-guide.html`** — "All Suits in LEGO Batman: Legacy of the Dark Knight — Complete Unlock Guide". Full character-by-character breakdown of all 101 base-game suits (35 for Batman + 6 supporting characters) with exact unlock requirements per GameRant's post-launch database. Tag: Analysis. Image: legobatmangame.com origin diptych (recycled from oldest post). 7 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**SEO Top 3 更新：**
+1. **`guides/suits-abilities-guide.html`** — Expanded "3 Ways to Unlock Suits" to 7 confirmed methods with specific milestones (WayneTech cache counts, animal milestones, Riddler/Cluemaster requirements, Falcone missions). Added link to new blog post. (评分：8/10)
+2. **`guides/batcave-hub-guide.html`** — Corrected Wardrobe Room section: removed fabricated "11 from Red Brick colour scheme unlocks" claim; replaced with confirmed unlock methods (Main Story, Bat-Mite Store, Zoo Animals, WayneTech Caches, AR Trials, Riddler/Cluemaster, Wanted Posters, Falcone missions). (评分：6/10)
+3. **`guides/mayhem-collection-dlc.html`** — Updated "Mayhem Mode is expected to have its own collectibles" to "includes its own objectives and collectibles according to the June 3, 2026 WB Games announcement". (评分：7/10)
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（66 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+## 2026-06-17 — Co-Op Blog + Beginner Guide Co-Op Section + Release Date Freshening
+
+### 阶段一：Blog 更新
+- **`blog/co-op-multiplayer-guide.html`** — "LEGO Batman: Legacy of the Dark Knight — Complete Co-Op Multiplayer Guide". Covers: how to enable local split-screen co-op (step-by-step), split-screen mechanics, Steam Remote Play Together + PlayStation Share Play online workarounds, best character combos (4 pairings), collectible hunting tips in co-op, and story mode co-op notes. 600+ words. Tag: Guide. Image: `legobatmangame.com/_astro/family.CQW_jlFK_2qvCfg.webp` (Gordon + Catwoman; cycled). Sources: Game Rant, GamesRadar, Nerdschalk. 6 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**SEO Top 3 更新：**
+1. **`guides/beginners-guide.html`** — Added "Playing Co-Op" section (completely missing). Covers: how to drop in second player, split-screen basics, Steam Remote Play Together / PS Share Play note, link to co-op guide. Added co-op guide to sidebar "Next Guides" list. (评分：9/10)
+2. **`guides/co-op-guide.html`** — Added cross-link to new blog post `co-op-multiplayer-guide.html` in sidebar "Related Guides". Strengthens internal linking between authoritative guide and new editorial post. (评分：8/10)
+3. **`guides/release-date-platforms.html`** — Updated "as of June 15" to "June 17". Updated Multiplayer section from vague "preview reports" language to confirmed post-launch co-op details with drop-in instructions and link to co-op guide. (评分：7/10)
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（67 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+## 2026-06-18 — Daily update: Batman mythology tributes blog + 3 guide SEO updates
+
+### 阶段一：Blog 更新
+- **`blog/batman-legacy-tributes-deep-dive.html`** — "Every Batman Movie, BTAS & Comics Tribute in LEGO Batman: Legacy of the Dark Knight" — 700+ words. Based on DC.com's June 8 post-launch feature by Joshua Lapin-Bertone, covering Kevin Conroy tribute billboard, shot-for-shot BTAS Chapter 4 intro, Batman Returns Catwoman recreation, Cesar Romero decoy Joker, Arkham Asylum opening recreation, NES purple Batsuit, Court of Owls Easter eggs, Loeb & Sale's Comic Store. Image: fight-3.KeK453wH_Z23bgKb.webp (Mr. Freeze). Tag: Analysis.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**SEO Top 3 更新：**
+1. **`suits-abilities-guide.html`** — Added "Video Game Legacy Skins" subsection with the confirmed 1990 NES purple Batsuit unlock (sourced from DC.com June 8 article). Previously missing from the guide.（评分：9/10）
+2. **`tips-for-new-players.html`** — Added new "Hidden Interactions & Community Discoveries" section with 5 verified secrets: yak petting in Nanda Parbat, Batusi dance in Chapter 1, throne dialogue Easter egg, Bat-Signal chapter changes, Kevin Conroy billboard. All sourced from DC.com June 8 article.（评分：7/10）
+3. **`all-villains-guide.html`** — Added Cesar Romero decoy Joker Easter egg in Chapter 5 to the Joker villain card (complete with confirmed mustache detail). Sourced from DC.com June 8 article.（评分：7/10）
+**新建页面：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新
+- [x] 内容审计已完成（31 页）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（68 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

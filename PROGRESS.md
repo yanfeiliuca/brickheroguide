@@ -892,3 +892,28 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（68 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-21 — Mayhem Collection DLC Confirmed Blog + 3 Guide SEO Updates
+
+### 阶段一：Blog 更新
+- **`blog/mayhem-collection-dlc-confirmed.html`** — "Mayhem Collection DLC: Everything Officially Confirmed — Joker & Harley Quinn, Arkham Asylum Mission & September 18 Release". 700+ words. Covers officially confirmed Sep 18 release date (WB Press Release), new Arkham Asylum escape story mission, Mayhem Mode (open-world Gotham villain sandbox), Sinister Pack (7 suits + 1 Batmobile + 5 Batcave props), Deluxe Edition access + $24.99 Standard upgrade path, and what remains unconfirmed. Tags: News + Analysis. Image: `legobatmangame.com/_astro/foes.CtQfCF5a_1k24YI.webp` (cycled — oldest prior use: easter-eggs-hidden-references.html, thematically perfect for Joker/villain DLC article). Sources: WB Press Release, Game8, legobatmangame.com. 7 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**关键发现：** Most guides well-maintained. New blog post had Sinister Pack error (1 Batcave prop → 5 Batcave items per WB press release) — corrected before publishing. All Mayhem/DLC guide pages already have correct September 18 date and confirmed details.
+
+**SEO Top 3 更新：**
+1. **`guides/all-characters-unlock.html`** — Updated "upcoming DLC duo" reference (line 540) to "confirmed September 18, 2026 DLC duo" with link to new Mayhem Collection confirmed blog post. Strengthens internal linking and removes pre-release language. (评分：7/10)
+2. **`guides/post-game-checklist.html`** — Expanded DLC section from generic placeholder to specific confirmed info: Sep 18 date, Arkham Asylum mission, Mayhem Mode, Sinister Pack contents, $24.99 upgrade path, base Platinum note, and link to new blog post. (评分：8/10)
+3. **`guides/mayhem-collection-dlc.html`** — Added "Latest Blog" sidebar card linking to new confirmed details post, Legacy Collection breakdown, and Switch 2 launch post. Improves internal link equity from the highest-traffic DLC guide page. (评分：7/10)
+**新建页面（如有）：** 无新建 guide 页面
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`mayhem-collection-dlc-confirmed.html`)
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面扫描）
+- [x] Sinister Pack 错误已修正（1 Batcave prop → 5 Batcave items）
+- [x] SEO Top 3 更新已执行
+- [x] sitemap.xml 已重新生成（71 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

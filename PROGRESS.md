@@ -892,3 +892,26 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（68 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-21 — Mayhem Collection DLC Confirmed Blog + Collectibles/Suits/Trophy Guide Updates
+
+### 阶段一：Blog 更新
+- **`blog/mayhem-collection-dlc-confirmed.html`** — "Mayhem Collection DLC Confirmed: September 18 Release Date & Full Content Breakdown" — 650+ words. Topic: Official confirmation of September 18, 2026 DLC release date, Joker & Harley Quinn playable characters, Arkham Asylum breakout story mission, Mayhem Mode, and Sinister Pack (7 suits, 5 Batcave items, 1 Batmobile). Sources: game8.co, LEGO.com, Steam. Tag: News + Analysis. Distinct from earlier "mayhem-collection-dlc-leak.html" (unconfirmed leak). Image: foes.CtQfCF5a_1k24YI.webp (Batman vs Joker).
+
+### 阶段二：内容审计结果
+**审计页面数：** 32 guide 页面（重点检查 suits, collectibles, trophy, characters, beginners, mayhem DLC, release-date, deluxe-edition）
+**SEO Top 3 更新：**
+1. **`collectibles-guide.html`** — Fixed major accuracy error: WayneTech Caches section said "10 Total hidden in Batcave" — corrected to "200 Total scattered across story missions and Gotham open world." Added suit unlock milestone thresholds (10, 30, 50, 70, 80, 90, 110, 140, 150, 160, 180). Updated meta description to include accurate counts. Sources: thegamer.com, games.gg.（评分：9/10）
+2. **`suits-abilities-guide.html`** — Updated meta description and OG description from imprecise "101+" to accurate "101 base suits (129 with all DLC)." Better matches user search intent for exact counts.（评分：7/10）
+3. **`trophy-guide.html`** — Added PowerPyx Trophy Guide & Roadmap as a key external resource (was missing from the guide). Added patch 1.006 note about Mr. Freeze boss crash fix that was blocking story trophy unlocks for some players.（评分：7/10）
+**新建页面：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（32 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（72 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

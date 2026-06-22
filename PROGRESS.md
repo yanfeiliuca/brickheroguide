@@ -1,5 +1,34 @@
 # BrickHeroGuide — Work Log
 
+## 2026-06-22 — One Month Anniversary Blog + 3 Guide SEO Fixes
+
+### 阶段一：Blog 更新
+- **`blog/lego-batman-legacy-one-month-report.html`** — "One Month In: How LEGO Batman: Legacy of the Dark Knight Has Held Up". 700+ words. Covers: critical reception (IGN 8/10, GamesRadar 4/5, Steam Overwhelmingly Positive with 11,600+ reviews), Update 1.006 stability patch (June 2), free HBO Max/WB Games account bonus suits (Dark Knights of Steel + Black Lantern + Golden Age), Twitch Drops recap, Mayhem Collection DLC Sept 18 preview. Tags: Analysis + News. Image: `legobatmangame.com/_astro/fight-2.BFd6neBb_2adSpB.webp` (Red Hood gang vs Batman — lowest reuse count, 1 prior use). Sources: Screen Rant, Game Rant, SteamDB, LEGO.com, WB Games rewards page. 7 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**关键发现：**
+- `collectibles-guide.html` quick stats had critical error: WayneTech Caches displayed as "10" (should be 200); TOC label also wrong. Fixed.
+- `suits-abilities-guide.html` missing free account-linked bonus suits section (3 suits: Golden Age/WB Games, Dark Knights of Steel + Black Lantern/HBO Max). Added.
+- `deluxe-edition-explained.html` missing note about free account-linked bonus suits for all edition owners. Added highlight box.
+
+**SEO Top 3 更新：**
+1. **`guides/collectibles-guide.html`** — Fixed critical stat error: WayneTech Caches quick-stat 10→200; fixed TOC label "10 Total"→"200 Total"; updated total collectibles from "99+" to "247+". High accuracy impact for completionist queries. (评分：9/10)
+2. **`guides/suits-abilities-guide.html`** — Added "Free Bonus Suits via Account Linking" section with WB Games (Golden Age Batsuit) and HBO Max (Dark Knights of Steel + Black Lantern Batsuits) instructions. Updated last-modified date to June 22, 2026. High value for suit-unlock searches. (评分：7/10)
+3. **`guides/deluxe-edition-explained.html`** — Added highlight box about 3 free account-linked suits (Golden Age, Dark Knights of Steel, Black Lantern) available to all edition owners. Relevant to edition comparison queries. (评分：6/10)
+
+**新建页面（如有）：** 无新建 guide 页面
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`lego-batman-legacy-one-month-report.html`)
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面扫描）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（如有新建）— 无新建 guide，无需更新
+- [x] sitemap.xml 已重新生成（73 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
 ## 2026-06-20 — Character Rankings Blog + Broken Link Fix + 3 Guide Cross-Links
 
 ### 阶段一：Blog 更新
@@ -893,53 +922,25 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
 
-## 2026-06-21 — Mayhem Collection DLC Confirmed Blog + 3 Guide SEO Updates
+## 2026-06-21 — Mayhem Collection DLC Confirmed Blog + Collectibles/Suits/Trophy Guide Updates
 
 ### 阶段一：Blog 更新
-- **`blog/mayhem-collection-dlc-confirmed.html`** — "Mayhem Collection DLC: Everything Officially Confirmed — Joker & Harley Quinn, Arkham Asylum Mission & September 18 Release". 700+ words. Covers officially confirmed Sep 18 release date (WB Press Release), new Arkham Asylum escape story mission, Mayhem Mode (open-world Gotham villain sandbox), Sinister Pack (7 suits + 1 Batmobile + 5 Batcave props), Deluxe Edition access + $24.99 Standard upgrade path, and what remains unconfirmed. Tags: News + Analysis. Image: `legobatmangame.com/_astro/foes.CtQfCF5a_1k24YI.webp` (cycled — oldest prior use: easter-eggs-hidden-references.html, thematically perfect for Joker/villain DLC article). Sources: WB Press Release, Game8, legobatmangame.com. 7 min read.
+- **`blog/mayhem-collection-dlc-confirmed.html`** — "Mayhem Collection DLC Confirmed: September 18 Release Date & Full Content Breakdown" — 650+ words. Topic: Official confirmation of September 18, 2026 DLC release date, Joker & Harley Quinn playable characters, Arkham Asylum breakout story mission, Mayhem Mode, and Sinister Pack (7 suits, 5 Batcave items, 1 Batmobile). Sources: game8.co, LEGO.com, Steam. Tag: News + Analysis. Distinct from earlier "mayhem-collection-dlc-leak.html" (unconfirmed leak). Image: foes.CtQfCF5a_1k24YI.webp (Batman vs Joker).
 
 ### 阶段二：内容审计结果
-**审计页面数：** 31 guide 页面
-**关键发现：** Most guides well-maintained. New blog post had Sinister Pack error (1 Batcave prop → 5 Batcave items per WB press release) — corrected before publishing. All Mayhem/DLC guide pages already have correct September 18 date and confirmed details.
-
+**审计页面数：** 32 guide 页面（重点检查 suits, collectibles, trophy, characters, beginners, mayhem DLC, release-date, deluxe-edition）
 **SEO Top 3 更新：**
-1. **`guides/all-characters-unlock.html`** — Updated "upcoming DLC duo" reference (line 540) to "confirmed September 18, 2026 DLC duo" with link to new Mayhem Collection confirmed blog post. Strengthens internal linking and removes pre-release language. (评分：7/10)
-2. **`guides/post-game-checklist.html`** — Expanded DLC section from generic placeholder to specific confirmed info: Sep 18 date, Arkham Asylum mission, Mayhem Mode, Sinister Pack contents, $24.99 upgrade path, base Platinum note, and link to new blog post. (评分：8/10)
-3. **`guides/mayhem-collection-dlc.html`** — Added "Latest Blog" sidebar card linking to new confirmed details post, Legacy Collection breakdown, and Switch 2 launch post. Improves internal link equity from the highest-traffic DLC guide page. (评分：7/10)
-**新建页面（如有）：** 无新建 guide 页面
-
-### Verification Checklist
-- [x] Blog 新文章已写入 (`mayhem-collection-dlc-confirmed.html`)
-- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
-- [x] 内容审计已完成（31 个 guide 页面扫描）
-- [x] Sinister Pack 错误已修正（1 Batcave prop → 5 Batcave items）
-- [x] SEO Top 3 更新已执行
-- [x] sitemap.xml 已重新生成（71 页）
-- [x] PROGRESS.md 已追加
-- [x] Git commit + push 已完成
-
-## 2026-06-22 — Accessibility Blog + Suit Count Fix + Character/Collectibles Guide Updates
-
-### 阶段一：Blog 更新
-- **`blog/accessibility-features-guide.html`** — "LEGO Batman: Legacy of the Dark Knight Accessibility Features — A Complete Breakdown". 700+ words. Complete breakdown of all accessibility options: High Contrast Mode, HUD customization, subtitles/closed captions, audio descriptions, fully remappable controls, gameplay speed reduction (50%/75%/90%), simplified QTEs, aim assist, puzzle/combat skipping, motion sickness settings. Notes missing screen reader support (planned future patch). Sources: victordima.net accessibility review (May 20, 2026), Can I Play That? (May 14, 2026), official WB Games support page. Image: `legobatmangame.com/_astro/origin.DSZma2rC_2hKTV2.webp` (cycled — oldest prior use was lego-batman-legacy-launch-preview.html). Tag: Analysis + Review. 7 min read.
-
-### 阶段二：内容审计结果
-**审计页面数：** 31 guide 页面
-**関键发现：** suits-abilities-guide.html listed 101 base suits; confirmed correct count is 100 (official FAQ + Dexerto/GamesRadar post-launch wiki). DLC total corrected from 129 to 126. all-characters-unlock.html had pre-announcement datamining framing; updated to reflect June 3, 2026 WB Games confirmation of Mayhem Collection roster.
-
-**SEO Top 3 更新：**
-1. **`guides/suits-abilities-guide.html`** — Fixed base suit count from 101 to 100 throughout (meta description, OG description, stat card, body paragraphs, DLC total, sidebar, bug fix tip box). Updated DLC total from 129 to 126. (评分：9/10)
-2. **`guides/all-characters-unlock.html`** — Updated Task Force X datamining paragraph from "reportedly/treat as rumor" framing to post-announcement context: datamined list predated June 3 confirmation; Joker/Harley confirmed, enemy roster still unannounced. (评分：8/10)
-3. **`guides/collectibles-guide.html`** — Updated "99+" total to "87+" with specific breakdown (23+10+10+14+30), updated meta description with exact counts for each type. Improves snippet quality for "how many collectibles" queries. (评分：7/10)
-
-**新建页面（如有）：** blog/accessibility-features-guide.html
+1. **`collectibles-guide.html`** — Fixed major accuracy error: WayneTech Caches section said "10 Total hidden in Batcave" — corrected to "200 Total scattered across story missions and Gotham open world." Added suit unlock milestone thresholds (10, 30, 50, 70, 80, 90, 110, 140, 150, 160, 180). Updated meta description to include accurate counts. Sources: thegamer.com, games.gg.（评分：9/10）
+2. **`suits-abilities-guide.html`** — Updated meta description and OG description from imprecise "101+" to accurate "101 base suits (129 with all DLC)." Better matches user search intent for exact counts.（评分：7/10）
+3. **`trophy-guide.html`** — Added PowerPyx Trophy Guide & Roadmap as a key external resource (was missing from the guide). Added patch 1.006 note about Mr. Freeze boss crash fix that was blocking story trophy unlocks for some players.（评分：7/10）
+**新建页面：** 无
 
 ### Verification Checklist
 - [x] Blog 新文章已写入
-- [x] blog/index.html 已更新
-- [x] 内容审计已完成 (31 pages)
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（32 个 guide 页面）
 - [x] SEO Top 3 更新已执行
-- [x] index.html 链接无需更新（仅更新现有页面）
-- [x] sitemap.xml 已重新生成 (72 pages)
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（72 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成

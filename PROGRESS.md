@@ -917,3 +917,29 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（71 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-22 — Accessibility Blog + Suit Count Fix + Character/Collectibles Guide Updates
+
+### 阶段一：Blog 更新
+- **`blog/accessibility-features-guide.html`** — "LEGO Batman: Legacy of the Dark Knight Accessibility Features — A Complete Breakdown". 700+ words. Complete breakdown of all accessibility options: High Contrast Mode, HUD customization, subtitles/closed captions, audio descriptions, fully remappable controls, gameplay speed reduction (50%/75%/90%), simplified QTEs, aim assist, puzzle/combat skipping, motion sickness settings. Notes missing screen reader support (planned future patch). Sources: victordima.net accessibility review (May 20, 2026), Can I Play That? (May 14, 2026), official WB Games support page. Image: `legobatmangame.com/_astro/origin.DSZma2rC_2hKTV2.webp` (cycled — oldest prior use was lego-batman-legacy-launch-preview.html). Tag: Analysis + Review. 7 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**関键发现：** suits-abilities-guide.html listed 101 base suits; confirmed correct count is 100 (official FAQ + Dexerto/GamesRadar post-launch wiki). DLC total corrected from 129 to 126. all-characters-unlock.html had pre-announcement datamining framing; updated to reflect June 3, 2026 WB Games confirmation of Mayhem Collection roster.
+
+**SEO Top 3 更新：**
+1. **`guides/suits-abilities-guide.html`** — Fixed base suit count from 101 to 100 throughout (meta description, OG description, stat card, body paragraphs, DLC total, sidebar, bug fix tip box). Updated DLC total from 129 to 126. (评分：9/10)
+2. **`guides/all-characters-unlock.html`** — Updated Task Force X datamining paragraph from "reportedly/treat as rumor" framing to post-announcement context: datamined list predated June 3 confirmation; Joker/Harley confirmed, enemy roster still unannounced. (评分：8/10)
+3. **`guides/collectibles-guide.html`** — Updated "99+" total to "87+" with specific breakdown (23+10+10+14+30), updated meta description with exact counts for each type. Improves snippet quality for "how many collectibles" queries. (评分：7/10)
+
+**新建页面（如有）：** blog/accessibility-features-guide.html
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新
+- [x] 内容审计已完成 (31 pages)
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接无需更新（仅更新现有页面）
+- [x] sitemap.xml 已重新生成 (72 pages)
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

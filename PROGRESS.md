@@ -944,3 +944,28 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（72 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-22 (Session 2) — Twitch Drops Blog + Suit Count Fixes + Batcave Props Guide
+
+### 阶段一：Blog 更新
+- **`blog/twitch-drops-batcave-cosmetics-guide.html`** — "LEGO Batman Legacy Twitch Drops: All 8 Free Batcave Rewards Explained". 5 min read. Complete coverage of the May 19–31, 2026 Twitch drops campaign: all 8 Batcave prop rewards (table with channel requirements), step-by-step account linking guide, DC Twitch exclusives (Comic Stand + Neon Bat-Symbol), in-game item location (Chapter 2 unlock), missed-campaign FAQ, future drops speculation tied to September 18 Mayhem Collection DLC launch. Sources: WB Games Rewards page, TheGamer, Insider Gaming, Dexerto. Image: `legobatmangame.com/_astro/origin.DSZma2rC_2hKTV2.webp` (cycled). Tags: Community + News.
+
+### 阶段二：内容审计结果
+**审计页面数：** 8 guide 页面
+**关键发现：** suits-abilities-guide.html 有 git rebase 冲突+文件截断；100-percent-completion.html 显示补丁前的 101 suit stat；batcave-hub-guide.html 无 Twitch drops 提及。
+
+**SEO Top 3 更新：**
+1. **`guides/suits-abilities-guide.html`** — 重建无冲突版本；meta description 更新为"128 suits (100 base + 28 DLC)"；stat card、正文、og:description 全部统一为 100/28/128。（评分：9/10）
+2. **`guides/100-percent-completion.html`** — Suits to Collect stat 101→100；购买成本文字更正。（评分：8/10）
+3. **`guides/batcave-hub-guide.html`** — 修正 Wardrobe Room suit 数字；新增 Batcave Props & Customization 章节，含 Twitch drops 内链。（评分：7/10）
+
+**新建页面：** blog/twitch-drops-batcave-cosmetics-guide.html
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新
+- [x] 内容审计已完成
+- [x] SEO Top 3 更新已执行
+- [x] sitemap.xml 已重新生成（74 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

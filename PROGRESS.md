@@ -969,3 +969,28 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（74 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-23 — Steam Summer Sale blog + 3 guide SEO fixes
+
+### 阶段一：Blog 更新
+- **`blog/steam-summer-sale-2026-guide.html`** — Steam Summer Sale 2026（6月25日开始）时效性内容：解析LEGO Batman Legacy是否会打折、Fanatical Mystery Egg Bundle $1机会、Standard vs Deluxe版本性价比、历史低价数据及追踪工具。来源：gHacks/Steamworks官方文档/Game Rant。图片循环：og-image.BcIYb3Fq.jpg。
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（全扫描）
+
+**SEO Top 3 更新：**
+1. **`guides/suits-abilities-guide.html`**（评分：8/10）— meta description 更新：明确当前可用 121 件（100 基础 + 21 Legacy Collection），Sinister Pack 7 件 9月18日上线，总计 128 件。OG title 加入"121 Now / 128 with DLC"便于搜索识别。
+2. **`guides/mission-1-walkthrough.html`**（评分：8/10）— URL 为 mission-1-walkthrough 但内容为故事概览，搜索意图严重错配。更新：meta title/description 重新对齐实际内容；替换原有 tip-box，加入章节攻略导航（Chapter 1 Red Hood、Chapter 4、Beginner's Guide），解决跳出率问题。
+3. **`guides/release-date-platforms.html`**（评分：6/10）— OG description 由未来时"launches"改为过去时；meta description 补充 Switch 2 九月十八日上线信息；正文"is launching on four platforms"修正为"launched on three of four"。
+
+**新建页面：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入（steam-summer-sale-2026-guide.html，500+字）
+- [x] blog/index.html 已更新（新卡片置顶，侧边栏 Latest Posts 已更新）
+- [x] 内容审计已完成（31 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接未变动（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（74 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

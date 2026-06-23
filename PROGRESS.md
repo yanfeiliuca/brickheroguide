@@ -1,6 +1,32 @@
 # BrickHeroGuide — Work Log
 
-## 2026-06-22 — One Month Anniversary Blog + 3 Guide SEO Fixes
+## 2026-06-23 — Edition Buyer's Guide Blog + Pre-Order Bonus Accuracy Fixes
+
+### 阶段一：Blog 更新
+- **`blog/edition-buyers-guide.html`** — "LEGO Batman Legacy: Standard vs. Deluxe vs. Switch 2 — Which Edition Should You Buy?" 1,000+ words. Full edition comparison table, per-edition breakdown cards (Standard, Deluxe, Switch 2 Standard, Switch 2 Deluxe), $24.99 upgrade path, pre-order bonus history across all platforms, Retro Batman Minifigure physical-only caveat, buyer verdict by player type. Tags: Analysis + News. Image: `legobatmangame.com/_astro/og-image.BcIYb3Fq.jpg` (least-used remaining from approved list, 1 prior use). Sources: WB Games June 3 press release, ComicBook.com, GameSpot, Stonewars, nerdschalk, Game8, Steam. 6 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**关键发现：** Factual inaccuracy in two high-value guides — `suits-abilities-guide.html` and `deluxe-edition-explained.html` both stated the *Dark Knight Returns* Batsuit was "a Switch 2 pre-order exclusive" and "not available on PS5, Xbox, or PC." This is incorrect: the suit was a pre-order bonus on ALL platforms at launch (May 22, 2026). The PS5/Xbox/PC pre-order window is now closed; Switch 2 pre-orders remain active through September 18. Both pages corrected.
+
+**SEO Top 3 更新：**
+1. **`guides/suits-abilities-guide.html`** — Corrected the "Switch 2 exclusive" error for the Dark Knight Returns Batsuit. Now accurately states the suit was available on all platforms at launch (window closed May 22) and that Switch 2 pre-orders are the only currently active route. High accuracy impact for batsuit-unlock and pre-order searches. (评分：9/10)
+2. **`guides/deluxe-edition-explained.html`** — Fixed same pre-order bonus inaccuracy; added new highlight box for Switch 2 physical Deluxe exclusive Retro Video Game Batman Minifigure (while supplies last). Strengthens Switch 2 edition comparison queries. (评分：8/10)
+3. **`guides/release-date-platforms.html`** — Updated Switch 2 performance table cell to remove "will be added after launch" promise; added Minifigure detail to Switch 2 entry; updated key facts list to clarify pre-order bonus history across platforms. (评分：7/10)
+
+**新建页面（如有）：** 无新建 guide 页面
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`edition-buyers-guide.html`)
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面扫描）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（如有新建）— 无新建 guide，无需更新
+- [x] sitemap.xml 已重新生成（74 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
+2026-06-22 — One Month Anniversary Blog + 3 Guide SEO Fixes
 
 ### 阶段一：Blog 更新
 - **`blog/lego-batman-legacy-one-month-report.html`** — "One Month In: How LEGO Batman: Legacy of the Dark Knight Has Held Up". 700+ words. Covers: critical reception (IGN 8/10, GamesRadar 4/5, Steam Overwhelmingly Positive with 11,600+ reviews), Update 1.006 stability patch (June 2), free HBO Max/WB Games account bonus suits (Dark Knights of Steel + Black Lantern + Golden Age), Twitch Drops recap, Mayhem Collection DLC Sept 18 preview. Tags: Analysis + News. Image: `legobatmangame.com/_astro/fight-2.BFd6neBb_2adSpB.webp` (Red Hood gang vs Batman — lowest reuse count, 1 prior use). Sources: Screen Rant, Game Rant, SteamDB, LEGO.com, WB Games rewards page. 7 min read.

@@ -601,9 +601,6 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 2. **`best-characters-each-mission.html`** — Replaced pre-release placeholder ("will be published after May 22 launch") with full mission-by-mission chapter breakdown and character recommendations for all 6 chapters + Prologue. Confirmed mission names from Push Square. (Score: 8/10)
 3. **`mayhem-collection-dlc.html`** — Removed "not yet confirmed" language from three locations; updated standalone pricing TBA text and trophy note to post-launch hedged language. (Score: 7/10)
 
-<<<<<<< Updated upstream
-**新建页面（如有）：** None (blog pos
-=======
 **新建页面（如有）：** None (blog post only)
 
 ### Verification Checklist
@@ -638,7 +635,6 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（41 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
->>>>>>> Stashed changes
 
 ---
 
@@ -1020,3 +1016,4 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（75 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+                                                                                                        

@@ -6,6 +6,10 @@ on:
     paths:
       - '**.html'
       - 'index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-sitemap:
@@ -44,9 +48,9 @@ jobs:
       - name: Ping Google
         run: |
           curl -s -o /dev/null -w "Google: HTTP %{http_code}\n" \
-            "https://www.google.com/ping?sitemap=https://brickheroguide.com/sitemap.xml" || true
+          "https://www.google.com/ping?sitemap=https://brickheroguide.com/sitemap.xml" || true
 
       - name: Ping Bing
         run: |
           curl -s -o /dev/null -w "Bing: HTTP %{http_code}\n" \
-            "https://www.bing.com/ping?sitemap=https://brickheroguide.com/sitemap.xml" || true
+          "https://www.bing.com/ping?sitemap=https://brickheroguide.com/sitemap.xml" || true

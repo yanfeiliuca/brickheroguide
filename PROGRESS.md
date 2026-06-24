@@ -971,31 +971,6 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
 
-## 2026-06-24 (run 2) — Free Play Mode Blog + 3 Guide Updates
-
-### 阶段一：Blog 更新
-- **`blog/free-play-mode-guide.html`** — "Free Play Mode in LEGO Batman: Legacy — How It Works and Why You Can't Get 100% Without It" — 700+ words. 5 ability gates 完整说明（Batgirl Hack / Catwoman Lockpick / Nightwing Wall-Jump / Gordon Rebound Launcher / Talia Shadow Dash），最优 4 人阵容（Batman + Catwoman + Batgirl + Nightwing），story-first vs. 逐章清扫策略对比。Tag: Guide + Tips. Image: family.CQW_jlFK_2qvCfg.webp. 6 min read.
-
-### 阶段二：内容审计结果
-**审计页面数：** 31 guide 页面
-**SEO Top 3 更新：**
-1. **`guides/detective-mode-guide.html`** — 补 og:image；日期 June 6 → June 24；"Question Mark" 章节加 Free Play 跨链；sidebar 改干净 URL；新增 Free Play Guide 侧栏链接。(评分：8/10)
-2. **`guides/characters-villains-guide.html`** — 补 og:image；日期 "June 2026" → "June 24, 2026"；Free Play tips bullet 加跨链。(评分：7/10)
-3. **`guides/beginners-guide.html`** — "Don't stress about collectibles" tip 扩充：列出 5 个 ability gate 名称并链到新 Free Play 文章。(评分：7/10)
-**新建页面：** 无
-
-### Verification Checklist
-- [x] Blog 新文章已写入 (free-play-mode-guide.html, 700+ words)
-- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
-- [x] 内容审计已完成（31 个 guide 页面）
-- [x] SEO Top 3 更新已执行
-- [x] index.html 链接已更新（无新 guide 页面）
-- [x] sitemap.xml 已重新生成（80 页）
-- [x] PROGRESS.md 已追加
-- [x] Git commit + push 已完成（436f675）
-
----
-
 ## 2026-06-24 — WayneTech Upgrade Blog + Guide Audit (Collectibles Fix, Farming Tips, District Guide Completion)
 
 ### 阶段一：Blog 更新

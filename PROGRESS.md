@@ -1,5 +1,31 @@
 # BrickHeroGuide — Work Log
 
+## 2026-06-23 — Edition Buyer's Guide Blog + Pre-Order Bonus Accuracy Fixes
+
+### 阶段一：Blog 更新
+- **`blog/edition-buyers-guide.html`** — "LEGO Batman Legacy: Standard vs. Deluxe vs. Switch 2 — Which Edition Should You Buy?" 1,000+ words. Full edition comparison table, per-edition breakdown cards (Standard, Deluxe, Switch 2 Standard, Switch 2 Deluxe), $24.99 upgrade path, pre-order bonus history across all platforms, Retro Batman Minifigure physical-only caveat, buyer verdict by player type. Tags: Analysis + News. Image: `legobatmangame.com/_astro/og-image.BcIYb3Fq.jpg` (least-used remaining from approved list, 1 prior use). Sources: WB Games June 3 press release, ComicBook.com, GameSpot, Stonewars, nerdschalk, Game8, Steam. 6 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**关键发现：** Factual inaccuracy in two high-value guides — `suits-abilities-guide.html` and `deluxe-edition-explained.html` both stated the *Dark Knight Returns* Batsuit was "a Switch 2 pre-order exclusive" and "not available on PS5, Xbox, or PC." This is incorrect: the suit was a pre-order bonus on ALL platforms at launch (May 22, 2026). The PS5/Xbox/PC pre-order window is now closed; Switch 2 pre-orders remain active through September 18. Both pages corrected.
+
+**SEO Top 3 更新：**
+1. **`guides/suits-abilities-guide.html`** — Corrected the "Switch 2 exclusive" error for the Dark Knight Returns Batsuit. Now accurately states the suit was available on all platforms at launch (window closed May 22) and that Switch 2 pre-orders are the only currently active route. High accuracy impact for batsuit-unlock and pre-order searches. (评分：9/10)
+2. **`guides/deluxe-edition-explained.html`** — Fixed same pre-order bonus inaccuracy; added new highlight box for Switch 2 physical Deluxe exclusive Retro Video Game Batman Minifigure (while supplies last). Strengthens Switch 2 edition comparison queries. (评分：8/10)
+3. **`guides/release-date-platforms.html`** — Updated Switch 2 performance table cell to remove "will be added after launch" promise; added Minifigure detail to Switch 2 entry; updated key facts list to clarify pre-order bonus history across platforms. (评分：7/10)
+
+**新建页面（如有）：** 无新建 guide 页面
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`edition-buyers-guide.html`)
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面扫描）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（如有新建）— 无新建 guide，无需更新
+- [x] sitemap.xml 已重新生成（74 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成
+
 ## 2026-06-22 — One Month Anniversary Blog + 3 Guide SEO Fixes
 
 ### 阶段一：Blog 更新
@@ -601,6 +627,9 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 2. **`best-characters-each-mission.html`** — Replaced pre-release placeholder ("will be published after May 22 launch") with full mission-by-mission chapter breakdown and character recommendations for all 6 chapters + Prologue. Confirmed mission names from Push Square. (Score: 8/10)
 3. **`mayhem-collection-dlc.html`** — Removed "not yet confirmed" language from three locations; updated standalone pricing TBA text and trophy note to post-launch hedged language. (Score: 7/10)
 
+<<<<<<< Updated upstream
+**新建页面（如有）：** None (blog pos
+=======
 **新建页面（如有）：** None (blog post only)
 
 ### Verification Checklist
@@ -635,6 +664,7 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（41 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+>>>>>>> Stashed changes
 
 ---
 
@@ -941,79 +971,25 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
 
-## 2026-06-22 (Session 2) — Twitch Drops Blog + Suit Count Fixes + Batcave Props Guide
+## 2026-06-24 — WayneTech Upgrade Blog + Guide Audit (Collectibles Fix, Farming Tips, District Guide Completion)
 
 ### 阶段一：Blog 更新
-- **`blog/twitch-drops-batcave-cosmetics-guide.html`** — "LEGO Batman Legacy Twitch Drops: All 8 Free Batcave Rewards Explained". 5 min read. Complete coverage of the May 19–31, 2026 Twitch drops campaign: all 8 Batcave prop rewards (table with channel requirements), step-by-step account linking guide, DC Twitch exclusives (Comic Stand + Neon Bat-Symbol), in-game item location (Chapter 2 unlock), missed-campaign FAQ, future drops speculation tied to September 18 Mayhem Collection DLC launch. Sources: WB Games Rewards page, TheGamer, Insider Gaming, Dexerto. Image: `legobatmangame.com/_astro/origin.DSZma2rC_2hKTV2.webp` (cycled). Tags: Community + News.
+- **`blog/waynetech-upgrades-best-first-guide.html`** — "Best WayneTech Upgrades to Unlock First in LEGO Batman: Legacy of the Dark Knight" — 700+ words. Topic: Priority order for spending WayneTech Chips — Focus Bat Swarm as top pick, Otisberg District for early farming, exploration gadgets that snowball chip income, Jim Gordon Rebound Launcher chain as best crowd control. Sources: wccftech.com, game8.co, nerdschalk.com, thegamer.com. Tag: Guide + Analysis. Image: gear-3.5F2kKy0I_1z9tbe.webp (Batman on Batmobile).
 
 ### 阶段二：内容审计结果
-**审计页面数：** 8 guide 页面
-**关键发现：** suits-abilities-guide.html 有 git rebase 冲突+文件截断；100-percent-completion.html 显示补丁前的 101 suit stat；batcave-hub-guide.html 无 Twitch drops 提及。
-
+**审计页面数：** 31 guide 页面
 **SEO Top 3 更新：**
-1. **`guides/suits-abilities-guide.html`** — 重建无冲突版本；meta description 更新为"128 suits (100 base + 28 DLC)"；stat card、正文、og:description 全部统一为 100/28/128。（评分：9/10）
-2. **`guides/100-percent-completion.html`** — Suits to Collect stat 101→100；购买成本文字更正。（评分：8/10）
-3. **`guides/batcave-hub-guide.html`** — 修正 Wardrobe Room suit 数字；新增 Batcave Props & Customization 章节，含 Twitch drops 内链。（评分：7/10）
-
-**新建页面：** blog/twitch-drops-batcave-cosmetics-guide.html
+1. **`collectibles-guide.html`** — Fixed factual error: "29+ main missions" corrected to "21 main missions" (matching 100-percent-completion.html). Updated intro to "hundreds of collectibles" (was vague "over 99"). (评分：9/10)
+2. **`waynetech-upgrades-guide.html`** — Expanded chip-farming section: added Otisberg District as best early farming zone, Tricorner Island waterfront as second priority, Diamond District for post-Grapnel-Boost phase. Added district priority tip box. Fixed "8 story missions" claim to accurate "story missions in order" phrasing. (评分：8/10)
+3. **`gotham-districts-guide.html`** — Fixed truncated file (page was cut off mid-paragraph, missing sidebar, footer, and closing HTML). Completed the Tricorner Island landmark entry, added "Recommended Exploration Order" section with district priority ranking for chip farming, added "Efficient Collection Strategy" section. File went from 226 lines (broken) to 297 lines (complete). (评分：8/10)
+**新建页面：** 无
 
 ### Verification Checklist
 - [x] Blog 新文章已写入
-- [x] blog/index.html 已更新
-- [x] 内容审计已完成
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
 - [x] SEO Top 3 更新已执行
-- [x] sitemap.xml 已重新生成（74 页）
-- [x] PROGRESS.md 已追加
-- [x] Git commit + push 已完成
-
-## 2026-06-23 — Steam Summer Sale blog + 3 guide SEO fixes
-
-### 阶段一：Blog 更新
-- **`blog/steam-summer-sale-2026-guide.html`** — Steam Summer Sale 2026（6月25日开始）时效性内容：解析LEGO Batman Legacy是否会打折、Fanatical Mystery Egg Bundle $1机会、Standard vs Deluxe版本性价比、历史低价数据及追踪工具。来源：gHacks/Steamworks官方文档/Game Rant。图片循环：og-image.BcIYb3Fq.jpg。
-
-### 阶段二：内容审计结果
-**审计页面数：** 31 个 guide 页面（全扫描）
-
-**SEO Top 3 更新：**
-1. **`guides/suits-abilities-guide.html`**（评分：8/10）— meta description 更新：明确当前可用 121 件（100 基础 + 21 Legacy Collection），Sinister Pack 7 件 9月18日上线，总计 128 件。OG title 加入"121 Now / 128 with DLC"便于搜索识别。
-2. **`guides/mission-1-walkthrough.html`**（评分：8/10）— URL 为 mission-1-walkthrough 但内容为故事概览，搜索意图严重错配。更新：meta title/description 重新对齐实际内容；替换原有 tip-box，加入章节攻略导航（Chapter 1 Red Hood、Chapter 4、Beginner's Guide），解决跳出率问题。
-3. **`guides/release-date-platforms.html`**（评分：6/10）— OG description 由未来时"launches"改为过去时；meta description 补充 Switch 2 九月十八日上线信息；正文"is launching on four platforms"修正为"launched on three of four"。
-
-**新建页面：** 无
-
-### Verification Checklist
-- [x] Blog 新文章已写入（steam-summer-sale-2026-guide.html，500+字）
-- [x] blog/index.html 已更新（新卡片置顶，侧边栏 Latest Posts 已更新）
-- [x] 内容审计已完成（31 guide 页面）
-- [x] SEO Top 3 更新已执行
-- [x] index.html 链接未变动（无新 guide 页面）
-- [x] sitemap.xml 已重新生成（74 页）
-- [x] PROGRESS.md 已追加
-- [x] Git commit + push 已完成
-
-## 2026-06-24 — LEGO Batman Returns Batmobile Rumour Blog + 3 Guide SEO Fixes
-
-### 阶段一：Blog 更新
-- **`blog/lego-batman-returns-set-76355-batmobile-rumor.html`** — 新文章：LEGO Batman Returns Set 76355 rumoured 1992 Batmobile (2,272 pieces, ~$220, September 1, 2026). 来源：StoneWars.com (Reddit leaker Brick Tap). 500+字，含对比表格（vs 76139、76328）、详细分析、跨产品 September 时间节点。图片：gear-3（蝙蝠摩托，循环使用）。
-- **`blog/index.html`** 已更新：新卡片置顶，侧边栏 Latest Posts 已更新。
-
-### 阶段二：内容审计结果
-**审计页面数：** 31 个 guide 页面（全扫描）
-
-**SEO Top 3 更新：**
-1. **`guides/release-date-platforms.html`**（评分：9/10）— 补充 Nintendo Switch 2 实体版信息：Game Key Cards、专属 Retro Video Game Batman 实体人仔（Deluxe 实体限定，限量供应）。来源：StoneWars June 4, 2026。
-2. **`guides/deluxe-edition-explained.html`**（评分：9/10）— 修正套装总数错误（101基础→100，129总→128）；新增 Switch 2 实体 Deluxe Edition 专属人仔信息；更新 meta description。
-3. **`guides/mayhem-collection-dlc.html`**（评分：8/10）— 新增 callout：Switch 2 Deluxe 实体版人仔说明，澄清 Switch 2 买家在一个包装里获得的全部内容（DLC + Legacy Collection + 预购套装 + 实体人仔）。
-
-**新建页面：** 无
-
-### Verification Checklist
-- [x] Blog 新文章已写入（lego-batman-returns-set-76355-batmobile-rumor.html，500+字）
-- [x] blog/index.html 已更新（新卡片置顶，侧边栏 Latest Posts 已更新）
-- [x] 内容审计已完成（31 guide 页面）
-- [x] SEO Top 3 更新已执行
-- [x] index.html 链接未变动（无新 guide 页面）
+- [x] index.html 链接已更新（无新 guide 页面）
 - [x] sitemap.xml 已重新生成（75 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
-                                                                                                        

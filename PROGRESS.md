@@ -994,3 +994,29 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（74 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-24 — LEGO Batman Returns Batmobile Rumour Blog + 3 Guide SEO Fixes
+
+### 阶段一：Blog 更新
+- **`blog/lego-batman-returns-set-76355-batmobile-rumor.html`** — 新文章：LEGO Batman Returns Set 76355 rumoured 1992 Batmobile (2,272 pieces, ~$220, September 1, 2026). 来源：StoneWars.com (Reddit leaker Brick Tap). 500+字，含对比表格（vs 76139、76328）、详细分析、跨产品 September 时间节点。图片：gear-3（蝙蝠摩托，循环使用）。
+- **`blog/index.html`** 已更新：新卡片置顶，侧边栏 Latest Posts 已更新。
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（全扫描）
+
+**SEO Top 3 更新：**
+1. **`guides/release-date-platforms.html`**（评分：9/10）— 补充 Nintendo Switch 2 实体版信息：Game Key Cards、专属 Retro Video Game Batman 实体人仔（Deluxe 实体限定，限量供应）。来源：StoneWars June 4, 2026。
+2. **`guides/deluxe-edition-explained.html`**（评分：9/10）— 修正套装总数错误（101基础→100，129总→128）；新增 Switch 2 实体 Deluxe Edition 专属人仔信息；更新 meta description。
+3. **`guides/mayhem-collection-dlc.html`**（评分：8/10）— 新增 callout：Switch 2 Deluxe 实体版人仔说明，澄清 Switch 2 买家在一个包装里获得的全部内容（DLC + Legacy Collection + 预购套装 + 实体人仔）。
+
+**新建页面：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入（lego-batman-returns-set-76355-batmobile-rumor.html，500+字）
+- [x] blog/index.html 已更新（新卡片置顶，侧边栏 Latest Posts 已更新）
+- [x] 内容审计已完成（31 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接未变动（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（75 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

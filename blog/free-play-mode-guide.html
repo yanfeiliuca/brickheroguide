@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BNQ7RJDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F7BNQ7RJDY');
+</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Play Mode in LEGO Batman: Legacy — How It Works and Why You Need It for 100% - BrickHeroGuide</title>
+  <meta name="description" content="Free Play Mode in LEGO Batman: Legacy lets you replay any mission with unlocked characters. Here's how it works, which ability gates block collectibles, and the best character team for a cleanup run.">
+  <meta name="keywords" content="LEGO Batman Legacy free play mode, LEGO Batman Legacy 100 percent, free play guide LEGO Batman, character ability gates LEGO Batman Legacy, collectibles free play">
+  <link rel="canonical" href="https://brickheroguide.com/blog/free-play-mode-guide">
+  <meta property="og:title" content="Free Play Mode in LEGO Batman: Legacy — How It Works and Why You Need It for 100%">
+  <meta property="og:description" content="Every collectible locked behind an ability gate, and the optimal character team to clear them all in Free Play.">
+  <meta property="og:image" content="https://legobatmangame.com/_astro/family.CQW_jlFK_2qvCfg.webp">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
+      --text: #e8eaed; --text-secondary: #9aa0ab;
+      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .article-header { margin-bottom: 28px; }
+    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; margin-bottom: 10px; margin-right: 6px; }
+    .tag-guide { background: #10b98120; color: #34d399; }
+    .tag-tips { background: #8b5cf620; color: #a78bfa; }
+    .article-header h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .tip-box strong { color: var(--accent); }
+    .highlight-box { background: rgba(59, 130, 246, 0.08); border-left: 3px solid #3b82f6; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .highlight-box strong { color: #60a5fa; }
+    .gate-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin: 16px 0; }
+    .gate-card h4 { font-size: 15px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+    .gate-card .gate-meta { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .gate-card p { font-size: 14px; margin-bottom: 0; }
+    .char-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+    .char-table th { background: var(--bg-card); color: var(--accent); font-weight: 700; padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--border); }
+    .char-table td { padding: 9px 14px; border-bottom: 1px solid var(--border); }
+    .char-table tr:last-child td { border-bottom: none; }
+    .char-table tr:hover td { background: var(--bg-card-hover); }
+    .featured-image { margin: 24px 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .featured-image img { width: 100%; display: block; }
+    .featured-image figcaption { padding: 10px 16px; font-size: 12px; color: var(--text-secondary); background: var(--bg-card); }
+    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-stat { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+    .sidebar-stat:last-child { border: none; }
+    .sidebar-stat .stat-val { color: var(--accent); font-weight: 700; }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Free Play Mode Guide
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag tag-guide">Guide</span>
+        <span class="article-tag tag-tips">Tips</span>
+        <h1>Free Play Mode in LEGO Batman: Legacy — How It Works and Why You Can't Get 100% Without It</h1>
+        <div class="article-meta">Published: June 24, 2026 &middot; 6 min read</div>
+      </div>
+
+      <div class="content">
+        <p>If you've finished the main story of <em>LEGO Batman: Legacy of the Dark Knight</em> and are staring at a completion percentage well below 100%, you're not missing secret areas — you're running into <strong>ability gates</strong>. Almost every mission in the game locks at least one collectible behind a character ability that your Story Mode pair doesn't have. Free Play Mode is the mechanism that fixes this, and understanding exactly how it works is the difference between a frustrating 70% ceiling and a clean platinum run.</p>
+
+        <figure class="featured-image">
+          <img src="https://legobatmangame.com/_astro/family.CQW_jlFK_2qvCfg.webp" alt="Full character roster in LEGO Batman: Legacy of the Dark Knight — Batman, Jim Gordon, Catwoman, Robin, Batgirl, Nightwing, and Talia al Ghul" loading="lazy">
+          <figcaption>All seven playable characters bring unique abilities to Free Play. Image: &copy; TT Games / Warner Bros. Games. Official promotional screenshot via <a href="https://legobatmangame.com" target="_blank" rel="noopener">legobatmangame.com</a>, used for editorial purposes.</figcaption>
+        </figure>
+
+        <h2>What Free Play Mode Actually Is</h2>
+
+        <p>Story Mode locks your character selection to the heroes narratively assigned to each chapter. You play Batman paired with whichever supporting character the plot dictates — there's no swapping in Catwoman mid-mission to pick a lock that's blocking a Red Brick.</p>
+
+        <p>Free Play changes this entirely. Once you have completed a mission in Story Mode, that mission becomes available for replay in Free Play. In Free Play, you can bring <em>any combination of characters you have unlocked</em> into that mission — including characters who weren't present in the original story encounter. The mission itself plays identically; what changes is your roster.</p>
+
+        <div class="tip-box"><strong>Key rule:</strong> Free Play does not change enemy placements, puzzle layouts, or objectives. The entire point is access: you carry in the right character for each ability gate and collect everything that was locked behind it during Story Mode.</div>
+
+        <h2>How to Enter Free Play</h2>
+
+        <p>There are two ways to replay a mission in Free Play:</p>
+
+        <ol>
+          <li><strong>Batcave Trophy Room:</strong> Access the wall-mounted mission selector in the Batcave. Each completed mission shows its current collectible completion status as a percentage. Selecting a mission here drops you straight into a character selection screen before loading.</li>
+          <li><strong>Gotham Open World:</strong> From the open-world hub, you can enter any completed mission's start point directly. The game will prompt you to confirm Free Play mode when you approach the story entry trigger.</li>
+        </ol>
+
+        <p>In both cases, after selecting Free Play you get a character selection screen. You pick two active characters and can swap between them at any time during the mission using the D-pad (or character swap button on PC). Up to two additional characters travel with you as AI companions, and you can also hot-swap to them in the field.</p>
+
+        <div class="highlight-box"><strong>Tip:</strong> Bring all four characters into Free Play whenever possible. If you encounter an ability gate you didn't anticipate, you can immediately hot-swap to the companion who can handle it rather than quitting and re-entering.</div>
+
+        <h2>The Five Ability Gates That Lock Collectibles</h2>
+
+        <p>Every character in the game has at least one unique ability that can interact with objects or environmental elements no other character can reach. These are the gates that block collectibles during Story Mode and make Free Play mandatory for 100% completion.</p>
+
+        <div class="gate-card">
+          <h4>Batgirl — Tech Hack</h4>
+          <div class="gate-meta">Unlocked: Chapter 3 &middot; Affects: Riddler terminal puzzles, security override panels</div>
+          <p>Batgirl can interface with Riddler's hacking terminals and electronic security panels that appear in the Gotham East and Diamond Districts. Any mission that takes you through tech-heavy sections of Gotham will have at least one Hack gate. She is the most frequently required non-Batman character for collectibles.</p>
+        </div>
+
+        <div class="gate-card">
+          <h4>Catwoman — Lockpick</h4>
+          <div class="gate-meta">Unlocked: Chapter 2 &middot; Affects: Locked containers, sealed doors</div>
+          <p>Catwoman's Lockpick bypasses padlocked containers and sealed-off side rooms that appear throughout every chapter. Her locks are visually distinctive — a gold padlock icon appears above the object. She is also required for the Falcone Fortunes missions, making her essential for two separate collectible systems simultaneously.</p>
+        </div>
+
+        <div class="gate-card">
+          <h4>Nightwing — Wall Jump</h4>
+          <div class="gate-meta">Unlocked: Chapter 4 &middot; Affects: Vertical traversal routes, high-platform collectibles</div>
+          <p>Nightwing can execute a Wall Jump between two close parallel walls, reaching platform heights that Batman's Grapnel Gun cannot target (the Grapnel requires a ledge anchor point). Several WayneTech Caches on rooftops and in warehouse interiors are placed specifically for Wall Jump access.</p>
+        </div>
+
+        <div class="gate-card">
+          <h4>Jim Gordon — Rebound Launcher</h4>
+          <div class="gate-meta">Unlocked: Chapter 1 &middot; Affects: Blocked lateral targets, collectibles behind breakable covers</div>
+          <p>Gordon's Rebound Launcher fires a projectile that bounces off walls at exact angles, hitting targets in alcoves, behind corners, or inside structures where line-of-sight attacks can't reach. Some Cluemaster Puzzle boards are deliberately placed behind walls and require the ricochet.</p>
+        </div>
+
+        <div class="gate-card">
+          <h4>Talia al Ghul — Shadow Dash</h4>
+          <div class="gate-meta">Unlocked: Chapter 5 &middot; Affects: Stealth corridors, phase-through barriers</div>
+          <p>Talia's Shadow Dash lets her pass through certain energy barriers and shadow-marked doorways that block other characters outright. These barriers appear in League of Shadows mission sections and are unmissable once you know what they look like — a faint blue shimmer on the door frame or floor marker.</p>
+        </div>
+
+        <div class="ad-inline">
+          <ins class="adsbygoogle"
+               style="display:block;text-align:center"
+               data-ad-client="ca-pub-1971262808837870"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <h2>The Optimal Free Play Team</h2>
+
+        <p>Because your active party is four characters and you can hot-swap at any time, you can cover all five ability gates with a single loadout if you choose carefully:</p>
+
+        <table class="char-table">
+          <thead>
+            <tr><th>Slot</th><th>Character</th><th>Why</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Active 1</td><td>Batman</td><td>Batarang, Grapnel, Sonar — covers the majority of standard puzzle interactions</td></tr>
+            <tr><td>Active 2</td><td>Catwoman</td><td>Lockpick is the single most common non-Batman gate; also handles Falcone Fortunes</td></tr>
+            <tr><td>Companion 1</td><td>Batgirl</td><td>Tech Hack for Riddler terminals; hot-swap in when you see a console</td></tr>
+            <tr><td>Companion 2</td><td>Nightwing</td><td>Wall Jump for vertical cache clusters; also useful as a fast traversal option</td></tr>
+          </tbody>
+        </table>
+
+        <p>Jim Gordon and Talia al Ghul cover more specialised gates (Rebound Launcher and Shadow Dash respectively). You will want to bring Gordon specifically for Cluemaster Puzzle chapters and Talia for the League of Shadows missions. For a general-purpose cleanup run, however, the Batman / Catwoman / Batgirl / Nightwing four covers the highest percentage of locked collectibles per mission.</p>
+
+        <div class="tip-box"><strong>Robin's role:</strong> Robin is the only character not listed above, because his unique Staff Vault (long-jump pole) covers far fewer collectible gates than the others. Prioritise the four characters above for Free Play; Robin is primarily a Story Mode character who shines in combat and co-op.</div>
+
+        <h2>Story First or Free Play As You Go?</h2>
+
+        <p>There are two valid approaches to completion, and the community is split between them. The "story first" camp recommends ignoring missed collectibles entirely during Story Mode and doing a single comprehensive Free Play sweep after finishing all six chapters. This keeps narrative momentum high and means you already have every character unlocked when you replay.</p>
+
+        <p>The "chapter-by-chapter" approach replays each chapter in Free Play immediately after finishing it in Story Mode, before moving on. This prevents collectibles from feeling like a separate chore at the end, and you hit True Hero stud thresholds faster because you're grinding every mission twice before your memory of the layout fades.</p>
+
+        <p>Either approach works; the completion outcome is identical. The difference is pacing preference. If you found the story missions engaging and want to relive them with full roster freedom, the chapter-by-chapter approach extends the enjoyment naturally. If you found certain missions tedious, batching them into a post-story cleanup is more efficient.</p>
+
+        <h2>What Free Play Does Not Change</h2>
+
+        <p>One common misconception: Free Play is not a separate "mode" with different rules for combat or difficulty. You're playing the same mission at the same difficulty you set in options. The only variable is character selection. Studs, collectibles found, and challenge progress all count toward your save file exactly as they would in Story Mode.</p>
+
+        <p>Suit unlocks that require mission completion triggers also fire in Free Play — so if you missed a WayneTech Cache that unlocks a specific suit, collecting it in Free Play will add that suit to your wardrobe immediately. The same applies to Batcave Trophy completions and Cluemaster Puzzle rewards.</p>
+
+        <p>For a full list of what each character can reach, the <a href="/guides/collectibles-guide">Collectibles Guide</a> has character requirement notes for each collectible type, and the <a href="/guides/100-percent-completion">100% Completion Checklist</a> organises the full sweep by phase.</p>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Quick Stats</h3>
+        <div class="sidebar-stat"><span>Ability Gates</span><span class="stat-val">5 types</span></div>
+        <div class="sidebar-stat"><span>Best FP Team</span><span class="stat-val">Batman + Catwoman + Batgirl + Nightwing</span></div>
+        <div class="sidebar-stat"><span>Access Method</span><span class="stat-val">Batcave / Open World</span></div>
+        <div class="sidebar-stat"><span>Hot-Swap</span><span class="stat-val">D-pad anytime</span></div>
+        <div class="sidebar-stat"><span>Active Party Size</span><span class="stat-val">2 active + 2 AI</span></div>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Related Guides</h3>
+        <a href="/guides/collectibles-guide" class="sidebar-link">Collectibles Guide (All Types)</a>
+        <a href="/guides/100-percent-completion" class="sidebar-link">100% Completion Checklist</a>
+        <a href="/guides/all-characters-unlock" class="sidebar-link">How to Unlock All Characters</a>
+        <a href="/guides/best-characters-each-mission" class="sidebar-link">Best Characters Per Mission</a>
+        <a href="/guides/trophy-guide" class="sidebar-link">Trophy Guide — Road to Platinum</a>
+        <a href="/blog/batcave-challenges-complete-guide" class="sidebar-link">Batcave Challenges Guide</a>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Related Blog Posts</h3>
+        <a href="/blog/best-character-ranking-lego-batman-legacy" class="sidebar-link">Character Tier List</a>
+        <a href="/blog/stud-farming-guide-fast-studs" class="sidebar-link">How to Farm Studs Fast</a>
+        <a href="/blog/all-batsuits-unlock-guide" class="sidebar-link">All 101 Suits — Unlock Guide</a>
+        <a href="/blog/waynetech-upgrades-best-first-guide" class="sidebar-link">Best WayneTech Upgrades First</a>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Ad</h3>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1971262808837870"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 BrickHeroGuide.com &mdash; Fan site. Not affiliated with TT Games or Warner Bros. Games.</p>
+      <p class="footer-disclaimer">LEGO Batman: Legacy of the Dark Knight &copy; 2026 Warner Bros. Entertainment Inc. LEGO and the LEGO logo are trademarks of the LEGO Group. All game content, characters, and images are the property of their respective owners and are used for editorial and informational purposes only.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const links = document.getElementById('navLinks');
+    if (toggle && links) toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+</body>
+</html>

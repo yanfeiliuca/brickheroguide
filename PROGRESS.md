@@ -1017,3 +1017,28 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
                                                                                                         
+## 2026-06-25 — Kevin Conroy Voice Tribute Blog + 3 Guide SEO Updates
+
+### 阶段一：Blog 更新
+- **`blog/kevin-conroy-voice-tribute-lego-batman.html`** — 新文章：Kevin Conroy 的声音隐藏在《LEGO Batman: Legacy of the Dark Knight》的阿卡姆疯人院关卡中，TT Games 高级关卡设计师 Mike Consalvey 于 2026 年 6 月 18 日在 X 上确认。文章详细介绍了两处隐藏存档声线（保安警报 + 电梯故障广播）、Gotham 城市中的"After Hours With Conroy"广告牌致敬，以及字幕表中的署名。600+字，含引用框、来源侧边栏、完整的深色主题 HTML。图片：clues-2（哥谭夜景 — 霓虹灯、蝙蝠信号），循环自 lego-batman-redeem-codes-qr-rewards.html。来源：GamingBible (June 19)、DC.com (June 8)、Screen Rant、TheGamer、OpenCritic。
+- **`blog/index.html`** 已更新：新卡片置顶，侧边栏 Latest Posts 已更新（Kevin Conroy / 76355 Batmobile / Steam Summer Sale）。
+
+### 阶段二：内容审计结果
+**审计页面数：** 30 个 guide 页面（全扫描）
+
+**SEO Top 3 更新：**
+1. **`guides/trophy-guide.html`**（评分：8/10）— 在"Character & Suit Trophies"板块新增具名奖杯"Let's see what Batgirl can do"（PS5 专属，解锁 Batgirl 时触发），注明出处为 BTAS《Shadow of the Bat, Part One》，来源 DC.com June 8, 2026。
+2. **`guides/post-game-checklist.html`**（评分：8/10）— 目录"Upcoming DLC"改为"Mayhem Collection DLC (September 18, 2026)"；新增章节"Secret Easter Egg: Kevin Conroy's Hidden Voice Lines"，包含两处声线位置及广告牌信息，并链接到 Blog 深度文章。
+3. **`guides/collectibles-guide.html`**（评分：7/10）— 在 Batcave Minikits 板块新增"Optimal Minikit Sweep Route (Post-Story)"，提供 7 个 Batcave 房间的逐房间路线（Main Chamber → Batcomputer Room → Workbench & Armoury → Trophy Room → Vehicle Bay → Chapter 5 Room → Chapter 6 Room），含具体隐藏位置提示。符合 CLAUDE.md 持续升级优先级。
+
+**新建页面：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入（kevin-conroy-voice-tribute-lego-batman.html，600+字）
+- [x] blog/index.html 已更新（新卡片置顶，侧边栏 Latest Posts 已更新）
+- [x] 内容审计已完成（30 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接未变动（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（77 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

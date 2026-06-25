@@ -993,3 +993,27 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（75 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-25 — Voice Cast Blog + Character Guide Voice Actor Enrichment
+
+### 阶段一：Blog 更新
+- **`blog/voice-cast-complete-guide.html`** — Complete voice cast guide for LEGO Batman: Legacy of the Dark Knight. Covers why the cast changed (2024–25 SAG-AFTRA strike), full table of all confirmed actors (Shai Matheson as Batman, Matt Berry as Bane, Colin McFarlane as Gordon, Ewan Bailey as Joker, etc.), archive tributes to Kevin Conroy and Adam West, and casting analysis for standout performances. Sources: Adventure Gamers, Insider Gaming, IMDb, Behind the Voice Actors. ~700 words. Image: legobatmangame.com family.CQW_jlFK_2qvCfg.webp.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面
+**SEO Top 3 更新：**
+1. **`guides/all-characters-unlock.html`** — Added confirmed voice actors (Shai Matheson, Colin McFarlane, Clara Emanuel, Greg Jones, Savannah Beckford, Hyoie O'Grady, Vanessa Labrie) to all 7 hero character subtitles. Updated meta description to include voice cast.（评分：9/10）
+2. **`guides/all-villains-guide.html`** — Added voice actors to all major villain entries missing them: Ewan Bailey (Joker), Scott Joseph (Ra's al Ghul), Ian Conningham (Penguin), Oliver Senton (Mr. Freeze), Rich Keeble (Two-Face), Alexandra Guelff (Poison Ivy), Matthew Curtis (Riddler). Updated meta description.（评分：7.5/10）
+3. **`guides/characters-villains-guide.html`** — Added full Voice Cast Overview section with a 10-row actor table, internal link to voice-cast blog post, and TOC entry. Updated meta description.（评分：7/10）
+
+**新建页面（如有）：** voice-cast-complete-guide.html (blog)
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面，blog 文章仅为 blog 目录）
+- [x] sitemap.xml 已重新生成（81 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

@@ -1017,3 +1017,27 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（81 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-26 — Catwoman Character Guide Blog + Ability Accuracy Fixes
+
+### 阶段一：Blog 更新
+- **`blog/catwoman-character-guide.html`** — "Catwoman in LEGO Batman Legacy: Complete Character Guide — Abilities, Puzzles & Story Role." 700+ words. Covers all 5 abilities (Whip, Call Kitty/Cat Control, Wall Climbing, Safe Cracking, Glass Cutter), unlock method (Chapter 2 — Mines mission), key puzzle scenarios per ability, story role, and practical Free Play tips. Tags: Guide + Analysis. Image: Steam promotional image `clan.fastly.steamstatic.com/images/45746841/c84e906c37b4bf2fd1c6297b933f31a2479fd477.png` (only unused image from approved list — all _astro/ images exhausted). Sources: GamesRadar, NoobFeed, Screen Rant, GameSpot, Game8, Push Square. 7 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面
+**SEO Top 3 更新：**
+1. **`guides/best-characters-each-mission.html`** — Fixed Catwoman ability table row from "Lockpick, Whip, Wall-run" to complete "Whip, Call Kitty, Wall Climbing, Safe Cracker, Glass Cutter." Rewrote Catwoman char-card description to include all 5 abilities with Call Kitty (vent navigation) and Glass Cutter (glass panels) that were previously absent. Added cross-link to new Catwoman blog. (评分：8/10)
+2. **`guides/all-characters-unlock.html`** — Added cross-link to new Catwoman complete character guide in the Catwoman section. (评分：7.5/10)
+3. **`guides/chapter-1-red-hood-gang-walkthrough.html`** — Added Free Play tip box noting the glass-panel hidden room in the eastern corridor (Catwoman Glass Cutter required). Added Catwoman guide cross-link in Related Guides. (评分：7/10)
+
+**新建页面（如有）：** blog/catwoman-character-guide.html
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（83 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

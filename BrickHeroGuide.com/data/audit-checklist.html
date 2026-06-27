@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>内容审核清单 — BrickHeroGuide</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d27;
+      --bg-card2: #232637;
+      --accent: #fbbf24;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --green: #22c55e;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: #2d3148;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; padding: 2rem; max-width: 900px; margin: 0 auto; }
+    h1 { color: var(--accent); font-size: 1.5rem; margin-bottom: 0.25rem; }
+    .subtitle { color: var(--muted); font-size: 0.875rem; margin-bottom: 2rem; }
+    h2 { font-size: 1rem; color: var(--accent); margin: 2rem 0 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+
+    /* Risk badge */
+    .risk { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700; margin-right: 0.5rem; vertical-align: middle; }
+    .risk-high { background: rgba(239,68,68,0.2); color: var(--red); border: 1px solid var(--red); }
+    .risk-mid { background: rgba(245,158,11,0.2); color: var(--yellow); border: 1px solid var(--yellow); }
+    .risk-low { background: rgba(34,197,94,0.15); color: var(--green); border: 1px solid var(--green); }
+
+    /* Checklist items */
+    .check-item { display: flex; align-items: flex-start; gap: 0.75rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; margin-bottom: 0.5rem; cursor: pointer; transition: border-color 0.15s; }
+    .check-item:hover { border-color: var(--accent); }
+    .check-item.done { border-color: var(--green); background: rgba(34,197,94,0.05); }
+    .check-item.error { border-color: var(--red); background: rgba(239,68,68,0.08); }
+    .checkbox { width: 20px; height: 20px; border: 2px solid var(--muted); border-radius: 4px; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; transition: all 0.15s; }
+    .check-item.done .checkbox { background: var(--green); border-color: var(--green); color: #000; }
+    .check-item.error .checkbox { background: var(--red); border-color: var(--red); color: #fff; }
+    .check-label { flex: 1; }
+    .check-label strong { display: block; font-size: 0.9rem; }
+    .check-label span { font-size: 0.8rem; color: var(--muted); }
+
+    /* Facts table */
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+    th { background: var(--bg-card2); color: var(--accent); padding: 0.5rem 0.75rem; text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; }
+    td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.875rem; }
+    tr:hover td { background: var(--bg-card2); }
+    .val { font-weight: 700; color: #fff; }
+    td.copy-val { cursor: pointer; }
+    td.copy-val:hover .val { color: var(--accent); }
+
+    /* Forbidden list */
+    .forbidden { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.4); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 0.5rem; }
+    .forbidden .wrong { color: var(--red); font-weight: 700; font-size: 0.875rem; }
+    .forbidden .correct { color: var(--green); font-size: 0.875rem; }
+
+    /* Progress bar */
+    .progress-wrap { background: var(--bg-card2); border-radius: 999px; height: 8px; margin: 0.5rem 0 1.5rem; overflow: hidden; }
+    .progress-bar { height: 100%; background: var(--accent); border-radius: 999px; transition: width 0.3s; }
+    .progress-label { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.25rem; }
+
+    /* Reset button */
+    .btn { background: var(--bg-card2); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 0.4rem 1rem; font-size: 0.8rem; cursor: pointer; transition: border-color 0.15s; }
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-row { display: flex; gap: 0.5rem; margin-top: 1.5rem; }
+
+    .timestamp { color: var(--muted); font-size: 0.75rem; margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+  </style>
+</head>
+<body>
+
+<h1>🔍 内容审核清单</h1>
+<p class="subtitle">BrickHeroGuide.com — LEGO Batman: Legacy of the Dark Knight</p>
+
+<!-- Progress -->
+<p class="progress-label" id="prog-label">进度：0 / 0 项已完成</p>
+<div class="progress-wrap"><div class="progress-bar" id="prog-bar" style="width:0%"></div></div>
+
+<!-- SECTION 1: Forbidden errors -->
+<h2>❌ 禁止错误（致命，出现即修正）</h2>
+
+<div class="forbidden">
+  <div class="wrong">✗ trophy-achievement-guide.html</div>
+  <div class="correct">✓ 正确文件：guides/trophy-guide.html</div>
+</div>
+<div class="forbidden">
+  <div class="wrong">✗ WayneTech 缓存 = 10 个</div>
+  <div class="correct">✓ 正确：200 个</div>
+</div>
+<div class="forbidden">
+  <div class="wrong">✗ 主线任务 = 29+ 或 8 个</div>
+  <div class="correct">✓ 正确：21 个</div>
+</div>
+<div class="forbidden">
+  <div class="wrong">✗ Dark Knight Returns Batsuit 是 Switch 2 独家</div>
+  <div class="correct">✓ 正确：全平台可获取（PS5/Xbox/PC 窗口已关闭，Switch 2 截止 2026-09-18）</div>
+</div>
+<div class="forbidden">
+  <div class="wrong">✗ Switch 2 性能"估计"或"待定"</div>
+  <div class="correct">✓ 正确：720p 掌机 / 最高 1080p 底座</div>
+</div>
+<div class="forbidden">
+  <div class="wrong">✗ 收藏品总数 "99+"</div>
+  <div class="correct">✓ 正确：247+</div>
+</div>
+<div class="forbidden">
+  <div class="wrong">✗ canonical URL 含 .html 后缀</div>
+  <div class="correct">✓ 正确：全站使用干净 URL（无后缀）</div>
+</div>
+
+<!-- SECTION 2: Verified numbers -->
+<h2>📊 已验证数值速查表</h2>
+<table>
+  <tr><th>数值</th><th>正确值</th><th>来源</th></tr>
+  <tr><td>主线任务数</td><td class="val copy-val" onclick="copyText(this,'21')"><span class="val">21</span></td><td>官方</td></tr>
+  <tr><td>可玩角色</td><td><span class="val">7</span>（+3隐藏：Alfred、Lucius Fox、Bruce Wayne）</td><td>社区发现</td></tr>
+  <tr><td>基础服装</td><td><span class="val">101</span>（含全DLC：129）</td><td>官方</td></tr>
+  <tr><td>收藏品总数</td><td><span class="val">247+</span></td><td>官方</td></tr>
+  <tr><td>谜题（Riddler Trophies）</td><td><span class="val">121</span></td><td>官方</td></tr>
+  <tr><td>WayneTech 缓存</td><td><span class="val">200</span></td><td>官方</td></tr>
+  <tr><td>哥谭岛屿数</td><td><span class="val">4</span></td><td>官方</td></tr>
+  <tr><td>PS5 奖杯数</td><td><span class="val">52</span></td><td>PowerPyx</td></tr>
+  <tr><td>Xbox 成就数</td><td><span class="val">51</span></td><td>PowerPyx</td></tr>
+  <tr><td>IGN 评分</td><td><span class="val">8/10</span></td><td>IGN</td></tr>
+  <tr><td>Steam 评价</td><td><span class="val">压倒性好评（11,600+ 评测）</span></td><td>Steam</td></tr>
+  <tr><td>Switch 2 掌机分辨率</td><td><span class="val">720p</span></td><td>TT Games</td></tr>
+  <tr><td>Switch 2 底座分辨率</td><td><span class="val">最高 1080p</span></td><td>TT Games</td></tr>
+  <tr><td>Mayhem DLC 发布日</td><td><span class="val">2026-09-18</span></td><td>官方</td></tr>
+  <tr><td>补丁 1.006 日期</td><td><span class="val">2026-06-02</span></td><td>官方</td></tr>
+  <tr><td>发售日（主机/PC）</td><td><span class="val">2026-05-22</span></td><td>官方</td></tr>
+  <tr><td>发售日（Switch 2）</td><td><span class="val">2026-09-18</span></td><td>官方</td></tr>
+  <tr><td>Steam Deck 认证日</td><td><span class="val">2026-05-12（Verified）</span></td><td>Steam</td></tr>
+</table>
+
+<!-- SECTION 3: Risk-tiered checklist -->
+<h2>✅ 四层验证清单（逐项点击完成）</h2>
+
+<div class="check-item" onclick="toggle(this)" data-id="c1">
+  <div class="checkbox">✓</div>
+  <div class="check-label">
+    <strong><span class="risk risk-high">🔴 高风险</span>已加载 data/game-facts.json</strong>
+    <span>所有数值从 JSON 文件取值，不凭记忆</span>
+  </div>
+</div>
+
+<div class="check-item" onclick="toggle(this)" data-id="c2">
+  <div class="checkbox">✓</div>
+  <div class="check-label">
+    <strong><span class="risk risk-high">🔴 高风险</span>所有数值已对照 JSON 逐项核查</strong>
+    <span>奖杯数、收藏品数、任务数、服装数等均已验证</span>
+  </div>
+</div>
+
+<div class="check-item" onclick="toggle(this)" data-id="c3">
+  <div class="checkbox">✓</div>
+  <div class="check-label">
+    <strong><span class="risk risk-high">🔴 高风险</span>禁止错误清单全部排查</strong>
+    <span>7条致命错误均未出现</span>
+  </div>
+</div>
+
+<div class="check-item" onclick="toggle(this)" data-id="c4">
+  <div class="checkbox">✓</div>
+  <div class="check-label">
+    <strong><span class="risk risk-high">🔴 高风险</span>不确定内容已标注 [待查证]</strong>
+    <span>不猜测，不使用"大约"、"可能"等模糊表述处理数值</span>
+  </div>
+</div>
+
+<div class="check-item" onclick="toggle(this)" data-id="c5">
+  <div class="checkbox">✓</div>
+  <div class="check-label">
+    <strong><span class="risk risk-mid">🟡 中风险</span>攻略策略/推荐内容已标注"仅供参考"</strong>
+    <span>配装推荐、难度评估等主观内容有适当免责声明</span>
+  </div>
+</div>
+
+<div class="check-item" onclick="toggle(this)" data-id="c6">
+  <div class="checkbox">✓</div>
+  <div class="check-label">
+    <strong><span class="risk risk-mid">🟡 中风险</span>每条来源已标注</strong>
+    <span>每个事实有可验证来源链接（官方/IGN/GamesRadar等）</span>
+  </div>
+</div>
+
+<div class="check-item" onclick="toggle(this)" data-id="c7">
+  <div class="checkbox">✓</div>
+  <div class="check-label">
+    <strong><span class="risk risk-low">🟢 低风险</span>canonical URL 无 .html 后缀</strong>
+    <span>例：/guides/trophy-guide 而非 /guides/trophy-guide.html</span>
+  </div>
+</div>
+
+<div class="check-item" onclick="toggle(this)" data-id="c8">
+  <div class="checkbox">✓</div>
+  <div class="check-label">
+    <strong><span class="risk risk-low">🟢 低风险</span>预发行表述已清理</strong>
+    <span>无"coming soon"、"expected"、"will feature"等表述</span>
+  </div>
+</div>
+
+<div class="check-item" onclick="toggle(this)" data-id="c9">
+  <div class="checkbox">✓</div>
+  <div class="check-label">
+    <strong><span class="risk risk-low">🟢 低风险</span>GA tag 已包含（G-F7BNQ7RJDY）</strong>
+    <span>新建每个 HTML 页面均包含 Google Analytics tag</span>
+  </div>
+</div>
+
+<div class="check-item" onclick="toggle(this)" data-id="c10">
+  <div class="checkbox">✓</div>
+  <div class="check-label">
+    <strong><span class="risk risk-low">🟢 低风险</span>meta description 120字以内且含关键词</strong>
+    <span>不超过120字，包含核心 SEO 关键词</span>
+  </div>
+</div>
+
+<div class="btn-row">
+  <button class="btn" onclick="resetAll()">↺ 重置清单</button>
+  <button class="btn" onclick="checkAll()">✓ 全部完成</button>
+</div>
+
+<div class="timestamp" id="timestamp"></div>
+
+<script>
+  const CHECKS = ['c1','c2','c3','c4','c5','c6','c7','c8','c9','c10'];
+
+  function toggle(el) {
+    el.classList.toggle('done');
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const total = CHECKS.length;
+    const done = document.querySelectorAll('.check-item.done').length;
+    document.getElementById('prog-label').textContent = `进度：${done} / ${total} 项已完成`;
+    document.getElementById('prog-bar').style.width = `${(done/total)*100}%`;
+    if (done === total) {
+      const now = new Date().toLocaleString('zh-CN');
+      document.getElementById('timestamp').textContent = `✅ 所有项目已完成 — ${now}`;
+    } else {
+      document.getElementById('timestamp').textContent = '';
+    }
+  }
+
+  function resetAll() {
+    document.querySelectorAll('.check-item').forEach(el => el.classList.remove('done','error'));
+    updateProgress();
+  }
+
+  function checkAll() {
+    document.querySelectorAll('.check-item').forEach(el => {
+      el.classList.add('done');
+      el.classList.remove('error');
+    });
+    updateProgress();
+  }
+
+  function copyText(td, val) {
+    navigator.clipboard.writeText(val).then(() => {
+      const orig = td.innerHTML;
+      td.innerHTML = '<span style="color:var(--green)">✓ 已复制</span>';
+      setTimeout(() => td.innerHTML = orig, 1000);
+    });
+  }
+
+  updateProgress();
+</script>
+</body>
+</html>

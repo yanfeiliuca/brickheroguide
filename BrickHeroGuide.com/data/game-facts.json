@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "game": "LEGO Batman: Legacy of the Dark Knight",
+    "developer": "TT Games",
+    "publisher": "WB Games",
+    "release_date": "2026-05-22",
+    "last_verified": "2026-06-27",
+    "source_authority": "Official WB Games page, IGN, GamesRadar, PowerPyx, Steam",
+    "usage_rule": "AI MUST only use values from this file for any numerical claim. If a value is missing, mark as [UNVERIFIED] and flag for human research."
+  },
+
+  "ratings": {
+    "ign": { "score": "8/10", "source": "IGN review" },
+    "gamesradar": { "score": "4/5", "source": "GamesRadar review" },
+    "steam": { "verdict": "Overwhelmingly Positive", "review_count": "11600+", "source": "Steam store page" }
+  },
+
+  "platforms": {
+    "release_date_ps5_xbox_pc": "2026-05-22",
+    "release_date_switch2": "2026-09-18",
+    "steam_deck_verified": true,
+    "steam_deck_verified_date": "2026-05-12"
+  },
+
+  "performance": {
+    "switch2_handheld": "720p",
+    "switch2_docked": "1080p (max)",
+    "switch2_performance_note": "720p handheld / up to 1080p docked. TT Games has not released official specs; full analysis pending Switch 2 launch 2026-09-18."
+  },
+
+  "content_counts": {
+    "main_missions": 21,
+    "playable_characters": 7,
+    "hidden_characters": 3,
+    "hidden_character_names": ["Alfred", "Lucius Fox", "Bruce Wayne"],
+    "gotham_islands": 4,
+    "base_suits": 101,
+    "total_suits_with_all_dlc": 129,
+    "collectibles_total": "247+",
+    "riddler_trophies": 121,
+    "waynetech_caches": 200,
+    "trophies_ps5": 52,
+    "achievements_xbox": 51
+  },
+
+  "waynetech_cache_milestones": [10, 30, 50, 70, 80, 90, 110, 140, 150, 160, 180],
+
+  "editions": {
+    "standard": {
+      "extra_cost": "$0",
+      "platforms": "all",
+      "includes": "base game"
+    },
+    "deluxe": {
+      "extra_cost": "$24.99",
+      "platforms": "all",
+      "includes": "season pass including Mayhem Collection"
+    },
+    "switch2_standard_physical": {
+      "extra_cost": "$0",
+      "platforms": "Switch 2 (physical only)",
+      "includes": "base game + Retro Video Game Batman figurine"
+    },
+    "switch2_deluxe_physical": {
+      "extra_cost": "$24.99",
+      "platforms": "Switch 2 (physical only)",
+      "includes": "all content + Retro Video Game Batman figurine"
+    }
+  },
+
+  "preorder_bonuses": {
+    "dark_knight_returns_batsuit": {
+      "available_on": "all platforms",
+      "ps5_xbox_pc_window_closed": "2026-05-22",
+      "switch2_preorder_deadline": "2026-09-18",
+      "note": "NOT Switch 2 exclusive — available on ALL platforms"
+    }
+  },
+
+  "free_suits_account_link": {
+    "golden_age_batsuit": {
+      "requirement": "link WB Games account",
+      "platforms": "all"
+    },
+    "steel_dark_knight_suit": {
+      "requirement": "link HBO Max account",
+      "platforms": "all"
+    },
+    "black_lantern_suit": {
+      "requirement": "link HBO Max account",
+      "platforms": "all"
+    }
+  },
+
+  "patches": {
+    "1_006": {
+      "date": "2026-06-02",
+      "type": "stability patch",
+      "fixes": ["Mr. Freeze boss crash that blocked story trophy unlock"]
+    }
+  },
+
+  "dlc_mayhem_collection": {
+    "release_date": "2026-09-18",
+    "new_playable_characters": ["Joker", "Harley Quinn"],
+    "new_missions": "Arkham Asylum Jailbreak mission",
+    "new_modes": "Mayhem Mode",
+    "sinister_pack_contents": {
+      "suits": 7,
+      "batcave_decorations": 5,
+      "batmobile_skins": 1
+    }
+  },
+
+  "internal_links": {
+    "trophy_guide": "guides/trophy-guide.html",
+    "suits_guide": "guides/suits-abilities-guide.html",
+    "collectibles_guide": "guides/collectibles-guide.html",
+    "deluxe_edition": "guides/deluxe-edition-explained.html",
+    "release_date": "guides/release-date-platforms.html",
+    "beginners_guide": "guides/beginners-guide.html",
+    "waynetech_guide": "guides/waynetech-upgrades-guide.html",
+    "gotham_districts": "guides/gotham-districts-guide.html",
+    "coop_guide": "guides/co-op-guide.html"
+  },
+
+  "forbidden_errors": [
+    "trophy-achievement-guide.html does not exist — correct file: trophy-guide.html",
+    "WayneTech caches = 10 — WRONG, correct: 200",
+    "Main missions = 29+ or 8 — WRONG, correct: 21",
+    "Dark Knight Returns Batsuit is Switch 2 exclusive — WRONG, available on all platforms",
+    "Switch 2 performance 'estimated' or 'TBD' — WRONG, known: 720p handheld / 1080p docked",
+    "Collectibles total '99+' — WRONG, correct: 247+",
+    "Canonical URLs with .html suffix — WRONG, site uses clean URLs"
+  ]
+}

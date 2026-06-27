@@ -1041,3 +1041,27 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（83 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-27 — Soundtrack Deep Dive Blog + Known Issues Guide Updates
+
+### 阶段一：Blog 更新
+- **`blog/lego-batman-legacy-soundtrack-deep-dive.html`** — "LEGO Batman Legacy Soundtrack Deep Dive: Simon Withenshaw, Danny Elfman & 39 Tracks Explained." 700+ words. Covers composer biography (TT Games since 2009), the Danny Elfman co-credit on track 30 "Rough and Tumble" (significant as Elfman composed the iconic 1989 Batman theme), full tracklist highlights with 5 featured track cards, production team details (WaterTower Music, released May 22, 2026), and streaming links. Tags: Analysis + Review. Image: `_astro/clues-2.D9jQ9zQy_Z12vcyH.webp` (Gotham nightscape — best atmospheric fit). Sources: VGMdb, NOWPLAYING, Spotify, Album of the Year. 7 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面
+**SEO Top 3 更新：**
+1. **`guides/trophy-guide.html`** — Added "Diamond Brutal Bat" trophy known bug warning (AR Challenges completion not triggering trophy unlock — listed as upcoming fix in Update 1.006 patch notes). Includes community workaround (quit/reload/replay one trial). Updated 1.006 tip box to reference the bug. (评分：8/10)
+2. **`guides/100-percent-completion.html`** — Expanded Known Bugs section from 2 items to 7 items, now including: Tricorner chest, Riddler markers, Riddler battery puzzles, Wanted Poster progression, Zoo animal Batmobile reward, Botanical Gardens soft-lock. Updated date stamp to June 27, 2026. (评分：8/10)
+3. **`guides/beginners-guide.html`** — Added Known Issues callout at end of tips section, specifically flagging the Botanical Gardens soft-lock and Wanted Poster + Riddler battery bugs that could affect new players. Practical prevention guidance included. (评分：7/10)
+
+**新建页面（如有）：** None (blog post only)
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（84 页）
+- [x] PROGRESS.md 已追加
+- [x] Git commit + push 已完成

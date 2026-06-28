@@ -26,6 +26,12 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://brickheroguide.com/BrickHeroGuide.com/data/audit-checklist.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://brickheroguide.com/blog/accessibility-features-guide.html</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -321,12 +327,6 @@
   </url>
   <url>
     <loc>https://brickheroguide.com/blog/waynetech-upgrades-best-first-guide.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://brickheroguide.com/BrickHeroGuide.com/data/audit-checklist.html</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

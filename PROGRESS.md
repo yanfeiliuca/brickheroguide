@@ -1065,3 +1065,33 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（84 页）
 - [x] PROGRESS.md 已追加
 - [x] Git commit + push 已完成
+
+## 2026-06-28 — All Boss Fights Guide Blog + WayneTech Count Audit
+
+### 阶段一：Blog 更新
+- **`blog/all-boss-fights-guide.html`** — "All 10 Boss Fights in LEGO Batman: Legacy of the Dark Knight — Chapter-by-Chapter Strategies." 870+ words. Phase-by-phase strategies for all 10 bosses (Ra's al Ghul, Red Hood One, Penguin, Joker, Two-Face, Poison Ivy, Firefly, Mr. Freeze, Bane, Talia al Ghul) across Prologue + 6 chapters. Includes general tips on auto gadget-swap, difficulty setting impact, grapple slam for shields, and Batcomputer replay. Cross-links to WayneTech Upgrades Guide, Trophy Guide, and patch 1.006 post. Tags: Guide + Analysis. Image: `legobatmangame.com/_astro/prefooter-keyart.C5w2I9s1_1Iktj5.jpg` (2 prior uses — least used). Sources: legobatmanwiki.com/legacy-of-the-dark-knight/bosses/, Kotaku 16-tips article. 6 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**关键发现：** Three critical errors found and fixed:
+1. `collectibles-guide.html` — "99+ collectibles" (forbidden error) fixed to "247+ total". Also "267+" stat card/body text fixed to "247+" (game-facts.json authority).
+2. `trophy-guide.html` — "recovering all 10 WayneTech Caches" (forbidden error: 10 vs 200) fixed to "200 total across Gotham's districts".
+3. `tips-for-new-players.html` — "WayneTech Chips from Batcave Caches… find the 10 Caches in Batcave rooms" fixed to correctly state 200 total WayneTech Caches across all of Gotham, open world, missions, and Batcave.
+
+**SEO Top 3 更新：**
+1. **`guides/collectibles-guide.html`** — Fixed forbidden "99+" error → "247+"; fixed "267+" total → "247+" (stat card + body text). This is the site's highest-traffic guide. (评分：9/10)
+2. **`guides/trophy-guide.html`** — Fixed "10 WayneTech Caches" → "200 total across Gotham's districts" in collectible trophies section. Prevents players from giving up WayneTech collection too early. (评分：8/10)
+3. **`guides/tips-for-new-players.html`** — Rewrote WayneTech Chips tip to correctly describe 200 total caches spread across all of Gotham; added internal link to WayneTech Upgrades Guide. (评分：7/10)
+
+**新建页面（如有）：** None (blog post only)
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（86 页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成

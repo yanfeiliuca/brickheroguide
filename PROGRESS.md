@@ -1095,3 +1095,33 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [x] Git commit + push 已完成
+
+## 2026-06-29 — Post-Credits Guide Blog + Mission Count & Patch Status Fixes
+
+### 阶段一：Blog 更新
+- **`blog/what-to-do-after-beating-lego-batman-legacy.html`** — "What to Do After Beating LEGO Batman: Legacy of the Dark Knight (Post-Credits Guide)". 740+字. Covers: no NG+ (confirmed), Free Play post-credits sweep, collectible breakdown (247+ total: 121 Riddler trophies, 200 WayneTech Caches), WayneTech milestone targets (10/30/50/70/80/90/110/140/150/160/180), Dark Knight difficulty as replay option, trophy/achievement hunting (PS5: 52, Xbox: 51), Mayhem Collection DLC prep (Sept 18, 2026). Tags: Guide + Tips. Image: `legobatmangame.com/_astro/fight-2.BFd6neBb_2adSpB.webp` (Red Hood gang vs Batman — 4 prior uses, tied for least used). Sources: Game8 (NG+ answer), PowerPyx (trophy roadmap), Neon Lights Media (difficulty guide), Games.gg (difficulties explained), Kotaku (16 tips), legobatmangame.com. 5 min read.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**关键发现：**
+1. `deluxe-edition-explained.html` — "29+ missions" (forbidden error) present on line 187. Fixed to "21 missions".
+2. `beginners-guide.html` — Known Issues section said "fixes are in progress" for all bugs, but Update 1.006 (June 2) already fixed the Mr. Freeze crash. Updated to clearly state Mr. Freeze is FIXED; other bugs still have workarounds.
+3. `trophy-guide.html` — Said "all 6 chapters" in roadmap Pass 1; game has 5 chapters per deluxe-edition-explained.html. Fixed to "5 chapters". Also removed ambiguous "10 WayneTech Caches in the Batcave" claim and replaced with clear reference to 200 total.
+
+**SEO Top 3 更新：**
+1. **`guides/deluxe-edition-explained.html`** — Fixed "29+ missions" → "21 missions" (forbidden error, high-traffic edition comparison page). (评分：9/10)
+2. **`guides/beginners-guide.html`** — Updated Known Issues callout: Mr. Freeze crash now marked FIXED (Update 1.006, June 2, 2026); remaining bugs retain workaround guidance. Prevents new players from avoiding a fixed section of the game. (评分：7/10)
+3. **`guides/trophy-guide.html`** — Fixed "6 chapters" → "5 chapters" in Pass 1 roadmap; clarified WayneTech Cache trophy text to reference 200 total rather than ambiguous "10 in Batcave". (评分：7/10)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31 个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（87 页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成

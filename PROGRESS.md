@@ -1125,3 +1125,48 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [x] Git commit + push 已完成
+
+## 2026-06-30 — Red Bricks Complete Guide Blog + "Stud Multiplier Red Brick" Error Sweep
+
+### 阶段一：Blog 更新
+- **`blog/red-bricks-guide.html`** — "All 23 Red Brick Locations in LEGO Batman: Legacy of the Dark Knight". 860+字. Full guide covering all 14 mission Red Bricks (Ninja through Bats, Prologue through Chapter 6) with step-by-step puzzle solutions for each, plus all 9 Bat-Mite Shop Red Bricks with exact Stud costs (15,000–50,000). Key contextual note: Red Bricks in Legacy are purely cosmetic (colour/visual skins for suits and vehicles), NOT Stud multiplier cheats as in prior LEGO games. Includes complete table, puzzle solution cards, Stud total for all shop bricks (250,000), and equip method (Options → R1/RB → Characters). Tags: Guide + Tips. Image: `legobatmangame.com/_astro/fight-3.KeK453wH_Z23bgKb.webp` (Mr. Freeze freezing truck — 4 prior uses, tied for least used from approved list). Sources: Game Rant (Jake Fillery, May 22, 2026), GamesRadar (Joel Franey, May 20, 2026), Push Square, Game Rant cheats article. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：12 条 ✅ / 0 条 ❌
+  - 23 Red Bricks total → Game Rant ✅
+  - 14 in missions / 9 in shop → Game Rant ✅
+  - Red Bricks purely cosmetic (no cheat codes) → Game Rant ✅
+  - Bat-Mite Shop Stud costs (15k–50k) → Game Rant table ✅
+  - Safe combination 5-9-6 (Filthy Rich) → Game Rant + search snippet ✅
+  - 247+ collectibles, 200 WayneTech Caches, 121 Riddler Trophies → game-facts.json ✅
+  - 101 base suits → game-facts.json ✅
+  - trophy-guide.html (not trophy-achievement-guide.html) ✅
+- References：4 条真实 URL
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面
+**关键发现：**
+1. `trophy-guide.html` — CRITICAL: Multiple references to "Stud Multiplier Red Bricks" (×6 instances). In Legacy, Red Bricks are purely cosmetic — there are NO Stud multipliers via Red Bricks. All instances fixed. Also fixed internal inconsistency: "5 chapters" in Pass 1 roadmap vs "6 chapters" in trophy list section; aligned to "6 chapters" throughout.
+2. `suits-abilities-guide.html` — Same "Stud Multiplier Red Bricks" error in 3 places (tip box, Bat-Mite Store section, Tips for Collectors). All corrected; added link to new Red Bricks guide.
+
+**SEO Top 3 更新：**
+1. **`guides/trophy-guide.html`** — Removed all 6 instances of "Stud Multiplier Red Bricks" (Red Bricks are cosmetic in Legacy, not cheats). Replaced with correct advice: Stud Cache farming circuits. Fixed "5 chapters" → "6 chapters" in roadmap. Added link to Red Bricks guide. (评分：9/10)
+2. **`guides/suits-abilities-guide.html`** — Removed 3 "Stud Multiplier Red Brick" references. Added clarification that Red Bricks = cosmetic. Added link to new Red Bricks blog post in tip box and Tips section. (评分：8/10)
+3. **`guides/suits-abilities-guide.html`** — Tips for Collectors: replaced misleading "Unlock Red Brick Stud Multipliers first" bullet with accurate Red Bricks collectible guidance (14 mission + 9 shop, link to guide). (评分：8/10, combined with #2)
+
+**新建页面（如有）：** `blog/red-bricks-guide.html`
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`blog/red-bricks-guide.html`)
+- [x] 步骤3B 网络事实核查已完成
+- [x] References 区块已填写（4条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（88页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成

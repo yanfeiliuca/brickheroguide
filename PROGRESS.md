@@ -1170,3 +1170,49 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [x] Git commit + push 已完成
+
+## 2026-07-01 — Physical LEGO Sets Gold Unlocks Blog + "29+/8 Main Missions" Error Sweep
+
+### 阶段一：Blog 更新
+- **`blog/lego-batman-physical-sets-gold-unlocks-guide.html`** — "All 4 LEGO Batman Sets With In-Game Gold Unlocks in Legacy of the Dark Knight". 690+字. Covers all 4 physical LEGO sets (76330 Batman Logo $79.99 → Golden Batman; 76331/76332/76333 Batmobile sets $29.99 each → gold Batmobile variants requiring in-game side-quest unlock of the black original first), 3-step redemption process (LEGO account, QR scan, in-game code), code validity until March 1 2029, one redemption per set per account. Clearly distinguished from existing account-linked free suits (WB Games/HBO Max) already documented on-site. Tags: News + Guide. Image: `legobatmangame.com/_astro/prefooter-keyart.C5w2I9s1_1Iktj5.jpg` (key art — 4 prior uses, tied for least used). Sources: LEGO.com official redemption page, Newsweek, Vice. 5 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：9 条 ✅ / 0 条 ❌
+  - Set numbers 76330–76333 and prices ($79.99 / $29.99 ×3) → LEGO.com official (direct fetch) ✅
+  - Golden Batman unlock (no prerequisite) → LEGO.com official ✅
+  - 3 golden Batmobile variants require unlocking black original via side quests first → LEGO.com official ✅
+  - Redemption steps (LEGO account → QR scan → in-game code) → LEGO.com official ✅
+  - Code validity until March 1, 2029; one redemption per set per account → LEGO.com official terms text ✅
+  - 23 Red Bricks (cosmetic only) cross-check → existing verified blog post + game-facts.json ✅
+  - 101 base suits, 247+ collectibles cross-check → game-facts.json ✅
+- References：3 条真实 URL（LEGO.com、Newsweek、Vice）
+- 推送门控：🟢 通过
+- **data/game-facts.json updated**: added `physical_lego_sets_bonus_content` block (4 sets, prices, unlock conditions, redemption process, code validity) — last_verified 2026-07-01, source LEGO.com official.
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面
+**关键发现：**
+1. `best-characters-each-mission.html` — Quick-stats card showed "29+ Main Missions" (forbidden error). Fixed to "21".
+2. `post-game-checklist.html` — Mission Replay checklist said "Replay all 8 missions in Free Play" with an unverified "5 caches × 8 = 40 chips" calculation (forbidden error: main missions ≠ 8). Fixed to "21 missions" and removed the unverified per-mission cache math, replaced with general guidance to consult mission walkthrough pages.
+3. No other forbidden errors found. WayneTech "10" references in `100-percent-completion.html` and `batcave-hub-guide.html` were confirmed correct in context (Batcave-specific subset of the 200 total, not a total-count claim).
+
+**SEO Top 3 更新：**
+1. **`guides/best-characters-each-mission.html`** — Fixed "29+ missions" → "21 missions" in quick-stats card (forbidden error, high-traffic character guide). (评分：9/10)
+2. **`guides/post-game-checklist.html`** — Fixed "8 missions" → "21 missions" in mission replay checklist; removed unverified "40 chips" math (forbidden error, post-game completionist traffic). (评分：8/10)
+3. **`guides/suits-abilities-guide.html`** — Added new method-card documenting the Golden Batman/Golden Batmobile physical-set unlocks with internal link to the new blog post, expanding the account-linked suits section into full bonus-cosmetics coverage. (评分：7/10)
+
+**新建页面（如有）：** `blog/lego-batman-physical-sets-gold-unlocks-guide.html`
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成
+- [x] References 区块已填写（3条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增）
+- [x] sitemap.xml 已重新生成（89页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 已更新（新增 physical_lego_sets_bonus_content）
+- [x] Git commit + push 已完成

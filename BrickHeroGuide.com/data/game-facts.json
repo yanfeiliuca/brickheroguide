@@ -92,6 +92,33 @@
     }
   },
 
+  "physical_lego_sets_bonus_content": {
+    "last_verified": "2026-07-01",
+    "source": "Official LEGO.com redemption page (lego.com/en-us/games/lego-batman-legacy-dark-knight/article/legacy-dark-knight-dlc-lego-batman-sets)",
+    "note": "Distinct from free_suits_account_link and preorder_bonuses — these require purchasing a physical LEGO set and scanning a QR code, not just linking an account",
+    "sets": {
+      "batman_logo_76330": {
+        "price": "$79.99",
+        "unlocks": "Golden Batman character/minifigure — redeemable directly, no in-game progress required first"
+      },
+      "batman_v_superman_batmobile_76331": {
+        "price": "$29.99",
+        "unlocks": "Golden variant of the Batman v Superman Batmobile — must first unlock the black original in-game by completing side quests"
+      },
+      "the_batman_batmobile_76332": {
+        "price": "$29.99",
+        "unlocks": "Golden variant of The Batman (2022 film) Batmobile — must first unlock the black original in-game by completing side quests"
+      },
+      "batman_robin_batmobile_76333": {
+        "price": "$29.99",
+        "unlocks": "Golden variant of the Batman & Robin Batmobile — must first unlock the black original in-game by completing side quests"
+      }
+    },
+    "redemption_process": "Create/log into LEGO account, scan QR code on building instructions cover, register set to receive code, redeem code in-game via in-game redemption system",
+    "code_validity": "Guaranteed redeemable until March 1, 2029",
+    "limit": "One redemption per set per LEGO account"
+  },
+
   "patches": {
     "1_006": {
       "date": "2026-06-02",

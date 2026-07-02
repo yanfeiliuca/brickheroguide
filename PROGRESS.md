@@ -1216,3 +1216,49 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 已更新（新增 physical_lego_sets_bonus_content）
 - [x] Git commit + push 已完成
+
+## 2026-07-02 — Speedrun Community One-Month Growth Blog + Systemic "Stud Multiplier Red Brick" Error Sweep (Guides)
+
+### 阶段一：Blog 更新
+- **`blog/speedrun-community-one-month-growth.html`** — "LEGO Batman: Legacy of the Dark Knight Speedrunning, One Month In: 69 Runs and One Runaway Leader". 850+字. Follow-up to the June 6 leaderboard-opening post: growth from 0 runs/68 followers to 69 runs (23 full-game, 46 IL), 16 active players, 83 followers, 2d20h23m55s cumulative run time. Covers runner "redniko" sweeping 5 level boards in the past week (League of Shadows Returns 5:16, Tumbler Chase 3:09, Joker 4:00, The Penguin 1:18, Mimes 2:51), the moderator roster shrinking from 6 to 5 (CaptainPaxo no longer listed), and the Mayhem Collection DLC (Sept 18) as the next likely inflection point for new categories. Tags: Community + News. Image: `legobatmangame.com/_astro/postfooter.Bp36eHDB_Z2cb3ek.webp` (least-used approved image, 4 prior uses). Sources: Speedrun.com official stats/leaderboard pages (direct fetch, primary source), prior BrickHeroGuide coverage. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：10 条 ✅ / 0 条 ❌
+  - 69 total runs / 23 full-game / 46 level runs / 16 players / 83 followers / 2d20h23m55s total time → Speedrun.com/LotDK/stats (direct fetch, primary source) ✅
+  - 18 level boards (unchanged since launch) → Speedrun.com/LotDK/stats ✅
+  - Moderator list (chimkin, gustative, colten8, kwazrr, Siedemnastek — 5 total, CaptainPaxo absent) → Speedrun.com/LotDK/stats ✅
+  - redniko's 5 recent first-place level times → Speedrun.com/LotDK/stats recent-runs feed ✅
+  - Zero challenge-category runs → Speedrun.com/LotDK/stats ✅
+  - Mayhem Collection DLC Sept 18, 2026, Joker/Harley Quinn playable → game-facts.json ✅
+  - IGN 8/10 (sidebar Game Info box) → game-facts.json ✅
+- References：3 条真实 URL（Speedrun.com stats page, Speedrun.com leaderboard page, prior internal coverage）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面
+**关键发现：**
+1. **Systemic issue found**: The "Stud Multiplier Red Brick" error (previously fixed in `trophy-guide.html` and `suits-abilities-guide.html` on 2026-06-30) was still present in **six more files**: `guides/beginners-guide.html`, `guides/collectibles-guide.html`, `guides/mayhem-collection-dlc.html`, `guides/post-game-checklist.html`, `guides/stud-farming-guide.html`, and `guides/tips-for-new-players.html`. The June 30 sweep only touched two files; the error was written into many pages before the correction existed and the sweep wasn't exhaustive.
+2. `guides/stud-farming-guide.html` was the most severe instance — the entire guide's premise (a ×3,840 stacked "Stud Multiplier Red Brick" system with a full multiplier table) was fabricated and contradicts the site's own corrected fact that Red Bricks are cosmetic-only. Fixed today (see below).
+3. `guides/mayhem-collection-dlc.html`, `guides/post-game-checklist.html`, and `guides/tips-for-new-players.html` still contain 1–2 residual "Stud Multiplier Red Brick" mentions each — **not fixed this session** (3-page update cap reached). Flagged as the top priority for tomorrow's SEO Top 3 slot.
+4. No canonical `.html` suffix issues, no "coming soon"/"estimated" language, no other forbidden-error matches found in this pass.
+
+**SEO Top 3 更新：**
+1. **`guides/stud-farming-guide.html`** — Full rewrite of the core farming strategy: removed the fabricated ×3,840 "Stud Multiplier Red Brick" system (quick-stats box, full multiplier table, all 4 method cards' "activate multipliers" steps, priority order, closing tip box, sidebar math box). Replaced with the site's already-verified Stud Cache circuit method (20,000–30,000 Studs/cache, 5-cache circuit under 2 minutes) and mission-replay/vehicle-farming tips with the false steps removed. Updated meta description, OG description, and related-guides sidebar links. (评分：10/10 — core guide was built on a fabricated mechanic that directly contradicted `trophy-guide.html`)
+2. **`guides/beginners-guide.html`** — Fixed 2 instances: "Activate Stud Multiplier Red Bricks as early as possible and stack them" → correct Stud Cache loop advice; "3. Find Stud Multiplier Red Bricks" priority-action → "3. Loop Stud Caches for fast income". (评分：9/10 — high-traffic key page per site's core guide list)
+3. **`guides/collectibles-guide.html`** — Fixed 2 instances: removed "with Stud Multiplier Red Bricks active" from the Stud Cache section; renamed "Phase 3 — WayneTech Upgrades + Stud Multipliers" to "...+ Free Play Red Bricks" and replaced the false multiplier-stacking step with correct guidance (Red Bricks are cosmetic; use Stud Cache circuit if Studs are needed). (评分：8/10 — high-SEO-value page per project's key-pages list)
+
+**新建页面（如有）：** `blog/speedrun-community-one-month-growth.html`
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`blog/speedrun-community-one-month-growth.html`)
+- [x] 步骤3B 网络事实核查已完成（直接抓取 Speedrun.com 一手数据源）
+- [x] References 区块已填写（3条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31个 guide 页面）
+- [x] SEO Top 3 更新已执行（stud-farming-guide.html / beginners-guide.html / collectibles-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（90页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [ ] Git commit + push（待执行）

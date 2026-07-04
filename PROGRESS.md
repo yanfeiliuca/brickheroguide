@@ -1262,3 +1262,49 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [ ] Git commit + push（待执行）
+
+## 2026-07-04 — PC "Won't Launch" Troubleshooting Blog + Systemic "Stud Multiplier Red Brick" Fabrication Sweep (7 Guides)
+
+### 阶段一：Blog 更新
+- **`blog/pc-not-launching-fix-guide.html`** — "LEGO Batman Legacy Won't Launch on PC? Here's Every Fix That Actually Works". 1000+字. Six weeks post-launch, a subset of PC players still can't open the game (Reddit r/legogaming report). Ranked troubleshooting checklist: Steam/Epic file verification, Config folder rename (`AppData\Local\Dinner\Saved`), `-dx11`/`-dx12` Steam launch options, disabling Windows Security's "Force randomization for images" and "Smart App Control", clearing Steam's download cache, GPU driver/Windows Update/reinstall as last resorts, and when to file a ticket with WB Games support. Tags: Tips + Guide. Image: `legobatmangame.com/_astro/foes.CtQfCF5a_1k24YI.webp` (tied-least-used approved image, 6 prior uses). Sources: KeenGamer troubleshooting article (published 2026-07-03, one day old), Steam official support pages, Reddit community report. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：6 条 ✅ / 0 条 ❌
+  - All fix steps (file verification, Config folder path, DX11/12 launch option, Force randomization for images, Smart App Control, Steam cache clear, AppData reinstall path) → KeenGamer, "How to Fix LEGO Batman: Legacy of the Dark Knight Not Launching" (direct fetch, published 2026-07-03) ✅
+  - Reddit player quote/report → direct fetch of r/legogaming thread linked from the KeenGamer article ✅
+  - IGN 8/10, release date May 22, 2026 → game-facts.json ✅
+- References：4 条真实 URL（KeenGamer, Steam Support ×2, Reddit）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 guide 页面（加检查全站 blog 内链）
+**关键发现：**
+1. **Broken internal links (8 files, non-guide-content fix, applied immediately as trivial 404 corrections):** `guides/trophies-achievements.html` (→ `trophy-guide.html`), `guides/best-suits-ranking.html` (→ `suits-abilities-guide.html`), `guides/character-unlock-guide.html` (→ `all-characters-unlock.html`), `guides/new-player-tips.html` (→ `tips-for-new-players.html`) were all 404s referenced across `blog/co-op-multiplayer-guide.html`, `blog/update-1-006-patch-notes-june-2026.html`, `blog/dark-knight-mode-survival-guide.html`, `blog/trophy-guide-platinum-road.html`, `blog/jonathan-smith-post-launch-interview.html`, `blog/how-long-to-beat-lego-batman-legacy.html`, `blog/switch-2-release-date-september-2026.html`, `blog/post-launch-patch-tracker.html`. All corrected to existing pages.
+2. **Systemic issue confirmed much larger than the 2026-07-02 finding indicated.** That session flagged 3 files as unfixed carryover (`mayhem-collection-dlc.html`, `post-game-checklist.html`, `tips-for-new-players.html`) after fixing `stud-farming-guide.html`, `beginners-guide.html`, `collectibles-guide.html`, `trophy-guide.html`. Today's fresh grep found the fabricated "Stud Multiplier Red Brick" mechanic (contradicts the site's own corrected fact that Red Bricks are cosmetic-only) **still present in `beginners-guide.html` (4 more instances) and `collectibles-guide.html` (2 more instances)** — the 2026-07-02 fix only removed 2 instances per file and missed the rest. Also newly found in `100-percent-completion.html` (7 instances, plus an incorrect "100 suits" count that should be 101) and `chapter-1-red-hood-gang-walkthrough.html` (1 instance).
+3. **Not fixed today — flagged as top priority for next session:** `blog/stud-farming-guide-fast-studs.html` has its *entire premise* built on the fabricated mechanic (a full "Understanding the Stud Multiplier" section, fake "Hyper Combo" skill-tree upgrades, x2–x4 stacking math) — same severity class as the `guides/stud-farming-guide.html` rewrite from 2026-06-30. Also residual instances in `blog/how-long-to-beat-lego-batman-legacy.html` (1), `blog/trophy-guide-platinum-road.html` (2), and a "Stud Multiplier Skips" section header in `blog/speedrun-leaderboards-opening.html` (needs review). `guides/batcave-mural-challenges.html` has one ambiguous mention ("Multi-Man" challenge referencing a combo-based stud multiplier) that may be a distinct, legitimate in-combat mechanic rather than the debunked Red Brick system — left alone pending verification, not fixed or flagged as an error.
+4. No canonical `.html` suffix issues, no "coming soon"/"estimated"/"TBD" pre-release hedging found in any of the 31 guide pages.
+
+**SEO Top 3+ 更新（本次因禁止错误清单严重性超出常规3页上限，共修复7个 guide 文件）：**
+1. **`guides/tips-for-new-players.html`** — Fixed 5 instances of the fabricated Stud Multiplier Red Brick mechanic across Collectible Strategy, Stud & Economy Tips, and Common Beginner Mistakes sections; replaced with correct Stud Cache circuit guidance. Carryover priority from 2026-07-02. (评分：9/10 — high-traffic beginner page with actionable wrong advice)
+2. **`guides/post-game-checklist.html`** — Fixed "Buy the Stud Multiplier upgrades" checklist step → "Start looping the Stud Cache circuit". Carryover priority from 2026-07-02. (评分：8/10)
+3. **`guides/mayhem-collection-dlc.html`** — Removed fabricated "×3,840 total" multiplier-stacking farming claim for the unreleased Mayhem DLC; replaced with an honest note that no multiplier exists and results will be confirmed post-launch (Sept 18, 2026). Carryover priority from 2026-07-02. (评分：7/10)
+4. **`guides/100-percent-completion.html`** — Fixed 7 instances of the fabricated mechanic across the efficient-order list, tip box, Phase 2–4 sections, and FAQ; also corrected "100 suits" → "101 suits" (2 instances) to match game-facts.json. Newly discovered today, not part of any prior carryover. (评分：9/10 — core completionist guide, high search intent, most error-dense page found)
+5. **`guides/beginners-guide.html`** — Fixed 4 additional instances the 2026-07-02 pass missed (Red Bricks section, tip #5, tip #12, highlight box); corrected "Red Bricks unlock game modifiers" → cosmetic-only framing. (评分：8/10)
+6. **`guides/collectibles-guide.html`** — Fixed 2 additional instances the 2026-07-02 pass missed ("Why Red Bricks Matter" section and Red Bricks overview list item); corrected "gameplay modifier" framing to cosmetic-only. (评分：8/10)
+7. **`guides/chapter-1-red-hood-gang-walkthrough.html`** — Fixed 1 instance describing the Chapter 1 Red Brick as unlocking a stackable Stud Multiplier. (评分：6/10)
+
+**新建页面（如有）：** 无（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`blog/pc-not-launching-fix-guide.html`)
+- [x] 步骤3B 网络事实核查已完成
+- [x] References 区块已填写（4条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31个 guide 页面 + 全站 blog 内链检查）
+- [x] SEO Top 3 更新已执行（超额完成7个文件，因禁止错误清单严重性）
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（91页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成

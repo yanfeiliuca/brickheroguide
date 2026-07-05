@@ -1308,3 +1308,55 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [x] Git commit + push 已完成
+
+## 2026-07-05 — Character Skill Trees Blog + Chapter 4 Fabrication Fix + Meta Description Audit
+
+### 阶段一：Blog 更新
+- **`blog/character-skill-trees-explained.html`** — "How Skill Trees Actually Work in LEGO Batman: Legacy of the Dark Knight". 885+字. Explains the character-specific gadget skill tree system (distinct from the WayneTech Chip cache economy already covered in `blog/waynetech-upgrades-best-first-guide.html`): Gold Skill Bricks earned per mission, spent at the Batcave workbench near Bat-Mite's shop, each character's two gadgets (Batman: Batarang/Batclaw, Robin: Birdarang/Cable Launcher, Jim Gordon: Foam Sprayer/Rebound Launcher, Catwoman: Whip/Call Kitty) having independent trees, Combat vs. Exploration skill tagging, and best early/late skill picks. Tags: Tips + Guide. Image: `legobatmangame.com/_astro/fight-2.BFd6neBb_2adSpB.webp` (tied-least-used approved image, 6 prior uses). Sources: GamesRadar+ skill-tree breakdown (direct fetch, published 2026-05-06), TheGamer best-early/late-skills guide (direct fetch). 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：10 条 ✅ / 0 条 ❌
+  - Workbench location (Batcave, right of Bat-Mite's shop, blue icon in Detective Mode) → GamesRadar+ (direct fetch) ✅
+  - Gold Skill Brick earned per mission completed → TheGamer (direct fetch) ✅
+  - Character/gadget pairings (Batman/Batarang+Batclaw, Robin/Birdarang+Cable Launcher, Gordon/Foam Sprayer+Rebound Launcher, Catwoman/Whip+Call Kitty) → GamesRadar+ (direct fetch) ✅
+  - Named skills (Concussive Batarang, Scatterang, Alarmarang, Extra Targets, Bungee Cable, Goop Trail, Speedy Spin) and Skill Brick costs (5–12 range) → GamesRadar+ (direct fetch) ✅
+  - Combat/Exploration categorization tags → TheGamer (direct fetch, explicit "(Combat)"/"(Exploration)" labels) ✅
+  - Best early skills (Combat Focus, Healthy Hero, Perfect Counter, Stud Magnet, Dive Bomb) → TheGamer (direct fetch) ✅
+  - Best late skills (Extra Focus, Dodge Attack, Glide Takedown, Focused Maneuvers, Hyper Combo) → TheGamer (direct fetch) ✅
+  - WayneTech Chips = separate currency/system, 200 caches → game-facts.json ✅
+  - IGN 8/10, release May 22, 2026 → game-facts.json ✅
+- Rejected/not used: A Google-summarized figure of "61 Riddler Puzzle Boxes" surfaced during research conflicts with the site's verified 121 Riddler Trophies. Cross-checked against `guides/collectibles-guide.html`, which already correctly documents both Riddler Trophies (121) and separate open-world Riddler Puzzle Rooms as distinct categories — the unverified "61" figure was discarded rather than used, per the no-fabrication rule.
+- References：2 条真实 URL（GamesRadar+, TheGamer）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（全量重新扫描，含 forbidden_errors 清单、canonical 后缀、"coming soon"/TBD 语言、WayneTech/任务/收藏品数值一致性）
+**关键发现：**
+1. **New fabrication found and fixed:** `guides/mission-4-walkthrough.html` contained an uncorrected instance of the debunked mechanic: "Red Bricks provide permanent gameplay modifiers and stud multipliers purchasable from the Batcave." This was missed by the 2026-06-30/07-02/07-04 sweeps because those sessions searched primarily in `beginners-guide.html`, `collectibles-guide.html`, `stud-farming-guide.html`, and other higher-traffic pages — this mission walkthrough page hadn't been checked. Fixed today.
+2. **Confirmed correctly fixed (false positives from broad grep):** `100-percent-completion.html`, `beginners-guide.html`, `mayhem-collection-dlc.html`, `post-game-checklist.html`, `stud-farming-guide.html`, `tips-for-new-players.html`, `trophy-guide.html`, `collectibles-guide.html`, `suits-abilities-guide.html`, and `chapter-1-red-hood-gang-walkthrough.html` all still contain the string "Stud Multiplier" but only inside corrective sentences ("there is no Stud Multiplier Red Brick in this game..."). No further action needed on these.
+3. **Left alone, as in the 2026-07-04 review:** `guides/batcave-mural-challenges.html`'s "Calculator" and "Multi-Man" Batcave Challenge entries reference an in-combat combo-based "stud multiplier" stat, which is a distinct, plausible mechanic (a temporary combo meter, not the debunked permanent Red Brick system) and was not changed pending further verification.
+4. **Sitemap generator bug found and fixed:** `generate-sitemap.py` was recursively scanning a stray nested `BrickHeroGuide.com/` directory (containing `WORKFLOW.md`, `git-push-brickhero.ps1`, and a `data/audit-checklist.html` file) and including `https://brickheroguide.com/BrickHeroGuide.com/data/audit-checklist.html` as a real page in every sitemap generated since at least 2026-06-29. Added an explicit directory exclusion for this non-site folder. Flagging for Yannick: this nested folder appears to be leftover clutter in the repo root and may be worth deleting entirely (not done today — deletion is a bigger structural decision left to a human call).
+5. **Systemic meta description length issue found:** 27 of 31 guide pages have `<meta name="description">` tags between 160–220 characters, well past Google's effective ~155–160 character display limit and the project's own 120-character target. This wasn't caught by prior sessions because past audits focused on factual/numeric accuracy, not meta tag length. Fixed the 2 highest-traffic pages today (see SEO Top 3); the remaining ~25 pages are flagged as a backlog item for upcoming sessions.
+6. Verified Steam review count: a web search surfaced a conflicting, implausible figure ("5,922 reviews") against the site's verified 11,600+ — since review counts cannot decrease, this was judged unreliable/stale and discarded rather than used to update `game-facts.json`.
+7. No canonical `.html` suffix issues, no "coming soon"/"estimated"/"TBD" hedging, no WayneTech=10/missions=29+or8/collectibles=99+/Switch2-exclusive-Batsuit errors found anywhere in the 31 guide pages.
+
+**SEO Top 3 更新：**
+1. **`guides/mission-4-walkthrough.html`** — Fixed the fabricated "Red Bricks provide permanent gameplay modifiers and stud multipliers" claim in the Chapter 4 Red Brick section; replaced with the correct cosmetic-only framing and a link to the Collectibles Guide. (评分：9/10 — direct contradiction of the site's own corrected fact, in a walkthrough page likely to be read by first-time players mid-playthrough)
+2. **`guides/collectibles-guide.html`** — Shortened the meta description from 216 to 147 characters (was truncating in search results), keeping the core keywords (200 WayneTech Caches, 23 Red Bricks, 10 Minikits, 14 Falcone Fortunes). (评分：7/10 — one of the site's core high-traffic pages per the project's key-pages list)
+3. **`guides/trophy-guide.html`** — Shortened the meta description from 192 to 143 characters, keeping Platinum trophy name and trophy/achievement counts. (评分：6/10 — core page, same truncation issue)
+
+**新建页面（如有）：** 无（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`blog/character-skill-trees-explained.html`)
+- [x] 步骤3B 网络事实核查已完成
+- [x] References 区块已填写（2条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31个 guide 页面）
+- [x] SEO Top 3 更新已执行（mission-4-walkthrough.html / collectibles-guide.html / trophy-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（91页，并修复了递归抓取无关子目录的脚本 bug）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成

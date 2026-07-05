@@ -65,7 +65,7 @@ def scan_html_files(root_dir):
     # Directories that are not part of the published site (internal working
     # files, stray nested clones, etc.) and must never be crawled or listed
     # in sitemap.xml.
-    EXCLUDED_DIRS = {'BrickHeroGuide.com'}
+    EXCLUDED_DIRS = {'data'}  # internal data files / audit tools, not public content
 
     for dirpath, dirnames, filenames in os.walk(root_dir):
         # Skip hidden directories and known non-site directories

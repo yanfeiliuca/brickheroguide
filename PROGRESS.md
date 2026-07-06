@@ -1360,3 +1360,50 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [x] Git commit + push 已完成
+
+## 2026-07-06 — Robin Character Guide Blog + Batcave WayneTech Cache Mislabeling Fix (Resurrected Forbidden Error)
+
+### 阶段一：Blog 更新
+- **`blog/robin-character-guide.html`** — "Robin in LEGO Batman Legacy: Complete Character Guide — Gadgets, Unlock & Story Role". 1085+字. Evergreen character guide covering Robin's Chapter 3: Haly's Circus unlock, his three-gadget loadout (Battle Staff for melee, Birdarang for ranged combat/puzzles, Cable Launcher for traversal), his B-Tier ranking versus the rest of the seven-character roster, his "pun champion" story tone, and practical upgrade-tree tips. Chose this topic after finding no genuine breaking news in the 30-day window (checked: no new patch since June 2's 1.006, no new Mayhem Collection DLC details on Game8 — page last updated May 14, no Comic-Con reveal, Steam Summer Sale price data was unreliable/stale on SteamDB). Tags: Guide + Tips. Image: `legobatmangame.com/_astro/prefooter-keyart.C5w2I9s1_1Iktj5.jpg` (tied-least-used approved image, 6 prior uses). Sources: GAMES.GG unlock guide (direct fetch), Dexerto character wiki and tier list (direct fetch), GamesRadar+ skills breakdown. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：7 条 ✅ / 0 条 ❌
+  - Robin unlocks at start of Chapter 3: Haly's Circus → GAMES.GG (direct fetch) + Dexerto (direct fetch, "How to Unlock: Complete Haly's Circus mission") — cross-confirmed by two independent sources ✅
+  - Robin's real name = Dick Grayson → Dexerto character wiki table (direct fetch) ✅
+  - Three gadgets: Battle Staff, Cable Launcher, Birdarang → GAMES.GG (direct fetch, "he comes equipped with three pieces of gear") + Dexerto gadgets field (Birdarang, Cable Launcher) ✅
+  - Robin = B-Tier, Batman/Talia = S-Tier, Batgirl/Nightwing = A-Tier → Dexerto tier list (direct fetch) ✅
+  - "Pun champion" bio quote → GAMES.GG (direct fetch, verbatim) ✅
+  - ~15-hour campaign length to reach Chapter 3 → GAMES.GG (direct fetch) ✅
+  - Seven-character playable roster (Batman, Jim Gordon, Talia, Catwoman, Nightwing, Robin, Batgirl) → GAMES.GG (direct fetch), cross-checked against `data/game-facts.json` content_counts.playable_characters = 7 ✅
+- References：4 条真实 URL（GAMES.GG, Dexerto character wiki, Dexerto tier list, GamesRadar+）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（全量扫描：forbidden_errors 清单、canonical 后缀、"coming soon"/TBD 语言、WayneTech/任务/收藏品数值一致性）
+**关键发现：**
+1. **Resurrected forbidden error found (new variant, not caught by prior sweeps):** `guides/batcave-hub-guide.html` and `guides/100-percent-completion.html` both stated "all 10 WayneTech Caches are hidden within" the Batcave — directly contradicting the site's own verified total of 200 WayneTech Caches (`data/game-facts.json` and `guides/collectibles-guide.html`, which correctly states "200 WayneTech Caches" in its meta description). This slipped past the 2026-06-30/07-02/07-04/07-05 sweeps because those searched for the flat pattern "WayneTech = 10" rather than the Batcave-subset phrasing ("all 10 WayneTech Caches ... within it"). Cross-checking `batcave-hub-guide.html`'s own room-by-room breakdown (Main Chamber 1, Vehicle Garage 1, Trophy Room 1, WayneTech Lab 2, Situation Room 1, Gallery 1, Main Chamber secondary 1) sums to 8, not 10 — so the "10" figure was also internally inconsistent with the page's own enumerated list, independent of the site-wide 200 total. Fixed today in both files (see SEO Top 3).
+2. Confirmed correct and consistent: Batcave Minikits = 10 total (a genuinely Batcave-only collectible category, distinct from WayneTech Caches) per `guides/collectibles-guide.html`'s stat-card ("10 Batcave Minikits"). No change needed to Minikit figures.
+3. No canonical `.html` suffix issues, no "coming soon"/"estimated"/"TBD" hedging, no main-missions=29+or8, no collectibles=99+, no Switch2-exclusive-Batsuit errors found in the 31 guide pages.
+4. `trophy-achievement-guide.html` string matches in `guides/trophy-guide.html` and `blog/trophy-guide-platinum-road.html` were checked and confirmed to be false positives — they're substrings of an external Happy Thumbs Gaming URL slug, not broken internal links. No action needed.
+5. Meta description length audit (continuing from 2026-07-05's finding of 27/31 pages over 160 characters): `guides/suits-abilities-guide.html` was the longest remaining at 211 characters. Fixed today (see SEO Top 3). Still outstanding for a future session: `guides/characters-villains-guide.html` (199), `guides/all-characters-unlock.html` (199), `guides/all-villains-guide.html` (195), `guides/mayhem-collection-dlc.html` (194), `guides/waynetech-upgrades-guide.html` (191), `guides/pc-requirements.html` (191), `guides/mission-4-walkthrough.html` (190), plus roughly 18 more pages in the 160-190 range.
+
+**SEO Top 3 更新：**
+1. **`guides/batcave-hub-guide.html`** — Fixed the resurrected "all 10 WayneTech Caches" claim in the intro paragraph and the Minikit & WayneTech Cache Locations section header paragraph; reworded to "8 of the game's 200 WayneTech Caches" (matching the page's own enumerated room list) with a clarifying note that the remaining 192 are in Gotham's open world. Also fixed a related mention in the FAQ answer. (评分：9/10 — direct contradiction of the site's own verified 200-cache total, on a page central to 100%-completion searches, and internally inconsistent with the page's own room-by-room list)
+2. **`guides/100-percent-completion.html`** — Fixed 3 instances of the same "all 10 WayneTech Caches" claim across the efficient-order checklist, the Batcave-sweep step, and a standalone checklist item; added a cross-link to the Batcave Hub Guide for the full 200-cache breakdown. (评分：9/10 — same resurrected error, on the site's core completionist page)
+3. **`guides/suits-abilities-guide.html`** — Shortened the meta description from 211 to 146 characters (was truncating badly in search results), keeping the core keywords (101 base suits, 129 with DLC, 7 playable characters). (评分：7/10 — one of the project's explicitly flagged high-SEO-value key pages)
+
+**新建页面（如有）：** 无（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入 (`blog/robin-character-guide.html`)
+- [x] 步骤3B 网络事实核查已完成
+- [x] References 区块已填写（4条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31个 guide 页面）
+- [x] SEO Top 3 更新已执行（batcave-hub-guide.html / 100-percent-completion.html / suits-abilities-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面）
+- [x] sitemap.xml 已重新生成（92页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成

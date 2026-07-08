@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BNQ7RJDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F7BNQ7RJDY');
+</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Skill Trees Actually Work in LEGO Batman: Legacy of the Dark Knight - BrickHeroGuide</title>
+  <meta name="description" content="LEGO Batman Legacy's skill system isn't like older LEGO games — it's tied to each character's two gadgets. Here's how Gold Skill Bricks, gadget trees, and Combat/Exploration skills actually work.">
+  <meta name="keywords" content="LEGO Batman Legacy skill tree, LEGO Batman Legacy Gold Skill Bricks, LEGO Batman Legacy best skills, LEGO Batman Legacy upgrades, LEGO Batman Legacy character abilities">
+  <link rel="canonical" href="https://brickheroguide.com/blog/character-skill-trees-explained">
+  <meta property="og:title" content="How Skill Trees Actually Work in LEGO Batman: Legacy of the Dark Knight">
+  <meta property="og:description" content="Every playable character has two gadgets, and every gadget has its own skill tree. Here's how the Gold Skill Brick system works and which skills to grab first.">
+  <meta property="og:image" content="https://legobatmangame.com/_astro/fight-2.BFd6neBb_2adSpB.webp">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
+      --text: #e8eaed; --text-secondary: #9aa0ab;
+      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .article-header { margin-bottom: 28px; }
+    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; margin-bottom: 10px; margin-right: 6px; }
+    .tag-review { background: #10b98120; color: #34d399; }
+    .tag-tips { background: #ec489920; color: #f472b6; }
+    .article-header h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .tip-box strong { color: var(--accent); }
+    .highlight-box { background: rgba(59, 130, 246, 0.08); border-left: 3px solid #3b82f6; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .highlight-box strong { color: #60a5fa; }
+    .featured-image { margin: 24px 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .featured-image img { width: 100%; display: block; }
+    .featured-image figcaption { padding: 10px 16px; font-size: 12px; color: var(--text-secondary); background: var(--bg-card); }
+    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Character Skill Trees Explained
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag tag-tips">Tips</span>
+        <span class="article-tag tag-review">Guide</span>
+        <h1>How Skill Trees Actually Work in LEGO Batman: Legacy of the Dark Knight</h1>
+        <div class="article-meta">Published: July 5, 2026 &middot; 6 min read</div>
+      </div>
+
+      <div class="content">
+        <p>Skills in <em>LEGO Batman: Legacy of the Dark Knight</em> work differently than in earlier LEGO games, where a single shared upgrade pool applied to whichever character you happened to be controlling. Here, progression is locked to specific characters and, more precisely, to the two unique gadgets each of them carries. If you've been holding onto Gold Skill Bricks without a plan for where to spend them, or you're not sure why Robin's upgrades don't seem to affect Batman at all, here's how the whole system actually fits together.</p>
+
+        <figure class="featured-image">
+          <img src="https://legobatmangame.com/_astro/fight-2.BFd6neBb_2adSpB.webp" alt="Batman confronting the Red Hood gang — LEGO Batman Legacy of the Dark Knight promotional artwork" loading="lazy">
+          <figcaption>LEGO Batman: Legacy of the Dark Knight. Image: &copy; TT Games / Warner Bros. Games. Official promotional screenshot via <a href="https://legobatmangame.com" target="_blank" rel="noopener">legobatmangame.com</a>, used for editorial purposes.</figcaption>
+        </figure>
+
+        <h2>Where to Actually Spend Skill Bricks</h2>
+        <p>Skills are unlocked at the upgrade workbench inside the Batcave, located to the right of Batmite's shop &mdash; look for the blue workbench icon while in Detective Mode. According to <a href="https://www.gamesradar.com/games/adventure/lego-batman-legacy-of-the-dark-knight-skills/" target="_blank" rel="noopener">GamesRadar+</a>, every playable character has their own separate tree, and the trees are entirely tied to that character's two unique gadgets rather than to the character as a whole. Spend Batarang chips on Batman, and Robin's Birdarang tree doesn't move an inch &mdash; there's no shared or universal pool.</p>
+
+        <p>The currency for these trees is the Gold Skill Brick, which according to <a href="https://www.thegamer.com/lego-batman-legacy-of-the-dark-knight-skill-upgrades-best-early-guide/" target="_blank" rel="noopener">TheGamer</a> you earn one of every time you complete a mission. You spend them from the map screen by pressing the map button and scrolling to the Upgrade arrow. Individual skills cost anywhere from around 5 to 12 bricks depending on how powerful the effect is, so a full gadget tree takes a meaningful chunk of story progress to max out.</p>
+
+        <h2>Every Character Has Two Gadget Trees</h2>
+        <p>Rather than one generic skill list, each hero's abilities are split across their two signature tools. A few confirmed examples, per GamesRadar's breakdown:</p>
+        <ul>
+          <li><strong>Batman</strong> &mdash; Batarang and Batclaw. Batman has the largest overall skill count of any character. Notable unlocks include Concussive Batarang (sticks to enemies before a blast), Scatterang (throw multiple Batarangs at once), and Alarmarang (draws in nearby enemies).</li>
+          <li><strong>Robin</strong> &mdash; Birdarang and Cable Launcher. His trees mirror Batman's structure: Extra Targets increases how many enemies a single Birdarang can hit, and Bungee Cable turns the Cable Launcher into a bounce-and-slam tool.</li>
+          <li><strong>Commissioner Jim Gordon</strong> &mdash; Foam Sprayer and Rebound Launcher. Goop Trail leaves sticky traps as Foam Zorbs roll, while Rebound Launcher upgrades add force and area to his ricochet attacks.</li>
+          <li><strong>Catwoman</strong> &mdash; Whip and Call Kitty (which summons a small cat usable for combat or stealth). Speedy Spin sends enemies into a crowd-clearing spin with a single crack of the Whip.</li>
+        </ul>
+        <p>Every skill inside these trees is additionally tagged as either a Combat or an Exploration skill, which matters when you're deciding what to prioritize &mdash; a Combat-heavy build clears fights faster, while an Exploration-heavy one speeds up traversal and collectible hunting.</p>
+
+        <div class="ad-inline">
+          <ins class="adsbygoogle"
+               style="display:block;text-align:center"
+               data-ad-client="ca-pub-1971262808837870"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <h2>Best Skills to Unlock First</h2>
+        <p>Because Gold Skill Bricks are earned slowly through mission completion, spreading them thin across every character early on is the main mistake to avoid &mdash; you end up with several underpowered heroes instead of one reliable frontliner. Per TheGamer's early-game recommendations, the standout picks in the opening chapters are:</p>
+        <ul>
+          <li><strong>Combat Focus</strong> (Combat) &mdash; builds Focus meter faster for quicker takedowns.</li>
+          <li><strong>Healthy Hero</strong> (Combat) &mdash; improves survivability against tougher enemies.</li>
+          <li><strong>Perfect Counter</strong> (Combat) &mdash; adds extra damage on a well-timed counter.</li>
+          <li><strong>Stud Magnet</strong> (Exploration) &mdash; pulls in more Studs automatically, useful for anyone working toward WayneTech Chip purchases.</li>
+          <li><strong>Dive Bomb</strong> (Exploration) &mdash; adds an aerial attack option useful for both combat openers and traversal.</li>
+        </ul>
+
+        <h2>Best Skills for Later in the Game</h2>
+        <p>Once you're further into the story and tougher enemy types show up, TheGamer's guide points to a second wave of priorities: Extra Focus and Dodge Attack (both Combat, for sustaining takedown chains against larger enemy groups), Glide Takedown (Combat, for finishing enemies mid-glide), Focused Maneuvers (Exploration, more Focus generation), and Hyper Combo (Exploration, extra Studs per combo). These late skills tend to cost more Gold Bricks than the early picks, so it's worth banking a surplus rather than spending every brick the moment you earn it.</p>
+
+        <div class="tip-box"><strong>Don't confuse this with WayneTech:</strong> Gadget skill trees (this article) run on Gold Skill Bricks earned from missions. WayneTech Chip upgrades &mdash; a separate system covered in our <a href="/blog/waynetech-upgrades-best-first-guide.html">WayneTech priority guide</a> &mdash; run on chips collected from the game's 200 hidden caches and are spent at a different workbench menu. The two systems don't share currency.</div>
+
+        <h2>Why This Matters for Your Build</h2>
+        <p>Because trees are gadget-specific rather than character-generic, the practical takeaway is to decide early which one or two characters you'll actually play the most &mdash; likely Batman, given his gadget count &mdash; and fund their trees first before spreading Gold Bricks across the rest of the roster. For co-op sessions where a second player is controlling Robin or Catwoman for most of the campaign, it's worth checking in on their trees separately, since neither playthrough progress nor Focus/Exploration priorities carry over between characters.</p>
+
+        <p>For everything else once you're deciding how to build your roster, our <a href="/guides/beginners-guide.html">Beginner's Guide</a> and <a href="/guides/suits-abilities-guide.html">Suits &amp; Abilities Guide</a> cover the rest of the progression systems, and the <a href="/blog/waynetech-upgrades-best-first-guide.html">WayneTech priority guide</a> handles the separate gadget-chip economy.</p>
+
+        <section class="references" style="margin-top:2rem;padding:1.5rem;background:var(--bg-card,#1a1d27);border-radius:8px;border-left:4px solid #fbbf24;">
+          <h2 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--accent,#fbbf24);border:none;padding-top:0;margin-top:0;">Sources &amp; References</h2>
+          <ol style="margin:0;padding-left:1.25rem;line-height:1.8;">
+            <li><a href="https://www.gamesradar.com/games/adventure/lego-batman-legacy-of-the-dark-knight-skills/" target="_blank" rel="noopener noreferrer">GamesRadar+ &mdash; How to unlock skills in Lego Batman Legacy of the Dark Knight (May 6, 2026)</a></li>
+            <li><a href="https://www.thegamer.com/lego-batman-legacy-of-the-dark-knight-skill-upgrades-best-early-guide/" target="_blank" rel="noopener noreferrer">TheGamer &mdash; Best Skills To Unlock First In Lego Batman: Legacy Of The Dark Knight</a></li>
+          </ol>
+        </section>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Sources</h3>
+        <a href="https://www.gamesradar.com/games/adventure/lego-batman-legacy-of-the-dark-knight-skills/" target="_blank" rel="noopener" class="sidebar-link">GamesRadar+ &mdash; Skill Trees Explained</a>
+        <a href="https://www.thegamer.com/lego-batman-legacy-of-the-dark-knight-skill-upgrades-best-early-guide/" target="_blank" rel="noopener" class="sidebar-link">TheGamer &mdash; Best Early Skills</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>Latest Posts</h3>
+        <a href="/blog/character-skill-trees-explained.html" class="sidebar-link">&#127942; Skill Trees Explained</a>
+        <a href="/blog/pc-not-launching-fix-guide.html" class="sidebar-link">&#128295; PC Not Launching Fix Guide</a>
+        <a href="/blog/speedrun-community-one-month-growth.html" class="sidebar-link">&#9193; Speedrunning One Month In</a>
+      </div>
+      <div class="sidebar-box" style="border-style: dashed; padding: 0; overflow: hidden;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1971262808837870"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="/guides/beginners-guide.html" class="sidebar-link">Beginner's Guide: 10 Tips</a>
+        <a href="/guides/suits-abilities-guide.html" class="sidebar-link">Suits &amp; Abilities Guide</a>
+        <a href="/guides/waynetech-upgrades-guide.html" class="sidebar-link">WayneTech Upgrades Guide</a>
+        <a href="/guides/co-op-guide.html" class="sidebar-link">Co-Op Guide</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>Game Info</h3>
+        <div style="font-size: 13px; color: var(--text-secondary); line-height: 2;">
+          <div><strong style="color:var(--text);">Developer:</strong> TT Games</div>
+          <div><strong style="color:var(--text);">Publisher:</strong> Warner Bros. Games</div>
+          <div><strong style="color:var(--text);">IGN Score:</strong> 8/10</div>
+          <div><strong style="color:var(--text);">Release:</strong> May 22, 2026</div>
+          <div><strong style="color:var(--text);">Platforms:</strong> PS5, Xbox, PC</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+  <script>document.getElementById('menuToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});</script>
+</body>
+</html>

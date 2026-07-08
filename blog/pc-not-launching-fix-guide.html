@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BNQ7RJDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F7BNQ7RJDY');
+</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGO Batman Legacy Won't Launch on PC? Every Fix That Actually Works - BrickHeroGuide</title>
+  <meta name="description" content="Still can't launch LEGO Batman: Legacy of the Dark Knight on PC six weeks after release? Here's every confirmed fix — file verification, Config reset, DirectX launch options, and Windows Security tweaks.">
+  <meta name="keywords" content="LEGO Batman Legacy won't launch, LEGO Batman Legacy not starting PC, LEGO Batman Legacy crash fix, LEGO Batman Legacy black screen, LEGO Batman Dark Knight troubleshooting">
+  <link rel="canonical" href="https://brickheroguide.com/blog/pc-not-launching-fix-guide">
+  <meta property="og:title" content="LEGO Batman Legacy Won't Launch on PC? Every Fix That Actually Works">
+  <meta property="og:description" content="Six weeks post-launch, some PC players still can't open LEGO Batman: Legacy of the Dark Knight. Here's the full troubleshooting checklist, ranked by what's most likely to work.">
+  <meta property="og:image" content="https://legobatmangame.com/_astro/foes.CtQfCF5a_1k24YI.webp">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
+      --text: #e8eaed; --text-secondary: #9aa0ab;
+      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .article-header { margin-bottom: 28px; }
+    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; margin-bottom: 10px; margin-right: 6px; }
+    .tag-review { background: #10b98120; color: #34d399; }
+    .tag-tips { background: #ec489920; color: #f472b6; }
+    .article-header h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .tip-box strong { color: var(--accent); }
+    .highlight-box { background: rgba(59, 130, 246, 0.08); border-left: 3px solid #3b82f6; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .highlight-box strong { color: #60a5fa; }
+    .patch-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin: 20px 0; }
+    .patch-box .patch-version { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 6px; }
+    .patch-box ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .patch-box li { font-size: 14px; padding-left: 20px; position: relative; }
+    .patch-box li::before { content: "✓"; position: absolute; left: 0; color: #34d399; font-weight: 700; }
+    .featured-image { margin: 24px 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .featured-image img { width: 100%; display: block; }
+    .featured-image figcaption { padding: 10px 16px; font-size: 12px; color: var(--text-secondary); background: var(--bg-card); }
+    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; PC Not Launching Fix Guide
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag tag-tips">Tips</span>
+        <span class="article-tag tag-review">Guide</span>
+        <h1>LEGO Batman Legacy Won't Launch on PC? Here's Every Fix That Actually Works</h1>
+        <div class="article-meta">Published: July 4, 2026 &middot; 6 min read</div>
+      </div>
+
+      <div class="content">
+        <p>Six weeks after <em>LEGO Batman: Legacy of the Dark Knight</em> launched on May 22, 2026, a small but persistent slice of the PC player base still can't get the game to open at all. On Reddit's r/legogaming, one player summed up the frustration a month into ownership: "So I purchased the Deluxe Edition a month ago... why can't I open up the game still?" It's not a widespread issue — most PC players have had a smooth launch — but for the players it does hit, the game either crashes to desktop on startup, hangs on a black screen, or never gets past the Steam/Epic loading spinner.</p>
+
+        <p>If that's you, here's a ranked troubleshooting checklist, based on the fixes the community and outlets covering the game have confirmed actually work, starting with the one most likely to solve it.</p>
+
+        <figure class="featured-image">
+          <img src="https://legobatmangame.com/_astro/foes.CtQfCF5a_1k24YI.webp" alt="Batman confronting the Joker — LEGO Batman Legacy of the Dark Knight promotional artwork" loading="lazy">
+          <figcaption>LEGO Batman: Legacy of the Dark Knight. Image: &copy; TT Games / Warner Bros. Games. Official promotional screenshot via <a href="https://legobatmangame.com" target="_blank" rel="noopener">legobatmangame.com</a>, used for editorial purposes.</figcaption>
+        </figure>
+
+        <h2>1. Verify the Game Files First</h2>
+        <p>Corrupted or incomplete game files are the single most common cause of a game refusing to launch, and it's the fastest thing to rule out. On Steam, right-click <em>LEGO Batman: Legacy of the Dark Knight</em> in your Library, open <strong>Properties &rarr; Installed Files</strong>, and select <strong>Verify integrity of game files</strong>. The client will re-check every file against Steam's records and re-download anything that doesn't match. Epic Games Store users have the same option under the game's <strong>Manage</strong> menu — look for <strong>Verify</strong>. This single step resolves a large share of launch failures because it catches the download errors and disk corruption that cause everything downstream.</p>
+
+        <h2>2. Reset the Config File</h2>
+        <p>If verification doesn't fix it, the next confirmed step is clearing out a corrupted local configuration file. The game stores its config data at <code>C:\Users\[your username]\AppData\Local\Dinner\Saved</code> (Dinner is the internal codename TT Games uses for the project's Unreal Engine build folder). Rename the <strong>Config</strong> folder inside that path to <code>Config.old</code> — don't delete it outright in case you need to roll back — and relaunch the game. This forces the engine to regenerate a fresh configuration from scratch, which clears out settings corruption that a verify-files pass won't catch.</p>
+
+        <h2>3. Force a DirectX 11 or 12 Launch Option</h2>
+        <p>Some launch failures trace back to how the game negotiates with your GPU driver on startup. You can sidestep this by forcing a specific graphics API through a Steam launch option: open <strong>Properties &rarr; General</strong> on the game in your Steam Library, and enter <code>-dx11</code> in the launch options box. If the game still won't start, try <code>-dx12</code> instead. This won't fix every case, but it's a quick, reversible test that's worth running before you touch any Windows system settings.</p>
+
+        <div class="ad-inline">
+          <ins class="adsbygoogle"
+               style="display:block;text-align:center"
+               data-ad-client="ca-pub-1971262808837870"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <h2>4. Check Two Windows Security Settings</h2>
+        <p>Two Windows 11 security features have been flagged as launch blockers for this game specifically, and both live inside the Windows Security app under <strong>App &amp; browser control</strong>.</p>
+
+        <h3>Force Randomization for Images</h3>
+        <p>This setting is meant to harden memory allocation against exploits, but it can interfere with how the game's executable loads on startup. In Windows Security, go to <strong>App &amp; browser control</strong> and set <strong>Force randomization for images (mandatory ASLR)</strong> to <strong>Off</strong> if it's been manually enabled.</p>
+
+        <h3>Smart App Control</h3>
+        <p>Smart App Control blocks apps and drivers it doesn't recognize as trusted, and a newly released game can occasionally get caught by that net before its reputation is established. Under the same <strong>App &amp; browser control</strong> tab, open <strong>Smart App Control settings</strong> and switch it to <strong>Off</strong>. Note that this is a one-way setting on some Windows 11 builds — turning it back on later may require a clean install — so only disable it if the earlier fixes haven't worked.</p>
+
+        <h2>5. Clear the Steam Download Cache</h2>
+        <p>Steam keeps a local cache of connection and download data that can occasionally get corrupted without affecting other games. Clearing it is a low-risk step: open the Steam client, go to <strong>Settings &rarr; Downloads &rarr; Clear Cache</strong> (the exact path is documented on <a href="https://help.steampowered.com/en/faqs/view/6AD7-820D-8BE5-E51F" target="_blank" rel="noopener">Steam's official support page</a>), and Steam will restart and prompt you to log back in. This won't touch your installed game files, only cached network data.</p>
+
+        <h2>6. Broader Fixes If Nothing Else Works</h2>
+        <p>If the game still refuses to launch after the steps above, move on to general PC-level checks that apply to most stubborn launch failures, not just this game:</p>
+        <ul>
+          <li>If your PC has both integrated and dedicated graphics, manually set the dedicated GPU as the game's renderer in your graphics driver's settings rather than relying on auto-detection.</li>
+          <li>Install the latest graphics driver directly from NVIDIA, AMD, or Intel rather than relying on Windows Update's bundled version.</li>
+          <li>Run Windows Update and install any pending Windows 11 updates — some launch failures are tied to OS-level API mismatches that get patched over time.</li>
+          <li>As a last resort, fully uninstall the game, delete the leftover <code>C:\Users\[username]\AppData\Local\Warner Bros. Interactive Entertainment\LEGO Batman - Legacy of the Dark Knight</code> folder, and reinstall from scratch.</li>
+        </ul>
+
+        <div class="tip-box"><strong>Before you reinstall:</strong> Check our <a href="/guides/pc-requirements.html">PC System Requirements guide</a> first. A handful of launch failures reported in the community turned out to be minimum-spec hardware that could install the game but couldn't actually initialize it — reinstalling won't fix a hardware shortfall.</div>
+
+        <h2>When to Contact Support Directly</h2>
+        <p>If you've worked through every step above and the game still won't open, the next move is a direct support ticket through the <a href="https://legogamessupport.wbgames.com/hc/en-us/requests/new" target="_blank" rel="noopener">official LEGO Games support portal</a>, run by WB Games. At that point you're likely dealing with a system-specific conflict — antivirus software, a corrupted Windows install, or a driver issue — that's easier to diagnose with a support agent looking at your specific crash logs than through general troubleshooting steps.</p>
+
+        <p>For everything else once you're actually in the game, our <a href="/guides/beginners-guide.html">Beginner's Guide</a> and <a href="/guides/pc-requirements.html">PC Requirements breakdown</a> are the two most useful starting points, and our <a href="/blog/post-launch-patch-tracker.html">Post-Launch Patch Tracker</a> covers every stability patch TT Games has shipped since release in case a future update addresses these launch issues directly.</p>
+
+        <section class="references" style="margin-top:2rem;padding:1.5rem;background:var(--bg-card,#1a1d27);border-radius:8px;border-left:4px solid #fbbf24;">
+          <h2 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--accent,#fbbf24);border:none;padding-top:0;margin-top:0;">Sources &amp; References</h2>
+          <ol style="margin:0;padding-left:1.25rem;line-height:1.8;">
+            <li><a href="https://www.keengamer.com/articles/features/troubleshooting/how-to-fix-lego-batman-legacy-of-the-dark-knight-not-launching/" target="_blank" rel="noopener noreferrer">KeenGamer — How to Fix LEGO Batman: Legacy of the Dark Knight Not Launching (July 3, 2026)</a></li>
+            <li><a href="https://help.steampowered.com/en/faqs/view/0C48-FCBD-DA71-93EB" target="_blank" rel="noopener noreferrer">Steam Support — How to Verify the Integrity of Game Files</a></li>
+            <li><a href="https://help.steampowered.com/en/faqs/view/6AD7-820D-8BE5-E51F" target="_blank" rel="noopener noreferrer">Steam Support — How to Clear the Download Cache</a></li>
+            <li><a href="https://www.reddit.com/r/legogaming/comments/1thtdx6/why_cant_i_open_lego_batman_legacy_of_the_dark/" target="_blank" rel="noopener noreferrer">r/legogaming — Player report of the game not launching a month after purchase</a></li>
+          </ol>
+        </section>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Sources</h3>
+        <a href="https://www.keengamer.com/articles/features/troubleshooting/how-to-fix-lego-batman-legacy-of-the-dark-knight-not-launching/" target="_blank" rel="noopener" class="sidebar-link">KeenGamer &mdash; Not Launching Fixes</a>
+        <a href="https://help.steampowered.com/en/faqs/view/0C48-FCBD-DA71-93EB" target="_blank" rel="noopener" class="sidebar-link">Steam &mdash; Verify Game Files</a>
+        <a href="https://legogamessupport.wbgames.com/hc/en-us/requests/new" target="_blank" rel="noopener" class="sidebar-link">WB Games &mdash; Official Support</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>Latest Posts</h3>
+        <a href="/blog/pc-not-launching-fix-guide.html" class="sidebar-link">&#128295; PC Not Launching Fix Guide</a>
+        <a href="/blog/speedrun-community-one-month-growth.html" class="sidebar-link">&#9193; Speedrunning One Month In</a>
+        <a href="/blog/lego-batman-physical-sets-gold-unlocks-guide.html" class="sidebar-link">&#129513; Physical Sets Gold Unlocks</a>
+      </div>
+      <div class="sidebar-box" style="border-style: dashed; padding: 0; overflow: hidden;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1971262808837870"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="/guides/pc-requirements.html" class="sidebar-link">PC System Requirements</a>
+        <a href="/guides/beginners-guide.html" class="sidebar-link">Beginner's Guide: 10 Tips</a>
+        <a href="/guides/co-op-guide.html" class="sidebar-link">Co-Op Guide</a>
+        <a href="/guides/collectibles-guide.html" class="sidebar-link">Collectibles Guide</a>
+        <a href="/guides/100-percent-completion.html" class="sidebar-link">100% Completion Guide</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>Game Info</h3>
+        <div style="font-size: 13px; color: var(--text-secondary); line-height: 2;">
+          <div><strong style="color:var(--text);">Developer:</strong> TT Games</div>
+          <div><strong style="color:var(--text);">Publisher:</strong> Warner Bros. Games</div>
+          <div><strong style="color:var(--text);">IGN Score:</strong> 8/10</div>
+          <div><strong style="color:var(--text);">Release:</strong> May 22, 2026</div>
+          <div><strong style="color:var(--text);">Platforms:</strong> PS5, Xbox, PC</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+  <script>document.getElementById('menuToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});</script>
+</body>
+</html>

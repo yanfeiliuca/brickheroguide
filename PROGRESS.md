@@ -1262,3 +1262,48 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [ ] Git commit + push（待执行）
+
+## 2026-07-03 — Deluxe Edition Upgrade Live on Steam Blog + Mayhem/Post-Game/Tips "Stud Multiplier" Carryover Fix
+
+### 阶段一：Blog 更新
+- **`blog/deluxe-edition-upgrade-live-steam.html`** — "The Deluxe Edition Upgrade Is Now Live on Steam for $24.99 — Here's Exactly What You Get". 777字. Reports the newly live standalone Steam DLC listing (app 4468750) letting Standard Edition owners upgrade without rebuying the base game: Legacy Collection (3 Themed Packs — Arkham Trilogy, Batman Beyond, Party Music — each 7 suits/1 Batmobile/5 Batcave props) unlocks immediately, Mayhem Collection (Joker/Harley Quinn, Arkham Breakout mission, Mayhem Mode, Sinister Pack) auto-unlocks Sept 18, 2026. Includes Standard-vs-upgrade comparison table and current Steam review standing (100% positive of 28 reviews). Tags: News + Analysis. Image: `legobatmangame.com/_astro/prefooter-keyart.C5w2I9s1_1Iktj5.jpg` (tied-lowest use count, 6 prior uses). Sources: Steam Deluxe Edition Upgrade page (direct fetch, primary), Steam base game page, Game8 Mayhem Collection archive. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：5 条 ✅ / 0 条 ❌
+  - $24.99 upgrade price, "requires base game on Steam" → Steam app/4468750 page (direct fetch, primary source) ✅
+  - Legacy Collection contents (3 Themed Packs, 7 suits/1 Batmobile/5 Batcave props each) → Steam app/4468750 page (direct fetch) ✅
+  - 100% positive of 28 user reviews → Steam app/4468750 page (direct fetch) ✅
+  - Mayhem Collection Sept 18, 2026 contents (Joker/Harley Quinn, Sinister Pack 7 suits/5 Batcave items/1 Batmobile skin) → data/game-facts.json `dlc_mayhem_collection` ✅
+  - Deluxe extra cost $24.99 (cross-check) → data/game-facts.json `editions.deluxe` ✅
+- References：3 条真实 URL（Steam DLC page, Steam base game page, Game8）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（新增页面出现前的当前总数）
+**关键发现：**
+1. 昨日（07-02）标记的 3 个"Stud Multiplier Red Brick"残留文件（`mayhem-collection-dlc.html`、`post-game-checklist.html`、`tips-for-new-players.html`）今日已全部修正（见下）。
+2. **新发现更严重的系统性问题**：`guides/beginners-guide.html` 和 `guides/collectibles-guide.html`——07-02 日志曾记录"已修正2处"——实际仍各含有多处虚构的 Stud Multiplier 内容，包括具体但虚构的数值（如"×80 Studs"、"stack ×2,×4,×6,×8,×10"），与站内已更正的权威说法（`stud-farming-guide.html`：Red Bricks 纯装饰性，无 Stud 加成机制）直接矛盾。这两个页面是项目关键高流量页面（beginners-guide、collectibles-guide），比今日已修的3个文件影响更大，但因今日3页上限已用完，未在本次修正，标记为明日最高优先级。
+3. 另有 3 个文件含较小残留提及（未修）：`guides/100-percent-completion.html`（5处）、`guides/chapter-1-red-hood-gang-walkthrough.html`（1处）、`guides/batcave-mural-challenges.html`（1处，"Multi-Man"挑战描述，可能指代战斗连击而非Stud经济系统，需人工确认是否为真实成就）。
+4. 核查 `trophy-achievement-guide.html` 误用：未发现内部链接错误——`trophy-guide.html` 和 `trophy-guide-platinum-road.html` 中的 "trophy-achievement-guide" 字符串均为第三方 URL（happythumbsgaming.com 自身命名），非内部死链。
+5. 未发现新的 canonical `.html` 后缀问题、WayneTech=10 总数误用、29+/8 任务数误用、Switch 2 独占蝙蝠战衣误用、或 "99+" 收藏品误用。
+
+**SEO Top 3 更新：**
+1. **`guides/mayhem-collection-dlc.html`** — 移除 Mayhem Mode 部分虚构的"All Stud Multiplier Red Bricks apply here"及"×3,840 total"农场攻略框，替换为纠正说明并链接到 Stud Farming Guide。(评分：8/10 — 高流量 DLC 页面，直接矛盾站内已确认事实)
+2. **`guides/tips-for-new-players.html`** — 修正 4 处虚构 Stud Multiplier 表述（Collectible Strategy 优先级、Stud 农场技巧、Common Mistakes 条目、结尾 Core Principle 提示框），全部替换为 Stud Cache 循环的正确指引。(评分：8/10 — 高流量新手页面)
+3. **`guides/post-game-checklist.html`** — 修正 1 处"Buy the Stud Multiplier upgrades"检查项标题与说明，替换为 Stud Cache 循环建议。(评分：7/10 — 完成通关后核心清单页面)
+
+**新建页面（如有）：** `blog/deluxe-edition-upgrade-live-steam.html`
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成
+- [x] References 区块已填写（3条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏）
+- [x] 内容审计已完成（31个 guide 页面）
+- [x] SEO Top 3 更新已执行（mayhem-collection-dlc.html / tips-for-new-players.html / post-game-checklist.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增）
+- [x] sitemap.xml 已重新生成（91页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [ ] Git commit + push（待执行）

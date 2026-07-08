@@ -1307,3 +1307,44 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [ ] Git commit + push（待执行）
+
+## 2026-07-08 — SDCC 2026 playable booth blog + release-date/Mayhem DLC/characters guide refresh
+
+### 阶段一：Blog 更新
+- **`blog/sdcc-2026-lego-batman-playable-booth.html`** — "LEGO Batman: Legacy of the Dark Knight Gets a Playable Booth at San Diego Comic-Con 2026". 898字. 报道 DC 于 2026-07-08 官方公布 SDCC 2026 阵容，确认游戏将在 DC 展位 #4544（7月22-26日）提供试玩站及现场赠品，并结合 Steam Charts 实时数据说明发售七周后的玩家活跃度。Tags: News. Image: https://legobatmangame.com/_astro/og-image.BcIYb3Fq.jpg（官方 OG 横幅，此前使用6次，本次为第7次，仍为库内最少使用之一）. Sources: DC.com 官方新闻稿、SDCC Unofficial Blog、Steam Charts. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：6 条 ✅ / 0 条 ❌
+  1. DC Booth #4544, SDCC 7/22-7/26 → ✅ dc.com 官方新闻稿（发布于今日 2026-07-08）
+  2. LEGO Batman 试玩站 + 现场赠品（数量有限） → ✅ dc.com 官方新闻稿，sdccblog.com 二次核实
+  3. Switch 2 / Mayhem Collection DLC 同为 2026-09-18 → ✅ dc.com 官方新闻稿，与 data/game-facts.json 一致
+  4. Steam 数据（30天均玩家14,570、24小时峰值17,601、历史峰值33,053） → ✅ 直接抓取 steamcharts.com/app/2215200 实时页面（放弃了 WebSearch 摘要中不准确的"2,325人/76.7%下降"数据，采用官方页面实测数字）
+  5. IGN 8/10、GamesRadar 4/5、Steam"压倒性好评"11,600+评测 → ✅ 与 data/game-facts.json 一致
+  6. PS5/Xbox/PC (Steam & Epic Games Store) 现已发售 → ✅ dc.com 官方新闻稿
+- References：3 条真实 URL（dc.com、sdccblog.com、steamcharts.com）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 30 个 guide 页面（全量扫描）
+**关键发现：** 无致命错误（禁止错误清单逐条核查均未重现：无 trophy-achievement-guide.html 引用、无 WayneTech=10 错误、无主线任务≠21 错误、无 Switch 2 独家 Batsuit 错误、无 Switch 2 性能"待定"表述、无收藏品"99+"错误、无 canonical .html 后缀问题）。发现 `release-date-platforms.html` 的"发售后数据"板块日期标注仍停留在 2026-06-17（已过时3周），予以更新。
+
+**SEO Top 3 更新：**
+1. **`guides/release-date-platforms.html`** — 刷新"Post-Launch Reception & Updates"板块：日期从"as of June 17, 2026"更新为"as of July 8, 2026"；Steam 峰值玩家数从旧数字33,449更正为 steamcharts.com 实测的历史峰值33,053，并补充30天均玩家14,570；新增 SDCC 2026 试玩站新闻条目并链接新 blog 文章。(评分：8/10 — 该页为核心"发售日期"落地页，过时数据+缺失时效新闻直接影响准确性与内链价值)
+2. **`guides/mayhem-collection-dlc.html`** — 新增一段说明 DC 于7月8日确认游戏（非DLC）将在 SDCC 2026 展位试玩，并注明官方公告未包含 Mayhem Collection 新内容爆料，避免读者误解；链接新 blog 文章。(评分：6/10 — 时效性内链，避免读者误判 DLC 有新爆料)
+3. **`guides/all-characters-unlock.html`** — 将"No standalone Mayhem Collection listing... as of June 2026"的时效性表述更新为"as of July 2026"，并通过 WebSearch 核实截至目前仍无独立DLC商店listing，结论未变。(评分：4/10 — 低影响度的时效性维护，避免陈旧日期标注误导读者)
+
+**新建页面（如有）：** 无（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成
+- [x] References 区块已填写（3条真实URL）
+- [x] 推送门控已通过
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏，保持3条）
+- [x] 内容审计已完成（30个 guide 页面）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增）
+- [x] sitemap.xml 已重新生成（94页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [ ] Git commit + push（待执行）

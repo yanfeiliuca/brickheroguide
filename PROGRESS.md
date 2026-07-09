@@ -1348,3 +1348,51 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [ ] Git commit + push（待执行）
+
+## 2026-07-09 — July mod roundup blog + collectibles-guide internal contradiction fix + trophy/release-date freshness refresh
+
+### 阶段一：Blog 更新
+- **`blog/july-2026-mod-roundup.html`** — "LEGO Batman: Legacy of the Dark Knight Mod Roundup — Best New Mods for July 2026". 804字. 报道 UE4SS 脚本框架、Ultimate Engine Tweaks 引擎优化、TheDCfanXO's Rebirth and New 52 Pack（v1.1，2026-05-22首发，2026-05-24更新）、The Batman Redux 材质重制（Update 2）、Unlock All Outfits and Characters 便利性 mod，聚焦发售七周后 mod 生态从"外观替换"转向"底层工具"的转变。Tags: Community. Image: https://legobatmangame.com/_astro/fight-3.KeK453wH_Z23bgKb.webp（此前使用6次，与 postfooter 并列最少使用，本次为第7次）. Sources: 5条 Nexus Mods 页面链接. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：5 条 ✅ / 0 条 ❌
+  1. TheDCfanXO's Rebirth and New 52 Pack 版本号/日期/改动日志（v1.1, 2026-05-22上传, 2026-05-24更新, 4个皮肤, v1.0/v1.1改动详情） → ✅ 直接抓取 nexusmods.com/legobatmanlegacyofthedarkknight/mods/6 页面（非JS-shell，完整内容含meta description、changelog、about区块）
+  2. UE4SS for Lego Batman LOTDK 提供 Lua 脚本+开发者控制台框架 → ✅ 两次独立 WebSearch 交叉验证一致
+  3. Ultimate Engine Tweaks 自定义 Engine.ini，作者已在50+款UE5游戏应用同一模板 → ✅ 两次独立 WebSearch 交叉验证一致
+  4. The Batman Redux 材质重制 + Update 2 新增护手/手臂细节 → ✅ WebSearch 验证（mod页面标题/描述匹配）
+  5. Unlock all outfits and characters mod 功能描述 → ✅ 两次独立 WebSearch 交叉验证一致
+  - 注：搜索中出现的"171 mods"总数声明未能通过直接抓取验证（Nexus Mods 列表页为纯JS渲染，抓取仅返回页面骨架），本文**未采用**该未核实数字，避免引入未验证总量声明。
+- References：5 条真实 URL（均为 nexusmods.com 具体 mod 页面）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（全量扫描）+ 内部链接死链扫描（guides + blog 全站）
+**关键发现：**
+1. 昨日（07-08）日志标记的"明日最高优先级"——`guides/beginners-guide.html` 与 `guides/collectibles-guide.html` 的虚构 Stud Multiplier 内容——经核查：**beginners-guide.html 已完全干净**（所有相关表述均正确声明"无 Stud Multiplier 机制"）；**collectibles-guide.html 仍有残留问题**，已修复（见下）。
+2. `guides/collectibles-guide.html` 发现并修复两处内部矛盾：(a) "Phase 5 — Store Red Bricks" 与紧邻的 highlight-box 中出现"your multipliers are stacked"及"a single Stud Cache with multipliers active can be worth 60,000–120,000 Studs"，与页面其余部分（含第103、107行）明确声明的"无 Stud Multiplier 机制"直接矛盾，且60,000–120,000 数值与站内权威页 `stud-farming-guide.html` 记录的 20,000–30,000/次 不一致；(b) FAQ 区块声称"247+ total includes 121 Riddler Trophies..."，但"Riddler Trophies"并非本页任何一个收藏品分类（页面实际分类为 WayneTech Caches/Red Bricks/Batcave Minikits/Falcone Fortunes/Gold Bricks），与页面自身分类体系及总数不符，已改为与页面主体分类一致的表述。
+3. `guides/batcave-mural-challenges.html` 中"Multi-Man"和"Calculator"挑战提及"stud multiplier"——经 WebSearch 核实（gamerant.com 等来源），这是 Batcave 43项挑战中真实存在的战斗连击型"stud multiplier"机制，与已废除的"Stud Multiplier Red Brick"收藏品是两个不同概念，**非虚构内容，无需修改**（解决昨日标记的待确认项）。
+4. `guides/100-percent-completion.html`（昨日标记5处残留）与 `guides/chapter-1-red-hood-gang-walkthrough.html`（昨日标记1处）经核查：**均已完全干净**，所有 multiplier 相关表述均为正确的"无此机制"声明，无需修改。
+5. 全站内部链接死链扫描（guides + blog 全部 html 文件的 href）：发现1处死链 `blog/deluxe-edition-upgrade-live-steam.html` 侧栏链接指向 `/guides/all-characters-unlock-guide.html`（该文件不存在），正确文件名为 `all-characters-unlock.html`，已修复。
+6. 未发现新的 canonical `.html` 后缀问题、WayneTech=10、主线任务≠21、Switch 2 独占 Batsuit、性能"待定"、收藏品"99+"等禁止错误清单项。
+7. `guides/suits-abilities-guide.html` 与 `guides/trophy-guide.html` 各有一处"As of June 2026"时效性表述已过期3周+；经 WebSearch 核实两项事实（QR码兑换情况、Mayhem Collection DLC奖杯列表未公布）均仍然成立，仅日期标注过时。已更新 `trophy-guide.html`（见 SEO Top 3）；`suits-abilities-guide.html` 同类问题记录，留待明日处理（预算已用完）。
+
+**SEO Top 3 更新：**
+1. **`guides/collectibles-guide.html`** — 修复三处内部矛盾：删除"multipliers are stacked"及"60,000–120,000 Studs with multipliers"表述（改为与 stud-farming-guide.html 一致的 20,000–30,000/次），并将 FAQ 中与页面自身分类体系矛盾的"121 Riddler Trophies"总数拆解替换为与页面主体一致的分类（WayneTech Caches 200 / Red Bricks 23 / Batcave Minikits 10 / Falcone Fortunes 14 / Gold Bricks 30+）。(评分：9/10 — 站内核心高流量收藏品页，此前存在的自相矛盾直接损害可信度，且延续了昨日日志标记的最高优先级问题)
+2. **`guides/trophy-guide.html`** — 将"As of June 2026, no DLC trophy or achievement list has been announced"更新为"As of July 2026"，经 WebSearch 核实截至目前 Mayhem Collection DLC 奖杯/成就列表仍未公布，结论未变，仅刷新时效性日期标注。(评分：7/10 — 项目关键高价值页面 trophy-guide.html，避免过时日期误导读者)
+3. **`guides/release-date-platforms.html`** — 将 Game Pass/PS Plus FAQ 中"As of June 15, 2026"更新为"As of July 9, 2026"，经 WebSearch 核实截至目前游戏仍未上线 Xbox Game Pass 或 PlayStation Plus，结论未变，仅刷新日期标注。(评分：6/10 — 核心发售信息落地页，避免过时日期标注影响准确性感知)
+
+**新建页面（如有）：** 无（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成
+- [x] References 区块已填写（5条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面 + 全站内部链接扫描）
+- [x] SEO Top 3 更新已执行（collectibles-guide.html / trophy-guide.html / release-date-platforms.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（95页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [ ] Git commit + push（待执行）

@@ -1261,7 +1261,7 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] sitemap.xml 已重新生成（90页）
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
-- [ ] Git commit + push（待执行）
+- [x] Git commit + push 已完成
 
 ## 2026-07-03 — Deluxe Edition Upgrade Live on Steam Blog + Mayhem/Post-Game/Tips "Stud Multiplier" Carryover Fix
 

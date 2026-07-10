@@ -1396,3 +1396,52 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [ ] Git commit + push（待执行）
+
+## 2026-07-10 — PC/Steam Deck 最佳设置指南 blog + suits-abilities-guide QR奖励重大事实错误修复 + pc-requirements Steam Deck数据核实修复
+
+### 阶段一：Blog 更新
+- **`blog/pc-steam-deck-best-settings-guide.html`** — "Best PC & Steam Deck Settings for LEGO Batman: Legacy of the Dark Knight (July 2026)". 1028字. 汇总 Wccftech 的 PC 优化设置实测数据（Epic预设 vs 优化设置：平均FPS 106→153提升44%，1% low 79→109提升38%，0.1% low 69→95提升38%；各分项设置建议表；Anisotropic Filtering反常表现需保持16X；材质设置的VRAM门槛）、Destructoid 的中端硬件社区预设（Ryzen 7 5700X + RX 9060XT，60FPS硬顶帧率）、Steam Deck HQ 的实机测试数据（默认Low+FSR Balanced、关卡40-60FPS偶尔37-38FPS、开放世界步行34-37FPS、蝙蝠车驾驶约30FPS、建议锁定30FPS、16:10无黑边、HDR性能影响极小）。三条信息均通过直接抓取原始文章验证（非仅WebSearch摘要）。Tags: Tips. Image: https://legobatmangame.com/_astro/postfooter.Bp36eHDB_Z2cb3ek.webp（此前使用6次，为全站最少使用图片，本次为第7次）. Sources: 3条真实URL（wccftech.com、destructoid.com、steamdeckhq.com）. 7 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：7 组 ✅ / 0 组 ❌（全部通过直接网页抓取验证，非仅搜索摘要，置信度高于常规WebSearch核查）
+  1. Steam Deck Verified 徽章日期 2026-05-12 → ✅ 与 data/game-facts.json 权威数据一致
+  2. Wccftech Epic vs 优化设置基准测试三项数值（平均FPS、1% low、0.1% low及百分比提升） → ✅ 直接抓取 wccftech.com 文章原文表格
+  3. Wccftech PSO/着色器编译不完整导致卡顿 + 过场动画转场卡顿 → ✅ 直接抓取原文
+  4. Wccftech 各向异性过滤在4X以下性能反而下降的反直觉发现 → ✅ 直接抓取原文
+  5. Wccftech 材质Epic档在1440p需12GB+显存 → ✅ 直接抓取原文
+  6. Destructoid 作者硬件规格与设置预设（Ryzen 7 5700X/16GB/RX 9060XT） → ✅ 直接抓取 destructoid.com 原文
+  7. Steam Deck HQ 分区FPS实测数据、默认设置、30FPS锁定建议、16:10画面比例、HDR性能影响 → ✅ 直接抓取 steamdeckhq.com 原文
+- References：3 条真实 URL（wccftech.com、destructoid.com、steamdeckhq.com，均为直接抓取验证的原始文章）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（全量扫描）+ 内部链接死链扫描（guides + blog）+ 关键数值一致性抽查（WayneTech 200、主线任务21、收藏品247+、玩家角色7+3隐藏、豪华版价格）
+**关键发现：**
+1. `guides/suits-abilities-guide.html`「LEGO Set QR Redemption Suits」整节存在重大事实错误：将四个可兑换LEGO实体套装奖励全部错误描述为"1 exclusive Batsuit + matching Batmobile variant"，但根据 `data/game-facts.json`（2026-07-01 从 LEGO.com 官方兑换页核实）及站内自己的 `blog/lego-batman-redeem-codes-qr-rewards.html`（内容正确），实际应为：76330 = 金色蝙蝠侠角色皮肤（可直接兑换），76331/76332/76333 = 金色蝙蝠车皮肤（需先通过支线任务在游戏内解锁黑色原版车辆才能使用金色皮肤，并非"直接可兑换的战服"）。该节标题、导语、四条列表项、highlight-box 全部包含此错误，已全部修复，并将"As of June 2026"过期日期标注更新为"As of July 2026"。
+2. `guides/pc-requirements.html`「Steam Deck Performance」段落引用了一篇实际不包含任何性能基准数据的文章（该文章是5月12日 Verified 徽章公告，非实机测试），却给出了具体但无来源支撑的数字（"contained missions 60fps / open world 30fps / 720p分辨率 / 续航1.5-2小时"）。经直接抓取 Steam Deck HQ 真正的实机测试文章核实，已替换为准确数据并修正引用链接。
+3. `guides/collectibles-guide.html` FAQ 中"as of May 2026"日期标注已过期2个月，同时"does not expire"表述与 data/game-facts.json 记录的"截止2029年3月1日"到期日不完全一致，已更新日期标注并补充准确到期信息。
+4. 顺带发现并修复 `blog/platform-performance-comparison.html`（5月24日发布）中"Valve's handheld is not an officially verified platform"的错误表述，与 Steam Deck 实际已于5月12日通过 Verified 认证的事实矛盾；已改为准确说明并链接今日新 blog 文章（此项为博客页面修复，不计入 guides SEO Top 3 名额）。
+5. 未发现新的 canonical .html 后缀问题、WayneTech=10、主线任务≠21、Switch 2 独占 Batsuit、性能"待定"、收藏品"99+"等禁止错误清单项。全站31个guide页面间及guides-blog间内部链接扫描无死链。
+6. Mayhem Collection DLC 相关的 Task Force X 数据挖掘内容在 `all-characters-unlock.html`、`all-villains-guide.html`、`mayhem-collection-dlc.html` 中均正确标注为"unconfirmed datamined content / rumor"，未发现将传闻当作既定事实报道的问题。
+
+**SEO Top 3 更新：**
+1. **`guides/suits-abilities-guide.html`** — 重写「LEGO Set QR Redemption Suits」整节（标题改为更准确的"...Redemption Rewards"、导语、四条套装奖励列表、highlight-box），修正与 game-facts.json 及站内自身 blog 文章矛盾的重大事实错误，并刷新过期日期标注。(评分：9/10 — 高流量核心攻略页存在会直接误导玩家购买决策的错误信息，且与站内另一篇文章自相矛盾，属最高优先级修复)
+2. **`guides/pc-requirements.html`** — 替换「Steam Deck Performance」段落中无来源支撑的性能数字（虚构的60/30fps二分法、720p分辨率、1.5-2小时续航），改为经直接抓取验证的真实实测数据（关卡40-60fps、开放世界34-37fps步行/~30fps驾驶、默认Low+FSR Balanced、建议锁定30fps、16:10画面支持、HDR影响极小），并修正引用链接指向真正包含该数据的文章。(评分：8/10 — PC购买决策关键页面，此前的具体数字实际查无实据，替换为可验证数据大幅提升可信度)
+3. **`guides/collectibles-guide.html`** — 刷新 FAQ 中过期2个月的"as of May 2026"日期标注为"as of July 2026"，并将QR码兑换到期时间的模糊表述（"does not expire"）改为与 game-facts.json 一致的精确到期日（2029年3月1日）及每账号每套装限兑一次的规则。(评分：5/10 — 高流量FAQ板块的时效性与精确度维护)
+
+**新建页面（如有）：** 无（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（7组高风险声明，全部通过直接网页抓取验证）
+- [x] References 区块已填写（3条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面 + 全站内部链接扫描 + 数值一致性抽查）
+- [x] SEO Top 3 更新已执行（suits-abilities-guide.html / pc-requirements.html / collectibles-guide.html）
+- [x] 顺带修复 blog/platform-performance-comparison.html 的 Steam Deck 认证状态错误（非Top3名额内）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（96页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [ ] Git commit + push（待执行）

@@ -1445,3 +1445,50 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [ ] Git commit + push（待执行）
+
+## 2026-07-11 — Steam Review Verdict (Two Months Later) Blog + Last-Updated Freshness Fixes + Broken Link Fix
+
+### 阶段一：Blog 更新
+- **`blog/steam-review-verdict-two-months-later.html`** — "Two Months Later: What LEGO Batman Legacy's Steam Reviews Actually Say". 947字. 核心内容：Steam "Overwhelmingly Positive" 评级（11,600+条评测，与 game-facts.json 一致）+ Alinea Analytics 评测情感分析（96% Steam好评率）；玩家好评焦点（Arkham式格斗系统、跨媒介叙事整合、非英语配音质量、原声音乐、AAA级制作水准）；持续存在的技术投诉（开放世界与分屏合作模式帧率下降，即使在推荐配置上也会出现；存档损坏问题，与Update 1.006的修复范围明确区分——1.006只修复了Mr. Freeze Boss崩溃，未涉及存档损坏）；无在线联机、仅支持本地分屏合作的结构性缺口；"不像传统LEGO游戏"的设计取舍（无红砖作弊码、无Free Play角色解锁门槛、无Stud倍增器、无传统迷你套件收集，7名主角色对比传统LEGO游戏60-100+角色阵容，70-90美元定价争议）。Tags: Analysis + Community. Image: `legobatmangame.com/_astro/foes.CtQfCF5a_1k24YI.webp`（蝙蝠侠提起小丑，此前8次使用，为全站并列最少使用图片之一）. Sources: 4条真实URL（Alinea Analytics Substack、GameRant合作模式文章、Steam社区存档损坏讨论帖、WB Games官方PC故障排除页面）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：7 组 ✅ / 0 组 ❌
+  1. Steam "Overwhelmingly Positive" 评级 + 11,600+ 评测数 → ✅ 与 data/game-facts.json 权威数据一致
+  2. Alinea Analytics 96% Steam好评率及好评焦点（Arkham式格斗、跨媒介叙事、配音、原声、AAA制作水准） → ✅ 直接抓取 alineaanalytics.substack.com 原文核实
+  3. 帧率下降问题（开放世界探索+分屏合作，即使在推荐配置上） → ✅ 直接抓取 Alinea 原文核实
+  4. 存档损坏问题 → ✅ 通过 WebSearch 核实，Steam社区讨论帖与WB Games官方故障排除页面均确认此问题为真实、持续存在的报告
+  5. 无在线联机、仅本地分屏合作 → ✅ 通过 WebSearch 核实 GameRant 合作模式文章，确认与站内 `guides/co-op-guide.html` 已有表述一致
+  6. "不像传统LEGO游戏"设计取舍细节（红砖/Free Play/Stud倍增器/迷你套件缺失，7角色对比传统60-100+，70-90美元定价） → ✅ 直接抓取 Alinea 原文核实，且与站内 game-facts.json 及既有 guide 页面（如 collectibles-guide.html 已确认"无Stud倍增器机制"）保持一致
+  7. Update 1.006 日期（2026-06-02）及修复范围（仅Mr. Freeze Boss崩溃） → ✅ 与 data/game-facts.json 权威数据一致
+- References：4 条真实 URL（均为直接验证）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（全量扫描：禁止错误清单逐项核对、WayneTech/主线任务/收藏品/角色/服装/奖杯数值一致性抽查）+ 全站内部链接死链扫描（guides + blog + index.html，含根路径解析修正）
+**关键发现：**
+1. 全站数值一致性抽查（WayneTech 200、主线任务21、收藏品247+、玩家角色7+3隐藏、服装101/129、奖杯PS5 52/Xbox 51、WayneTech里程碑10/30/50/70/80/90/110/140/150/160/180）：**全部一致，无发现新的禁止错误清单项**。
+2. 死链扫描发现1处真实死链：`blog/how-long-to-beat-lego-batman-legacy.html` 中一处链接 href 写成裸域名字符串 `brickheroguide.com/blog/switch-2-release-date-september-2026.html`（缺少协议前缀或根路径斜杠，会被浏览器解析为无效相对路径），已修复为站内标准干净URL格式 `/blog/switch-2-release-date-september-2026`（此项为blog页面修复，不计入guides SEO Top 3名额）。
+3. 发现4个高流量 guide 页面的可见"Last updated"日期标签与 PROGRESS.md 记录的实际最近内容修改日期严重不符（标签停留在数月前的初始发布日期，未随后续多次实质性内容修改同步更新）：`collectibles-guide.html`（标签May 24，实际最近修改07-10）、`suits-abilities-guide.html`（标签June 22，实际最近修改07-10，含07-10当天的QR兑换奖励重大事实修复）、`trophy-guide.html`（标签June 7，实际最近修改07-09）。已修复其中3个（见SEO Top 3）。`release-date-platforms.html`（标签June 7，实际最近修改07-09）同类问题，因本次Top 3名额已用完，记录留待下次处理。
+4. 内部链接死链扫描（含 /about、/privacy、/contact 等根路径链接的正确解析修正）未发现其他新增死链。
+
+**SEO Top 3 更新：**
+1. **`guides/collectibles-guide.html`** — 修复可见"Last updated"标签从"May 24, 2026"更新为"July 10, 2026"，与该页面07-10当天的实际最近一次内容修改（FAQ日期与QR到期时间修正）同步。(评分：7/10 — 站内最高流量收藏品页，过期近2个月的可见更新日期损害用户与搜索引擎对内容时效性的信任)
+2. **`guides/suits-abilities-guide.html`** — 修复可见"Last updated"标签从"June 22, 2026"更新为"July 10, 2026"，与该页面07-10当天修复的QR兑换奖励重大事实错误（LEGO实体套装兑换内容误标）同步，此前该页面标签停留在近3周前，未反映后续的重大修正。(评分：7/10 — 高流量核心攻略页，标签滞后掩盖了近期的重大准确性修复)
+3. **`guides/trophy-guide.html`** — 修复可见"Last updated"标签从"June 7, 2026"更新为"July 9, 2026"，与该页面07-09当天的时效性日期刷新同步。(评分：6/10 — 项目关键高价值奖杯攻略页，避免过期一个月的日期标签误导用户内容陈旧程度判断)
+
+**新建页面（如有）：** 无（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（7组高风险声明，全部通过直接抓取或WebSearch交叉验证）
+- [x] References 区块已填写（4条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面 + 全站内部链接死链扫描）
+- [x] SEO Top 3 更新已执行（collectibles-guide.html / suits-abilities-guide.html / trophy-guide.html 的Last-updated时效性修复）
+- [x] 顺带修复 blog/how-long-to-beat-lego-batman-legacy.html 的死链（非Top3名额内）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（97页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [ ] Git commit + push（待执行）

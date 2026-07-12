@@ -1492,3 +1492,47 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [ ] Git commit + push（待执行）
+
+## 2026-07-12 — Nightwing Character Guide Blog + Release-Date-Platforms Freshness Fix + Cross-Link SEO Updates
+
+### 阶段一：Blog 更新
+- **`blog/nightwing-character-guide.html`** — "Nightwing in LEGO Batman Legacy: Unlock, Abilities & Is He Worth Switching To?". 955字. 覆盖：解锁条件（第4章末尾，Mr. Freeze Boss战，与站内 `guides/characters-villains-guide.html` 及 `guides/all-characters-unlock.html` 权威数据一致）、三项能力详解（Electric Cable Launcher、平行墙面二段跳、更快地面移动速度）、与 Robin 的横向对比分析（引用 COGconnected 对全部7名可玩角色的完整排名，Nightwing 排名第6，直接引用 "essentially...an upgraded ability in combat than a different character" 原文）、配音演员信息（Hyoie O'Grady 饰演成年 Dick Grayson，Greg Jones 饰演年少版本）、实用技巧与最终评价。选题背景：Catwoman、Robin 已有专属角色深度文章，但 Nightwing 和 Batgirl 尚无——填补真实内容空缺，而非追逐当日突发新闻（今日新闻搜索未发现有效新素材：Mayhem DLC 预告片为5月旧闻，speedrun.com 实时抓取显示"embargo中/0 runs"与站内7月2日已发布数据严重矛盾，判定为缓存陈旧页面而非真实倒退，故未采用）。Tags: Guide + Analysis. Image: `legobatmangame.com/_astro/fight-3.KeK453wH_Z23bgKb.webp`（急冻人冻卡车场景，与 Nightwing 在 Mr. Freeze Boss战解锁的剧情节点主题契合；此前8次使用，与其余5张图片并列全站最少使用）. Sources: 3条真实URL（COGconnected 角色排名直接抓取验证、Behind The Voice Actors 配音表、Screen Rant 角色排名）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：5 条 ✅ / 0 条 ❌
+  1. Nightwing 解锁节点（第4章末尾 Mr. Freeze Boss战）→ ✅ 与站内 `guides/characters-villains-guide.html`、`guides/all-characters-unlock.html` 两处权威内部数据完全一致
+  2. 三项能力（Electric Cable Launcher、平行墙面二段跳、更快地面移动）→ ✅ 与站内 `guides/characters-villains-guide.html` 权威数据一致
+  3. COGconnected 排名与直接引语（"After playing as Robin for a while, Nightwing just felt a bit redundant..."）→ ✅ 直接抓取 cogconnected.com 原文验证（文章日期2026年6月7日，2026年7月4日更新）
+  4. 配音演员 Hyoie O'Grady（成年）/ Greg Jones（年少）→ ✅ 通过 WebSearch 交叉验证 Behind The Voice Actors 索引数据，且与站内 `guides/all-characters-unlock.html` 中已有的 "Voiced by Hyoie O'Grady" 表述完全一致（双重内部+外部核实）
+  5. 7名可玩角色完整名单（Batman、Jim Gordon、Catwoman、Robin、Nightwing、Batgirl、Talia al Ghul）→ ✅ 与 `data/game-facts.json`（playable_characters: 7）及 COGconnected 直接抓取原文一致
+- References：3 条真实 URL（cogconnected.com 已直接抓取验证；behindthevoiceactors.com 与 screenrant.com 通过 WebSearch 索引内容验证，两站直接抓取均返回JS-shell空内容，未采用其直接抓取结果，仅采用搜索引擎索引摘要中的可验证事实）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（禁止错误清单全项 grep 扫描：trophy-achievement-guide、WayneTech=10、主线任务≠21、Switch 2独占Batsuit、性能"待定"、收藏品"99+"、canonical .html后缀）
+**关键发现：**
+1. 禁止错误清单全项扫描**未发现新增违规**；`collectibles-guide.html` 与 `trophy-guide.html` 中出现的"10"均为"10个蝙蝠洞Minikits"正确表述，非"10个WayneTech缓存"错误（已排查确认非误报）。
+2. `guides/release-date-platforms.html` 发现已知延续问题：可见"Last updated: June 7, 2026"标签已停滞超1个月，而页面FAQ内容实际最近一次修改为7月9日（Game Pass/PS Plus状态刷新）——该问题已在07-11日志中明确标记"记录留待明日处理"，今日按计划修复。同时重新核实 Game Pass/PlayStation Plus 现状（WebSearch确认截至今日游戏仍未上线两平台订阅服务，结论未变），FAQ日期同步刷新为7月12日。
+3. 全站内部链接扫描（含全部guides+blog的href）：确认站内大量形如 `/guides/xxx`（无.html后缀）的链接均为**站点既定"干净URL"规范**（`_redirects`文件统一处理301重定向），非死链，排除误判。未发现真实新增死链。
+4. `guides/robin-character-guide.html`（应为blog文件，位于blog/目录）目前无任何guide页面反向链接至它，而 Catwoman 角色指南已有3处guide页面反向链接——记录为潜在SEO差距，留待后续会话评估是否需要补充。
+
+**SEO Top 3 更新：**
+1. **`guides/release-date-platforms.html`** — 修复可见"Last updated"标签从"June 7, 2026"更新为"July 12, 2026"，并将FAQ区块"As of July 9, 2026, the game has not been announced for Xbox Game Pass or PlayStation Plus"日期刷新为"As of July 12, 2026"（WebSearch重新核实结论未变：截至今日仍未上线两平台订阅服务）。(评分：7/10 — 核心发售信息高流量落地页，过期超1个月的可见更新日期损害用户信任，且属于07-11日志明确标记的待办事项)
+2. **`guides/all-characters-unlock.html`** — 在 Nightwing 角色卡片中新增指向今日新发布 `blog/nightwing-character-guide.html` 的交叉链接，引导用户深入了解其二段跳与Robin对比分析。(评分：6/10 — 高流量角色解锁页，为新内容建立站内链接权重，参照06-29日 Catwoman 指南同类操作的既定模式)
+3. **`guides/suits-abilities-guide.html`** — 在角色服装总览段落中新增指向 `blog/nightwing-character-guide.html` 的交叉链接。(评分：5/10 — 高流量服装攻略页，补充相关角色深度内容的站内引导)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章 `blog/nightwing-character-guide.html`）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（5条高风险声明，全部通过内部权威数据交叉验证或直接抓取/WebSearch索引验证）
+- [x] References 区块已填写（3条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + 全站内部链接扫描）
+- [x] SEO Top 3 更新已执行（release-date-platforms.html / all-characters-unlock.html / suits-abilities-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（98页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成

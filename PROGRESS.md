@@ -1536,3 +1536,51 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [x] Git commit + push 已完成
+
+## 2026-07-13 — Batgirl Character Guide Blog + Cross-Link SEO Updates (Fills Confirmed Content Gap)
+
+### 阶段一：Blog 更新
+- **`blog/batgirl-character-guide.html`** — "Batgirl in LEGO Batman Legacy: Unlock, Gadgets & Why She's Essential for 100%". 985字. 覆盖：解锁条件（Chapter 4 开始即自动解锁，无需支线任务/收集品/购买，触发于"Knight at the Museum"任务，Firefly在博物馆纵火，营救聚会宾客）、三项装备详解（Hackarang 黑客蝙蝠镖、Drone 侦察无人机、Focus Blast 远程攻击——第三项装备来自 GAMES.GG 单一来源，已在正文中明确标注来源归属，未与站内现有仅列2项装备的表述冲突，属补充而非矛盾）、开放世界100%完成度的关键性（Drone侦测塔解锁全区收集品地图标记，与站内 characters-villains-guide.html 已有表述"Essential for 100%"完全一致）、Dexerto官方分级列表交叉对比（Batgirl与Nightwing同为A-Tier，高于Catwoman/Robin的B-Tier，Batman/Talia为S-Tier，Jim Gordon为C-Tier）、配音演员（Savannah Beckford，其首个电子游戏配音角色）。选题背景：延续07-12日志记录的内容空缺——Catwoman、Robin、Nightwing均已有专属角色深度文章，Batgirl 是最后一位缺少专属博客的核心角色（已通过全站grep确认无重名文件）。今日新闻搜索（"LEGO Batman Legacy" news July 2026 / patch DLC 2026）未发现有效突发新素材，故选择填补此项已确认的内容空缺而非追逐当日新闻。Tags: Guide + Analysis. Image: `legobatmangame.com/_astro/clues-2.D9jQ9zQy_Z12vcyH.webp`（哥谭夜景+蝙蝠信号，此前8次使用，为全站并列最少使用图片之一，主题契合"科技型角色"基调）. Sources: 4条真实URL（GAMES.GG解锁攻略、Dexerto分级列表、Dexerto角色页、Behind The Voice Actors配音表）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：7 组 ✅ / 0 组 ❌
+  1. 解锁条件（Chapter 4 开始，无需求，"Knight at the Museum"任务）→ ✅ 直接抓取 games.gg 与 Dexerto 两个独立"角色解锁攻略"专项来源，均明确一致；且与站内 `guides/all-characters-unlock.html`（"Enter Chapter 4"）表述不矛盾
+  2. 任务剧情细节（Firefly博物馆纵火、营救聚会宾客三批）→ ✅ 通过 WebSearch 交叉验证（Game8/Neoseeker/PSNProfiles 相关摘要）
+  3. 核心装备 Hackarang、Drone → ✅ 直接抓取 Dexerto 原文确认，且与站内 `guides/all-characters-unlock.html` 权威数据完全一致（双重验证）
+  4. 第三装备 Focus Blast → ✅ 直接抓取 games.gg 原文确认，正文中已明确标注"according to GAMES.GG's breakdown"归属，不与站内现有2装备表述冲突（视为补充信息）
+  5. 角色简介（自学成才、自制战服、"team's tech support"）→ ✅ 直接抓取 games.gg 原文确认
+  6. Dexerto 分级列表（Batgirl/Nightwing A-Tier，Batman/Talia S-Tier，Catwoman/Robin B-Tier，Jim Gordon C-Tier）→ ✅ 直接抓取 Dexerto 专属分级列表页确认
+  7. 配音演员 Savannah Beckford + 首个电子游戏角色 → ✅ 通过 WebSearch 交叉验证 Behind The Voice Actors 索引数据（该站直接抓取历史上多次返回JS-shell空内容，本次沿用既定做法，仅采用搜索引擎索引摘要中的可验证事实，与07-12日 Nightwing 配音验证方法一致）
+  8. 额外核查项：Chapter 4 任务名称歧义排查——发现站内 `guides/characters-villains-guide.html` 使用"Batgirl Begins"作为解锁节点标签，而本文使用"Knight at the Museum"。经进一步搜索 Game8 完整任务列表，确认两者实为 Chapter 4 内两个不同的剧情节点/任务分组（"Firefly"分组含"Pirate Party"+"Knight at the Museum"；"Batgirl Begins"分组含"Out of Commission"），何者才是 Batgirl 实际解锁的精确任务节点存在来源间的表述差异，本文采用的"Knight at the Museum"直接来自两个专项"如何解锁"来源（games.gg、Dexerto）的明确陈述，可信度更高，但因证据不足以确认站内现有"Batgirl Begins"表述为错误，本次**未修改**站内既有页面的该表述，避免在不确定情况下引入新的潜在错误——已如实记录此处存在待厘清的来源分歧，留待未来会话如有更权威来源（如任务内实机截图/官方任务列表）时进一步核实。
+- References：4 条真实 URL（games.gg、Dexerto ×2、Behind The Voice Actors）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（全量禁止错误清单 grep 扫描：trophy-achievement-guide、WayneTech=10、主线任务≠21、Switch 2独占Batsuit、性能"待定/estimated"、收藏品"99+"、canonical .html后缀）+ 数值一致性抽查（WayneTech 200、主线任务21、收藏品247+、服装/奖杯/角色数）+ 内部链接死链扫描（全部guides间href）+ 过期"Last updated"标签排查
+**关键发现：**
+1. 禁止错误清单全项扫描：**未发现任何违规项**，全站31个guide页面均无forbidden_errors清单中的任何一项。
+2. 数值一致性抽查：WayneTech 200、主线任务21、收藏品247+（含子项200+23+10+14+30+的加总说明）均在多个页面中保持一致，未发现矛盾。
+3. 内部链接死链扫描：全部guides间href引用（含干净URL与.html后缀混用情况）均对应实际存在的文件，无死链。
+4. 发现并记录（但审慎未处理）一处潜在的任务名称表述分歧：`guides/characters-villains-guide.html` 与 `guides/mission-4-walkthrough.html` 使用"Batgirl Begins"标注 Batgirl 解锁节点，而外部专项来源（games.gg、Dexerto）明确指向"Knight at the Museum"任务。因无法在两个来源集群间确定唯一正确答案，且此项不属于 game-facts.json 已收录的禁止错误清单项，本次不做主动修改，仅记录供后续核实（详见阶段一B核查日志第8项）。
+5. `guides/jim-gordon-guide.html` 将 Jim Gordon 描述为"升级后成为游戏最强角色"，与 Dexerto 分级列表将其列为最低的 C-Tier 存在观感差异——判定为两个来源基于不同评价维度的主观编辑立场差异（站内聚焦"人群控制/AR挑战"场景优势，Dexerto 为综合评分），非事实性数值错误，不计入forbidden_errors，未做修改。
+
+**SEO Top 3 更新：**
+1. **`guides/all-characters-unlock.html`** — 在 Batgirl 角色卡片新增指向今日新发布 `blog/batgirl-character-guide.html` 的交叉链接，并将过期近2个月的"Updated May 22, 2026"标签刷新为"Updated July 13, 2026"。(评分：7/10 — 高流量角色解锁页，参照07-12日 Nightwing 同类操作的既定模式，同时修复严重滞后的可见更新日期)
+2. **`guides/characters-villains-guide.html`** — 在 Batgirl 角色卡片新增指向 `blog/batgirl-character-guide.html` 的交叉链接，并将"Updated: June 2026"月级标签刷新为"Updated: July 2026"。(评分：6/10 — 全角色/反派总览页，为新内容建立站内链接权重)
+3. **`guides/suits-abilities-guide.html`** — 在角色服装总览段落中新增指向 `blog/batgirl-character-guide.html` 的交叉链接（与已有 Nightwing 链接并列），并将"Last updated: July 10, 2026"刷新为"July 13, 2026"，与本次实际内容修改同步。(评分：5/10 — 高流量服装攻略页，补充相关角色深度内容的站内引导)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章 `blog/batgirl-character-guide.html`）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（7组高风险声明，全部通过直接抓取或WebSearch交叉验证；另记录1项任务名称表述分歧，审慎未处理）
+- [x] References 区块已填写（4条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + 数值一致性抽查 + 内部链接死链扫描）
+- [x] SEO Top 3 更新已执行（all-characters-unlock.html / characters-villains-guide.html / suits-abilities-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（99页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成

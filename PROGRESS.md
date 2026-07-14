@@ -1584,3 +1584,55 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [x] Git commit + push 已完成
+
+## 2026-07-14 — Arkham Comparison Blog + Difficulty/Collectibles/Beginners SEO Refresh
+
+### 阶段一：Blog 更新
+- **`blog/arkham-comparison-legacy-of-the-dark-knight.html`** — "How LEGO Batman: Legacy of the Dark Knight Stacks Up Against Batman: Arkham". 955字. 内容：直接抓取三篇独立评测全文（TechRadar/Josephine Watson、ScreenRant/Austin King、Destructoid/Andrej Barovic），逐段引用原文语句构建对比分析——战斗系统（focus bar/counter/dodge三件套与Arkham Asylum自由连招体系的对应关系）、开放世界设计（Riddler Trophies/WayneTech Caches/Batmobile Trials密度对比Arkham Knight）、三档难度模式（Classic/Caped Crusader/Dark Knight，无失败状态vs检查点重来）、差异点（潜行系统薄弱、武器技能树设计单薄、7名可玩角色对比前作100+角色）、三方评分对比（ScreenRant 10/10、Destructoid 8.5/10、TechRadar未给数字评分但收尾语"it made me want to play Batman: Arkham instead"）。所有数值引用（247+收藏品、四座哥谭岛屿、7名可玩角色+3名隐藏角色、三档难度）均与 game-facts.json 一致，UE5引擎选型通过独立信源交叉核实（dsogaming性能测评、LEGO Games Wiki）。选题背景：今日新闻搜索（"LEGO Batman Legacy" news/patch/DLC/speedrun 2026年7月）未发现有效突发新素材（1.006补丁仍为最新，无新补丁；DLC仍锁定9月18日无新进展；speedrun社区数据与搜索引擎返回的过时快照矛盾，不可靠），故选择填补全站尚未覆盖的"Arkham对比"深度分析角度——已通过全站grep确认此前61篇博客中无一篇专门处理这一常被评测提及但从未系统梳理的话题。Tags: Analysis. Image: `legobatmangame.com/_astro/fight-2.BFd6neBb_2adSpB.webp`（Red Hood帮派对战蝙蝠侠，此前8次使用，为全站并列最少使用图片之一，主题契合"战斗系统"基调）. Sources: 3条真实URL（TechRadar/ScreenRant/Destructoid完整评测原文，均为直接抓取非搜索摘要）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：13 组 ✅ / 0 组 ❌
+  1. Destructoid战斗系统引用（"carbon copy...Spider-Man games"、focus bar/counter/dodge描述）→ ✅ 直接抓取原文逐句核对，非摘要引用
+  2. TechRadar战斗描述（"attack, dodge, counter, and land satisfying environmental takedowns"、"THAKK/KAPOW"音效）→ ✅ 直接抓取原文核对
+  3. 三档难度机制（Classic/Caped Crusader无失败状态，Dark Knight检查点重来，穿墙视觉bug）→ ✅ 直接抓取TechRadar原文；与站内 `guides/difficulty-modes-guide.html` 既有描述一致，无矛盾
+  4. Destructoid哥谭世界描述引用（"one of the best open worlds"、"confused for an Arkham Knight setting"）→ ✅ 直接抓取原文
+  5. ScreenRant Riddler Trophies/WayneTech Caches/Batmobile Trials密度描述 + "Arkham Knight will especially feel right at home"引用 → ✅ 直接抓取原文
+  6. 247+收藏品/四座哥谭岛屿 → ✅ 与 game-facts.json 权威内部数据完全一致
+  7. TechRadar潜行系统批评引用（"stealth in Legacy of the Dark Knight is passable but unremarkable..."）→ ✅ 直接抓取原文逐字核对
+  8. TechRadar武器技能树批评引用（"a rather uninspiring array of movesets and upgrades"）→ ✅ 直接抓取原文
+  9. TechRadar性能表现引用（Cons列表"Surprisingly demanding performance-wise"）→ ✅ 直接抓取原文Pros/Cons区块
+  10. 7名可玩角色 vs 前作"over 100"角色对比引用 → ✅ 直接抓取TechRadar原文；与 game-facts.json（playable_characters: 7, hidden: 3）一致
+  11. 三方评分数据（ScreenRant SR Score 10/Top Critic Avg 84/Critics Rec 92、故事9/玩法10/画面10/音效9；Destructoid 8.5/10；TechRadar无数字评分但引用verdict原句）→ ✅ 逐项直接抓取页面显示的实际评分数字核对，非估算
+  12. ScreenRant文氏图收尾引用（"perfectly at its center"）→ ✅ 直接抓取原文
+  13. Unreal Engine 5引擎选型 → ✅ 通过 WebSearch 交叉验证两个独立信源（dsogaming PC性能测评、LEGO Games Fandom Wiki），均确认UE5而非TT Games自有引擎
+- References：3 条真实 URL（TechRadar、ScreenRant、Destructoid 完整评测原文链接）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（禁止错误清单全项 grep 扫描 + 数值一致性抽查 + 内部URL格式检查）
+**关键发现：**
+1. 禁止错误清单全项扫描：初次粗筛出5个文件命中关键词（100-percent-completion.html、jim-gordon-guide.html、mayhem-collection-dlc.html、trophy-guide.html、waynetech-upgrades-guide.html），逐条人工复核后确认**全部为误报**——均为"Estimated total time"（预估完成时长，合法用法）、"underestimated"（子串误匹配）等无害内容，非真正的forbidden_errors清单项。**未发现任何真实违规项**。
+2. 数值一致性抽查：主线任务21（100-percent-completion.html、deluxe-edition-explained.html、post-game-checklist.html 均一致）、WayneTech缓存200、奖杯总数52（trophy-guide.html: 1金+3银+4铜+44... 实际为"51其他+1白金=52"与game-facts.json trophies_ps5:52一致）、收藏品247+（batcave-hub-guide.html、collectibles-guide.html 均一致）——未发现矛盾。
+3. canonical URL 格式检查：全部31个guide页面canonical均为干净URL（无.html后缀），无违规。
+4. 发现 `guides/difficulty-modes-guide.html` 缺少可见的"最后更新"日期标签（仅显示模糊的"📅 May 2026"），属于SEO新鲜度信号缺失，已在本次Top 3更新中修正。
+
+**SEO Top 3 更新：**
+1. **`guides/difficulty-modes-guide.html`** — 补全缺失的具体更新日期（"📅 May 2026"模糊标签 → "📅 Last updated: July 14, 2026"精确日期），并在Caped Crusader模式"If you've played any Batman: Arkham game, start here"一句后追加指向今日新博客 `blog/arkham-comparison-legacy-of-the-dark-knight.html` 的交叉链接。(评分：7/10 — 该页此前完全没有可见更新日期这一SEO新鲜度信号缺陷，且与今日博客主题高度相关，是最高优先级修复)
+2. **`guides/beginners-guide.html`** — 更新日期刷新（"Updated May 22, 2026" → "Updated July 14, 2026"，此前近2个月未更新，为高流量新手入口页面），并在"Combat Fundamentals"小节追加指向新博客的交叉链接。(评分：8/10 — 全站高流量入口页面，滞后近2个月的更新日期是明显SEO减分项，本次同步修复)
+3. **`guides/collectibles-guide.html`** — 更新日期刷新（"July 10" → "July 14"），并在开篇段落追加指向新博客的交叉链接，说明收藏品密度与Arkham系列开放世界设计的关联性。(评分：6/10 — 高流量收藏品攻略页，补充相关深度内容的站内引导)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（13组高风险声明，全部通过直接抓取原文或独立信源交叉验证）
+- [x] References 区块已填写（3条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + 数值一致性抽查 + canonical格式检查）
+- [x] SEO Top 3 更新已执行（difficulty-modes-guide.html / beginners-guide.html / collectibles-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（100页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成

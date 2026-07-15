@@ -1636,3 +1636,55 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [x] Git commit + push 已完成
+
+## 2026-07-15 — Update 1.007 Patch Notes Blog + 100%/Release-Date/PC-Requirements Freshness Refresh
+
+### 阶段一：Blog 更新
+- **`blog/update-1-007-patch-notes-july-2026.html`** — "LEGO Batman Legacy Update 1.007: Every Fix in the July 14 Patch (and What's Still Broken)". 约900+字（正文）. 内容：官方WB Games Support发布的Update 1.007完整补丁说明（2026年7月14日，PS5/Xbox Series X|S/PC同步上线，Epic Games Store版本将于本月晚些时候跟进），逐项拆解全部10项修复（On the Prowl任务、Haly's Circus任务[LBAT-134]、Batpod摄像机问题[LBAT-118]、Riddler Trophy蝙蝠洞道具交互[LBAT-121]、按键重映射后瞄准问题、Talia al Ghul技能升级[LBAT-64]、Case of Waylon Jones支线UV视觉问题[LBAT-179]、Party Select菜单问题、蝙蝠洞载具隐形问题[LBAT-602]、Tricorner Island WayneTech缓存箱不生成问题[LBAT-446]），并整理MP1st报道中仍未修复的已知问题清单（WB Services兑换码错误、Twitch Drops问题、跳过事件WayneTech不足、100%奖励不可获得、随机崩溃/存档损坏、Bat Symbols卡49/50、Clue Master火车谜题bug）。选题背景：今日新闻搜索（"LEGO Batman Legacy" news/patch/DLC/speedrun 2026年7月）发现Update 1.007已于昨日（7月14日）上线且全站63篇既有博客中无一篇报道，属于最新鲜且来源最权威的可用素材，故选定此题；速通/模组搜索结果显示速通社区仍处于排行榜禁运期（39次跑分提交/13名玩家，未开放正式提交），无新可写素材，DLC仍锁定9月18日无新进展。Tags: News. Image: `legobatmangame.com/_astro/og-image.BcIYb3Fq.jpg`（官方OG横幅，此前8次使用，与全站gear-3/postfooter并列最少使用，因本文性质为官方补丁公告，选用官方通用横幅最贴合）. Sources: 2条真实URL（WB Games Support官方补丁说明页 + MP1st完整报道，均为直接抓取原文，非搜索摘要）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：12 组 ✅ / 0 组 ❌
+  1. Update 1.007发布日期（2026年7月14日）→ ✅ 直接抓取WB Games Support官方页面确认
+  2. Update 1.007适用平台（PS5/Xbox Series X|S/PC Steam同步，Epic Games Store稍后跟进）→ ✅ 直接抓取官方页面原文"*July 2026 Update will be available for Epic Games Store later this month"逐字核对
+  3. 10项修复的完整清单及对应bug编号（LBAT-134/118/121/64/179/602/446）→ ✅ 直接抓取WB Games Support官方页面，逐条与MP1st报道交叉核对，两个独立信源完全一致
+  4. Tricorner Island WayneTech缓存箱不生成问题修复 → ✅ 官方原文+MP1st报道双重确认；与game-facts.json中"哥谭四座岛屿"及"WayneTech缓存200个"设定一致，无矛盾
+  5. MP1st已知问题清单（WB Services兑换码、Twitch Drops、跳过事件WayneTech不足、100%奖励不可获得、随机崩溃/存档损坏、Bat Symbols卡49/50、Clue Master谜题bug）→ ✅ 直接抓取MP1st原文Known Issues区块逐条核对
+  6. "On the Prowl"任务问题、Riddler Trophy蝙蝠洞道具交互问题被MP1st标注为"probably fixed with today's patch"，本文正确归类为已修复项而非未修复项 → ✅ 直接抓取原文确认标注逻辑
+  7. Update 1.006发布日期（2026年6月2日）及内容摘要，用于新旧补丁对比段落 → ✅ 与站内既有`blog/update-1-006-patch-notes-june-2026.html`历史记录一致，无矛盾
+  8. Mayhem Collection DLC日期（2026年9月18日）及内容（Joker+Harley Quinn可玩、Arkham Asylum越狱任务、Mayhem模式）→ ✅ 与game-facts.json权威内部数据完全一致
+  9. WayneTech缓存总数200个（用于说明单个缓存箱不生成的影响范围）→ ✅ 与game-facts.json一致
+  10. 哥谭四座岛屿（Tricorner Island为其一）→ ✅ 与game-facts.json一致
+  11. 文章作者署名（Alex Co, MP1st）及发布时间（2026年7月14日下午3:50）→ ✅ 直接抓取页面byline核对
+  12. PS5/Xbox手动检查更新方法（Options按钮→Check for Update；Steam右键→Properties→Updates）→ ✅ 与站内既有1.006补丁文章历史表述一致，属于平台通用操作说明，非本次新增数值声明，予以保留
+- References：2 条真实 URL（WB Games Support 官方补丁说明页 + MP1st 完整报道原文）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（禁止错误清单全项 grep 扫描 + 数值一致性抽查 + canonical格式检查 + 过期"Last updated"标签排查）
+**关键发现：**
+1. 禁止错误清单全项扫描：`guides/trophy-guide.html`命中"trophy-achievement-guide"关键词初筛，人工复核确认为误报——该字符串出现在外部URL（happythumbsgaming.com的文章slug）中，非本站内部死链引用，不违反forbidden_errors清单。`guides/release-date-platforms.html`命中"Switch 2...exclusive"初筛，人工复核确认该句描述的是"Retro Video Game Batman Minifigure"（实体版限定周边）为Switch 2独占，而非Dark Knight Returns Batsuit（文中明确写明"the same bonus that was available for PS5/Xbox/PC pre-orders"），不违反forbidden_errors清单。**未发现任何真实违规项。**
+2. 数值一致性抽查：WayneTech 200、主线任务21、收藏品247+、四座哥谭岛屿在多页面中保持一致，未发现矛盾。
+3. canonical URL 格式检查：全部31个guide页面canonical均为干净URL，无违规。
+4. 过期"Last updated"标签排查：发现8个页面标签仍停留在5月（`all-villains-guide.html`5/27、`best-characters-each-mission.html`5/29、`deluxe-edition-explained.html`5/22、`gotham-map-guide.html`5/28、`is-it-good-for-kids.html`5/29、`mission-1/2/3/4-walkthrough.html`5/19-5/29、`tips-for-new-players.html`5/29、`stud-farming-guide.html`仅标注"May 2026"无具体日期），已记录供后续会话优先处理，本次因SEO Top 3名额有限未全部覆盖。
+5. 发现`guides/100-percent-completion.html`、`guides/release-date-platforms.html`、`guides/pc-requirements.html`三页均仅提及Update 1.006为"最新补丁"，与今日新闻（1.007已于7/14上线）产生新鲜度落差，已在本次Top 3中修正。
+
+**SEO Top 3 更新：**
+1. **`guides/100-percent-completion.html`** — 在"Known Bugs Affecting 100% Completion"提示框中新增1.007修复Tricorner Island WayneTech缓存箱不生成问题的说明及指向新博客的交叉链接，并将"Last updated: June 7, 2026"刷新为"July 15, 2026"。(评分：8/10 — 1.007修复的bug直接影响100%完成度这一页面的核心主题，是本次更新中相关性最高的一项，且此前更新日期已滞后超过5周)
+2. **`guides/release-date-platforms.html`** — 在"Post-launch patches"条目中补充Update 1.007信息及交叉链接，并将"Last updated: July 12"刷新为"July 15"。(评分：7/10 — 高流量发售日期/平台信息页，此前仅提及1.006会让读者误以为1.006是最新补丁)
+3. **`guides/pc-requirements.html`** — meta description由"Includes Update 1.006"更新为"Includes Update 1.007"，正文补丁列表新增1.007条目及交叉链接，并将"Updated June 2, 2026"刷新为"Updated July 15, 2026"。(评分：6/10 — PC需求页此前更新日期滞后超过6周，且meta description包含过期版本号影响SEO准确性)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（12组高风险声明，全部通过直接抓取原文或站内既有数据交叉验证）
+- [x] References 区块已填写（2条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + 数值一致性抽查 + canonical格式检查 + 过期日期排查）
+- [x] SEO Top 3 更新已执行（100-percent-completion.html / release-date-platforms.html / pc-requirements.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（101页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成

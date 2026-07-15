@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BNQ7RJDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F7BNQ7RJDY');
+</script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1971262808837870" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGO Batman Legacy Update 1.007 Patch Notes (July 14, 2026): Every Fix, Plus What's Still Broken - BrickHeroGuide</title>
+  <meta name="description" content="Update 1.007 for LEGO Batman: Legacy of the Dark Knight went live July 14, 2026 on PS5, Xbox Series X|S, and PC. Here's every fix, plus the known issues that remain.">
+  <meta name="keywords" content="LEGO Batman Legacy update 1.007, LEGO Batman patch notes July 2026, LEGO Batman Legacy Dark Knight fixes, LEGO Batman known issues, LEGO Batman Batpod camera fix">
+  <link rel="canonical" href="https://brickheroguide.com/blog/update-1-007-patch-notes-july-2026">
+  <meta property="og:title" content="LEGO Batman Legacy Update 1.007: Every Fix in the July 14 Patch (and What's Still Broken)">
+  <meta property="og:description" content="TT Games' July 2026 update fixes ten issues across missions, the Batpod camera, and WayneTech Caches. Here's the full breakdown, plus outstanding bugs still on the list.">
+  <meta property="og:image" content="https://legobatmangame.com/_astro/og-image.BcIYb3Fq.jpg">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --bg-card: #1a1d27; --bg-card-hover: #222633;
+      --text: #e8eaed; --text-secondary: #9aa0ab;
+      --accent: #fbbf24; --accent-hover: #f59e0b; --accent-dim: rgba(251,191,36,0.12);
+      --border: #2a2e3a; --max-width: 1100px; --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text-secondary); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+    .page-layout { max-width: var(--max-width); margin: 0 auto; padding: 32px 20px 60px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
+    .breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .breadcrumb a { color: var(--text-secondary); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .article-header { margin-bottom: 28px; }
+    .article-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 6px; margin-bottom: 10px; margin-right: 6px; }
+    .tag-news { background: #3b82f620; color: #60a5fa; }
+    .tag-analysis { background: #f59e0b20; color: #fbbf24; }
+    .article-header h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+    .article-meta { font-size: 13px; color: var(--text-secondary); }
+    .content h2 { font-size: 22px; font-weight: 700; margin: 36px 0 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .content h3 { font-size: 17px; font-weight: 600; margin: 24px 0 10px; color: var(--accent); }
+    .content p { margin-bottom: 16px; color: var(--text); font-size: 15.5px; }
+    .content ul, .content ol { margin: 0 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .content li { font-size: 15px; }
+    .tip-box { background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .tip-box strong { color: var(--accent); }
+    .highlight-box { background: rgba(59, 130, 246, 0.08); border-left: 3px solid #3b82f6; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+    .highlight-box strong { color: #60a5fa; }
+    .patch-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin: 20px 0; }
+    .patch-box .patch-version { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 6px; }
+    .patch-box .patch-date { font-size: 12px; color: var(--text-secondary); margin-bottom: 14px; }
+    .patch-box ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .patch-box li { font-size: 14px; padding-left: 20px; position: relative; }
+    .patch-box li::before { content: "✓"; position: absolute; left: 0; color: #34d399; font-weight: 700; }
+    .patch-box li.pending::before { content: "⏳"; }
+    .featured-image { margin: 24px 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .featured-image img { width: 100%; display: block; }
+    .featured-image figcaption { padding: 10px 16px; font-size: 12px; color: var(--text-secondary); background: var(--bg-card); }
+    .ad-inline { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--text-secondary); font-size: 12px; margin: 28px 0; }
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .sidebar-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .sidebar-link { display: block; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-secondary); }
+    .sidebar-link:last-child { border: none; }
+    .sidebar-link:hover { color: var(--accent); }
+    .footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: var(--text-secondary); }
+    .footer-disclaimer { font-size: 11px; color: #555; max-width: 600px; margin: 12px auto 0; line-height: 1.5; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+      .menu-toggle { display: block; }
+      .page-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">&#9881; Brick<span>Hero</span>Guide</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#guides">Guides</a></li>
+        <li><a href="/#walkthrough">Walkthrough</a></li>
+        <li><a href="/#collectibles">Collectibles</a></li>
+        <li><a href="/#characters">Characters</a></li>
+        <li><a href="/#tips">Tips</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+    <main>
+      <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Update 1.007 Patch Notes
+      </div>
+
+      <div class="article-header">
+        <span class="article-tag tag-news">News</span>
+        <h1>LEGO Batman Legacy Update 1.007: Every Fix in the July 14 Patch (and What's Still Broken)</h1>
+        <div class="article-meta">Published: July 15, 2026 &middot; 6 min read</div>
+      </div>
+
+      <div class="content">
+        <p>Warner Bros. Games and TT Games pushed out update 1.007 for <em>LEGO Batman: Legacy of the Dark Knight</em> on July 14, 2026 — the game's first update since June's stability-focused 1.006 patch. It's a smaller download this time around, but it clears out a batch of specific, long-reported bugs rather than the broad "stability and performance" language of the previous update.</p>
+
+        <p>Here's the complete list of what 1.007 fixes, what it means for progress-blocking bugs some players hit, and which known issues are still sitting on TT Games' list.</p>
+
+        <figure class="featured-image">
+          <img src="https://legobatmangame.com/_astro/og-image.BcIYb3Fq.jpg" alt="Official key art for LEGO Batman: Legacy of the Dark Knight" loading="lazy">
+          <figcaption>LEGO Batman: Legacy of the Dark Knight — official promotional art. Image: &copy; TT Games / Warner Bros. Games, via <a href="https://legobatmangame.com" target="_blank" rel="noopener">legobatmangame.com</a>, used for editorial purposes.</figcaption>
+        </figure>
+
+        <h2>Update 1.007 Full Patch Notes</h2>
+
+        <p>According to Warner Bros. Games' official LEGO Games Support page, update 1.007 is live now on PlayStation 5, Xbox Series X|S, and PC (Steam). An Epic Games Store version of the update is confirmed to follow later in July. The full list of fixes:</p>
+
+        <div class="patch-box">
+          <div class="patch-version">Update 1.007</div>
+          <div class="patch-date">Released: July 14, 2026 &mdash; PS5, Xbox Series X|S, PC (Steam)</div>
+          <ul>
+            <li>Fixed issues related to the "On the Prowl" mission</li>
+            <li>Fixed issues related to the "Haly's Circus" mission</li>
+            <li>Fixed camera issues related to the Batpod</li>
+            <li>Fixed an interaction issue with the Riddler Trophy Batcave item</li>
+            <li>Fixed issues related to aiming gadgets after control remapping</li>
+            <li>Fixed issues related to Talia al Ghul's gadget/ability upgrades</li>
+            <li>Fixed a UV Vision issue when playing the "Case of Waylon Jones" side activities in the open world</li>
+            <li>Fixed an issue related to the "Party Select" menu</li>
+            <li>Fixed an issue related to vehicles becoming invisible in the Batcave</li>
+            <li>Fixed an issue related to a WayneTech Cache Chest not spawning in Tricorner Island</li>
+          </ul>
+        </div>
+
+        <p>That's ten confirmed fixes, each tied to a specific internal bug ticket in WB Games' public bug tracker — a level of transparency the studio didn't offer with 1.006, which listed only general categories like "stability fixes" and "performance improvements." It suggests TT Games is now working through a triaged backlog rather than shipping broad engine-level patches.</p>
+
+        <h2>What Actually Changes for Players</h2>
+
+        <h3>Mission-Blocking Fixes: "On the Prowl" and "Haly's Circus"</h3>
+        <p>The two mission-specific fixes are the most consequential entries for players still working through the story. "On the Prowl" had been flagged by players as having movement-related issues that could interrupt progress, while "Haly's Circus" — tracked internally as bug LBAT-134 — had its own unspecified issue resolved. Neither patch note explains the exact symptom, which is typical of TT Games' terse changelog style, but both missions are now expected to play through cleanly.</p>
+
+        <h3>Batpod Camera and Control Remapping</h3>
+        <p>Players who remapped their controls — a common accessibility adjustment — had reported that gadget aiming stopped working correctly afterward. That's now fixed, alongside a separate camera issue tied specifically to Batpod sequences (LBAT-118). Combined, these two fixes should smooth out two of the more input-sensitive parts of the game.</p>
+
+        <h3>WayneTech Cache Chest Spawn Fix (Tricorner Island)</h3>
+        <p>One of the more collection-relevant fixes (LBAT-446) addresses a WayneTech Cache Chest that wasn't spawning in Tricorner Island — one of Gotham's four islands. With 200 WayneTech Caches spread across the open world feeding into unlock milestones, a chest that simply never appeared could block 100% completion for affected players. If you were stuck below full WayneTech Cache count specifically around Tricorner Island, this patch is the reason to go back and check.</p>
+
+        <h3>Riddler Trophy Interaction and Batcave Vehicle Visibility</h3>
+        <p>Two smaller quality-of-life fixes round out the patch: a Riddler Trophy Batcave display item that couldn't be interacted with properly (LBAT-121), and vehicles occasionally turning invisible while parked in the Batcave (LBAT-602). Neither blocked progress, but both were visible, frequently-screenshotted annoyances for completionists who spend time decorating their Batcave hub.</p>
+
+        <div class="ad-inline">
+          <ins class="adsbygoogle"
+               style="display:block;text-align:center"
+               data-ad-client="ca-pub-1971262808837870"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <h2>What's Still Broken</h2>
+
+        <p>Update 1.007 is targeted, but it doesn't close out every open issue. Based on player reports compiled by outlets tracking the game's known-issues list, several bugs remain outstanding after this patch:</p>
+
+        <div class="patch-box">
+          <div class="patch-version">Known Issues Not Addressed in 1.007</div>
+          <ul>
+            <li class="pending">Golden Batmobile / Batsuit redemption codes failing with a "WB Services can't be reached" error</li>
+            <li class="pending">Twitch Drops and survey-related bug reports</li>
+            <li class="pending">Insufficient WayneTech awarded when using the skip-event feature</li>
+            <li class="pending">100% completion reward reported unobtainable for some players who applied the Day 1 patch</li>
+            <li class="pending">Random crashes, including isolated reports of corrupted save files</li>
+            <li class="pending">Players stuck at 49/50 on the Bat Symbols collectible tracker</li>
+            <li class="pending">Clue Master train puzzle bugging out for some players</li>
+          </ul>
+        </div>
+
+        <p>A few other issues on community-tracked lists — the "On the Prowl" movement bug and the Riddler Trophy Batcave interaction — were already flagged as likely candidates for this exact patch, and both are confirmed fixed above. If you're still seeing them after updating, verify your game files (Steam: right-click the game &rarr; Properties &rarr; Local Files) or check that the patch fully downloaded on console.</p>
+
+        <div class="highlight-box"><strong>For context:</strong> Update 1.006, released June 2, 2026, focused on broader stability and stuttering fixes. See our <a href="/blog/update-1-006-patch-notes-june-2026.html">full 1.006 breakdown</a> if you want the fuller history of post-launch patches, or the <a href="/blog/post-launch-patch-tracker.html">Post-Launch Patch Tracker</a> for the Day 1 patch notes.</div>
+
+        <h2>How to Get Update 1.007</h2>
+
+        <p>The patch downloads automatically on PS5, Xbox Series X|S, and PC (Steam) when your platform is connected to the internet with auto-updates enabled. On PS5, highlight the game tile, press the Options button, and select "Check for Update" to force it manually. On Steam, right-click the game in your library and choose Properties &gt; Updates, or simply relaunch the client. Epic Games Store players will need to wait — WB Games has confirmed that platform's version of the update is coming later this month, separate from today's PS5/Xbox/PC rollout.</p>
+
+        <h2>What's Next</h2>
+
+        <p>TT Games hasn't announced a date for update 1.008, but the roughly six-week gap between 1.006 and 1.007 suggests the studio is working through its bug backlog at a measured pace rather than rushing frequent hotfixes. The bigger date on the calendar remains September 18, 2026, when the Mayhem Collection DLC arrives with playable Joker and Harley Quinn, a new Mayhem Mode, and an Arkham Asylum-set story mission. Whether 1.008 lands before then to clear out the remaining known issues — particularly the WB Services redemption error and the stuck-at-49/50 Bat Symbols bug — is still an open question.</p>
+
+        <p>In the meantime, players chasing full completion can check our <a href="/guides/collectibles-guide.html">Collectibles Guide</a> for a breakdown of every Riddler Trophy and WayneTech Cache location, or our <a href="/guides/waynetech-upgrades-guide.html">WayneTech Upgrades Guide</a> for what those caches actually unlock.</p>
+
+        <section class="references" style="margin-top:2rem;padding:1.5rem;background:var(--bg-card,#1a1a2e);border-radius:8px;border-left:4px solid #f0c040;">
+          <h2 style="font-size:1.1rem;margin-bottom:0.75rem;color:var(--accent,#f0c040);border:none;padding-top:0;margin-top:0;">Sources &amp; References</h2>
+          <ol style="margin:0;padding-left:1.25rem;line-height:1.8;">
+            <li><a href="https://legogamessupport.wbgames.com/hc/en-us/articles/52506110938259-LEGO-Batman-Legacy-of-the-Dark-Knight-July-2026-Update" target="_blank" rel="noopener noreferrer">WB Games Support &mdash; "LEGO Batman: Legacy of the Dark Knight | July 2026 Update" (official patch notes)</a></li>
+            <li><a href="https://mp1st.com/title-updates-and-patches/lego-batman-legacy-of-the-dark-knight-update-1-007-swoops-fixes-july-14" target="_blank" rel="noopener noreferrer">MP1st &mdash; "LEGO Batman: Legacy of the Dark Knight Update 1.007 Swoops in for Fixes on July 14" (Alex Co, July 14, 2026)</a></li>
+          </ol>
+        </section>
+
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Sources</h3>
+        <a href="https://legogamessupport.wbgames.com/hc/en-us/articles/52506110938259-LEGO-Batman-Legacy-of-the-Dark-Knight-July-2026-Update" class="sidebar-link" target="_blank" rel="noopener">WB Games Support: Official Patch Notes</a>
+        <a href="https://mp1st.com/title-updates-and-patches/lego-batman-legacy-of-the-dark-knight-update-1-007-swoops-fixes-july-14" class="sidebar-link" target="_blank" rel="noopener">MP1st: Update 1.007 Coverage</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>Latest Posts</h3>
+        <a href="/blog/update-1-007-patch-notes-july-2026.html" class="sidebar-link">Update 1.007: Every Fix in the July 14 Patch</a>
+        <a href="/blog/arkham-comparison-legacy-of-the-dark-knight.html" class="sidebar-link">How Legacy of the Dark Knight Stacks Up Against Arkham</a>
+        <a href="/blog/batgirl-character-guide.html" class="sidebar-link">Batgirl Character Guide</a>
+      </div>
+      <div class="sidebar-box" style="border-style: dashed; padding: 0; overflow: hidden;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1971262808837870"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+      <div class="sidebar-box">
+        <h3>Popular Guides</h3>
+        <a href="/guides/beginners-guide.html" class="sidebar-link">Beginner's Guide: 10 Tips</a>
+        <a href="/guides/collectibles-guide.html" class="sidebar-link">Collectibles Guide</a>
+        <a href="/guides/trophy-guide.html" class="sidebar-link">Trophies &amp; Achievements</a>
+        <a href="/guides/waynetech-upgrades-guide.html" class="sidebar-link">WayneTech Upgrades Guide</a>
+        <a href="/guides/100-percent-completion.html" class="sidebar-link">100% Completion Guide</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrickHeroGuide.com. All rights reserved.</p>
+    <p class="footer-disclaimer">BrickHeroGuide is an independent fan site and is not affiliated with, endorsed by, or connected to the LEGO Group, DC Comics, Warner Bros., or any of their subsidiaries.</p>
+  </footer>
+  <script>document.getElementById('menuToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});</script>
+</body>
+</html>

@@ -1688,3 +1688,50 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [x] Git commit + push 已完成
+
+## 2026-07-17 — Photo Mode Guide Blog + WayneTech/Gotham-Districts/Co-Op SEO Freshness & Bug-Status Fixes
+
+### 阶段一：Blog 更新
+- **`blog/photo-mode-guide.html`** — "LEGO Batman Legacy Photo Mode: How to Use It (and Unlock the Collecting Evidence Trophy)". 870字（正文）. 内容：官方LEGO Games News账号（TT Games）确认游戏内置Photo Mode功能，逐项说明通过暂停菜单进入方式、景深/曝光/色彩分级调整选项、通过PowerPyx奖杯攻略核实的"Collecting Evidence"铜奖杯解锁方法（相机滚转超过20度）、Steam社区论坛记录的PC端截图保存路径（AppData\Local\Dinner\Saved\Screenshots\Windows\），并结合In Game News报道说明Photo Mode与PlayStation "Share of the Week"社区活动的关联，末尾展望9月18日Mayhem Collection DLC上线后Photo Mode的使用场景。选题背景：今日新闻搜索（补丁1.007后续、SDCC展台、Metacritic/Steam评分、DLC预告片、速通社区等）均已被既有67篇博客覆盖，搜索发现Photo Mode这一已确认但站内从未报道过的功能，且有4个可直接抓取核实的独立信源支撑，故选定此常青向Tips选题。Tags: Tips. Image: `legobatmangame.com/_astro/gear-3.5F2kKy0I_1z9tbe.webp`（蝙蝠摩托行动画面，此前使用8次，与postfooter并列全站最少使用）. Sources: 4条真实URL（官方X账号确认帖 + PowerPyx奖杯攻略 + In Game News社区报道 + Steam社区讨论帖，均为直接抓取原文，非搜索摘要）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：8 组 ✅ / 0 组 ❌
+  1. Photo Mode功能存在性 → ✅ 直接抓取官方LEGO Games News（TT Games官方账号）X帖子原文"LEGO Batman: Legacy of the Dark Knight has a PHOTO MODE"确认
+  2. Photo Mode通过暂停菜单进入 → ✅ 直接抓取In Game News报道原文"By accessing the pause menu, players can enter this mode"确认，未采用搜索引擎合成摘要
+  3. Photo Mode可调整景深、曝光、色彩分级 → ✅ 同上In Game News原文"providing a range of adjustments such as depth of field, exposure, and color grading"逐字核对，未与无障碍设置的滤镜列表（色差、动态模糊等，属另一功能）混淆
+  4. "Collecting Evidence"铜奖杯：相机滚转超过20度解锁 → ✅ 直接抓取PowerPyx官方奖杯攻略页确认，与Game8报道交叉印证（相机在Photo Mode中滚转的机制）
+  5. PC端截图保存路径 `AppData\Local\Dinner\Saved\Screenshots\Windows\` → ✅ 直接抓取Steam社区讨论帖原文核对，标注为社区实测发现（非官方文档），措辞中明确来源为玩家报告
+  6. Photo Mode与PS "Share of the Week"社区活动的关联 → ✅ 直接抓取In Game News原文"instrumental in the recent Share of the Week winners initiative"确认，并链接至站内既有`blog/ps-share-of-the-week-community-screenshots.html`
+  7. Mayhem Collection DLC日期（2026年9月18日）及Joker/Harley Quinn可玩内容 → ✅ 与`data/game-facts.json`权威内部数据完全一致
+  8. PS5/Xbox平台截图通过主机原生功能处理（非游戏内独立图库）→ ✅ 表述为平台通用常识性说明，未附加具体游戏特定数值声明，风险等级为🟢低风险，无需额外信源
+- References：4 条真实 URL（官方X账号 + PowerPyx + In Game News + Steam社区讨论）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（禁止错误清单全项 grep 扫描 + 数值一致性抽查 + canonical格式检查 + "Last updated"过期日期排查）
+**关键发现：**
+1. 禁止错误清单全项扫描：初筛命中`trophy-guide.html`（"trophy-achievement-guide"子串来自外部URL）、`deluxe-edition-explained.html`及`release-date-platforms.html`（"Switch 2...Exclusive"子串），人工复核确认均为误报——分别对应外部文章链接、Switch 2实体版限定Minifigure周边（非Dark Knight Returns Batsuit）。**未发现任何真实违规项**。canonical URL格式检查：全部31个guide页面均为干净URL，无`.html`后缀违规。
+2. 数值一致性抽查：主线任务21、WayneTech缓存200、收藏品247+、四座哥谭岛屿在多页面中保持一致，未发现矛盾。
+3. **重要发现**：`guides/gotham-districts-guide.html`中Tricorner区域描述仍标注"1.006版本已知bug——世界宝箱可能在读档后消失"，但站内`blog/update-1-007-patch-notes-july-2026.html`（2026-07-15发布，已核实）已确认该WayneTech缓存宝箱不生成问题已于7月14日Update 1.007修复。该guide页面存在过期bug状态信息，属本次审计发现的最高优先级修正项，已在SEO Top 3中处理。
+4. "Last updated"过期日期排查：发现14个guide页面仍停留在5月-6月6日区间（`batcave-mural-challenges.html`、`best-characters-each-mission.html`、`co-op-guide.html`、`detective-mode-guide.html`、`gotham-districts-guide.html`、`gotham-map-guide.html`、`is-it-good-for-kids.html`、`jim-gordon-guide.html`、`mission-1/2/3-walkthrough.html`、`post-game-checklist.html`、`tips-for-new-players.html`、`waynetech-upgrades-guide.html`），已优先处理与今日发现的1.007过期bug信息直接相关、且在`data/game-facts.json`内部权威链接（internal_links）中被列为高价值页面的三项，其余记录供后续会话继续处理。
+
+**SEO Top 3 更新：**
+1. **`guides/gotham-districts-guide.html`** — 修正Tricorner区域描述及排障清单中的过期bug状态：将"1.006版本已知bug，宝箱可能消失"更新为"该问题已于Update 1.007（7月14日）修复"，并新增指向`blog/update-1-007-patch-notes-july-2026.html`的交叉链接；"Last updated"由June 6刷新为July 17。(评分：9/10 — 这是本次审计中唯一发现的"guide页面描述已被后续补丁修复的bug为仍然存在"的事实性过期问题，直接影响玩家排障判断，且该页面是`game-facts.json`内部链接清单收录的高价值页面)
+2. **`guides/waynetech-upgrades-guide.html`** — 在Tricorner Island路线提示框中补充说明该区域缓存宝箱不生成问题已于Update 1.007修复，避免玩家因read到旧版信息而误判缺失的芯片是永久性问题；新增交叉链接；"Last updated"由June 6刷新为July 17。(评分：7/10 — 与gotham-districts-guide同源问题的关联页面，同样是`game-facts.json`内部高价值链接页面，此前更新日期滞后超过6周)
+3. **`guides/co-op-guide.html`** — 在"随时加入"提示框中新增建议双人暂停游戏体验Photo Mode合影，交叉链接至今日新博客`blog/photo-mode-guide.html`；"Last updated"由June 6刷新为July 17。(评分：6/10 — `game-facts.json`内部链接清单收录页面，此前更新日期滞后超过6周，且与今日博客主题形成自然的站内引导)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（8组高风险声明，全部通过直接抓取原文验证，未采用搜索引擎合成摘要作为唯一依据）
+- [x] References 区块已填写（4条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + 数值一致性抽查 + canonical格式检查 + 过期日期排查 + 过期bug状态排查）
+- [x] SEO Top 3 更新已执行（gotham-districts-guide.html / waynetech-upgrades-guide.html / co-op-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（102页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成

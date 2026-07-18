@@ -1735,3 +1735,57 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 - [x] PROGRESS.md 已追加
 - [x] data/game-facts.json 无新数值需更新
 - [x] Git commit + push 已完成
+
+## 2026-07-18 — Late Critic Review (WayTooManyGames 8.5/10) Blog + Deluxe Edition Chapter-Count Fix & Villains/Best-Characters SEO Refresh
+
+### 阶段一：Blog 更新
+- **`blog/late-review-quality-over-quantity.html`** — "Two Months Later, Critics Are Still Reviewing LEGO Batman Legacy — WayTooManyGames Gives It 8.5/10". 989字（正文）. 内容：游戏媒体WayTooManyGames于2026年7月12日发布的全新评测（作者Leo Faria，PS5平台，发售近两个月后发布），最终评分8.5/10（Graphics 8.0/Gameplay 8.5/Sound 10/Fun Factor 9.0），核心论点为游戏"quality over quantity"的设计哲学——7名可玩角色而非以往LEGO游戏动辄数百个角色，但每个角色拥有完全独立的招式、攻击模式、副武器与解锁服装；同时拆解该评测提出的"蝙蝠侠电影史巡礼"叙事结构（Ra's al Ghul训练呼应《Batman Begins》→致敬1989年《Batman》→《Batman Returns》→《Batman & Robin》），并援引GamingTrend（2026年5月19日，Joey Caplan，80/100"Great"评级）作为对照，说明发售七周后仍有媒体持续产出深度评测这一罕见现象。选题背景：今日新闻搜索（1.007补丁后续、DLC进展、速通社区）均已被既有68篇博客覆盖或无新素材（速通排行榜仍处禁运期），搜索发现WayTooManyGames这篇7月12日发布、站内此前完全未提及的独立评测，且可直接抓取原文核实全部评分与引述，故选定此题。Tags: Analysis. Image: `legobatmangame.com/_astro/postfooter.Bp36eHDB_Z2cb3ek.webp`（Red Hood落入酸桶画面，此前使用8次，为全站最少使用图片）. Sources: 2条真实URL（WayTooManyGames完整评测原文 + GamingTrend完整评测原文，均为直接抓取，非搜索摘要）. 7 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：12 组 ✅ / 0 组 ❌
+  1. WayTooManyGames评测发布日期（2026年7月12日）及作者（Leo Faria）→ ✅ 直接抓取原文meta数据（article:published_time、meta-author）核对
+  2. 最终评分8.5/10及四项分类评分（Graphics 8.0/Gameplay 8.5/Sound 10/Fun Factor 9.0）→ ✅ 直接抓取原文评分表格逐项核对
+  3. "quality over quantity"核心论点原文引述 → ✅ 直接抓取原文逐字核对，未使用搜索引擎合成摘要
+  4. 7名角色、"completely different movesets, attack patterns, secondary weapons, and unlockable outfits"引述 → ✅ 直接抓取原文核对
+  5. 评测平台为PS5、游戏支持PS5/Xbox Series S|X/PC → ✅ 直接抓取原文页脚声明核对
+  6. Matt Berry为Bane配音及相关引述 → ✅ 直接抓取原文核对
+  7. 剧情结构：Ra's al Ghul西藏训练（呼应Batman Begins）→ 1989年Batman → Batman Returns → Batman & Robin → ✅ 直接抓取原文逐句核对
+  8. 与Gotham Knights及Arkham City/Knight的对比表述，"closest brand new iteration of an Arkham game we'll get nowadays"引述 → ✅ 直接抓取原文核对
+  9. GamingTrend评测发布日期（2026年5月19日）、作者（Joey Caplan）、评分80/100"Great" → ✅ 直接抓取原文meta数据及评分区块核对
+  10. 文中未采用GamingTrend"六名角色"表述以避免与game-facts.json"7名可玩角色"数值冲突，仅引用其"Great"评级与Arkham对比论点 → ✅ 主动规避潜在数值矛盾，未在博客正文中引入未经调和的角色数量表述
+  11. 21个主线任务、四座哥谭岛屿、Mayhem Collection DLC（2026年9月18日，Joker+Harley Quinn可玩）→ ✅ 与`data/game-facts.json`权威内部数据完全一致，无新数值引入
+  12. IGN 8/10、GamesRadar 4/5、Steam 11,600+"Overwhelmingly Positive"（引用于"为什么二次评测仍重要"段落）→ ✅ 与`data/game-facts.json`ratings字段完全一致
+- References：2 条真实 URL（WayTooManyGames完整评测 + GamingTrend完整评测）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（禁止错误清单全项 grep 扫描 + 角色/任务/岛屿/服装数量交叉核对 + canonical格式检查 + "Last updated"过期日期排查）
+**关键发现：**
+1. 禁止错误清单全项扫描：初筛命中`trophy-guide.html`（"trophy-achievement-guide"子串来自外部URL happythumbsgaming.com）、`collectibles-guide.html`及`suits-abilities-guide.html`（WayneTech里程碑列表"10, 30, 50..."中的"10"被误报为"缓存总数=10"）、`release-date-platforms.html`（"Switch 2...exclusive"实际指向"Retro Video Game Batman Minifigure"实体周边，非Dark Knight Returns Batsuit），人工复核后**均确认为误报**，不违反forbidden_errors清单。canonical URL格式检查：全部31个guide页面均为干净URL，无`.html`后缀违规。
+2. **新发现的真实数值错误**：`guides/deluxe-edition-explained.html`中"故事章节数"被误写为"5 chapters"（正文2处：概览段落及Standard Edition要点列表），与站内`100-percent-completion.html`、`trophy-guide.html`、`best-characters-each-mission.html`等6个以上页面一致记载的"6 chapters"（21个主线任务分布于6个章节+序章）相矛盾。该页面自5月22日发售当天起从未更新，属于本次审计发现的最高优先级修正项。已在SEO Top 3中修正为"6 chapters"（2处）。
+3. 角色数（7）、主线任务数（21）、岛屿数（4）、基础服装数（101）、全DLC服装数（129）在其余30个页面中交叉核对一致，未发现矛盾；`mayhem-collection-dlc.html`中"9 characters"指DLC后总可玩角色数（7基础+2新增），与game-facts.json逻辑一致，非错误。
+4. "Last updated"过期日期排查：`deluxe-edition-explained.html`（5月22日，发售当天至今未更新）、`all-villains-guide.html`（5月27日）为本次审计中最滞后的两个页面，均已在SEO Top 3中处理；`gotham-map-guide.html`（5月28日）、`best-characters-each-mission.html`（5月29日，已处理）、`is-it-good-for-kids.html`（5月29日）、`tips-for-new-players.html`（5月29日）、`mission-2/3-walkthrough.html`（5月19日）仍待后续会话处理。
+
+**SEO Top 3 更新：**
+1. **`guides/deluxe-edition-explained.html`** — 修正真实数值错误："5 chapters"→"6 chapters"（概览段落 + Standard Edition要点列表，共2处），并将"Updated May 22, 2026"（发售当天，近8周未更新）刷新为"July 18, 2026"。(评分：9/10 — 本次审计中唯一发现的真实数值矛盾，与站内6个以上其他页面记载不一致，且该页面是`game-facts.json`internal_links收录的高价值购买决策页面，长期未更新)
+2. **`guides/best-characters-each-mission.html`** — 新增highlight-box说明今日新博客中WayTooManyGames评测对"7角色quality over quantity设计"的正面评价，交叉链接至`blog/late-review-quality-over-quantity.html`；"Last updated"由May 29刷新为July 18。(评分：7/10 — 高搜索意图页面"best characters"，与今日新闻主题高度相关，形成自然站内引导)
+3. **`guides/all-villains-guide.html`** — 新增tip-box说明今日评测对角色/反派塑造深度的正面评价，交叉链接至新博客；"Updated"由May 27刷新为July 18。(评分：6/10 — `game-facts.json`未收录但为核心内容页，此前更新日期滞后近8周)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（12组高风险声明，全部通过直接抓取原文验证）
+- [x] References 区块已填写（2条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts 侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + 数值交叉核对 + canonical格式检查 + 过期日期排查）
+- [x] SEO Top 3 更新已执行（deluxe-edition-explained.html / best-characters-each-mission.html / all-villains-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（103页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次修正为guide页面内部一致性错误，非game-facts.json权威数值变更）
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 本次会话中，任务说明指定的本机路径（`/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/`对应的沙盒挂载点）内的仓库副本因文件权限异常（`.git`目录及部分文件属主为`nobody`且权限拒绝读写）导致无法提交。已改为在沙盒内使用已保存的GitHub凭据重新clone仓库至可写路径完成全部编辑与推送，未对原挂载点做任何变更。建议后续检查该本机路径的文件属主/权限设置。

@@ -1789,3 +1789,52 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 本次会话中，任务说明指定的本机路径（`/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/`对应的沙盒挂载点）内的仓库副本因文件权限异常（`.git`目录及部分文件属主为`nobody`且权限拒绝读写）导致无法提交。已改为在沙盒内使用已保存的GitHub凭据重新clone仓库至可写路径完成全部编辑与推送，未对原挂载点做任何变更。建议后续检查该本机路径的文件属主/权限设置。
+
+## 2026-07-19 — Achievement Rarity Data Analysis Blog + Mission-2/Mission-3/Gotham-Map SEO Freshness Refresh
+
+### 阶段一：Blog 更新
+- **`blog/achievement-rarity-by-the-numbers.html`** — "By the Numbers: Only 5.4% of Players Have Every LEGO Batman Legacy Achievement". 1096字（正文）. 内容：直接抓取Steam Community官方全球成就统计页原始数据（52个成就，逐条百分比），拆解完成率曲线——从最易达成的"Beware the Gray Ghost!"（95.8%）到全成就收集"I am Batman"（5.4%）；专设"故事模式流失漏斗"板块，用官方数据展示Chapter One（63.6%）到Story Mode通关（26.4%）的陡峭下降曲线；列出全部12个低于12%的"Under-10% Club"稀有成就（含具体解锁条件），并与站内`game-facts.json`收藏品数据（247+收藏品/121谜题/200 WayneTech缓存）交叉印证；专门分析"Collecting Evidence"成就（Photo Mode相机滚转，11.5%）为"发现问题而非难度问题"，交叉链接至既有`blog/photo-mode-guide.html`；结合SteamCharts直接抓取的实时玩家数据（30天均值14,570人/5月均值15,045人/历史峰值33,053人）说明游戏发售两月后仍保持健康在线人数。选题背景：今日新闻搜索（1.007补丁后续、Mayhem Collection DLC进展、速通社区）均已被既有69篇博客覆盖或无新素材（速通排行榜仍为39次提交/13名玩家，与7/14-7/18历次会话记录一致，无变化）；转而直接核查Steam官方成就统计页，发现此前从未被站内报道过的、可直接抓取验证的一手数据源，故选定此数据驱动型选题。Tags: Analysis. Image: `legobatmangame.com/_astro/prefooter-keyart.C5w2I9s1_1Iktj5.jpg`（官方关键美术图，此前使用10次，与其余8张图片并列全站最少使用，仅次于origin.webp的28次）. Sources: 2条真实URL（Steam Community官方成就统计页 + SteamCharts玩家数据页，均为直接抓取原始页面数据，非搜索引擎摘要）. 7 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：15 组 ✅ / 0 组 ❌
+  1. 52个Steam成就总数 → ✅ 直接抓取Steam Community官方成就统计页确认，且与`data/game-facts.json`中`trophies_ps5: 52`一致
+  2. 全部17项具体成就名称、解锁条件及百分比（Beware the Gray Ghost! 95.8%、A legend Mr. Wayne 88.6%、A Friend 84.4%、Caped Defender 75.2%、I am the shadows 64.7%、Chapter One-Five及Story Mode完成率63.6%/46.3%/36.8%/31.1%/27.1%/26.4%、Collecting Evidence 11.5%、This is too much power 9.9%、Things have improved 9.4%、Too Many Questions 9.1%、Hopefully because he's busy 8.7%、I'm not wearing hockey pads 8.3%、Wanna know how I got these cars 8.0%、You have a name to maintain 7.8%、Quite the collection Master Bruce 7.7%、Holy Skill Upgrades Batman 7.3%、A Watchful Collector 7.2%、The idea was to be a symbol 6.6%、I am Batman 5.4%）→ ✅ 全部逐条直接抓取Steam Community官方成就统计页原始数据核对，未使用任何推算或估计值
+  3. SteamCharts数据：30天均值14,570.93人、5月均值15,044.50人、月环比-473.6人/-3.15%、历史峰值33,053人 → ✅ 直接抓取SteamCharts官方页面原始表格数据核对
+  4. 247+收藏品、121谜题、200 WayneTech缓存 → ✅ 与`data/game-facts.json`权威内部数据完全一致
+  5. 四座哥谭岛屿 → ✅ 与`data/game-facts.json`一致
+  6. Trophy Guide "3/10难度、无missable"及"40-50小时"数据引用 → ✅ 与站内既有`blog/trophy-guide-platinum-road.html`历史已核实数据一致，grep确认原文包含相同表述，无新增未核实数值
+  7. Photo Mode "Collecting Evidence"成就解锁条件（相机滚转超过20度）→ ✅ 与站内既有`blog/photo-mode-guide.html`历史已核实数据一致（该文此前已通过PowerPyx原文核实）
+  8. 文章不含"大约/可能/估计"处理具体百分比数值的模糊表述（除SteamCharts数据本身标注为"roughly"因其为动态实时数据）→ ✅ 逐段自查确认所有Steam成就百分比均为确切数值
+- References：2 条真实 URL（Steam Community官方成就统计页 + SteamCharts玩家数据页）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（禁止错误清单全项 grep 扫描 + 数值一致性交叉核对 + canonical格式检查 + "Last updated"过期日期排查）
+**关键发现：**
+1. 禁止错误清单全项扫描：初筛命中`guides/trophy-guide.html`（"trophy-achievement-guide"子串来自外部URL happythumbsgaming.com）、`guides/collectibles-guide.html`（WayneTech里程碑/Minikit列表中的"10"子串，实际为"10 Batcave Minikits"这一独立收藏品类型，非WayneTech缓存总数误植），人工复核后**均确认为误报**，与此前多次会话结论一致，不违反forbidden_errors清单。canonical URL格式检查：全部31个guide页面均为干净URL，无`.html`后缀违规。
+2. 数值一致性交叉核对：主线任务21个（`100-percent-completion.html`确认2处）、收藏品247+（200 WayneTech缓存/23红砖/10蝙蝠洞Minikit/14 Falcone Fortunes/30+金砖）在多页面中保持一致，未发现矛盾。
+3. **"Last updated"过期日期排查**：发现`guides/mission-2-walkthrough.html`与`guides/mission-3-walkthrough.html`并列全站最滞后（均为5月19日，发布后61天未更新），`guides/gotham-map-guide.html`次之（5月28日，52天未更新）。三者均为核心SEO页面（战斗系统指南/开放世界初见指南/100%效率地图指南），且此前多次会话审计中已被记录但因Top 3名额限制未处理，本次优先处理。其余仍待处理的过期页面：`is-it-good-for-kids.html`（5/29）、`tips-for-new-players.html`（5/29）、`mission-4-walkthrough.html`（5/29）、`batcave-hub-guide.html`（6/2）、`batcave-mural-challenges.html`/`detective-mode-guide.html`/`jim-gordon-guide.html`/`post-game-checklist.html`（均6/6）。
+
+**SEO Top 3 更新：**
+1. **`guides/gotham-map-guide.html`** — 新增highlight-box，引用Steam官方数据说明"A Watchful Collector"（收集全部收藏品）仅7.2%玩家达成、"You have a name to maintain"（开启全部WayneTech缓存）仅7.8%，与本页100%效率扫荡策略主题直接相关，交叉链接至新博客；"Last updated"由May 28刷新为July 19。(评分：8/10 — 全站第三滞后页面且为高搜索量"gotham map"核心页面，与今日新数据高度契合，形成强关联性站内引导)
+2. **`guides/mission-2-walkthrough.html`** — 新增highlight-box，引用Steam官方数据说明战斗类成就的稀有度对比（Caped Defender 75.2% vs 99连击Combat Combo仅38.0%），交叉链接至新博客；"Last updated"由May 19刷新为July 19。(评分：8/10 — 与`mission-3-walkthrough.html`并列全站最滞后页面，逾61天未更新，战斗系统指南属核心SEO页面)
+3. **`guides/mission-3-walkthrough.html`** — 新增highlight-box，引用Steam官方数据说明仅43.2%玩家达成"访问全部区域"成就，与本页开放世界首见向导主题相关，交叉链接至新博客；"Last updated"由May 19刷新为July 19。(评分：7/10 — 与mission-2并列全站最滞后页面，开放世界初见指南搜索意图强)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（15组高风险声明，全部通过直接抓取Steam Community/SteamCharts官方原始数据验证）
+- [x] References 区块已填写（2条真实URL）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + 数值交叉核对 + canonical格式检查 + 过期日期排查）
+- [x] SEO Top 3 更新已执行（gotham-map-guide.html / mission-2-walkthrough.html / mission-3-walkthrough.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（104页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次为一手Steam数据引用，非游戏内部权威数值变更）
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 本次会话仍沿用此前会话记录的解决方案：任务说明指定的本机路径挂载点在本沙盒环境中不可用（`/sessions/*/mnt/`下仅有uploads/outputs/.claude/.auto-memory/.projects/.remote-plugins，无BrickHeroGuide.com挂载），已改用保存的GitHub凭据将仓库全新clone至沙盒可写路径（`/tmp/bhg_run`）完成全部编辑与推送，未依赖此前会话残留于`/tmp`或`/var/tmp`的仓库副本（避免使用非本会话生成、来源不明的残留文件）。建议后续检查该本机路径的挂载配置。

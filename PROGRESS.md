@@ -1838,3 +1838,54 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 本次会话仍沿用此前会话记录的解决方案：任务说明指定的本机路径挂载点在本沙盒环境中不可用（`/sessions/*/mnt/`下仅有uploads/outputs/.claude/.auto-memory/.projects/.remote-plugins，无BrickHeroGuide.com挂载），已改用保存的GitHub凭据将仓库全新clone至沙盒可写路径（`/tmp/bhg_run`）完成全部编辑与推送，未依赖此前会话残留于`/tmp`或`/var/tmp`的仓库副本（避免使用非本会话生成、来源不明的残留文件）。建议后续检查该本机路径的挂载配置。
+
+## 2026-07-20 — TRUE UNLOCKS Mod Datamining Blog + Suits/Mission-1/Kids-Guide SEO Freshness Refresh
+
+### 阶段一：Blog 更新
+- **`blog/true-unlocks-mod-maps-every-gatekept-reward.html`** — "A New Nexus Mod Just Mapped Out Every 'Gatekept' Unlock in LEGO Batman: Legacy of the Dark Knight". 1006字（正文）. 内容：报道7月10日上线的Nexus Mods模组"TRUE UNLOCKS"（作者Elvatopancbo），该模组文档化了游戏内置的17个"解锁代码"分类，逐条核实：3个金色蝙蝠车+1个金色战服对应4款实体LEGO套装（76330-76333，价格与兑换流程与LEGO.com官方页面完全一致，直接抓取核实）；HBO Max/WB Games账户绑定战服（与站内`suits-abilities-guide.html`及`data/game-facts.json`权威数据完全一致）；9个Twitch drop代码中8个与站内已发布`twitch-drops-batcave-cosmetics-guide.html`的8个Batcave道具完全匹配；明确标注2个此前从未被任何来源记录的条目（问卷调查获得的Stud Cache道具、拥有全部金色奖励解锁的Golden Red Brick）以及1个未在官方渠道单独提及的"Twitch Drop Stud-Reward"代码为"数据挖掘所得、未经官方确认"，不作为既定事实呈现。选题背景：今日新闻搜索（1.007补丁后续为7/15已报道内容的官方页面重复、SDCC 2026 booth信息与7/8已发布博客高度重复无新增细节、销售数据为5月27日Alinea Analytics旧数据且已被6/8博客覆盖）均已被站内覆盖或缺乏新素材；转而搜索mod社区动态，发现该模组披露的解锁代码映射为站内此前未曾以此形式呈现的一手数据源，故选定此选题。Tags: Community. Image: `legobatmangame.com/_astro/gear-3.5F2kKy0I_1z9tbe.webp`（蝙蝠侠骑蝙蝠摩托，此前使用10次，与其余7张图片并列全站最少使用）. Sources: 2条真实URL（Nexus Mods模组页面直接抓取核实 + LEGO.com官方兑换页面直接抓取核实，两者内容完全一致）. 7 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：9 组 ✅ / 0 组 ❌（2组明确标注为"数据挖掘、未经官方确认"，不计入已核实声明，已在正文highlight-box中清晰说明）
+  1. TRUE UNLOCKS模组存在、7月10日上传、作者Elvatopancbo、模组#208、共17个代码 → ✅ 直接抓取Nexus Mods模组页面确认（文件信息、上传日期、作者、完整代码描述文本）
+  2. 3个金色蝙蝠车+1个金色战服对应LEGO套装76330/76331/76332/76333及各自价格（$79.99/$29.99/$29.99/$29.99）→ ✅ 直接抓取LEGO.com官方兑换页面确认，与`data/game-facts.json`中`physical_lego_sets_bonus_content`字段完全一致
+  3. LEGO套装兑换流程（扫描QR码、注册LEGO账户、代码有效期至2029年3月1日、每套装每账户限兑一次）→ ✅ 直接抓取LEGO.com官方页面确认，与`data/game-facts.json`一致
+  4. HBO Max账户绑定解锁Steel Dark Knight与Black Lantern战服、WB Games/Steam账户绑定解锁Golden Age战服 → ✅ 与`data/game-facts.json`及站内`guides/suits-abilities-guide.html`已核实内容一致
+  5. 8个Twitch drop道具（Gaming Chair/Gamer Desk/Controller Stand/Collectible Display Case/Comic Book Stand/Neon Bat-Symbol/Drinks Fridge/Controller Backdrop）→ ✅ 与站内已发布并核实来源的`blog/twitch-drops-batcave-cosmetics-guide.html`完全匹配
+  6. 第9个"Twitch Drop Stud-Reward"代码 → ⚠️ 模组描述中提及但站内既有Twitch guide未单独记录此项，正文中明确标注为"未经官方确认的额外项"
+  7. Stud Cache道具（问卷调查获得）→ ⚠️ 仅见于模组描述，无其他来源佐证，正文highlight-box中明确标注为"数据挖掘所得，非官方确认"
+  8. Golden Red Brick（拥有全部金色奖励解锁）→ ⚠️ 仅见于模组描述，无其他来源佐证，同上明确标注
+  9. 文章不含将未核实内容包装为既定事实的模糊表述 → ✅ 逐段自查确认，两处未核实条目均有独立highlight-box明确警示
+- References：2 条真实 URL（均直接抓取核实，无占位符）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（禁止错误清单全项 grep 扫描 + canonical格式检查 + "Last updated"过期日期排查）
+**关键发现：**
+1. 禁止错误清单全项扫描：初筛命中`guides/trophy-guide.html`中的"trophy-achievement-guide"子串，与此前多次会话结论一致，来自外部URL（happythumbsgaming.com），非站内文件命名错误，**确认为误报**。全站31个guide页面canonical URL均为干净URL，无`.html`后缀违规，无WayneTech=10、主线任务=29+/8等禁止错误。
+2. **"Last updated"过期日期排查**：`guides/mission-1-walkthrough.html`（实际标题为"Story & Premise Overview"）自游戏发售当天5月22日起从未更新，为全站最滞后页面（59天未更新），本次审计中优先级最高；`guides/is-it-good-for-kids.html`与`guides/tips-for-new-players.html`并列次滞后（均为5月29日，52天未更新）。`guides/mission-4-walkthrough.html`（5月29日）、`guides/batcave-hub-guide.html`（6月2日）、`guides/batcave-mural-challenges.html`/`detective-mode-guide.html`/`jim-gordon-guide.html`/`post-game-checklist.html`（均6月6日）仍待后续会话处理。
+3. `guides/mission-1-walkthrough.html`的"Release & Reception"章节仅记载发售初期Steam评测数（"1,700+ reviews at launch"），与`data/game-facts.json`当前权威数据（11,600+评测、"Overwhelmingly Positive"持续两个月）不一致，已在SEO Top 3中修正。
+4. `guides/suits-abilities-guide.html`中关于金色套装/蝙蝠车/LEGO套装兑换的详细记载（76330-76333套装映射、账户绑定战服）经与今日新博客核实的TRUE UNLOCKS模组数据逐条交叉核对，**完全一致**，无矛盾，属额外验证加分项。
+
+**SEO Top 3 更新：**
+1. **`guides/mission-1-walkthrough.html`** — 修正Steam评测数据过时表述："over 1,700 reviews at launch"补充为"two months on, the game remains 'Overwhelmingly Positive' with more than 11,600 reviews logged"；"Last updated"由May 22刷新为July 20。(评分：9/10 — 全站59天未更新的最滞后页面，且发现真实数据过时问题，非仅日期刷新)
+2. **`guides/suits-abilities-guide.html`** — 新增highlight-box，引用今日新博客对TRUE UNLOCKS模组的报道，说明社区数据挖掘独立证实了本页已有的LEGO套装/账户绑定战服兑换映射，交叉链接至新博客；"Last updated"由July 13刷新为July 20。(评分：7/10 — 与今日新闻主题高度相关且形成双向验证的自然站内引导，属核心购买决策/收集向页面)
+3. **`guides/is-it-good-for-kids.html`** — 新增tip-box，说明9月18日Mayhem Collection DLC将加入Joker与Harley Quinn可玩角色及新增剧情任务，为家长提前预警内容基调可能的变化；"Last updated"由May 29刷新为July 20。(评分：7/10 — 全站并列第二滞后页面之一，"是否适合儿童"为高搜索意图决策型页面，此前从未提及DLC相关内容)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（9组高风险声明，全部通过直接抓取Nexus Mods/LEGO.com官方原始数据验证，2组数据挖掘内容明确标注未确认）
+- [x] References 区块已填写（2条真实URL，均直接抓取核实）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + canonical格式检查 + 过期日期排查）
+- [x] SEO Top 3 更新已执行（mission-1-walkthrough.html / suits-abilities-guide.html / is-it-good-for-kids.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（105页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次为社区数据挖掘引用与既有数据交叉验证，非游戏内部权威数值变更）
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 本次会话沿用此前多次会话记录的解决方案：任务说明指定的本机路径挂载点在本沙盒环境中不可用；发现`/var/tmp/brickhero-push`存在此前会话残留的仓库副本，但其`.git`目录及部分文件属主为`nobody`且当前会话用户（`inspiring-upbeat-carson`）无读写权限（包括无法创建`.git/index.lock`），判定为不可用的残留状态，未使用该副本任何内容。已改用保存的GitHub凭据将仓库全新clone至沙盒可写路径（`/tmp/work/repo`）完成全部编辑与推送。建议后续检查该本机路径挂载点及`/var/tmp`残留副本的属主/权限设置。

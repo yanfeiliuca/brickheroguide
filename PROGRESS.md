@@ -1889,3 +1889,46 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 本次会话沿用此前多次会话记录的解决方案：任务说明指定的本机路径挂载点在本沙盒环境中不可用；发现`/var/tmp/brickhero-push`存在此前会话残留的仓库副本，但其`.git`目录及部分文件属主为`nobody`且当前会话用户（`inspiring-upbeat-carson`）无读写权限（包括无法创建`.git/index.lock`），判定为不可用的残留状态，未使用该副本任何内容。已改用保存的GitHub凭据将仓库全新clone至沙盒可写路径（`/tmp/work/repo`）完成全部编辑与推送。建议后续检查该本机路径挂载点及`/var/tmp`残留副本的属主/权限设置。
+
+## 2026-07-21 — Talia al Ghul角色深度攻略博客 + Update 1.007补丁事实核查审计
+
+### 阶段一：Blog 更新
+- **`blog/talia-al-ghul-character-guide.html`** — "Talia al Ghul in LEGO Batman Legacy: Unlock, Abilities & Why Update 1.007 Finally Fixed Her". 约1,086字. 内容：Chapter 5 Tumbler Chase解锁触发条件、Ninja Dash与Blowdarts双技能详解、WB Games官方7月更新中LBAT-64（Talia技能升级失效）修复说明、League of Shadows剧情定位、实用技巧、总评. Tags: Guide, News. Image: legobatmangame.com/_astro/foes.CtQfCF5a_1k24YI.webp（并列最少使用图片之一）. Sources: WB Games Support官方补丁说明（LBAT-64原始出处）、Game8解锁指南、Deltia's Gaming第五章攻略、Dexerto角色wiki、Game Rant全角色解锁顺序. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：5条 ✅ / 0条 ❌
+  1. Talia解锁触发条件（Tumbler Chase任务，第5章）— ✅ 已核查（Game8 + Deltia's Gaming双源交叉确认）
+  2. Ninja Dash / Blowdarts技能描述 — ✅ 已核查（Dexerto + Game8一致）
+  3. Update 1.007（7月14日补丁）修复LBAT-64（Talia技能升级Bug）— ✅ 已核查（直接抓取WB Games Support官方补丁页面原文确认，ticket编号LBAT-64与官方描述完全一致）
+  4. Talia与Catwoman同为"反派转可玩角色"分类 — ✅ 已核查（Game Rant原文确认）
+  5. 站内game-facts.json数值（可玩角色7名、发售日等）与本文引用一致 — ✅ 已核查（无新增数值，未修改game-facts.json）
+- References：5条真实URL（均为本次会话直接WebFetch/WebSearch核实，非记忆生成）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 30 个 guide 页面（禁止错误清单全项grep扫描 + canonical格式检查 + 内部数值一致性抽查）
+**关键发现：** 全站禁止错误清单扫描无新增命中（`trophy-guide.html`中"trophy-achievement-guide"字符串再次确认为外部URL误报，非站内错误，与历史会话结论一致）；全站canonical URL均为干净URL；"43个Batcave挑战"数值在`guides/batcave-mural-challenges.html`与`blog/batcave-challenges-complete-guide.html`间交叉核对一致，无矛盾。检查`guides/trophy-guide.html`中Diamond Brutal Bat奖杯Bug状态描述，发现其引用的"即将修复"说法仅基于6月2日(1.006)补丁说明，而7月14日(1.007)官方补丁说明中并未包含该修复项——判定为过期表述，已在SEO Top 3中修正为"截至1.007仍未修复"并将引用来源从第三方聚合站(updatecrazy.com)升级为WB Games官方原文链接。
+
+**SEO Top 3 更新：**
+1. **`guides/trophy-guide.html`** — 修正Diamond Brutal Bat奖杯Bug状态表述：由"1.006补丁说明列为待修复项"更新为"官方1.007补丁说明（7月14日）中确认仍未包含此修复"，引用来源由第三方站点更换为WB Games Support官方链接；"Last updated"由July 9刷新为July 21。(评分：8/10 — 直接的事实准确性修正，避免误导玩家以为Bug已解决，且为高搜索意图的决策型页面)
+2. **`guides/waynetech-upgrades-guide.html`** — 在Talia al Ghul升级表格后新增tip-box，说明LBAT-64（Talia技能升级Bug）已于Update 1.007修复，并双向链接至今日新博客与1.007补丁说明博客. (评分：7/10 — 与今日新闻主题直接相关，修复了此前"玩家花费芯片升级Talia却看不到效果"的潜在困惑点，属实用性与站内链接权重双重提升)
+3. **`guides/all-characters-unlock.html`** — 在Talia al Ghul角色卡片末尾新增引导链接，指向今日新博客的完整解锁触发条件与补丁修复细节. (评分：6/10 — 高搜索量的"全角色解锁"页面与新内容的自然站内链接机会，低风险高确定性更新)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（5条高风险声明，全部通过官方/多源交叉核实）
+- [x] References 区块已填写（5条真实URL，均直接核实）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（30个 guide 页面禁止错误清单扫描 + canonical格式检查 + 数值一致性抽查）
+- [x] SEO Top 3 更新已执行（trophy-guide.html / waynetech-upgrades-guide.html / all-characters-unlock.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（106页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 沿用历史会话已记录的解决方案：任务说明指定的本机挂载路径在本沙盒中不可用；`/var/tmp/brickhero-push`与`/tmp/work/repo`均为此前会话残留副本，属主为`nobody`，当前会话用户（`epic-loving-cray`）无写权限，均判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`~/repo`，沙盒内实际路径`/sessions/epic-loving-cray/repo`）完成全部编辑与推送。

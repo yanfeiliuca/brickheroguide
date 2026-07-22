@@ -1932,3 +1932,52 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 沿用历史会话已记录的解决方案：任务说明指定的本机挂载路径在本沙盒中不可用；`/var/tmp/brickhero-push`与`/tmp/work/repo`均为此前会话残留副本，属主为`nobody`，当前会话用户（`epic-loving-cray`）无写权限，均判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`~/repo`，沙盒内实际路径`/sessions/epic-loving-cray/repo`）完成全部编辑与推送。
+
+## 2026-07-22 — Update 1.008 "mystery patch" blog + mission-4/post-game-checklist/tips-for-new-players SEO freshness refresh
+
+### 阶段一：Blog 更新
+- **`blog/update-1-008-patch-july-2026.html`** — "Update 1.008: The 13GB LEGO Batman Legacy Patch Nobody Explained". 约882字. 内容：7月21日上线的1.008补丁在PS5/Xbox/PC均无官方changelog、Steam端下载超13GB、WB官方支持页面截至发稿仍只记录7月14日1.007补丁内容、MP1st汇总的玩家已知问题清单（金色蝙蝠车兑换码故障、Twitch Drops问题、跳过任务导致WayneTech减少、100%无法达成、崩溃与存档丢失、49/50蝙蝠徽章卡死、Diamond Brutal Bat奖杯、Clue Master火车谜题）、与trophy-guide.html中Diamond Brutal Bat奖杯状态交叉引用、对"静默补丁"现象的分析、玩家应对建议. Tags: News, Analysis. Image: legobatmangame.com/_astro/og-image.BcIYb3Fq.jpg（并列最少使用图片之一，10→11次）. Sources: MP1st（1.008发布报道）、WB Games Support官方补丁页面（1.007官方changelog原文）、SteamDB补丁追踪器（确认1.008无官方notes）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：6条 ✅ / 0条 ❌
+  1. Update 1.008于2026年7月21日在PS5/Xbox/PC同步上线 — ✅ 已核查（MP1st原文 + SteamDB build记录双源确认）
+  2. Steam端下载体积超13GB — ✅ 已核查（MP1st原文直接引用）
+  3. TT Games未针对1.008发布官方changelog — ✅ 已核查（MP1st原文 + SteamDB "no official patch notes available for this build"原文双源确认）
+  4. WB Games官方"July 2026 Update"支持页面内容实际对应的是7月14日1.007修复清单，未反映1.008变更 — ✅ 已核查（直接WebFetch官方页面原文，逐条比对确认列表与1.007一致，无1.008专属条目）
+  5. 玩家已知问题清单（金色兑换码故障、Twitch Drops问题、跳过任务WayneTech减少、100%无法达成、崩溃/存档丢失、49/50蝙蝠徽章、Diamond Brutal Bat奖杯、Clue Master谜题）— ✅ 已核查（MP1st原文直接列出，来源为Steam社区讨论区）
+  6. Diamond Brutal Bat奖杯状态未在1.007官方修复清单中出现（与站内trophy-guide.html此前7月21日审计结论一致）— ✅ 已核查（本次直接WebFetch官方1.007页面原文重新确认，未见该修复项）
+- References：3条真实URL（MP1st、WB Games Support官方页面、SteamDB，均本次会话直接WebFetch核实）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（禁止错误清单全项grep扫描 + canonical格式检查 + "Last updated"过期日期排查 + 重复HTML id扫描）
+**关键发现：**
+1. 禁止错误清单全项扫描：`guides/trophy-guide.html`中"trophy-achievement-guide"字符串再次确认为外部URL（happythumbsgaming.com）误报，非站内错误，与历次会话结论一致。全站canonical URL均为干净URL，无WayneTech=10、主线任务=29+/8等禁止错误值被写入站内页面。
+2. **网络信息交叉核查中发现外部来源噪音：** WebSearch对"Out of Commission"任务的AI摘要一度声称"游戏共有29个主线任务"，与`data/game-facts.json`的权威值（21个）及禁止错误清单直接矛盾——判定为搜索引擎摘要生成的噪音（并非游戏真实数据），未采用该数字，仅采用同一来源（Game Rant原始表格，直接WebFetch核实）中与主线任务数无关的、逐关卡收集品清单（如Firefly=5宇宙飞船/5仪工缓存/1红砖，Batgirl Begins与Out of Commission均无专属收集品），这些数据与站内既有页面无矛盾。
+3. **`guides/mission-4-walkthrough.html`发现HTML结构性错误：** 第119-120行存在重复的`<h2 id="overview">`标签（"Character System Overview"与"Chapter 4 Overview"共用同一id），属于全站59天以来首次发现的重复id缺陷，已修复（保留后者，删除多余标题）。同时该页Firefly/Batgirl Begins/Out of Commission三个任务的收集品描述长期标注"not confirmed"/"not fully documented"占位语，本次通过直接WebFetch Push Square（2026-05-19发布）与Game Rant（2026-05-20发布）双源原始攻略页确认：Firefly=5宇宙飞船+5仪工缓存+1红砖，Batgirl Begins与Out of Commission均无专属收集品类型——已替换占位语为确认数据。
+4. **`guides/post-game-checklist.html`发现过时Bug状态描述：** 第289行的Tricorner区"消失的仪工缓存箱"警告框仍标注为"1.006补丁尚待修复"，但直接WebFetch WB Games官方1.007补丁说明（7月14日）确认该Bug（LBAT-446）已修复——判定为过期表述，已修正为"已于1.007修复"并补充1.008信息与官方链接。
+5. **"Last updated"过期日期排查：** 修复前`guides/mission-4-walkthrough.html`（May 29）与`guides/tips-for-new-players.html`（May 29）为全站并列最滞后页面（54天未更新，均已在本次SEO Top 3中处理并刷新至July 22）；`guides/jim-gordon-guide.html`/`batcave-hub-guide.html`/`detective-mode-guide.html`/`batcave-mural-challenges.html`（均June 6，46天未更新）内容审计未发现事实错误，标记为下次会话优先处理对象。
+
+**SEO Top 3 更新：**
+1. **`guides/mission-4-walkthrough.html`** — 修复重复H2标签结构错误；将Firefly/Batgirl Begins/Out of Commission三任务的收集品占位语替换为经Push Square+Game Rant双源核实的确认数据（Firefly：5宇宙飞船/5仪工缓存/1红砖；Batgirl Begins与Out of Commission：均无专属收集品）；"Updated"由May 29刷新为July 22。(评分：9/10 — 全站并列最滞后页面之一，且发现并修复了真实HTML结构缺陷与多处过时占位语，非仅日期刷新)
+2. **`guides/post-game-checklist.html`** — 修正Tricorner区仪工缓存箱消失Bug的过时状态描述：由"1.006补丁尚待修复"更正为"已于7月14日Update 1.007修复（LBAT-446）"，并补充今日Update 1.008博客的双向链接与官方补丁说明原文链接；"Last updated"由June 6刷新为July 22。(评分：8/10 — 直接的事实准确性修正，避免玩家误以为100%完成度仍受该Bug阻碍，且与今日新博客形成自然的站内双向验证链接)
+3. **`guides/tips-for-new-players.html`** — 在"Performance & Setup (PC)"章节新增tip-box，说明1.006/1.007/1.008的补丁节奏并建议新玩家保持游戏更新至最新版本，双向链接至今日Update 1.008博客；"Last updated"由May 29刷新为July 22。(评分：7/10 — 全站并列最滞后页面之一，为高搜索意图的新手向页面，且与今日新闻主题形成自然站内引导)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（6条高风险声明，全部通过MP1st/WB Games官方/SteamDB多源直接WebFetch核实）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + canonical格式检查 + 过期日期排查 + 重复id扫描）
+- [x] SEO Top 3 更新已执行（mission-4-walkthrough.html / post-game-checklist.html / tips-for-new-players.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（107页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次核实的均为既有权威数值的交叉验证与补丁状态更新，非新增游戏内部数值；外部来源"29主线任务"噪音已识别并拒绝采用，未污染game-facts.json）
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 沿用历史会话已记录的解决方案：任务说明指定的本机挂载路径（`/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/`）在本沙盒中不可用；`/var/tmp/brickhero-push`与`/tmp/work/repo`均为此前会话残留副本，属主为`nobody`，当前会话用户（`sweet-funny-bohr`）无写权限（包括无法创建`.git`锁文件），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/sessions/sweet-funny-bohr/tmp/brickheroguide`）完成全部编辑与推送。另外，Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（cat heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。

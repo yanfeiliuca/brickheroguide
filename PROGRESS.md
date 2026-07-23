@@ -1981,3 +1981,55 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 沿用历史会话已记录的解决方案：任务说明指定的本机挂载路径（`/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/`）在本沙盒中不可用；`/var/tmp/brickhero-push`与`/tmp/work/repo`均为此前会话残留副本，属主为`nobody`，当前会话用户（`sweet-funny-bohr`）无写权限（包括无法创建`.git`锁文件），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/sessions/sweet-funny-bohr/tmp/brickheroguide`）完成全部编辑与推送。另外，Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（cat heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-07-23 — LEGO Batman Returns Batmobile (76355) price update blog + stalest-pages SEO refresh
+
+### 阶段一：Blog 更新
+- **`blog/lego-batman-returns-batmobile-76355-price-update.html`** — "LEGO Batman Returns Batmobile (76355): Rumoured Price Jumps to $230, Piece Count Drops". 833字. 内容：追踪7月17日Brick Fanatics对6月24日原始76355传闻文章的更新报道——传闻规格由2,272件/$219.99变为2,269件/$230，源头为Reddit r/Legoleak用户BrickTap；对比表列出2026年已确认LEGO DC系列4款Batmobile套装（76330-76333，数据取自game-facts.json中physical_lego_sets_bonus_content字段并与Brick Fanatics今日文章表格交叉核对一致）；分析价格/件数比趋势（对比76139 1989版$249.99/3,306件、76328经典剧集版$149.99/1,822件，均经WebSearch独立核实）；明确标注套装仍未经LEGO官方确认. Tags: News, Analysis. Image: legobatmangame.com/_astro/family.CQW_jlFK_2qvCfg.webp（并列最少使用图片之一，10→11次）. Sources: Brick Fanatics（7月17日原文）、Reddit r/Legoleak（BrickTap爆料帖）、StoneWars.com（5月26日原始爆料）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：7条 ✅ / 0条 ❌
+  1. 76355更新后规格为2,269件/$230，7月17日Brick Fanatics报道 — ✅ 已核查（直接WebFetch原文全文确认）
+  2. 更新源头为Reddit r/Legoleak用户BrickTap — ✅ 已核查（Brick Fanatics原文直接引用并附链接）
+  3. 原始传闻规格2,272件/$219.99（5月26日StoneWars首发） — ✅ 已核查（Brick Fanatics今日文章正文明确复述"previously stated...$219.99 for 2,272 pieces"，与站内6月24日原文章一致）
+  4. LEGO 76139 1989 Batmobile：$249.99/3,306件（2019年发售） — ✅ 已核查（WebSearch多源交叉：Amazon官方listing、BrickEconomy、The Brothers Brick均确认$249.99）
+  5. LEGO 76328经典剧集版Batmobile：$149.99/1,822件（2024年发售） — ✅ 已核查（WebSearch多源交叉：Brick Fanatics原发布报道、Brickset、LEGO官网均确认$149.99/1,822件）——**发现并修正站内既有错误**：6月24日发布的`blog/lego-batman-returns-set-76355-batmobile-rumor.html`对比表中该套装数据错误标注为"~1,900件/$169.99"，本次已直接修正为正确数值，未在新文章中沿用旧错误
+  6. 2026年已确认LEGO DC系列4款Batmobile套装规格（76330-76333） — ✅ 已核查（直接WebFetch Brick Fanatics今日文章内嵌表格，与站内game-facts.json中physical_lego_sets_bonus_content字段价格一致）
+  7. SDCC 2026 DC展位#4544档期为7月22-26日 — ✅ 已核查（本会话早前直接WebFetch dc.com官方新闻稿确认，与站内6月8日发布的SDCC文章一致，未见变化）
+- References：3条真实URL（Brick Fanatics、Reddit r/Legoleak、StoneWars，均本次会话直接WebFetch/WebSearch核实）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（禁止错误清单全项grep扫描 + canonical格式检查 + "Last updated"过期日期排查）
+**关键发现：**
+1. 禁止错误清单全项扫描：无新增命中，全站canonical URL均为干净URL。
+2. **"Last updated"过期日期排查：** 发现4个并列全站最滞后页面（46天未更新，均为June 6/June 2）——`guides/batcave-hub-guide.html`（June 2）、`guides/jim-gordon-guide.html`、`guides/detective-mode-guide.html`、`guides/batcave-mural-challenges.html`（均June 6）。这4个页面在上次会话（2026-07-22）PROGRESS.md中已被标记为"下次会话优先处理对象"，本次会话按此优先级处理其中3个。
+3. **`guides/batcave-hub-guide.html`发现真实内容缺口：** Vehicle Garage章节描述车辆展示平台机制，但未提及官方1.007补丁说明中列出的"车辆在Batcave中偶发不可见"Bug（LBAT-602）——该Bug与本页面主题直接相关但此前完全未提及，属于真实的内容准确性缺口而非仅日期陈旧。
+4. **交叉核实`guides/jim-gordon-guide.html`与`guides/batcave-mural-challenges.html`间的Dodgeball/Bouncer挑战归属**：两页数据一致（Dodgeball=Jim Gordon专属，Bouncer=Nightwing专属，jim-gordon-guide.html页面已正确提示"Bouncer实为Nightwing挑战勿与Gordon机制混淆"），未发现矛盾，但两页此前互相之间无内部链接，属站内链接权重缺口。
+5. `guides/detective-mode-guide.html`（同为June 6最滞后页面之一）本次审计未发现可安全核实的具体内容缺口（如"UV Vision"与1.007补丁LBAT-179的关联无法在不推测的情况下确认属于Detective Mode机制本身，为避免臆测已放弃在该页新增相关内容），标记为下次会话候选，暂未列入本次SEO Top 3。
+
+**SEO Top 3 更新：**
+1. **`guides/batcave-hub-guide.html`** — 在Vehicle Garage章节新增tip-box，说明官方1.007补丁已修复"车辆在Batcave展示平台偶发不可见"Bug（LBAT-602），并双向链接至`blog/update-1-007-patch-notes-july-2026.html`；"Last updated"由June 2刷新为July 23（全站原最滞后页面，51天未更新）。(评分：8/10 — 直接的真实内容缺口修正，非仅日期刷新，且为全站更新最滞后的页面)
+2. **`guides/jim-gordon-guide.html`** — 在"Jim Gordon's Batcave Challenges"章节末尾新增链接，指向完整的`guides/batcave-mural-challenges.html`43项挑战攻略；"Last updated"由June 6刷新为July 23。(评分：6/10 — 站内链接权重提升，为并列次滞后页面之一，低风险高确定性更新)
+3. **`guides/batcave-mural-challenges.html`** — 在Character-Specific Challenges表格的Dodgeball行新增反向链接指向`guides/jim-gordon-guide.html`（形成与更新2的双向互链）；"Last updated"由June 6刷新为July 23。(评分：6/10 — 与更新2构成完整双向站内链接，同为并列次滞后页面)
+
+**额外修正（不计入以上3项配额）：** 修正`blog/lego-batman-returns-set-76355-batmobile-rumor.html`中76328套装的错误数据（"~1,900件/$169.99"→正确的"1,822件/$149.99"），该错误在撰写新文章76355价格更新时于WebSearch核实环节被发现。
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（7条高风险声明，全部通过Brick Fanatics/Reddit/WebSearch多源直接核实）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + canonical格式检查 + 过期日期排查）
+- [x] SEO Top 3 更新已执行（batcave-hub-guide.html / jim-gordon-guide.html / batcave-mural-challenges.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（108页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次核实的均为外部LEGO实体套装数据，非游戏内部数值，且与既有physical_lego_sets_bonus_content字段无冲突）
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 沿用历史会话已记录的解决方案：任务说明指定的本机挂载路径在本沙盒中不可用；`/var/tmp/brickhero-push`为此前会话残留副本（属主为`nobody`，当前会话用户无写权限），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/bhg`）完成全部编辑与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。

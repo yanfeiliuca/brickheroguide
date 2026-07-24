@@ -2033,3 +2033,52 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 沿用历史会话已记录的解决方案：任务说明指定的本机挂载路径在本沙盒中不可用；`/var/tmp/brickhero-push`为此前会话残留副本（属主为`nobody`，当前会话用户无写权限），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/bhg`）完成全部编辑与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-07-24 — Epic Games Store "still pending" July update watchdog blog + detective-mode/chapter-1/stud-farming SEO refresh
+
+### 阶段一：Blog 更新
+- **`blog/epic-games-store-july-update-still-pending.html`** — "Epic Games Store Players Are Still Waiting on LEGO Batman Legacy's July Update". 817字. 内容：直接WebFetch WB Games官方"July 2026 Update"支持页面原文，确认页面底部footnote原文"*July 2026 Update will be available for Epic Games Store later this month."仍然存在（发稿日7月24日，距7月结束仅剩7天）；对比时间线表格（1.007于7月14日、1.008于7月21日均已在PS5/Xbox/Steam上线，EGS两个补丁均未到账）；列出官方确认的10项1.007修复清单（含LBAT-134/118/121/64/179/602/446各项bug编号及原文链接）；重点标注LBAT-446（Tricorner Island WayneTech缓存箱不生成，与站内post-game-checklist.html交叉引用）与LBAT-602（Batcave载具消失，与站内batcave-hub-guide.html交叉引用）两项对完成度玩家的实际影响；EGS玩家应对建议；不臆测延迟原因（WB未说明，明确声明不猜测）. Tags: News, Analysis. Image: legobatmangame.com/_astro/fight-3.KeK453wH_Z23bgKb.webp（并列最少使用图片之一，10→11次）. Sources: WB Games LEGO Games Support官方页面（本次会话直接WebFetch原文核实）、MP1st（1.008发布报道）、MP1st（1.007发布报道）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：7条 ✅ / 0条 ❌
+  1. WB Games官方"July 2026 Update"页面确实包含footnote"*July 2026 Update will be available for Epic Games Store later this month." — ✅ 已核查（本次会话直接WebFetch官方页面原文逐字提取，非转述）
+  2. 该页面列出的10项修复（On the Prowl、Haly's Circus/LBAT-134、Batpod摄像机/LBAT-118、Riddler Trophy Batcave道具/LBAT-121、控制重映射后瞄准、Talia al Ghul技能升级/LBAT-64、UV Vision（Case of Waylon Jones）/LBAT-179、Party Select菜单、Batcave载具消失/LBAT-602、Tricorner Island WayneTech缓存箱不生成/LBAT-446）— ✅ 已核查（直接WebFetch原文逐条比对，与站内既有update-1-007-patch-notes-july-2026.html博文历史记录一致）
+  3. Update 1.007于2026年7月14日在PS5/Xbox/PC(Steam)上线 — ✅ 已核查（MP1st原文 + 站内既有博文交叉确认）
+  4. Update 1.008于2026年7月21日上线，Steam端下载超13GB，无官方changelog — ✅ 已核查（MP1st原文直接引用，与站内既有update-1-008-patch-july-2026.html博文历史记录一致）
+  5. LBAT-446（Tricorner Island WayneTech缓存箱）与站内post-game-checklist.html的关联 — ✅ 已核查（内部交叉引用，该关联已在2026-07-22会话中经Push Square+官方1.007页面双源核实并写入站内页面）
+  6. LBAT-602（Batcave载具消失）与站内batcave-hub-guide.html的关联 — ✅ 已核查（内部交叉引用，该关联已在2026-07-23会话中经官方1.007页面核实并写入站内页面）
+  7. 发稿日（2026-07-24）距7月31日剩7天 — ✅ 已核查（日历计算，非需外部核实的事实声明，但计算结果已通过bash date命令交叉确认）
+- References：3条真实URL（WB Games官方支持页面、MP1st×2篇，均本次会话直接WebFetch/WebSearch核实）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（禁止错误清单全项grep扫描 + canonical格式检查 + "Last updated"过期/缺失日期排查 + 跨页面机制一致性抽查）
+**关键发现：**
+1. 禁止错误清单全项扫描：无新增命中，全站canonical URL均为干净URL，`guides/trophy-guide.html`中"trophy-achievement-guide"字符串再次确认为外部URL（happythumbsgaming.com）误报，非站内错误，与历次会话结论一致。
+2. **"Last updated"过期/缺失日期排查：** 发现`guides/detective-mode-guide.html`（June 6，48天未更新，为2026-07-23会话已标记的"下次会话优先处理对象"）；`guides/stud-farming-guide.html`日期字段仅显示模糊的"May 2026"（无具体日期，且是全站已知最早/最模糊的日期标注）；`guides/chapter-1-red-hood-gang-walkthrough.html`的article-meta完全缺失日期字段（结构性缺陷，非仅陈旧）。
+3. **跨页面机制一致性抽查发现真实错误：** `guides/chapter-1-red-hood-gang-walkthrough.html`中两处（第175行角色能力列表、第229行WayneTech缓存说明）将Detective Vision的激活方式标注为"hold R2/RT"（长按R2/RT），与站内权威页面`guides/detective-mode-guide.html`的控制对照表（PS5: R3点击、Xbox: RS点击、PC鼠标: 鼠标中键，无按住机制，无冷却）直接矛盾——判定为真实的按键绑定错误，已修正为与权威页面一致的表述，并加入指向该权威页面的链接。（注：站内"Detective Vision"与"Detective Mode"两种命名并存于不同页面，属长期存在的措辞差异而非本次判定范围，本次仅修正可验证的具体按键绑定错误，未改动措辞本身）
+4. `guides/detective-mode-guide.html`的WayneTech Cache Audio Ping功能说明与今日博文主题（LBAT-446 Tricorner Island缓存箱不生成bug）高度相关，此前完全未提及该已知问题，属真实内容缺口。
+
+**SEO Top 3 更新：**
+1. **`guides/detective-mode-guide.html`** — 在WayneTech Cache Audio Ping功能卡片后新增tip-box，说明Tricorner Island缓存箱不生成的已知问题（LBAT-446）已于1.007修复（PS5/Xbox/Steam），并双向链接至今日新博文提示EGS玩家仍需等待；"Last updated"由June 6刷新为July 24（修复上次会话标记的全站最滞后页面）。(评分：8/10 — 全站原最滞后页面之一，且新增内容与今日博文形成自然的站内双向验证链接，直接的玩家实用价值)
+2. **`guides/chapter-1-red-hood-gang-walkthrough.html`** — 修正两处Detective Vision按键绑定错误描述（"hold R2/RT"→与权威控制对照表一致的"click R3 / RS, or Middle Mouse Button on PC"），新增指向`guides/detective-mode-guide.html`的链接；补充此前完全缺失的"Last updated: July 24, 2026"日期字段。(评分：8/10 — 发现并修复真实的跨页面机制矛盾，而非仅日期刷新，同时修复了结构性缺失的日期字段)
+3. **`guides/stud-farming-guide.html`** — 将模糊的"May 2026"日期标注替换为具体的"Last updated: July 24, 2026"。(评分：5/10 — 全站日期标注最模糊的页面，内容本身核对后未发现事实错误，仅为freshness signal修正)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（7条高风险声明，全部通过WB Games官方页面直接WebFetch + MP1st交叉核实）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + canonical格式检查 + 过期/缺失日期排查 + 跨页面机制一致性抽查）
+- [x] SEO Top 3 更新已执行（detective-mode-guide.html / chapter-1-red-hood-gang-walkthrough.html / stud-farming-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（109页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次核实内容均为既有权威数值与官方补丁状态的交叉验证，未发现需要写入game-facts.json的新游戏内部数值）
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 沿用历史会话已记录的解决方案：任务说明指定的本机挂载路径在本沙盒中不可用；`/var/tmp/brickhero-push`及`/tmp/work/repo`均为此前会话残留副本（属主为`nobody`，当前会话用户无写权限），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/bhg_1784880425/repo`）完成全部编辑与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。

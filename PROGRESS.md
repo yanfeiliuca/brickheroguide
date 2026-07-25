@@ -2082,3 +2082,50 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 沿用历史会话已记录的解决方案：任务说明指定的本机挂载路径在本沙盒中不可用；`/var/tmp/brickhero-push`及`/tmp/work/repo`均为此前会话残留副本（属主为`nobody`，当前会话用户无写权限），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/bhg_1784880425/repo`）完成全部编辑与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-07-25 — Mayhem DLC Joker & Harley costume leak deep-dive blog + mayhem-dlc/all-characters/characters-villains SEO refresh
+
+### 阶段一：Blog 更新
+- **`blog/mayhem-dlc-joker-harley-costume-list-leak.html`** — "The Full Leaked Joker & Harley Quinn Costume List for the Mayhem Collection DLC". 888字. 内容：填补站内5月25日已发布的Task Force X datamine文章遗留的空白——原文提及datamined files中含"Mayhem Hideout costume shop"但从未公布具体服装名单；本文首次在站内公布完整清单（Joker&Harley共享8款、Joker专属15款、Harley专属约20款），来源为X0X_LEAK于5月24日发布的两条推文，经ComicBook.com（5/24）与AllKeyShop（5/26）独立转载确认一致；明确区分"已官方确认的Sinister Pack（7套服装，原7名角色专属）"与"未确认的Joker/Harley专属服装泄露清单"，避免混淆；附"两个月后仍未获官方确认"的审慎提醒段落. Tags: News, Analysis. Image: legobatmangame.com/_astro/fight-2.BFd6neBb_2adSpB.webp（并列最少使用图片之一，10→11次）. Sources: ComicBook.com、VICE、AllKeyShop（均本次会话直接WebFetch原文核实）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：4条 ✅ / 0条 ❌（含1处自查修正）
+  1. Joker&Harley共享8款、Joker专属15款、Harley专属约20款服装名单 — ✅ 已核查（直接WebFetch ComicBook.com与AllKeyShop原文逐字比对，两源列表完全一致）
+  2. 泄露源头为X0X_LEAK于2026年5月24日发布的两条推文 — ✅ 已核查（ComicBook.com与AllKeyShop原文均直接引用推文内嵌截图/文字，日期一致）
+  3. **自查发现并修正**：初稿曾写"三家媒体（ComicBook.com、VICE、AllKeyShop）均转载了相同的服装清单"——直接WebFetch VICE原文后发现该文章仅报道了Task Force X角色清单，并未包含服装清单内容。已在推送前修正为准确表述："服装清单仅经ComicBook.com与AllKeyShop转载确认，VICE同期报道了同一份泄露但未收录服装部分"，避免夸大信源数量。
+  4. Sinister Pack（官方确认，7套服装/原7名角色专属）与本文泄露的Joker/Harley服装清单为两个不同事物，前者已被WB Games 6月3日新闻稿确认，后者未获官方确认 — ✅ 已核查（交叉比对站内`guides/suits-abilities-guide.html`第264行与`guides/mayhem-collection-dlc.html`第384-391行既有权威表述，确保不混淆）
+- References：3条真实URL（ComicBook.com、VICE、AllKeyShop，均本次会话直接WebFetch核实）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 31 个 guide 页面（禁止错误清单全项grep扫描 + canonical格式检查 + "Last updated"/"Updated"日期完整性排查）
+**关键发现：**
+1. 禁止错误清单全项扫描：无新增命中；`guides/trophy-guide.html`中"trophy-achievement-guide"字符串再次确认为外部URL（happythumbsgaming.com）误报；`blog/all-batsuits-unlock-guide.html`中"10 WayneTech Caches"确认为合法的服装解锁里程碑（对照`data/game-facts.json`的`waynetech_cache_milestones`字段含10），非"总数=10"错误，非命中。
+2. **发现并修复真实canonical缺陷**：`blog/mayhem-collection-dlc-leak.html`的canonical标签长期错误指向不存在的`/guides/mayhem-collection-dlc`（应为`/blog/mayhem-collection-dlc-leak`），属于历次会话审计均未捕获的独立SEO缺陷，已修复（不计入以下3项SEO Top 3配额）。
+3. **日期完整性排查：** 发现`guides/mayhem-collection-dlc.html`的"Updated"字段自本站建站以来一直显示模糊的"Updated for launch"（无具体日期，为全站最模糊的日期标注，且从未被此前任何一次会话刷新）；`guides/characters-villains-guide.html`同样长期显示模糊的"Updated: July 2026"（无具体日）；`guides/all-characters-unlock.html`的"Updated July 13, 2026"为当前全站（非本次新发现类别）最早的具体日期标注（12天未更新）。三者均与本次新博文主题（Mayhem DLC / Joker & Harley）直接相关，构成本次SEO Top 3的自然选择。
+
+**SEO Top 3 更新：**
+1. **`guides/mayhem-collection-dlc.html`** — 修复长期存在的模糊日期"Updated for launch"→"Last updated: July 25, 2026"；在"Unconfirmed Extras — Datamine Findings"章节的costume shop提及处新增双向链接至今日新博文完整服装清单. (评分：9/10 — 全站最模糊的日期标注，且是本次泄露内容的最直接关联页面，真实内容缺口修复而非仅日期刷新)
+2. **`guides/all-characters-unlock.html`** — "Updated"由July 13刷新为July 25；在DLC角色banner的datamine段落新增指向今日服装清单博文的链接. (评分：6/10 — 当前全站最早的具体日期标注之一，内容审计未发现事实错误，属freshness signal刷新+相关性链接)
+3. **`guides/characters-villains-guide.html`** — "Updated"由模糊的"July 2026"刷新为"July 25, 2026"；在Harley Quinn角色卡片新增指向今日服装清单博文的链接. (评分：6/10 — 全站另一处模糊日期标注，同为泄露内容自然关联页面)
+
+**额外修正（不计入以上3项配额）：** 修复`blog/mayhem-collection-dlc-leak.html`长期存在的canonical URL错误（`/guides/mayhem-collection-dlc` → `/blog/mayhem-collection-dlc-leak`）。
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（4条高风险声明，含1处VICE信源自查修正，全部通过ComicBook.com/AllKeyShop/VICE直接WebFetch核实）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（31个 guide 页面禁止错误清单扫描 + canonical格式检查 + 日期完整性排查）
+- [x] SEO Top 3 更新已执行（mayhem-collection-dlc.html / all-characters-unlock.html / characters-villains-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（110页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次泄露内容均为未确认服装名称，非游戏内部权威数值，不写入game-facts.json）
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 任务说明指定的本机挂载路径在本沙盒中不可用；`/var/tmp/brickhero-push`为此前会话残留副本（属主为`nobody`，当前会话用户无写权限，且落后origin/main约一个月），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/var/tmp/bhg-fresh`）完成全部编辑与推送，确保基于最新origin/main（2026-07-24 commit f95ee73）工作。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。

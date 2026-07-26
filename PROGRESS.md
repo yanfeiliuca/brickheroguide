@@ -1,5 +1,19 @@
 # BrickHeroGuide — Work Log
 
+## 2026-07-26 (2) — AR Trials Guide (Combat + Traversal + Driving Consolidated)
+
+### 新建页面
+- **`guides/ar-trials-guide.html`** — "Complete AR Trials Guide — Combat, Traversal & Driving". ~1,900 words. First consolidated guide covering all 28 AR Trials as one hub: 10 Combat Trials (wave-clear priority tips), 10 Traversal Trials (full 10-location list + Tricorner Gold/Silver/Bronze time example), 8 Driving Trials (boost technique, Tricorner example location; full district-by-district list for Driving not sourced — flagged transparently in-article rather than invented). Reward tier table (10k/5k/3k Gold/Silver/Bronze Studs). Sources: Game8 (Combat/Traversal/Driving Trial Locations archives), Neoseeker AR Trials walkthrough page, wccftech Driving Trial gold-medal guide, mapmaster.io. 8 min read.
+
+### 站点更新
+- `sitemap.xml` — 1 条新 URL 加入 guides 区块（字母序：all-villains-guide 与 batcave-hub-guide 之间）
+- `_redirects` — 1 条 301 规则已加入
+- `index.html` — Game Information 列表新增 1 张卡片，紧跟 Cheat Codes 卡片之后
+
+### 待办 / 已知缺口
+- Driving Trials 的完整8个地点列表未能从公开来源核实全部，目前只确认了Tricorner一处；文章内已诚实标注为"待补充"而非编造，后续若找到权威分区列表应回补更新（更新日期即可，无需新起一条 PROGRESS 记录）。
+- Git commit + push — 待人工在 GitHub Desktop 中review后提交
+
 ## 2026-07-26 — SubWayne Puzzle Guide + Cheat Codes Mythbusting Guide (P0 New Content)
 
 ### 新建页面

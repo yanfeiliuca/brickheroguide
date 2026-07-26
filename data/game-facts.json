@@ -8,31 +8,60 @@
     "source_authority": "Official WB Games page, IGN, GamesRadar, PowerPyx, Steam",
     "usage_rule": "AI MUST only use values from this file for any numerical claim. If a value is missing, mark as [UNVERIFIED] and flag for human research."
   },
-
   "ratings": {
-    "ign": { "score": "8/10", "source": "IGN review" },
-    "gamesradar": { "score": "4/5", "source": "GamesRadar review" },
-    "steam": { "verdict": "Overwhelmingly Positive", "review_count": "11600+", "source": "Steam store page" }
+    "ign": {
+      "score": "8/10",
+      "source": "IGN review"
+    },
+    "gamesradar": {
+      "score": "4/5",
+      "source": "GamesRadar review"
+    },
+    "steam": {
+      "verdict": "Overwhelmingly Positive",
+      "review_count": "12,665 (as of 2026-07-26)",
+      "source": "Steam store page",
+      "breakdown_2026_07_26": {
+        "total_reviews": 12665,
+        "positive": 12139,
+        "negative": 526,
+        "positive_rate": "95.8%",
+        "steam_purchasers": 8072,
+        "other_purchase_type": 4593,
+        "english_only": 6123,
+        "recent_30_day": 688,
+        "recent_30_day_positive_rate": "94%",
+        "recent_30_day_verdict": "Very Positive"
+      }
+    },
+    "opencritic": {
+      "score": "85",
+      "tier": "Mighty",
+      "critics_recommend": "97%",
+      "critic_count": 69,
+      "source": "OpenCritic (checked 2026-07-26)"
+    }
   },
-
   "platforms": {
     "release_date_ps5_xbox_pc": "2026-05-22",
     "release_date_switch2": "2026-09-18",
     "steam_deck_verified": true,
     "steam_deck_verified_date": "2026-05-12"
   },
-
   "performance": {
     "switch2_handheld": "720p",
     "switch2_docked": "1080p (max)",
     "switch2_performance_note": "720p handheld / up to 1080p docked. TT Games has not released official specs; full analysis pending Switch 2 launch 2026-09-18."
   },
-
   "content_counts": {
     "main_missions": 21,
     "playable_characters": 7,
     "hidden_characters": 3,
-    "hidden_character_names": ["Alfred", "Lucius Fox", "Bruce Wayne"],
+    "hidden_character_names": [
+      "Alfred",
+      "Lucius Fox",
+      "Bruce Wayne"
+    ],
     "gotham_islands": 4,
     "base_suits": 101,
     "total_suits_with_all_dlc": 129,
@@ -42,9 +71,19 @@
     "trophies_ps5": 52,
     "achievements_xbox": 51
   },
-
-  "waynetech_cache_milestones": [10, 30, 50, 70, 80, 90, 110, 140, 150, 160, 180],
-
+  "waynetech_cache_milestones": [
+    10,
+    30,
+    50,
+    70,
+    80,
+    90,
+    110,
+    140,
+    150,
+    160,
+    180
+  ],
   "editions": {
     "standard": {
       "extra_cost": "$0",
@@ -67,7 +106,6 @@
       "includes": "all content + Retro Video Game Batman figurine"
     }
   },
-
   "preorder_bonuses": {
     "dark_knight_returns_batsuit": {
       "available_on": "all platforms",
@@ -76,7 +114,6 @@
       "note": "NOT Switch 2 exclusive — available on ALL platforms"
     }
   },
-
   "free_suits_account_link": {
     "golden_age_batsuit": {
       "requirement": "link WB Games account",
@@ -91,7 +128,6 @@
       "platforms": "all"
     }
   },
-
   "physical_lego_sets_bonus_content": {
     "last_verified": "2026-07-01",
     "source": "Official LEGO.com redemption page (lego.com/en-us/games/lego-batman-legacy-dark-knight/article/legacy-dark-knight-dlc-lego-batman-sets)",
@@ -118,18 +154,21 @@
     "code_validity": "Guaranteed redeemable until March 1, 2029",
     "limit": "One redemption per set per LEGO account"
   },
-
   "patches": {
     "1_006": {
       "date": "2026-06-02",
       "type": "stability patch",
-      "fixes": ["Mr. Freeze boss crash that blocked story trophy unlock"]
+      "fixes": [
+        "Mr. Freeze boss crash that blocked story trophy unlock"
+      ]
     }
   },
-
   "dlc_mayhem_collection": {
     "release_date": "2026-09-18",
-    "new_playable_characters": ["Joker", "Harley Quinn"],
+    "new_playable_characters": [
+      "Joker",
+      "Harley Quinn"
+    ],
     "new_missions": "Arkham Asylum Jailbreak mission",
     "new_modes": "Mayhem Mode",
     "sinister_pack_contents": {
@@ -138,7 +177,6 @@
       "batmobile_skins": 1
     }
   },
-
   "internal_links": {
     "trophy_guide": "guides/trophy-guide.html",
     "suits_guide": "guides/suits-abilities-guide.html",
@@ -150,7 +188,6 @@
     "gotham_districts": "guides/gotham-districts-guide.html",
     "coop_guide": "guides/co-op-guide.html"
   },
-
   "forbidden_errors": [
     "trophy-achievement-guide.html does not exist — correct file: trophy-guide.html",
     "WayneTech caches = 10 — WRONG, correct: 200",

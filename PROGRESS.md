@@ -1,5 +1,28 @@
 # BrickHeroGuide — Work Log
 
+## 2026-07-26 — SubWayne Puzzle Guide + Cheat Codes Mythbusting Guide (P0 New Content)
+
+### 新建页面
+- **`guides/subwayne-puzzle-solutions-guide.html`** — "All SubWayne Puzzle Solutions — Every Station Guide". ~1,700 words. Full step-by-step solutions for all 8 open-world SubWayne station puzzles (East End, Old Gotham South/North/West, The Cauldron South/North (ACE Chemicals), Newtown, Gotham Village), including which character each requires. Sources: games.gg, gamerant.com, nerdschalk.com, noobfeed.com, whisperofthehouse.com. 7 min read.
+- **`guides/cheat-codes-unlockables-guide.html`** — "Are There Cheat Codes in LEGO Batman: Legacy of the Dark Knight?". ~950 words. Mythbusting FAQ confirming there is no in-game cheat menu and all 23 Red Bricks are cosmetic-only, redirecting search traffic to real unlock systems (QR codes, Bat-Mite Store, WayneTech chips, account-linked suits) plus an honest PC trainer safety note. Sources: GameFAQs cheats page, games.gg cheats explained, own site's `collectibles-guide.html` and `blog/lego-batman-redeem-codes-qr-rewards.html`. 5 min read.
+
+### 站点更新
+- `sitemap.xml` — 2 条新 URL 已加入 guides 区块（字母序插入）
+- `_redirects` — 2 条 `.html` → 干净URL 的 301 规则已加入
+- `index.html` — Game Information 文章列表新增 2 张卡片（SubWayne + Cheat Codes），置于 Mayhem Collection DLC 之后、Blog 链接之前
+
+### 附带发现（供后续排期参考）
+- 抓取完整 `sitemap.xml` 后确认：本轮内容清单中原计划的 **Talia al Ghul 角色专题** 和 **完整Boss战攻略** 均已存在（`blog/talia-al-ghul-character-guide.html`、`blog/all-boss-fights-guide.html`），此前仅核对首页可见链接未能发现，属于研究疏漏，已从后续排期中移除，避免重复产出。
+- **Character Tier List**（`blog/best-character-ranking-lego-batman-legacy.html`）此前已确认存在，同样应从排期中移除。
+- 站内 sitemap 实际页面数远超此前认知的75页（含大量 `/blog/` 下的新闻/分析类文章），后续做内容缺口分析时应优先抓取完整 sitemap.xml，而非仅抓首页可见链接。
+
+### Verification Checklist
+- [x] 两篇新 guide 页面已写入并采用站内实际模板（复用 jim-gordon-guide.html 的 CSS/结构）
+- [x] sitemap.xml 已更新
+- [x] _redirects 已更新
+- [x] index.html 链接已更新
+- [ ] Git commit + push — 待人工在 GitHub Desktop 中review后提交
+
 ## 2026-06-23 — Edition Buyer's Guide Blog + Pre-Order Bonus Accuracy Fixes
 
 ### 阶段一：Blog 更新

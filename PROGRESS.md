@@ -2218,3 +2218,54 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 任务说明指定的本机挂载路径在本沙盒中不可用；`/var/tmp/brickhero-push`为此前会话残留副本（仅含WORKFLOW.md/data/git-push脚本，无完整站点文件，属主为`nobody`，当前会话用户无写权限），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/repo`）完成全部编辑与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-07-27 — Fortnite crossover pickaxe / EGS sale blog + pc-requirements literal-\n bug fix + deluxe-edition/collectibles SEO refresh
+
+### 阶段一：Blog 更新
+- **`blog/fortnite-crossover-pickaxe-egs-sale.html`** — "LEGO Batman Legacy's Free Fortnite Pickaxe Is Still Live — Plus a 20% Epic Games Store Sale". 726字. 内容：直接WebFetch Epic Games Store商品页确认Golden Batarang Knucks Pickaxe与Bricks and Batarangs Loading Screen这一Fortnite联动奖励（购买本作即送）截至今日仍然有效，且EGS当前对Base Game/Deluxe Edition/Deluxe Edition Upgrade全线20%折扣（至2026年8月10日11:00 AM），并直接WebFetch Steam商店页确认同期无对应折扣。联动奖励的资格规则（同一Epic账号、仅限预购+5月22日后标准购买、不可在LEGO Batman本体内使用）引用自Brick Fanatics 2026年5月16日原始报道核实。经站内全文搜索确认此前74篇博文从未涉及Fortnite联动这一话题，为真正的内容空白填补. Tags: Tips, News. Image: legobatmangame.com/_astro/clues-2.D9jQ9zQy_Z12vcyH.webp（站内当前使用次数最少的已收录图片之一，10→11次）. Sources: Epic Games Store商品页（今日直接核实）、Brick Fanatics（2026年5月16日）、Steam商店页（今日直接核实）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：5条 ✅ / 0条 ❌
+  1. Fortnite联动奖励内容与名称（Golden Batarang Knucks Pickaxe + Bricks and Batarangs Loading Screen） — ✅ 已核查（本次会话直接WebFetch Epic Games Store商品页原文"Get the Golden Batarang Knucks Pickaxe in Fortnite"）
+  2. 联动奖励资格规则（预购+5月22日后标准购买、需同一Epic账号、仅限Fortnite内使用不可用于本体） — ✅ 已核查（Brick Fanatics 2026-05-16原文直接WebFetch核实）
+  3. EGS当前20%折扣三档价格（$69.99→$55.99 / $89.99→$71.99 / $24.99→$19.99）及折扣截止日期（2026年8月10日11:00 AM） — ✅ 已核查（本次会话直接WebFetch Epic Games Store商品页实时价格与倒计时文案）
+  4. Steam商店页同期无等效折扣（基础版/豪华版均显示原价） — ✅ 已核查（本次会话直接WebFetch Steam商店页，价格区块显示$69.99/$89.99原价，无折扣标签）
+  5. Deluxe Edition豪华版预购3天提前体验（5月19日） — ✅ 已核查（Brick Fanatics同篇原文直接WebFetch核实）
+  - 附注：曾尝试将"speedrun.com排行榜近30天数据"作为候选选题，但直接WebFetch的实时统计页面数据（69次总提交、16名玩家、82关注者）与站内7月2日已发布博文描述的数据几乎完全一致，且"最近runs"时间戳（13-14天前）与两篇博文的发布间隔逻辑上无法互相印证，存在数据时效性无法确认的风险，判定为不可靠选题来源，已放弃该方向，改用可直接、明确核实的Fortnite联动+EGS折扣选题。
+- References：3条真实URL（Epic Games Store商品页、Brick Fanatics、Steam商店页，均本次会话直接核实）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描 + canonical格式检查 + 全站"Updated/Last updated"日期梳理 + 站内已知literal转义字符扫描）
+**关键发现：**
+1. 禁止错误清单全项扫描：无新增命中；`guides/trophy-guide.html`中"trophy-achievement-guide"字符串再次确认为外部URL（happythumbsgaming.com）误报，与历次会话结论一致。全站canonical均为干净URL，无`.html`后缀问题。
+2. **发现并修复真实的HTML渲染缺陷**：`guides/pc-requirements.html`第278行的Post-Launch Patch Notes列表中存在一个字面量`\n`转义字符串（而非真正的换行符），会在实际页面上原样显示为可见的反斜杠n文本，是本次全站`\n`字面量扫描发现的唯一实例，判定为影响页面显示的真实缺陷，已修复为正常的HTML换行结构。
+3. **发现并修复真实的过期声明**：同一处（`guides/pc-requirements.html`）原文声称"Epic Games Store received the update later in July"（暗示EGS已收到7月更新），但与站内自身`blog/epic-games-store-july-update-still-pending.html`（7月24日发布）以及本次会话对TT Games/WB Games官方页面的核实结果直接矛盾——截至今日EGS仍未收到该更新。已修正为准确的"as of July 27, 2026, Epic Games Store has not yet received this update"表述，并补充此前完全遗漏的Update 1.008（7月21日）条目。
+4. 全站"Updated/Last updated"日期梳理：`guides/collectibles-guide.html`（7月14日）与`guides/difficulty-modes-guide.html`（7月14日）为全站最滞后的两个日期标注；`guides/pc-requirements.html`（7月15日，含上述真实错误）次之。
+
+**SEO Top 3 更新：**
+1. **`guides/pc-requirements.html`** — 修复真实的字面量`\n`转义字符HTML渲染缺陷；修正过期且与站内其他文章矛盾的"EGS已收到7月更新"错误声明为准确的"截至7月27日仍未收到"；补充此前遗漏的Update 1.008条目；新增指向今日博文的EGS折扣/Fortnite联动链接。"Updated"由July 15刷新为July 27. (评分：9/10 — 修复真实影响页面渲染的HTML缺陷+修正与站内其他权威文章矛盾的过期错误声明，而非仅日期刷新)
+2. **`guides/deluxe-edition-explained.html`** — 在版本定价段落后新增"Current PC pricing"提示框，说明今日核实的EGS 20%折扣三档价格与Fortnite联动奖励，并注明Steam同期无等效折扣；链接至今日博文。"Updated"由July 18刷新为July 27. (评分：7/10 — 与本页核心主题（版本定价）高度相关的真实当前信息增值，非仅日期刷新)
+3. **`guides/collectibles-guide.html`** — 全站并列最滞后页面（7月14日，12天未更新），在开篇引言后新增"How rare is full completion?"段落，引用站内此前已核实的Steam全局成就稀有度数据（"A Watchful Collector" 7.2%、"You have a name to maintain" 7.8%），并链接至`achievement-rarity-by-the-numbers`博文（此前仅`gotham-map-guide.html`一处链接该数据，本页作为247+收藏品权威页面此前完全未引用这一高相关性数据点）。"Last updated"由July 14刷新为July 27. (评分：6/10 — 全站最滞后页面之一，新增真实的站内已核实数据交叉引用，非凭空推断)
+
+**新建页面（如有）：** 无
+
+**额外修正：** `_redirects`文件补充新博文`fortnite-crossover-pickaxe-egs-sale.html`的301重定向条目（发现该文件对大量既有博文/攻略页缺少对应条目，属历史遗留缺口，本次仅补充今日新增页面对应条目，未扩大范围修复历史缺口）。
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（5条高风险声明，全部通过Epic Games Store/Brick Fanatics/Steam直接WebFetch核实；speedrun.com候选选题因数据时效性存疑主动放弃）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单扫描 + canonical格式检查 + 日期梳理 + 全站literal转义字符扫描）
+- [x] SEO Top 3 更新已执行（pc-requirements.html / deluxe-edition-explained.html / collectibles-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（115页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次为促销/联动信息与HTML缺陷修复，非游戏内部权威数值）
+- [x] _redirects 已同步新增页面条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 任务说明指定的本机挂载路径在本沙盒中不可用；`/var/tmp/brickhero-push/BrickHeroGuide.com`为此前会话残留副本（仅含WORKFLOW.md/data/git-push脚本，无完整站点文件，属主为`nobody`，当前会话用户无写权限），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/brickhero-clone`）完成全部编辑与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。

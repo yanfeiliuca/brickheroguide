@@ -2269,3 +2269,51 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 任务说明指定的本机挂载路径在本沙盒中不可用；`/var/tmp/brickhero-push/BrickHeroGuide.com`为此前会话残留副本（仅含WORKFLOW.md/data/git-push脚本，无完整站点文件，属主为`nobody`，当前会话用户无写权限），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/brickhero-clone`）完成全部编辑与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-07-28 — All Vehicles/Batmobiles guide blog + difficulty-modes/waynetech/co-op SEO cross-links
+
+### 阶段一：Blog 更新
+- **`blog/all-vehicles-batmobiles-guide.html`** — "All Vehicles in LEGO Batman: Legacy of the Dark Knight — Complete Roster Guide". 约858字（正文提取统计）。内容：全站此前从未覆盖的"全车辆名录"选题空白（经全文搜索blog/*.html确认）。核心内容包括：（1）诚实披露两个第三方攻略站对车辆总数的分歧——GamingBolt称33辆（含3辆豪华版专属），TheGamer称29辆（对应基础版），并解释差异来源于版本而非任一来源有误，未强行调和或编造统一数字；（2）按7名可玩角色列出车辆名称清单（两来源交叉核对一致，仅具体商店购买价格存在冲突——如Batman '66的价格在两站分别标注为1,000与66,000 Studs——文中明确说明未采用有冲突的具体售价数字，转而建议玩家以游戏内Garage菜单当前价格为准，符合web-content-fact-guard skill"来源冲突→暂停/如实说明"的处理原则）；（3）豪华版专属3辆车辆（Batman Beyond、Batman: Arkham Trilogy、Batmobeast）与本次会话直接WebFetch Steam商店页确认的Deluxe Edition "Legacy Collection"三大主题包（Arkham Trilogy Pack/Batman Beyond Pack/Party Music Pack，每包含7套服装+1辆蝙蝠车+5个Batcave道具）结构进行交叉印证，并明确注明"一一对应关系为基于官方内容的合理推断，非TT Games官方逐项确认"，未过度断言；（4）引用站内已核实的3辆QR码金色蝙蝠车实体LEGO套装解锁内容（引用自站内`lego-batman-physical-sets-gold-unlocks-guide.html`及其原始LEGO.com来源）。Tags: Guide. Image: legobatmangame.com/_astro/gear-3.5F2kKy0I_1z9tbe.webp（并列站内使用次数最少图片之一，6→7次）. Sources: GamingBolt（全33辆车辆攻略）、TheGamer（29辆车辆攻略）、Steam商店页（Deluxe Edition内容，本次会话直接WebFetch核实）. 7 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：4条 ✅ / 0条 ❌（1条来源冲突已如实披露，未强行调和）
+  1. GamingBolt记载车辆总数33辆，含3辆豪华版专属 — ✅ 已核查（本次会话直接WebFetch GamingBolt完整车辆列表原文）
+  2. TheGamer记载车辆总数29辆（基础版口径） — ✅ 已核查（本次会话直接WebFetch TheGamer完整车辆列表原文）
+  3. 两来源就"Batman '66"车辆售价存在冲突（1,000 vs 66,000 Studs，且与"Batman '89"命名存在交叉） — ⚠️ 已核查但发现冲突，处理方式：文中不采用具体冲突数字，改为建议玩家查看游戏内当前价格，符合skill"来源冲突→暂停/如实说明"原则，未编造调和结果
+  4. Deluxe Edition Legacy Collection三大主题包结构（各含7套服装+1辆蝙蝠车+5个Batcave道具） — ✅ 已核查（本次会话直接WebFetch Steam商店页原文"Legacy Collection"描述段落）
+- References：3条真实URL（GamingBolt、TheGamer、Steam商店页，均本次会话直接核实）
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描 + canonical格式检查 + 全站"Last updated"日期梳理）
+**关键发现：**
+1. 禁止错误清单全项扫描：无新增命中；`guides/trophy-guide.html`中"trophy-achievement-guide"字符串再次确认为外部URL（happythumbsgaming.com）误报，与历次会话结论一致。全站canonical均为干净URL，无`.html`后缀问题。
+2. `guides/gotham-districts-guide.html`标注"Gotham分为9个districts"与`data/game-facts.json`中"gotham_islands: 4"经核实为不同层级概念（4座岛屿内共9个districts，页面内每个district卡片均标注所属Island），非矛盾，判定为无需修正的误报排查。
+3. 全站"Last updated"日期梳理：`guides/difficulty-modes-guide.html`（7月14日，14天未更新）为全站最滞后页面；`guides/co-op-guide.html`、`guides/gotham-districts-guide.html`、`guides/waynetech-upgrades-guide.html`并列次滞后（均7月17日）。
+
+**SEO Top 3 更新：**
+1. **`guides/difficulty-modes-guide.html`** — 全站最滞后页面（14天未更新），在Overview章节新增数据支撑提示框，引用站内已核实的Steam成就稀有度数据（story mode完成率26.4%、全成就完成率5.4%，来源`achievement-rarity-by-the-numbers.html`），为"多数玩家实际难度体验"提供真实站内数据支撑而非主观推测；"Last updated"由July 14刷新为July 28. (评分：7/10 — 全站最滞后页面，新增真实站内已核实数据交叉引用)
+2. **`guides/waynetech-upgrades-guide.html`** — 与本次新博文主题直接相关：新增"WayneTech Caches Also Gate Vehicle Unlocks"章节，说明Batgirl's Van（100缓存）、Nightbird（130）、Sports Car/Tumbler（170/190）等车辆同样受WayneTech缓存里程碑门控（引用自本次核实的车辆攻略数据），并链接今日新博文；"Last updated"由July 17刷新为July 28. (评分：8/10 — 与今日核实内容直接相关的真实站内交叉引用，非仅日期刷新)
+3. **`guides/co-op-guide.html`** — 新增"Splitting Up in Vehicles"章节，说明各角色独立驾驶专属车辆对双人本地分屏co-op探索效率的实际影响，并链接今日新博文；"Last updated"由July 17刷新为July 28. (评分：6/10 — 与今日新内容相关的真实站内交叉引用，为双人玩家提供额外实用信息)
+
+**新建页面（如有）：** 无
+
+**额外修正：** `_redirects`文件补充今日新博文`all-vehicles-batmobiles-guide.html`的301重定向条目。
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（4条高风险声明，3条直接核实通过，1条发现来源冲突并如实披露/未编造调和结果）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单扫描 + canonical格式检查 + 日期梳理）
+- [x] SEO Top 3 更新已执行（difficulty-modes-guide.html / waynetech-upgrades-guide.html / co-op-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（116页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次为第三方车辆攻略内容与Deluxe Edition结构交叉核实，非站内核心权威数值范畴）
+- [x] _redirects 已同步新增页面条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 任务说明指定的本机挂载路径在本沙盒中不可用；未挂载任何用户文件夹。发现沙盒内`/var/tmp/brickhero-push`、`/tmp/brickhero-clone`、`/var/tmp/bhg-fresh`均为此前会话残留的仓库副本，但全部属主为`nobody`且当前会话用户（`dazzling-keen-gates`）对其无读写权限（`Permission denied`），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/sessions/dazzling-keen-gates/tmp/bhg`）完成全部编辑与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。

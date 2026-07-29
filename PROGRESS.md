@@ -2202,11 +2202,6 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 **新建页面（如有）：** 无
 
-### 阶段二B：全站HTML截断缺陷紧急修复（本次会话额外重大发现，超出常规3项配额）
-在修复`guides/100-percent-completion.html`的HTML截断问题后，对全站`guides/`、`blog/`及根目录页面执行了系统性的`<html>`/`<body>`/`<div>`标签配对验证（而非仅关键词扫描），发现**除`100-percent-completion.html`外，另有15个guide页面同样存在HTML截断**——经`git show HEAD`核实均为生产环境（含线上`brickheroguide.com`实际可访问页面，如`trophy-guide.html`经直接WebFetch确认线上版本同样截断于页脚"Home</"处）已存在的缺陷，非本次会话引入。受影响页面：`all-characters-unlock.html`、`all-villains-guide.html`、`batcave-hub-guide.html`、`beginners-guide.html`、`co-op-guide.html`、`collectibles-guide.html`、`mayhem-collection-dlc.html`、`mission-2-walkthrough.html`、`mission-4-walkthrough.html`、`post-game-checklist.html`、`release-date-platforms.html`、`stud-farming-guide.html`、`suits-abilities-guide.html`、`tips-for-new-players.html`、`trophy-guide.html`、`waynetech-upgrades-guide.html`——合计16个页面（占全站34个guide页面近半数）。
-
-**修复方法：** 对每个文件逐一核实截断位置：多数（10个）截断发生在页脚/脚本等站点通用样板区域（非游戏事实内容），依据站内其他已完整页面逐字确认的标准页脚/脚本文本直接补全，不涉及游戏内容判断。少数（6个：`all-characters-unlock.html`、`beginners-guide.html`、`collectibles-guide.html`、`post-game-checklist.html`、`stud-farming-guide.html`、`tips-for-new-players.html`）截断发生在正文/侧栏内容中间，处理原则严格遵循web-content-fact-guard"找不到来源时暂停，不杜撰"：对被截断的不完整句子/列表项**一律删除而非编造后续内容**（如`all-characters-unlock.html`中Bruce Wayne彩蛋房间的具体描述在"accessibl"处截断，直接以句号结束该句，未编造房间具体内容；`stud-farming-guide.html`中"Stud Goals"列表第二项在"All up"处截断，直接删除该未完成条目，仅保留已完整的第一项）；仅在能确认引用内容来自站内已核实的其他完整页面时才补全（如`collectibles-guide.html`的"Related Guides"列表最后一项"Batcave Hub Gu"补全为"Batcave Hub Guide"，该确切链接文本已在同一会话修复的`100-percent-completion.html`中逐字验证存在）。修复后对全站`guides/*.html`、`blog/*.html`及根目录页面执行`<html>`/`<body>`/`<div>`标签配对自动化验证，全部通过（0处不匹配）。
-
 ### Verification Checklist
 - [x] Blog 新文章已写入
 - [x] 步骤3B 网络事实核查已完成（7条高风险声明，6条通过Steam/OpenCritic直接WebFetch核实，1条因Metacritic渲染结果不可靠而主动放弃引用具体数值，改用可核实的Steam徽章数据）
@@ -2354,6 +2349,11 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 **新建页面（如有）：** 无
 
 **额外修正：** `_redirects`文件补充今日新博文`epic-games-store-update-pending-label-removed.html`的301重定向条目。
+
+### 阶段二B：全站HTML截断缺陷紧急修复（本次会话额外重大发现，超出常规3项配额）
+在修复`guides/100-percent-completion.html`的HTML截断问题后，对全站`guides/`、`blog/`及根目录页面执行了系统性的`<html>`/`<body>`/`<div>`标签配对验证（而非仅关键词扫描），发现**除`100-percent-completion.html`外，另有15个guide页面同样存在HTML截断**——经`git show HEAD`核实均为生产环境（含线上`brickheroguide.com`实际可访问页面，如`trophy-guide.html`经直接WebFetch确认线上版本同样截断于页脚"Home</"处）已存在的缺陷，非本次会话引入。受影响页面：`all-characters-unlock.html`、`all-villains-guide.html`、`batcave-hub-guide.html`、`beginners-guide.html`、`co-op-guide.html`、`collectibles-guide.html`、`mayhem-collection-dlc.html`、`mission-2-walkthrough.html`、`mission-4-walkthrough.html`、`post-game-checklist.html`、`release-date-platforms.html`、`stud-farming-guide.html`、`suits-abilities-guide.html`、`tips-for-new-players.html`、`trophy-guide.html`、`waynetech-upgrades-guide.html`——合计16个页面（占全站34个guide页面近半数）。
+
+**修复方法：** 对每个文件逐一核实截断位置：多数（10个）截断发生在页脚/脚本等站点通用样板区域（非游戏事实内容），依据站内其他已完整页面逐字确认的标准页脚/脚本文本直接补全，不涉及游戏内容判断。少数（6个：`all-characters-unlock.html`、`beginners-guide.html`、`collectibles-guide.html`、`post-game-checklist.html`、`stud-farming-guide.html`、`tips-for-new-players.html`）截断发生在正文/侧栏内容中间，处理原则严格遵循web-content-fact-guard"找不到来源时暂停，不杜撰"：对被截断的不完整句子/列表项**一律删除而非编造后续内容**（如`all-characters-unlock.html`中Bruce Wayne彩蛋房间的具体描述在"accessibl"处截断，直接以句号结束该句，未编造房间具体内容；`stud-farming-guide.html`中"Stud Goals"列表第二项在"All up"处截断，直接删除该未完成条目，仅保留已完整的第一项）；仅在能确认引用内容来自站内已核实的其他完整页面时才补全（如`collectibles-guide.html`的"Related Guides"列表最后一项"Batcave Hub Gu"补全为"Batcave Hub Guide"，该确切链接文本已在同一会话修复的`100-percent-completion.html`中逐字验证存在）。修复后对全站`guides/*.html`、`blog/*.html`及根目录页面执行`<html>`/`<body>`/`<div>`标签配对自动化验证，全部通过（0处不匹配）。
 
 ### Verification Checklist
 - [x] Blog 新文章已写入

@@ -2202,6 +2202,11 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 **新建页面（如有）：** 无
 
+### 阶段二B：全站HTML截断缺陷紧急修复（本次会话额外重大发现，超出常规3项配额）
+在修复`guides/100-percent-completion.html`的HTML截断问题后，对全站`guides/`、`blog/`及根目录页面执行了系统性的`<html>`/`<body>`/`<div>`标签配对验证（而非仅关键词扫描），发现**除`100-percent-completion.html`外，另有15个guide页面同样存在HTML截断**——经`git show HEAD`核实均为生产环境（含线上`brickheroguide.com`实际可访问页面，如`trophy-guide.html`经直接WebFetch确认线上版本同样截断于页脚"Home</"处）已存在的缺陷，非本次会话引入。受影响页面：`all-characters-unlock.html`、`all-villains-guide.html`、`batcave-hub-guide.html`、`beginners-guide.html`、`co-op-guide.html`、`collectibles-guide.html`、`mayhem-collection-dlc.html`、`mission-2-walkthrough.html`、`mission-4-walkthrough.html`、`post-game-checklist.html`、`release-date-platforms.html`、`stud-farming-guide.html`、`suits-abilities-guide.html`、`tips-for-new-players.html`、`trophy-guide.html`、`waynetech-upgrades-guide.html`——合计16个页面（占全站34个guide页面近半数）。
+
+**修复方法：** 对每个文件逐一核实截断位置：多数（10个）截断发生在页脚/脚本等站点通用样板区域（非游戏事实内容），依据站内其他已完整页面逐字确认的标准页脚/脚本文本直接补全，不涉及游戏内容判断。少数（6个：`all-characters-unlock.html`、`beginners-guide.html`、`collectibles-guide.html`、`post-game-checklist.html`、`stud-farming-guide.html`、`tips-for-new-players.html`）截断发生在正文/侧栏内容中间，处理原则严格遵循web-content-fact-guard"找不到来源时暂停，不杜撰"：对被截断的不完整句子/列表项**一律删除而非编造后续内容**（如`all-characters-unlock.html`中Bruce Wayne彩蛋房间的具体描述在"accessibl"处截断，直接以句号结束该句，未编造房间具体内容；`stud-farming-guide.html`中"Stud Goals"列表第二项在"All up"处截断，直接删除该未完成条目，仅保留已完整的第一项）；仅在能确认引用内容来自站内已核实的其他完整页面时才补全（如`collectibles-guide.html`的"Related Guides"列表最后一项"Batcave Hub Gu"补全为"Batcave Hub Guide"，该确切链接文本已在同一会话修复的`100-percent-completion.html`中逐字验证存在）。修复后对全站`guides/*.html`、`blog/*.html`及根目录页面执行`<html>`/`<body>`/`<div>`标签配对自动化验证，全部通过（0处不匹配）。
+
 ### Verification Checklist
 - [x] Blog 新文章已写入
 - [x] 步骤3B 网络事实核查已完成（7条高风险声明，6条通过Steam/OpenCritic直接WebFetch核实，1条因Metacritic渲染结果不可靠而主动放弃引用具体数值，改用可核实的Steam徽章数据）
@@ -2317,3 +2322,54 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 任务说明指定的本机挂载路径在本沙盒中不可用；未挂载任何用户文件夹。发现沙盒内`/var/tmp/brickhero-push`、`/tmp/brickhero-clone`、`/var/tmp/bhg-fresh`均为此前会话残留的仓库副本，但全部属主为`nobody`且当前会话用户（`dazzling-keen-gates`）对其无读写权限（`Permission denied`），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/sessions/dazzling-keen-gates/tmp/bhg`）完成全部编辑与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-07-29 — Epic Games Store patch-status follow-up blog + 100%/districts/character-guide SEO refresh
+
+### 阶段一：Blog 更新
+- **`blog/epic-games-store-update-pending-label-removed.html`** — "The 'Epic Games Store Pending' Note Just Disappeared From LEGO Batman Legacy's Patch Page". 961字。内容：直接WebFetch WB Games官方LEGO Games Support"July 2026 Update"页面（今日7月29日），发现其平台标题已从此前站内7月24日文章引用的"PlayStation 5, Xbox Series X|S, and PC"（EGS单独列出并附"later this month"待定脚注）变为合并后的"PlayStation 5, XBOX Series X|S, PC (Steam & Epic Games Store)"，且待定脚注句子已完全消失，十项修复清单本身未变。同时直接WebFetch TT Games官方新闻页（ttgames.com）同一更新的报道，发现该页仍显示旧版措辞（"PC (Steam*)"+相同待定脚注），且页面日期停留在7月15日，与WB支持页形成两个官方来源互相矛盾的真实情况。文章诚实披露这一矛盾，明确说明"这是两个WB/TT Games官方URL之间可验证的真实分歧，而非基于沉默的推测"，并明确指出未找到任何独立玩家（Steam社区/Reddit等）确认EGS版本本身已更新的证据，建议玩家自行在Epic Games Launcher中核实而非直接采信页面措辞变化. Tags: News, Analysis. Image: legobatmangame.com/_astro/foes.CtQfCF5a_1k24YI.webp（并列站内使用次数最少图片之一，12→13次）. Sources: WB Games LEGO Games Support页面（今日直接WebFetch）、TT Games官方新闻页（今日直接WebFetch）、MP1st Update 1.008报道. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：4条 ✅ / 0条 ❌
+  1. WB支持页今日（7月29日）措辞为"PlayStation 5, XBOX Series X|S, PC (Steam & Epic Games Store)"且无待定脚注 — ✅ 已核查（本次会话直接WebFetch该页面原文，URL与站内7月24日文章引用的URL完全一致，仅内容措辞不同）
+  2. 站内7月24日文章曾引用的该同一页面旧版措辞（EGS单独列出+"later this month"待定脚注） — ✅ 已核查（对照站内既有已发布文章`blog/epic-games-store-july-update-still-pending.html`原文引用，该文章本身已注明基于7月24日直接WebFetch）
+  3. TT Games官方新闻页（ttgames.com）今日仍显示"PC (Steam*)"+待定脚注旧版措辞，页面日期7月15日未变 — ✅ 已核查（本次会话直接WebFetch该页面原文）
+  4. 十项修复清单具体内容（On the Prowl任务、Haly's Circus任务、Batpod相机、Riddler Trophy蝙蝠洞道具、瞄准操作重映射、Talia al Ghul技能升级LBAT-64、UV视觉、Party Select菜单、蝙蝠洞载具隐形、Tricorner Island WayneTech缓存箱不生成）在两个页面版本中完全一致 — ✅ 已核查（本次会话直接WebFetch两页面原文交叉对比逐项确认）
+  - 附注：文中明确未声称"EGS玩家已确认收到更新"这一更强断言——仅报告页面措辞的可验证变化，并明确说明未找到独立玩家端证据（尝试搜索Steam社区/Reddit相关讨论，未发现今日或近期的EGS版本更新确认帖），符合web-content-fact-guard skill"证据边界"原则，未夸大结论。
+- References：3条真实URL（WB Games支持页、TT Games新闻页均今日直接核实；MP1st报道为既有可靠信源），无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide/WayneTech=10/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀）
+**关键发现：**
+1. **发现并修复严重的HTML截断缺陷（本次会话最高优先级发现）**：`guides/100-percent-completion.html`在生产仓库（git HEAD）中的原始文件在第306行、`<script>(adsbygo`处硬性截断——缺少该script标签闭合、缺少"Game Info"侧栏、缺少`</aside>`、`</div>`（page-layout容器）、整个`<footer>`区块、以及移动端菜单切换的`<script>`标签，直至`</body></html>`全部缺失。经`git show HEAD`核实此为已提交并推送至生产环境的既有缺陷，非本次会话引入。已完整重建缺失的HTML结构（补全ad script闭合、新增Game Info侧栏、闭合aside/page-layout容器、完整footer区块、菜单切换script、body/html闭合标签），修复后全站div开闭标签数量验证平衡（47/47），html/body标签验证均为1/1。此前该页面在浏览器中侧边栏底部内容、页脚、以及移动端汉堡菜单功能均无法正常渲染。
+2. 禁止错误清单全项扫描：无新增命中；`guides/trophy-guide.html`中"trophy-achievement-guide"字符串再次确认为外部URL（happythumbsgaming.com）误报，与历次会话结论一致。全站canonical均为干净URL，未发现`.html`后缀问题。WayneTech相关"10"字符串均为"10 Batcave Minikits"或"10 chips"等无关数值的正常出现，非"WayneTech caches=10"错误。
+3. 全站"Last updated"日期梳理：`guides/100-percent-completion.html`（7月15日，14天未更新）为全站最滞后页面；`guides/gotham-districts-guide.html`（7月17日）、`guides/all-villains-guide.html`与`guides/best-characters-each-mission.html`（均7月18日）并列次滞后。
+4. 未发现新的跨页面数值矛盾或过期声明；`guides/all-villains-guide.html`中Deluxe Edition SRP "$89.99"经与站内`blog/fortnite-crossover-pickaxe-egs-sale.html`已核实的Epic Games Store三档定价交叉核对一致，非矛盾。
+
+**SEO Top 3 更新：**
+1. **`guides/100-percent-completion.html`** — 全站最滞后页面（14天未更新），且发现真实的HTML截断渲染缺陷（详见关键发现第1项）已完整修复。同时"Known Bugs Affecting 100% Completion"提示框新增Update 1.008（7月21日，13GB无官方changelog）说明，并加入今日核实的WB支持页EGS措辞变化及未确认玩家端证据的完整披露，链接今日新博文。"Last updated"由July 15刷新为July 29. (评分：10/10 — 修复影响页面完整渲染的真实HTML截断缺陷，且同时补充与该页核心主题"完成度阻断性bug"直接相关的当前patch信息，非仅日期刷新)
+2. **`guides/gotham-districts-guide.html`** — 全站次滞后页面之一（7月17日）。Tricorner District 9条目（该区已知的WayneTech缓存箱不生成bug）明确区分"PS5/Xbox/Steam已解决"与"Epic Games Store玩家建议自行核实"，链接今日新博文；同时刷新已过时的"Latest Blog Posts"侧栏（原链接为6月内容，替换为今日新博文+最近两篇）。"Last updated"由July 17刷新为July 29. (评分：7/10 — 与本页已有的Tricorner已知问题条目直接相关的真实平台区分信息，且修复了侧栏过期链接)
+3. **`guides/best-characters-each-mission.html`** — 全站并列次滞后页面之一（7月18日）。Talia al Ghul角色卡片新增"Patch note"说明，引用LBAT-64（其技能升级bug已于7月14日更新修复）并链接今日核实的EGS措辞变化，建议玩家自行核实平台更新状态；侧栏新增今日博文链接。"Last updated"由July 18刷新为July 29. (评分：6/10 — 与该角色条目直接相关的真实patch信息，为该角色的Free Play选择提供额外上下文)
+
+**新建页面（如有）：** 无
+
+**额外修正：** `_redirects`文件补充今日新博文`epic-games-store-update-pending-label-removed.html`的301重定向条目。
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（4条高风险声明，全部通过WB Games/TT Games官方页面今日直接WebFetch核实；未找到独立玩家端确认证据的边界已在文中明确披露，未夸大结论）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + canonical格式检查 + 全站日期梳理）
+- [x] SEO Top 3 更新已执行（100-percent-completion.html / gotham-districts-guide.html / best-characters-each-mission.html）
+- [x] 额外发现并修复全站16个guide页面的HTML截断缺陷（详见阶段二B），修复后全站html/body/div标签配对验证100%通过
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（117页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次为官方支持页面措辞变化的事实性报道，非游戏内部权威数值范畴）
+- [x] _redirects 已同步新增页面条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 任务说明指定的本机挂载路径（`/var/tmp/brickhero-push/BrickHeroGuide.com`）在本沙盒中存在但整个仓库目录属主为`nobody:nogroup`（含`.git`目录本身），当前会话用户对其无任何写权限，且该副本内容已过期（最后提交为2026-06-29，落后当前生产仓库一个月），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/sessions/dreamy-admiring-albattani/work/repo`）完成全部编辑与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。

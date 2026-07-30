@@ -196,5 +196,17 @@
     "Switch 2 performance 'estimated' or 'TBD' — WRONG, known: 720p handheld / 1080p docked",
     "Collectibles total '99+' — WRONG, correct: 247+",
     "Canonical URLs with .html suffix — WRONG, site uses clean URLs"
-  ]
+  ],
+  "sales_history": {
+    "2026_07_first_major_sale": {
+      "discount": "20%",
+      "standard_price": "$55.99 (from $69.99)",
+      "deluxe_price": "$71.99 (from $89.99)",
+      "platforms": "Steam, PlayStation Store, Xbox Store (originated on Epic Games Store around 2026-07-27)",
+      "steam_end_date": "2026-08-10",
+      "ps_xbox_end_date": "2026-08-13",
+      "source": "ComicBook.com (2026-07-29), GG.deals (2026-07-28), Epic Games Store direct check (2026-07-27)",
+      "last_verified": "2026-07-30"
+    }
+  }
 }

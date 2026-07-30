@@ -2373,3 +2373,57 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 任务说明指定的本机挂载路径（`/var/tmp/brickhero-push/BrickHeroGuide.com`）在本沙盒中存在但整个仓库目录属主为`nobody:nogroup`（含`.git`目录本身），当前会话用户对其无任何写权限，且该副本内容已过期（最后提交为2026-06-29，落后当前生产仓库一个月），判定为不可用，未使用其任何内容。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/sessions/dreamy-admiring-albattani/work/repo`）完成全部编辑与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内的克隆仓库文件——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-07-30 — 首次重大促销（20%折扣）blog + deluxe/release-date/all-villains SEO刷新
+
+### 阶段一：Blog 更新
+- **`blog/first-major-sale-20-percent-off.html`** — "LEGO Batman: Legacy of the Dark Knight Gets Its First Big Sale Since Launch". 869字。内容：直接WebFetch并交叉核实ComicBook.com（2026-07-29发布）与GG.deals（2026-07-28发布）两篇独立报道，确认游戏自5月22日发售以来的首次重大折扣——Steam/PS商店/Xbox商店全部20%off（标准版$69.99→$55.99，豪华版$89.99→$71.99），Steam截止8月10日、PS5/Xbox截止8月13日（两篇报道均给出具体金额与日期，互相印证）。同时直接WebFetch Steam商店页面本身核实基础价格与豪华版内容（Legacy Collection三套主题包各含7套服装/1辆蝙蝠车/5件蝙蝠洞道具），但注明本次直接抓取时Steam页面未显示折扣标签（可能为地区/缓存/时序原因），如实披露而非强行调和。文中"Standard vs Deluxe购买数学"一节最初误判"未找到Deluxe Upgrade DLC本身打折的来源"，经阶段二审计发现与站内`blog/fortnite-crossover-pickaxe-egs-sale.html`（7月27日已发布文章）矛盾——该文章已用Epic Games Store官方页面直接核实Deluxe Upgrade当时降至$19.99（20%off），已修正为呈现两种情况的价格区间（$75.98或$80.98）而非单一断言. Tags: News, Tips. Image: legobatmangame.com/_astro/og-image.BcIYb3Fq.jpg（并列站内使用次数最少图片之一，12→13次）. Sources: ComicBook.com、GG.deals、Steam商店页面（均今日或近日直接核实）. 7 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：7条 ✅ / 0条 ❌
+  1. Steam标准版$69.99→$55.99（20%off），截止8月10日 — ✅ 已核查（GG.deals今日直接WebFetch原文逐字确认，含具体折扣标签"-20%"与到期倒计时"2 weeks"）
+  2. 豪华版$89.99→$71.99（20%off） — ✅ 已核查（ComicBook.com今日直接WebFetch原文确认）
+  3. PS5/Xbox同样20%off，截止8月13日 — ✅ 已核查（ComicBook.com原文明确给出PS Store/Xbox Store链接与8月13日日期，与Steam的8月10日形成对比）
+  4. Deluxe Upgrade DLC定价$24.99、Legacy Collection内容（3套主题包/每包7套服装+1蝙蝠车+5道具，共30+件） — ✅ 已核查（Steam商店页面今日直接WebFetch原文确认）
+  5. Mayhem Collection DLC 9月18日、Joker/Harley Quinn可玩、Sinister Pack内容 — ✅ 已核查（对照`data/game-facts.json`已验证数值，与Steam页面今日抓取的DLC描述一致）
+  6. IGN 8/10、OpenCritic 85"Mighty"、Steam 12,665评测95.8%好评 — ✅ 已核查（`data/game-facts.json`已验证数值，2026-07-26基准）
+  7. Deluxe Upgrade DLC此前（7月27日）在Epic Games Store曾降至$19.99 — ✅ 已核查（对照站内既有已发布文章`blog/fortnite-crossover-pickaxe-egs-sale.html`原文引用及其References区块的Epic Games Store直接抓取来源，非本次凭空引用）
+  - GG.deals文中"其他地区官方渠道最高42%off、key商最高50%off"一句被明确标注为"第三方平台声称、未逐店核实"，未作为确定性事实呈现（warn-box边界披露）。
+- References：3条真实URL（ComicBook.com、GG.deals、Steam商店页面，均本次会话直接核实），无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide/WayneTech=10/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中）
+**关键发现：**
+1. `guides/release-date-platforms.html`中"早期准入窗口已结束，游戏目前在所有平台均为常规价格"一句经本次核实为**过时且不准确**——该页面7月26日更新时准确，但截至今日Steam/PS商店/Xbox商店均已进入20%off促销期，已直接改正为反映当前促销状态并链接今日新博文。
+2. `guides/deluxe-edition-explained.html`中7月27日记录的"仅Epic Games Store有促销，Steam当天无同等促销"表述本身准确（当时确实如此），但截至今日促销已扩展至Steam/PS5/Xbox，该页面的"当前PC定价"提示框已刷新为反映促销范围扩大后的最新状态，并保留原7月27日记录作为历史对照，未删除或篡改。
+3. `guides/all-villains-guide.html`为全站日期最滞后页面（7月18日，12天未更新），且其"Mayhem Collection含于豪华版（SRP $89.99）"表述虽准确但未提及当前折扣价，已补充链接今日新博文。
+4. 全站HTML闭合标签验证（html/body）：34个guide页面全部1/1平衡，无新增截断问题（此前会话已修复的16个页面缺陷保持完好）。
+5. 全站日期梳理：`guides/all-villains-guide.html`（7月18日）为最滞后页面；`guides/gotham-map-guide.html`、`guides/mission-2-walkthrough.html`、`guides/mission-3-walkthrough.html`（均7月19日）并列次滞后，本次会话优先级让位于与今日促销新闻直接相关的三个页面，留待后续会话处理。
+
+**SEO Top 3 更新：**
+1. **`guides/release-date-platforms.html`** — 修正"游戏目前在所有平台均为常规价格"这一今日已过时的不准确表述，补充今日核实的Steam/PS5/Xbox 20%off促销详情（含各平台不同截止日期）并链接今日新博文；"Last updated"由July 26刷新为July 30. (评分：9/10 — 修正真实存在的过时/不准确断言，而非仅日期刷新)
+2. **`guides/deluxe-edition-explained.html`** — 将7月27日记录的"仅EGS促销"信息更新为反映促销已扩展至Steam/PS5/Xbox的最新状态，注明两次独立信源与不同平台截止日期，并链接今日新博文；"Last updated"由July 27刷新为July 30. (评分：8/10 — 与本页核心主题"豪华版定价"直接相关的真实促销范围扩大信息)
+3. **`guides/all-villains-guide.html`** — 全站最滞后页面（12天未更新）。为"Mayhem Collection含于豪华版（SRP $89.99）"条目补充当前20%off促销价$71.99及今日新博文链接；"Last updated"由July 18刷新为July 30. (评分：6/10 — 与该条目直接相关的真实促销价格补充，同时解决全站最滞后页面问题)
+
+**新建页面（如有）：** 无
+
+**额外修正：** `_redirects`文件补充今日新博文`first-major-sale-20-percent-off.html`的301重定向条目；`data/game-facts.json`新增`sales_history.2026_07_first_major_sale`字段，记录本次促销的折扣、价格、平台、各平台截止日期及信源，供后续会话复用。
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（7条高风险声明，全部核实通过；写作过程中发现并修正了与站内既有文章的一处内部矛盾，未回避）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + canonical格式检查 + html/body闭合验证 + 全站日期梳理）
+- [x] SEO Top 3 更新已执行（release-date-platforms.html / deluxe-edition-explained.html / all-villains-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（118页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 已新增 sales_history 字段记录本次促销数值
+- [x] _redirects 已同步新增页面条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 任务说明指定的挂载路径在本沙盒中不可直接写入：`/var/tmp/brickhero-push/BrickHeroGuide.com`权限不足且内容严重过期（最后提交2026-06-29）；另发现`/var/tmp/bhg-fresh`为可读的完整仓库副本（本地领先origin/main一个提交，经`git fetch`+`git rebase`确认该提交实际已包含在origin历史中，无遗漏工作），但同样因属主为`nobody`而在原位置不可写。已将`/var/tmp/bhg-fresh`完整复制到本会话可写路径（`/sessions/eager-sleepy-fermat/work/BrickHeroGuide.com`）后完成全部编辑、sitemap生成与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内路径——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。

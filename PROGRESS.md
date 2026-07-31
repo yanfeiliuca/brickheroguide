@@ -2427,3 +2427,50 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 任务说明指定的挂载路径在本沙盒中不可直接写入：`/var/tmp/brickhero-push/BrickHeroGuide.com`权限不足且内容严重过期（最后提交2026-06-29）；另发现`/var/tmp/bhg-fresh`为可读的完整仓库副本（本地领先origin/main一个提交，经`git fetch`+`git rebase`确认该提交实际已包含在origin历史中，无遗漏工作），但同样因属主为`nobody`而在原位置不可写。已将`/var/tmp/bhg-fresh`完整复制到本会话可写路径（`/sessions/eager-sleepy-fermat/work/BrickHeroGuide.com`）后完成全部编辑、sitemap生成与推送。Read/Write/Edit工具运行于宿主机文件系统而非本沙盒VM，无法直接操作VM内路径——本次会话全程改用bash（heredoc、python3脚本读写替换）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-07-31 — Sale discount discrepancy blog (Steam storefront vs third-party trackers) + gotham-map/mission-2/mission-3 SEO refresh
+
+### 阶段一：Blog 更新
+- **`blog/sale-discount-missing-from-steam-store-page.html`** — "LEGO Batman Legacy's Sale Still Isn't Showing on Steam's Own Page, Two Days Later". 751字。内容：本次会话直接WebFetch Steam商店页面原文（今日7月31日），确认页面显示标准版$69.99/豪华版$89.99全价，无任何折扣标签或banner；同时直接WebFetch GG.deals同一促销报道页面（今日重新核实），确认其仍显示"Regular price: $69.99, Discount: -20%, Current price: $55.99"且促销剩余"in 2 weeks"（与此前报道的8月10日Steam截止日期一致）。两个直接抓取的真实来源之间存在明确的价格矛盾，与站内7月30日文章已初步记录的"Steam页面当时未显示折扣"现象形成第二个连续交易日的独立验证，文中如实披露矛盾、明确说明未能确定具体原因（缓存/地区定价/结算页显示等推测均标注为推测，非结论），并建议玩家自行在结算页核实价格而非轻信任一单一信源。同时直接WebFetch SteamCharts.com获取今日实时数据（当前在线6,748人、24小时峰值17,601、历史峰值33,053、过去30天日均14,570.93，环比上月-3.15%），并诚实说明"最近30天"窗口大部分仍为促销开始前的时段，故月度均值下降尚不能说明促销是否拉动了新玩家，需等下月数据. Tags: News, Analysis. Image: legobatmangame.com/_astro/prefooter-keyart.C5w2I9s1_1Iktj5.jpg（并列站内使用次数最少图片之一，12→13次）. Sources: Steam商店页面、GG.deals促销页面、SteamCharts.com（均本次会话直接WebFetch核实）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：3条 ✅ / 0条 ❌
+  1. Steam商店页面今日（7月31日）直接抓取显示标准版$69.99、豪华版$89.99全价，无折扣banner — ✅ 已核查（本次会话直接WebFetch原文确认，与站内7月30日文章记录的"当时也显示全价"结果一致，形成第二个交易日的独立复现）
+  2. GG.deals促销页面今日重新核实仍显示"Regular price: $69.99, Discount: -20%, Current price: $55.99"，促销剩余"in 2 weeks" — ✅ 已核查（本次会话直接WebFetch该页面原文，与站内7月30日文章引用的原始报道一致，且页面本身未做任何更正或撤回声明）
+  3. SteamCharts.com今日实时数据：当前在线6,748、24小时峰值17,601、历史峰值33,053、30天日均14,570.93、环比上月-3.15% — ✅ 已核查（本次会话直接WebFetch原文逐项确认，未使用任何缓存或历史截图数据）
+  - 文中未对"促销是否真实存在"下确定性结论——仅如实呈现两个直接来源之间的矛盾现状，并将"缓存/地区定价/结算页显示"等可能原因明确标注为未经证实的猜测，符合web-content-fact-guard"找不到确定答案时暂停/如实说明分歧"原则。
+- References：3条真实URL（Steam商店页面、GG.deals促销页面、SteamCharts.com，均本次会话直接WebFetch核实），无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide/WayneTech=10/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中；html/body标签配对34个页面全部1/1平衡，无新增截断问题）
+**关键发现：**
+1. 全站"Last updated"日期梳理（本次采用改进后的正则同时匹配"Last updated:"与"Updated:"两种站内既有措辞，避免此前会话可能因格式差异漏检部分页面）：`guides/gotham-map-guide.html`、`guides/mission-2-walkthrough.html`、`guides/mission-3-walkthrough.html`三个页面并列全站最滞后（均7月19日，12天未更新），优先作为本次SEO Top 3对象。
+2. 未发现新的跨页面数值矛盾或过期声明；三个最滞后页面本身内容准确性核对无误，仅为需要补充当前时效性信息。
+
+**SEO Top 3 更新：**
+1. **`guides/gotham-map-guide.html`** — 全站并列最滞后页面之一（12天未更新）。新增引用今日SteamCharts直接核实数据（24小时峰值17,601、30天日均约14,570）的活跃玩家提示框，为正在冲刺100%完成度的读者提供"当前有多少人同时在线"的真实背景信息，并链接今日新博文；"Last updated"由July 19刷新为July 31. (评分：6/10 — 全站并列最滞后页面，新增真实站外数据交叉引用)
+2. **`guides/mission-2-walkthrough.html`** — 全站并列最滞后页面之一（12天未更新）。新增提示框，明确告知因促销消息买入的新玩家：站内今日核实发现Steam商店页面本身仍显示全价、无折扣banner，建议买家自行在结算页核实价格，并链接今日新博文的完整核查过程；"Last updated"由July 19刷新为July 31. (评分：7/10 — 与促销价格真实性直接相关的消费者保护类信息，非仅日期刷新)
+3. **`guides/mission-3-walkthrough.html`** — 全站并列最滞后页面之一（12天未更新），且面向"首次游玩"新玩家群体，与促销买家高度相关。新增与`mission-2-walkthrough.html`类似的促销价格核实提示框，链接今日新博文；"Last updated"由July 19刷新为July 31. (评分：7/10 — 面向新玩家群体的真实消费者保护信息，页面受众与今日博文话题高度契合)
+
+**新建页面（如有）：** 无
+
+**额外修正：** `_redirects`文件补充今日新博文`sale-discount-missing-from-steam-store-page.html`的301重定向条目。
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（3条高风险声明，全部通过Steam商店页面/GG.deals/SteamCharts.com今日直接WebFetch核实；两个官方/第三方来源间的真实价格矛盾已如实披露，未强行调和或编造解释）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + canonical格式检查 + html/body闭合验证 + 全站日期梳理，本次改进正则同时匹配两种日期措辞）
+- [x] SEO Top 3 更新已执行（gotham-map-guide.html / mission-2-walkthrough.html / mission-3-walkthrough.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（119页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次为站外第三方价格/玩家数追踪数据的时效性报道，非游戏内部权威数值范畴）
+- [x] _redirects 已同步新增页面条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 任务说明指定的本机挂载路径在本沙盒中不可用；未挂载任何用户文件夹。发现沙盒内`/var/tmp/brickhero-push`（内容严重过期，最后提交2026-06-29，属主为`nobody`无写权限）与`/var/tmp/bhg-fresh`（属主同样为`nobody`无写权限）均为此前会话残留副本，判定为不可用。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/bhg-today`）完成全部编辑、sitemap生成与推送。Read/Write/Edit工具无法直接访问该bash沙盒路径（报错"outside this session's connected folders"）——本次会话全程改用bash（heredoc写入新文件、python3脚本读写替换既有文件）完成对仓库文件的所有读取与编辑操作。

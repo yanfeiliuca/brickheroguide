@@ -2474,3 +2474,54 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 任务说明指定的本机挂载路径在本沙盒中不可用；未挂载任何用户文件夹。发现沙盒内`/var/tmp/brickhero-push`（内容严重过期，最后提交2026-06-29，属主为`nobody`无写权限）与`/var/tmp/bhg-fresh`（属主同样为`nobody`无写权限）均为此前会话残留副本，判定为不可用。已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/bhg-today`）完成全部编辑、sitemap生成与推送。Read/Write/Edit工具无法直接访问该bash沙盒路径（报错"outside this session's connected folders"）——本次会话全程改用bash（heredoc写入新文件、python3脚本读写替换既有文件）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-08-01 — Steam sale discrepancy resolved (mystery-solved follow-up) + is-it-good-for-kids/suits-abilities/trophy-guide SEO refresh
+
+### 阶段一：Blog 更新
+- **`blog/steam-sale-now-confirmed-store-page-updated.html`** — "Mystery Solved: LEGO Batman Legacy's 20% Sale Is Now Showing on Steam's Own Page". 约850字。内容：本次会话直接WebFetch Steam商店页面原文（今日8月1日），确认与7月30-31日连续两天记录的"Steam自身页面显示全价、无折扣banner"现象不同——今日页面标题本身已变为"Save 20% on LEGO® Batman™: Legacy of the Dark Knight on Steam"，购买框直接显示"SPECIAL PROMOTION! Offer ends August 10"横幅，标准版$69.99→$55.99、豪华版$89.99→$71.99、DLC Upgrade单独购买$24.99→$19.99，三个SKU折扣一致；同时直接WebFetch GG.deals同一促销页面（今日重新核实），与Steam页面价格完全吻合（$55.99），为连续追踪以来两个信源首次一致。文中如实说明仍无法确定7月30-31日两日差异的具体原因（区域定价/账号状态/横幅上线延迟/缓存等均标注为未经证实的猜测），未强行给出确定性解释。同时报告最新评测数据：总评测数12,903（12,359好评/544差评），好评率95.8%与7月26日基准完全持平；英语评测6,218条"好评如潮"；近30天评测降温至"多半好评"92%（489条），低于7月26日记录的94%（688条），如实标注为正常的发售两月后评测节奏回落而非具体投诉；同时报告Steam页面自身显示的Metacritic评分84（明确标注来源为"通过Steam页面显示"而非直接引用metacritic.com——本次会话尝试直接WebFetch metacritic.com官方页面，但返回内容为发售前5月的过期缓存快照，与Steam页面today显示的数据矛盾，判定该缓存不可信，故未采用其内容，仅采信Steam页面自身的评分展示）。**重要方法论说明：** 本次会话还尝试直接WebFetch SteamCharts.com获取今日玩家数据，但返回结果与站内7月31日已发布文章记录的数字完全一致（6,748在线/17,601峰值/33,053历史峰值/14,570.93月均），判断为缓存快照而非实时数据，因此本文**未采用**该数据，避免将疑似缓存内容当作"今日新数据"呈现——这是对web-content-fact-guard"找不到确定来源时暂停"原则的延伸应用（来源看似可访问，但内容可疑时同样应暂停使用）. Tags: News, Analysis. Image: legobatmangame.com/_astro/family.CQW_jlFK_2qvCfg.webp（并列站内使用次数最少图片之一，12→13次）. Sources: Steam商店页面、GG.deals促销页面（均本次会话直接WebFetch核实）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：9条 ✅ / 0条 ❌
+  1. Steam商店页面今日（8月1日）页面标题变为"Save 20% on..."，购买框显示"SPECIAL PROMOTION! Offer ends August 10"，标准版$69.99→$55.99 — ✅ 已核查（本次会话直接WebFetch原文确认，与7月30-31日两次记录的"无折扣banner、全价"形成明确对比）
+  2. 豪华版$89.99→$71.99，同样8月10日截止 — ✅ 已核查（同一页面同次WebFetch确认）
+  3. Deluxe Edition Upgrade DLC单独购买$24.99→$19.99 — ✅ 已核查（同一页面"Content For This Game"区块确认）
+  4. GG.deals促销页面今日重新核实仍显示"Regular price: $69.99, Discount: -20%, Current price: $55.99" — ✅ 已核查（本次会话直接WebFetch该页面原文，与Steam页面今日数据完全吻合，为连续追踪以来首次两信源一致）
+  5. 总评测数12,903（12,359好评/544差评），好评率95.8% — ✅ 已核查（Steam页面今日直接WebFetch的Review Type筛选器数据）
+  6. 英语评测6,218条"好评如潮" — ✅ 已核查（同一页面直接确认）
+  7. 近30天评测："多半好评"92%（489条） — ✅ 已核查（同一页面"Recent Reviews"直接确认，与7月26日基准94%/688条对比如实呈现降温而非隐瞒）
+  8. Metacritic评分84 — ✅ 已核查但**降级为间接引用**（Steam页面本身直接显示"84 metacritic"徽章及外链，本次会话同时尝试直接WebFetch metacritic.com官方页面交叉验证，但该页面返回内容为发售前的过期缓存快照——显示"Metascore Available after 4 critic reviews tbd"及5月的预览评测，与今日日期严重不符，判定不可信，故未采用该次抓取内容；最终仅将84分来源明确标注为"Steam页面展示"而非"metacritic.com直接核实"，避免用不可信来源佐证）
+  9. SteamCharts.com数据排除说明 — 本次会话直接WebFetch该页面，但返回数字（6,748/17,601/33,053/14,570.93/-3.15%）与站内7月31日已发布文章记录的数字逐位相同，判定为缓存快照而非今日实时数据，**主动排除**、未在本文中作为"今日新数据"使用，避免向读者呈现失实的"新鲜度"
+  - 附注：文中对7月30-31日与今日结果不一致的原因，明确保留为"未能独立确认具体原因"，仅列出区域定价/账号状态/横幅延迟/缓存等可能性，均标注为推测，符合web-content-fact-guard证据边界原则。
+- References：2条真实URL（Steam商店页面、GG.deals促销页面，均本次会话直接WebFetch核实），无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide/WayneTech=10/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中；html/body/div标签配对34个页面全部平衡，无新增截断问题）
+**关键发现：** 未发现新的禁止错误或跨页面数值矛盾。全站"Last updated"日期梳理（正则同时匹配"Last updated:"与"Updated:"两种措辞）：`guides/is-it-good-for-kids.html`与`guides/suits-abilities-guide.html`并列全站最滞后（均7月20日，12天未更新），`guides/trophy-guide.html`（7月21日，11天）次之，本次选为SEO Top 3对象。
+
+**SEO Top 3 更新：**
+1. **`guides/is-it-good-for-kids.html`** — 全站并列最滞后页面之一（12天未更新）。为面向家长的FAQ区块新增"Is now a good time to buy for a family?"条目，引用今日核实的Steam 20%折扣（$55.99，8月10日截止）帮助家长做购买决策，并链接今日新博文与Deluxe Edition指南；"Last updated"由July 20刷新为August 1. (评分：7/10 — 与该页核心受众"决定是否购买"直接相关的真实促销信息，非仅日期刷新)
+2. **`guides/suits-abilities-guide.html`** — 全站并列最滞后页面之一（12天未更新），且为项目说明中标注的高SEO价值页面。在现有DLC Note高亮框后新增促销提示，告知追求129套全服装的玩家：Deluxe Edition Upgrade DLC今日20%off（$19.99），链接今日新博文；"Last updated"由July 20刷新为August 1. (评分：7/10 — 与该页"如何解锁全部服装"主题直接相关的真实促销价格，针对完成度玩家的实用信息)
+3. **`guides/trophy-guide.html`** — 全站次滞后页面（11天未更新），同为高SEO价值页面。在Overview区块新增Steam玩家专属说明：Steam版共52个成就，与PS5奖杯总数一致（比Xbox的51个多1个，因Xbox无独立"白金"成就），该数字本次会话直接从Steam商店页面核实；"Last updated"由July 21刷新为August 1. (评分：6/10 — 与该页"奖杯/成就数量"核心主题直接相关的真实平台对比数据补充)
+
+**新建页面（如有）：** 无
+
+**额外修正：** `_redirects`文件补充今日新博文`steam-sale-now-confirmed-store-page-updated.html`的301重定向条目。
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（9条高风险声明核查，全部通过Steam商店页面/GG.deals今日直接WebFetch核实；主动识别并排除了SteamCharts.com的疑似缓存数据、降级处理了metacritic.com的过期缓存快照，未将不可信来源当作今日新数据呈现）
+- [x] References 区块已填写（2条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + canonical格式检查 + html/body/div闭合验证 + 全站日期梳理）
+- [x] SEO Top 3 更新已执行（is-it-good-for-kids.html / suits-abilities-guide.html / trophy-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（120页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次为站外促销价格/评测计数的时效性报道，非游戏内部权威数值范畴）
+- [x] _redirects 已同步新增页面条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 任务说明指定的本机挂载路径在本沙盒中不可用；未挂载任何用户文件夹。发现沙盒内`/tmp/bhg-today`为此前会话（7月31日）克隆的仓库副本，内容为最新（已与origin/main同步），但其属主为`nobody`，当前会话用户对`.git/FETCH_HEAD`等文件无写权限，无法直接`git pull`。已将该副本完整复制到本会话可写路径（`/tmp/work`），修正权限后完成`git fetch`+`git pull --rebase`同步至最新（快进合并一个GitHub Action自动生成的sitemap提交），随后完成全部编辑、sitemap生成与推送。Read/Write/Edit工具无法直接访问`/tmp/work`路径（报错"outside this session's connected folders"）——本次会话全程改用bash（heredoc写入新文件、python3脚本读写替换既有文件）完成对仓库文件的所有读取与编辑操作。

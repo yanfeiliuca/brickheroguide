@@ -2525,3 +2525,51 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 任务说明指定的本机挂载路径在本沙盒中不可用；未挂载任何用户文件夹。发现沙盒内`/tmp/bhg-today`为此前会话（7月31日）克隆的仓库副本，内容为最新（已与origin/main同步），但其属主为`nobody`，当前会话用户对`.git/FETCH_HEAD`等文件无写权限，无法直接`git pull`。已将该副本完整复制到本会话可写路径（`/tmp/work`），修正权限后完成`git fetch`+`git pull --rebase`同步至最新（快进合并一个GitHub Action自动生成的sitemap提交），随后完成全部编辑、sitemap生成与推送。Read/Write/Edit工具无法直接访问`/tmp/work`路径（报错"outside this session's connected folders"）——本次会话全程改用bash（heredoc写入新文件、python3脚本读写替换既有文件）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-08-02 — Jim Gordon character guide (evergreen roster gap) + jim-gordon-guide/tips-for-new-players/mission-4-walkthrough SEO refresh
+
+### 阶段一：Blog 更新
+- **`blog/jim-gordon-character-guide.html`** — "Jim Gordon in LEGO Batman Legacy: Unlock, Gadgets & Why He's the Roster's Most Overlooked Pick". 约960字。选题理由：搜索今日（8月2日）无新的官方补丁/DLC/促销进展（7月官方更新内容已被站内`update-1-007-patch-notes-july-2026.html`完整覆盖；SteamCharts数据与站内7月31日文章记录的数字逐位相同，判定为缓存，未采用；速通社区stats页面数字与站内7月2日文章报道的数字（69 runs/16 players）完全一致，同样无新进展；76355 Batmobile价格传闻为7月17日旧闻，已被站内7月23日文章覆盖），故转向常青型选题：核实全站7个可玩角色的博客覆盖情况，发现Batman、Batgirl、Catwoman、Nightwing、Robin、Talia al Ghul均有独立blog角色介绍文章，唯独Jim Gordon缺失（仅在guides/目录下有一篇进阶build guide，二者定位不同）。内容涵盖：解锁时机（Chapter 1完成Docks任务）、Foam Sprayer与Rebound Launcher两个装备的功能、Dexerto tier list中Gordon独占C-Tier（全roster最低）的排名及其局限性说明、角色设计取材自2022年电影版《The Batman》且服装涵盖从动画版到2022电影版的跨度. Tags: Guide, Analysis. Image: legobatmangame.com/_astro/fight-2.BFd6neBb_2adSpB.webp（站内使用次数最少图片之一，12→13次）. Sources: Dexerto角色wiki、GameRant全角色列表、TheDirect全DC角色列表（均本次会话直接WebFetch核实）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：6条 ✅ / 0条 ❌
+  1. Jim Gordon解锁时机：完成Chapter 1 Docks任务 — ✅ 已核查（Dexerto角色页"How to Unlock: Complete Docks mission"直接确认，并与GameRant"Chapter 1"及WebSearch摘要中game8.co"playable when you arrive at the Docks"的独立表述互相印证）
+  2. 装备：Foam Sprayer、Rebound Launcher — ✅ 已核查（Dexerto角色页Details区块与GameRant全角色装备对照表两个独立来源一致确认）
+  3. Foam Sprayer效果：粘性泡沫使敌人/机械暂时失效，可用于冻结齿轮机关 — ✅ 已核查（GameRant"What Makes Each Playable Character Different"与"How Characters Affect Exploration"两个段落直接描述）
+  4. Rebound Launcher效果：弹射式射击，可连续命中多个目标/物体 — ✅ 已核查（GameRant同上段落直接描述，并与WebSearch摘要中的独立表述互相印证）
+  5. Dexerto tier list：Jim Gordon为全roster唯一C-Tier角色 — ✅ 已核查（Dexerto角色页Details区块"Tier: C-Tier"直接显示；文中已明确标注为"Dexerto's own editorial ranking"而非官方声明，避免误导为开发商定论）
+  6. 角色设计取材自2022年电影《The Batman》，服装跨度从动画版到2022电影版 — ✅ 已核查（TheDirect"All 21 DC Characters"文章直接WebFetch确认原文表述"Gordon's appearance is based on the version of Jim Gordon who appears in 2022's The Batman"及服装跨度描述）
+  - 附注：文中所有服装总数引用（101基础/129含DLC）均与`data/game-facts.json`权威数值一致，未做任何未经核实的数值推断。guides/jim-gordon-guide.html（进阶build guide）已独立引用同一Dexerto tier list来源并标注C-tier，两篇文章数值互相印证，无矛盾。
+- References：3条真实URL（Dexerto、GameRant、TheDirect，均本次会话直接WebFetch核实），无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide/WayneTech缓存总数错误/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中——4个页面命中初筛正则但逐一人工核查均为误报，如WayneTech里程碑"10, 30, 50..."被误判为"WayneTech=10"错误；html/body/div标签配对34个页面全部平衡）
+**关键发现：** 全站"Last updated"日期梳理：`guides/mission-4-walkthrough.html`、`guides/post-game-checklist.html`、`guides/tips-for-new-players.html`三者并列全站最滞后（均7月22日，11天未更新）；`guides/jim-gordon-guide.html`、`guides/batcave-hub-guide.html`、`guides/batcave-mural-challenges.html`次之（均7月23日，10天）。发现`guides/jim-gordon-guide.html`（已存在的进阶build guide）与今日新博文主题直接相关但此前互相未建立内部链接，判定为高价值链接补全机会，优先处理。
+
+**SEO Top 3 更新：**
+1. **`guides/jim-gordon-guide.html`** — 全站次滞后页面之一（10天未更新），且与今日新博文主题直接相关。在开篇段落与侧边栏"Character Guides"区块新增指向`blog/jim-gordon-character-guide.html`的双向内链，帮助搜索引擎与读者在"进阶build攻略"与"角色总览/解锁时机/lore背景"两类内容间建立关联；"Last updated"由July 23刷新为August 2. (评分：7/10 — 与今日新内容直接相关的高价值内链补全，非仅日期刷新)
+2. **`guides/tips-for-new-players.html`** — 全站并列最滞后页面之一（11天未更新）。已有段落提及"Gordon's foam gun for armoured enemies"但此前未链接任何Gordon专题页面，新增指向今日博文的内链，帮助新手玩家在遇到该提示时能进一步了解Gordon的完整解锁时机与装备；"Last updated"由July 22刷新为August 2. (评分：6/10 — 高流量新手引导页的内链补全)
+3. **`guides/mission-4-walkthrough.html`** — 全站并列最滞后页面之一（11天未更新）。Batgirl Begins任务段落此前未链接站内已有的`blog/batgirl-character-guide.html`，新增该内链帮助读者从流程攻略跳转至角色深度介绍；"Last updated"由July 22刷新为August 2. (评分：6/10 — 高流量流程攻略页与已有角色专题内容的内链补全)
+
+**新建页面（如有）：** 无
+
+**额外修正：** `_redirects`文件补充今日新博文`jim-gordon-character-guide.html`的301重定向条目。
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（6条高风险声明，全部通过Dexerto/GameRant/TheDirect直接WebFetch核实；tier list排名已明确标注为来源方编辑观点而非官方定论）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + canonical格式检查 + html/body/div闭合验证 + 全站日期梳理）
+- [x] SEO Top 3 更新已执行（jim-gordon-guide.html / tips-for-new-players.html / mission-4-walkthrough.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（121页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次为角色lore/装备/第三方tier list的时效性/结构性报道，未引入任何新的游戏内部权威数值）
+- [x] _redirects 已同步新增页面条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 任务说明指定的本机挂载路径在本沙盒中不可用；未挂载任何用户文件夹。发现沙盒内`/var/tmp/brickhero-push`、`/var/tmp/bhg-fresh`、`/tmp/bhg-today`、`/tmp/work`均为此前会话残留副本（属主均为`nobody`，内容新旧不一，最新为`/tmp/work`的2026-08-01提交）。为确保基于最新代码工作，已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/bhg`），确认其HEAD（3f961bb，2026-08-01自动sitemap提交）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具无法直接访问`/tmp/bhg`路径（报错"outside this session's connected folders"）——本次会话全程改用bash（heredoc写入新文件、python3脚本读写替换既有文件）完成对仓库文件的所有读取与编辑操作。

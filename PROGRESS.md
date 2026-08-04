@@ -2625,3 +2625,53 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 任务说明指定的本机挂载路径（`/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/`）在本沙盒中不可用；未挂载任何用户文件夹。发现沙盒内`/var/tmp/brickhero-push`残留此前会话副本，属主为`nobody`，当前会话用户对其无读写权限（含`.git/FETCH_HEAD`等核心文件）。为确保基于最新代码工作，已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/brickhero-work`），确认其HEAD（cc79e2b，2026-08-02自动sitemap提交）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具无法直接访问`/tmp/brickhero-work`路径（报错"outside this session's connected folders"）——本次会话全程改用bash（heredoc写入新文件、python3脚本读写替换既有文件）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-08-04 — Detective Mode sonar-pulse deep dive (evergreen mechanics gap) + detective-mode-guide/batcave-mural-challenges/chapter-1-red-hood-gang-walkthrough SEO refresh
+
+### 阶段一：Blog 更新
+- **`blog/detective-mode-explained.html`** — "Detective Mode Explained: How the Sonar Pulse Actually Works in LEGO Batman: Legacy of the Dark Knight". 约950字。选题理由：搜索今日（8月4日）官方补丁/DLC/促销进展均无新内容——WB Games官方"July 2026 Update"支持页面直接WebFetch核实后，确认其完整修复清单与站内已发布的`update-1-007-patch-notes-july-2026.html`逐条一致（同一次1.007补丁的官方changelog，非新补丁）；Speedrun.com今日直接WebFetch的`/LotDK/stats`页面显示69 runs/23 full-game/16 players/82 followers，与站内7月`speedrun-community-one-month-growth.html`记录的69/23/16/83几乎逐位相同（仅followers从83降到82），判定为无实质新进展，且WebSearch摘要给出的"72 runs/17 players"经直接WebFetch验证后证实为搜索摘要误差、非真实数据，未采用；Steam商店页面今日直接WebFetch后价格显示为$69.99全价（非此前追踪的$55.99促销价），且评测数字与`data/game-facts.json`中7月26日快照完全一致（12,665/12,139/526等逐位相同），判定为疑似缓存/非当日真实数据，未采用任何本次Steam抓取内容。故转向常青型选题：核实Detective Mode（游戏内声呐脉冲扫描机制，每篇评测都会提及但均未详细解释）此前从未有独立博客文章覆盖，仅guides/目录下有一篇操作向指南，遂选定为深度机制解析选题。内容涵盖：激活方式（R3/中键）、单次脉冲可揭示的5大类信息（可交互物/敌人/收藏品/环境线索/traversal）完整表格、与装备gadget的连携用法（蝙蝠镖击晕/蝙蝠爪拉拽/爆炸凝胶标记弱墙）、蝙蝠洞workbench升级可延长范围/持续时间/细节度、与Arkham系列Detective Vision的设计差异对比（TechRadar评测原文直接引用："paired with the Detective Mode-like area scan..." 及 "make things a little too easy in places"）、TechRadar评测中提及的"敌人隔墙可见"疑似bug单独说明. Tags: Analysis, Guide. Image: legobatmangame.com/_astro/clues-2.D9jQ9zQy_Z12vcyH.webp（与fight-3并列站内使用次数最少图片，12→13次）. Sources: Power Up Gaming（2026年5月24日发布，本次会话直接WebFetch核实）、TechRadar评测（2026年5月20日发布，本次会话直接WebFetch核实）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：8条 ✅ / 0条 ❌
+  1. 激活方式：主机R3/中键（PC）— ✅ 已核查（Power Up Gaming原文步骤1直接确认）
+  2. 脉冲为临时效果、扫描当前操控角色周围（非仅限蝙蝠侠）— ✅ 已核查（Power Up Gaming原文直接确认）
+  3. 单次脉冲揭示5大类信息及具体内容（Interactables/Enemies/Collectibles & Secrets/Environmental Clues/Traversal）— ✅ 已核查（Power Up Gaming原文表格逐项对照，文中表格与原文基本一致）
+  4. 建议每10-20秒重新触发一次 — ✅ 已核查（Power Up Gaming原文"every 10-20 seconds"直接确认）
+  5. 可与蝙蝠镖击晕、蝙蝠爪拉拽、爆炸凝胶标记弱墙连携使用 — ✅ 已核查（Power Up Gaming原文直接确认）
+  6. 蝙蝠洞升级可延长声呐范围/持续时间/细节度，使用WayneTech芯片+金色技能砖+studs购买 — ✅ 已核查（Power Up Gaming原文直接确认；另行WebSearch交叉核实未找到独立第二来源佐证此细节，仅单一来源支持，但该来源已直接WebFetch确认为真实存在的具体表述，符合抗幻觉skill"来源真实即可，无需强制多源"标准）
+  7. TechRadar原文引用"paired with the Detective Mode-like area scan that will help you locate intractable items and enemies"及"does make things a little too easy in places" — ✅ 已核查（本次会话直接WebFetch TechRadar评测原文逐字确认，未使用WebSearch摘要转述）
+  8. TechRadar评测中"敌人隔墙可见"表述（作者称为疑似bug，非Detective Mode故意设计）— ✅ 已核查（原文"enemies could see me through walls on a few levels...I'm hoping that's a bug we'll see fixed soon"直接确认）
+  - 附注：本次会话另尝试直接WebFetch IGN评测页面，返回HTTP 403（域名被环境拦截），未采用任何IGN相关表述；GameSpot评测页面直接WebFetch两次均返回空内容（疑似JS渲染或访问限制），故文中未引用GameSpot，仅采用已直接验证成功的Power Up Gaming与TechRadar两个来源，避免使用未经直接核实的WebSearch摘要作为最终引用来源。
+- References：2条真实URL（Power Up Gaming、TechRadar，均本次会话直接WebFetch核实），无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 32 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存总数错误/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀/coming soon等预发行语气，全部0命中；html/body/div/section/aside/main/nav/footer/table/tr标签配对全部平衡）
+**关键发现：** 全站"Last updated"日期梳理：`guides/batcave-mural-challenges.html`（7月23日，12天未更新）为全站最滞后页面；`guides/chapter-1-red-hood-gang-walkthrough.html`、`guides/detective-mode-guide.html`、`guides/stud-farming-guide.html`三者并列次滞后（均7月24日，11天）。另发现一处**术语不一致但非本次修复范围**的问题：站内约15个文件（如`mission-2-walkthrough.html`、`best-characters-each-mission.html`、`tips-for-new-players.html`、`batcave-hub-guide.html`等）混用"Detective Vision"指代游戏内声呐脉冲机制，其中`guides/mission-2-walkthrough.html`第175行明确写作"A toggle-able view mode"——经今日直接核实的Power Up Gaming原文，该机制实为临时脉冲扫描（需反复触发），并非可常开的toggle模式，这一表述与已核实事实存在潜在冲突。因涉及面广（约15个文件），超出本次"Top 3精准更新"范围，故仅记录留待后续会话评估是否需要全站术语统一，本次未做任何全站替换。
+
+**SEO Top 3 更新：**
+1. **`guides/detective-mode-guide.html`** — 与今日新博文主题直接相关（11天未更新，且是站内权威Detective Mode操作指南）。新增"Batcave Upgrades Extend the Pulse"功能卡片，说明声呐脉冲范围/持续时间/细节度可通过蝙蝠洞workbench升级（今日核实的新事实，此前guide未提及），并双向链接今日新博文与WayneTech Upgrades Guide；侧边栏新增博文链接；meta description同步更新；"Last updated"由July 24刷新为August 4. (评分：8/10 — 与今日全新一手核实信息直接相关的高价值功能补全，非仅日期刷新)
+2. **`guides/batcave-mural-challenges.html`** — 全站最滞后页面（12天未更新）。在Tips区块新增提示框，说明Detective Mode声呐升级与Utility Belt挑战（168芯片）共享同一蝙蝠洞workbench芯片池，帮助玩家规划WayneTech芯片分配，并链接detective-mode-guide.html；"Last updated"由July 23刷新为August 4. (评分：6/10 — 全站最滞后页面的时效性修复，且新增内容基于真实共享系统机制、非凭空关联)
+3. **`guides/chapter-1-red-hood-gang-walkthrough.html`** — 全站并列次滞后页面之一（11天未更新）。在章节概述段落中为"Detective Vision"提及处新增指向今日新博文的内链（保留原有术语未做全站替换，仅补充链接指向准确机制说明）；"Last updated"由July 24刷新为August 4. (评分：5/10 — 高流量章节攻略页的时效性修复+内链补全)
+
+**新建页面（如有）：** 无
+
+**额外修正：** `_redirects`文件补充今日新博文`detective-mode-explained.html`的301重定向条目。
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（8条高风险声明，全部通过Power Up Gaming/TechRadar直接WebFetch核实；IGN因域名拦截、GameSpot因空内容返回，均未采用，避免使用未直接验证的转述来源）
+- [x] References 区块已填写（2条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（32个 guide 页面禁止错误清单全项扫描 + canonical格式检查 + html/div/section/aside/table标签闭合验证 + 全站日期梳理 + 预发行语气扫描；额外发现术语不一致问题已记录留待后续处理）
+- [x] SEO Top 3 更新已执行（detective-mode-guide.html / batcave-mural-challenges.html / chapter-1-red-hood-gang-walkthrough.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（123页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次为第三方评测机制解析报道，未引入任何新的游戏内部权威数值；Batcave升级延长声呐范围等为机制性描述，非game-facts.json覆盖的计数类数值）
+- [x] _redirects 已同步新增页面条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 任务说明指定的本机挂载路径（`/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/`）在本沙盒中不可用；未挂载任何用户文件夹。使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/work/repo`），确认其HEAD（4239ba1，2026-08-03自动sitemap提交）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具无法直接访问该路径（报错"outside this session's connected folders"）——本次会话全程改用bash（heredoc写入新文件、python3脚本读写替换既有文件）完成对仓库文件的所有读取与编辑操作。

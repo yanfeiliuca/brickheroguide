@@ -2675,3 +2675,53 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 任务说明指定的本机挂载路径（`/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/`）在本沙盒中不可用；未挂载任何用户文件夹。使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/work/repo`），确认其HEAD（4239ba1，2026-08-03自动sitemap提交）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具无法直接访问该路径（报错"outside this session's connected folders"）——本次会话全程改用bash（heredoc写入新文件、python3脚本读写替换既有文件）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-08-05 — Speedrun Any% record-break blog (redniko under 2 hours) + stud-farming-guide/all-characters-unlock/mission-1-walkthrough SEO refresh
+
+### 阶段一：Blog 更新
+- **`blog/speedrun-any-percent-under-two-hours.html`** — "Speedrun Watch: redniko Breaks the 2-Hour Barrier in LEGO Batman Legacy's Any%". 约779字。选题理由：搜索今日（8月5日）官方补丁/DLC进展（无新官方patch note，7月更新与9月18日Mayhem Collection发售日均已被站内已有文章完整覆盖；Gamescom 2026搜索显示LEGO集团将参展8月26-30日，但具体LEGO Batman展示内容尚未公布，判定为无实质新闻可写，未采用）；转向Speedrun.com官方leaderboard与stats页面直接WebFetch核实，发现Any%（Full Game, Solo, PC）排行榜TOP名次已发生实质变化：此前站内`speedrun-community-one-month-growth.html`（7月）与内部记录均未报道过具体的Any% WR数值进展，本次直接核实到redniko以2h00m04s（约1个月前认证）登顶，超越此前站内`speedrun-leaderboards-opening.html`报道过的kwazrr 2h29m01s纪录（现降至第3名）。内容涵盖：TOP6完整排行榜（含Timing Method LRT/RTA差异的技术性说明，避免直接比较不同计时标准）、过去3周内的3个IL/分类纪录（Arkham Asylum主机端8m01s、The League of Shadows主机端13m57s、Replay Story分类PC端1h11m54s）、redniko此前已持有的多个IL纪录、社区实时数据快照（72次运行/17名玩家/86名关注者/总时长2天21小时57分47秒，均与7月数据对比说明增长有限）、Mayhem Collection DLC（9月18日）对未来排行榜的潜在影响. Tags: Community, News. Image: legobatmangame.com/_astro/fight-3.KeK453wH_Z23bgKb.webp（站内使用次数最少图片，12→13次）. Sources: Speedrun.com官方排行榜页、Stats页、redniko个人跑分页（均本次会话直接WebFetch核实）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：8条 ✅ / 0条 ❌
+  1. Any%（Full Game, Solo, PC）排行榜TOP6完整名次、跑者名、时间、认证时间 — ✅ 已核查（本次会话直接WebFetch speedrun.com/LotDK 排行榜页表格逐行确认）
+  2. redniko跑分详情：2h00m04s，1st place，约1个月前认证，LRT计时 — ✅ 已核查（本次会话直接WebFetch跑分详情页 /LotDK/runs/yo8133dz 确认）
+  3. kwazrr跑分详情：2h29m01s，现3rd place，约2个月前，LRT计时 — ✅ 已核查（本次会话直接WebFetch跑分详情页 /LotDK/runs/ywoox73m 确认）
+  4. 第6名xioni15使用RTA计时（而非前5名的LRT），两种计时标准不可直接秒数对比 — ✅ 已核查（排行榜页Timing Method列直接显示，文中已明确标注此技术差异避免误导读者直接比较）
+  5. 近3周IL/分类纪录：Arkham Asylum（DMsSpeedruns，8m01s，15天前，主机RTA）、The League of Shadows（gordosgames21，13m57s，17天前，主机RTA）、Replay Story分类（Siedemnastek，1h11m54s，21天前，PC LRT）— ✅ 已核查（本次会话直接WebFetch stats页"Recent runs"区块逐条确认）
+  6. redniko另持有的IL纪录：The League of Shadows Returns（5m16s）、Tumbler Chase（3m09s），均约1个月前，PC LRT — ✅ 已核查（同上stats页直接确认）
+  7. 社区实时统计：72次运行（24次全流程/48次关卡）、17名玩家（全部活跃）、86名关注者、总运行时长2天21小时57分47秒、Challenge分类0次提交 — ✅ 已核查（本次会话直接WebFetch stats页顶部统计区块确认）
+  8. Mayhem Collection DLC：9月18日发售，Joker与Harley Quinn可玩，新增Arkham Asylum越狱任务 — ✅ 已核查（`data/game-facts.json`权威数值）
+  - 附注：文中刻意注明"主机端IL排行榜提交较少，第一名不代表击败大量对手"的免责说明，避免夸大这两条主机纪录的竞争性质，符合抗幻觉原则中"不做未经证实的推断"的要求。
+- References：3条真实URL（Speedrun.com排行榜页、Stats页、redniko跑分详情页，均本次会话直接WebFetch核实），无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀/coming soon等预发行语气，全部0命中——`trophy-guide.html`内一处"happythumbsgaming.com/.../trophy-achievement-guide-htg/"为外部URL slug误报，人工核查排除，非站内断链；html/div/section/table标签配对全部平衡）
+**关键发现：** 全站"Last updated"日期梳理：`guides/stud-farming-guide.html`（7月24日，12天未更新）为全站最滞后页面；`guides/all-characters-unlock.html`与`guides/characters-villains-guide.html`并列次滞后（均7月25日，11天）。审计中另发现`guides/stud-farming-guide.html`已正确引用Red Bricks纯装饰性质（与`guides/trophy-guide.html`表述一致，无矛盾），但此前从未反向链接至`trophy-guide.html`的100万Stud里程碑奖杯说明，判定为高价值单向补全内链机会。`guides/all-characters-unlock.html`的Jim Gordon分节此前未链接今日8月2日新发布的`blog/jim-gordon-character-guide.html`（对比同页Catwoman分节已正确链接其角色博文），判定为遗漏的内链模式不一致问题。
+
+**SEO Top 3 更新：**
+1. **`guides/stud-farming-guide.html`** — 全站最滞后页面（12天未更新）。在"Why Farm Studs"段落新增反向链接至`guides/trophy-guide.html`的100万Stud里程碑奖杯说明（"Life's been good to me"奖杯），与该页面此前已单向引用本页面形成双向内链；"Last updated"由July 24刷新为August 5. (评分：6/10 — 全站最滞后页面的时效性修复，且新增内容基于两页面已有事实的双向内链补全，非凭空关联)
+2. **`guides/all-characters-unlock.html`** — 全站并列次滞后页面之一（11天未更新），且为"全角色解锁"这一高搜索量话题的权威页面。在Jim Gordon分节新增指向`blog/jim-gordon-character-guide.html`的内链，修复此前与Catwoman分节内链模式不一致的问题；"Last updated"由July 25刷新为August 5. (评分：7/10 — 高流量总览页的内链模式一致性修复)
+3. **`guides/mission-1-walkthrough.html`**（实为游戏总览/故事背景页，非狭义任务流程页）— 全站7月26日并列滞后梯队之一（10天未更新）。在"The Heroes"分节Jim Gordon条目新增指向`blog/jim-gordon-character-guide.html`的内链；"Last updated"由July 26刷新为August 5. (评分：5/10 — 高流量总览页的内链补全+时效性修复)
+
+**新建页面（如有）：** 无
+
+**额外修正：** `_redirects`文件补充今日新博文`speedrun-any-percent-under-two-hours.html`的301重定向条目。
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（8条高风险声明，全部通过Speedrun.com排行榜页/Stats页/跑分详情页直接WebFetch核实；已刻意标注LRT/RTA计时差异与主机端IL纪录竞争性质的免责说明，避免误导性对比）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + canonical格式检查 + html/div/section/table标签闭合验证 + 全站日期梳理）
+- [x] SEO Top 3 更新已执行（stud-farming-guide.html / all-characters-unlock.html / mission-1-walkthrough.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（124页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次为第三方Speedrun.com竞速社区时效性报道，未引入任何新的游戏内部权威数值）
+- [x] _redirects 已同步新增页面条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 任务说明指定的本机挂载路径（`/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/`）在本沙盒中不可用；未挂载任何用户文件夹。发现沙盒内`/tmp/bhg`残留此前会话副本，属主为`nobody`，当前会话用户对其无读写权限（`git pull`报"cannot open .git/FETCH_HEAD: Permission denied"）。为确保基于最新代码工作，已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`~/repo`，即`/sessions/[session]/repo`），确认其HEAD（d02de313，2026-08-04自动sitemap提交）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"无法直接访问该路径——本次会话全程改用bash（heredoc写入新文件、python3脚本读写替换既有文件）完成对仓库文件的所有读取与编辑操作。

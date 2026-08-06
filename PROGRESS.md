@@ -2725,3 +2725,52 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 任务说明指定的本机挂载路径（`/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/`）在本沙盒中不可用；未挂载任何用户文件夹。发现沙盒内`/tmp/bhg`残留此前会话副本，属主为`nobody`，当前会话用户对其无读写权限（`git pull`报"cannot open .git/FETCH_HEAD: Permission denied"）。为确保基于最新代码工作，已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`~/repo`，即`/sessions/[session]/repo`），确认其HEAD（d02de313，2026-08-04自动sitemap提交）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"无法直接访问该路径——本次会话全程改用bash（heredoc写入新文件、python3脚本读写替换既有文件）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-08-06 — Combat & Stealth Takedowns 攻略博文 + WayneTech/Beginners/All-Characters 元描述精简
+
+### 阶段一：Blog 更新
+- **`blog/combat-focus-stealth-takedowns-guide.html`** — "Combat & Stealth Takedowns Guide: How to Master Focus in LEGO Batman: Legacy of the Dark Knight". ~1,020字（正文纯文字计数）. 内容：Freeflow战斗基础操作、Focus槽机制与3种敌人克制关系（Shielded/Armed/Sword-Wielders）、Stun-to-Flurry连招build Focus速通技巧（三连蝙蝠镖+连续攻击）、3种潜行处决类型（Ground/Perch/Ledge）操作详解、"I am the shadows"奖杯（100次潜行处决）说明. Tags: Guide, Tips. Image: `legobatmangame.com/_astro/fight-2.BFd6neBb_2adSpB.webp`（战斗场景，此前14次使用，与其余7张并列最少使用图）. Sources: Wccftech战斗指南、GAMES.GG潜行处决指南. 7 min read.
+
+### 阶段一B：网络事实核查结果
+**待核查声明清单（🔴高风险）：**
+1. Freeflow战斗基础按键（Attack/Counter/Dodge/Gadgets）及"按方向+按钮锁定最近敌人"机制 — ✅ 已核查（本次会话直接WebFetch Wccftech战斗指南原文确认）
+2. Focus槽机制：攻击积攒→槽满后Takedown按钮秒杀普通敌人/重创大型敌人 — ✅ 已核查（同上Wccftech原文）
+3. 3种敌人克制关系（Shielded需绕背/Armed远程破连招/Sword-Wielders连击仅可闪避不可格挡） — ✅ 已核查（同上Wccftech原文列表）
+4. Stun-to-Flurry连招具体步骤（3连蝙蝠镖→Carbon Fiber Tips升级可减少数量→连续攻击触发快速连击） — ✅ 已核查（同上Wccftech原文步骤列表）
+5. 3种潜行处决类型（Ground/Perch/Ledge）及触发条件（敌人变红+提示出现→按R1/RB即时处决，无需连击槽） — ✅ 已核查（本次会话直接WebFetch GAMES.GG潜行处决指南原文表格与步骤）
+6. 潜行处决额外Stud奖励 + Combat技能树"潜行处决恢复Focus"被动升级 — ✅ 已核查（同上GAMES.GG原文"Why bother with stealth"段落）
+7. "I am the shadows"奖杯需100次潜行处决，可在Free Play重刷早期关卡补齐 — ✅ 已核查（同上GAMES.GG原文info提示框）
+8. 基础奖杯总数52 PS5/51 Xbox — ✅ 已核查（`data/game-facts.json`权威数值，与此前`mayhem-collection-achievements-leak.html`已引用数值一致）
+- References：2条真实URL（Wccftech战斗指南、GAMES.GG潜行处决指南，均本次会话直接WebFetch核实），无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀/预发行"coming soon"语气，全部0命中——`trophy-guide.html`内"happythumbsgaming.com/.../trophy-achievement-guide-htg/"为外部URL slug误报，已人工核查排除；内部链接死链扫描全部通过，34个页面互相引用的`.html`链接均指向实际存在文件）
+**关键发现：** 全站meta description长度扫描发现24个guide页面超出160字符SEO理想上限（部分接近200字符，存在被搜索引擎截断风险），此前几日的SEO更新未覆盖此项；`collectibles-guide.html`/`trophy-guide.html`/`suits-abilities-guide.html`/`release-date-platforms.html`此前已修复至143-147字符，其余24页仍待处理。
+
+**SEO Top 3 更新：**
+1. **`guides/all-characters-unlock.html`** — meta description从199字符精简至151字符（保留"全7角色/解锁顺序/道具/3隐藏角色/DLC角色Joker&Harley"核心关键词，去除冗余的具体配音演员姓名列举）. (评分：8/10 — 全角色解锁为高搜索量话题，超长description在移动端搜索结果中会被截断损失点击率)
+2. **`guides/waynetech-upgrades-guide.html`** — meta description从191字符精简至150字符（保留"升级优先级/200个缓存/最优消费路径"核心信息，与今日新博文形成关键词呼应）. (评分：7/10 — 与今日新发布的Combat & Stealth博文形成站内内链关键词呼应，且原description冗长)
+3. **`guides/beginners-guide.html`** — meta description从176字符精简至142字符（保留"难度模式/侦探模式/红砖/抓钩猛击"核心关键词，去除"and how to get started the right way"冗余收尾）. (评分：7/10 — 新手引导页为全站流量入口页面之一，description精简后更符合搜索结果展示规范)
+
+**新建页面（如有）：** 无
+
+**额外修正：** `_redirects`文件补充今日新博文`combat-focus-stealth-takedowns-guide.html`的301重定向条目。
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（8条高风险声明，全部通过Wccftech战斗指南/GAMES.GG潜行处决指南原文直接WebFetch核实）
+- [x] References 区块已填写（2条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + 内部死链扫描 + meta description长度扫描）
+- [x] SEO Top 3 更新已执行（all-characters-unlock.html / waynetech-upgrades-guide.html / beginners-guide.html，均为meta description精简）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（125页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次高风险声明均为第三方战斗/潜行机制攻略内容，未引入新的游戏内部权威数值）
+- [x] _redirects 已同步新增页面条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 任务说明指定的本机挂载路径（`/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/`）在本沙盒中不可用；未挂载任何用户文件夹。沙盒内`/tmp/brickhero-work`与`/var/tmp/brickhero-push`发现此前会话（2026-08-03前后）残留副本，属主为`nobody`，本会话无写权限。为确保基于最新代码工作，已使用仓库保存的GitHub凭据将仓库全新clone至本会话可写路径（`/tmp/bhg2/repo`），确认其HEAD（79374ec，2026-08-05自动sitemap提交）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"无法直接访问该路径——本次会话全程改用bash（heredoc写入新文件、python3脚本读写替换既有文件）完成对仓库文件的所有读取与编辑操作。

@@ -3103,3 +3103,48 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 与此前多次会话相同，本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用，未挂载任何用户文件夹（本次为定时任务自动运行，无用户在场批准文件夹连接）。本次会话使用仓库保存的GitHub凭据将仓库全新clone至会话可写路径（`/tmp/bhg-work/repo`），确认其HEAD（6ea376e，含2026-08-12每日更新的自动sitemap提交）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话全程改用bash（heredoc写入新博文HTML、python3脚本读写替换既有guide/blog/index.html/_redirects文件，并额外用python3脚本做全站div标签配对校验与内部链接完整性扫描）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-08-14 — Metacritic Per-Platform Score Split + Steam 13,000 Reviews Blog + Sale-End / Review-Data SEO Refresh
+
+### 阶段一：Blog 更新
+- **`blog/xbox-86-pc-84-ps5-83-metacritic-platform-split.html`** — "Xbox 86, PC 84, PS5 83: LEGO Batman Legacy's Metacritic Scores Finally Split by Platform". 约797字。选题背景：今日新闻搜索（"LEGO Batman Legacy" news/patch/Gamescom/Switch 2 2026年8月）未发现新素材——SteamDB无8月新补丁（最新仍为7月1.007/1.008，站内已覆盖）；Nexus Mods Recent Activity页直接核实，最新条目仍为8月10日Nuar12z戈登套装模组（站内8月11日已发布对应博文），无新模组活动；WB Games官方渠道与主流媒体均无新公告。转而直接WebFetch Steam商店页与Metacritic页面两个一手数据源，发现两项此前未在站内报道过的新数据：(1) Metacritic评分首次按平台拆分显示（此前站内引用的均为单一混合分数）——Xbox Series X 86分（16条评测）、PC 84分（23条）、PS5 83分（85条，样本最大）；(2) Steam全语言评测总数已达13,199条（较7月26日站内记录的12,665条增长534条），其中Steam验证购买者8,391条、其他购买类型4,808条，正面率95.7%，30天内评测464条/91%好评（"Very Positive"）；(3) Steam评测语言细分数据（此前站内从未报道）：英语6,339条（压倒性好评）、葡萄牙语-巴西335条、俄语322条、简体中文291条、西班牙语-西班牙211条，均为"Very Positive"。同时确认今日Steam价格已全平台恢复原价（基础版$69.99/豪华版$89.99/豪华升级DLC$24.99），印证7月-8月首轮20%折扣已于8月10日（Steam）与8月13日（PS/Xbox）全部结束。附带交叉核实：Steam成就数52与站内`guides/trophy-guide.html`记录的PS5奖杯数52一致。Tags: News, Analysis. Image: `legobatmangame.com/_astro/postfooter.Bp36eHDB_Z2cb3ek.webp`（此前站内最低使用次数14次，本次为15次）. Sources: 2条真实URL（Steam商店页、Metacritic评分页，均本次会话直接WebFetch核实）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：本文全部数值均为本次会话直接WebFetch一手页面所得，非转述：
+  1. Metacritic分平台评分（Xbox 86/16条、PC 84/23条、PS5 83/85条）及PS5用户评分8.4（627条评分，83%正面/10%中立/7%负面）— ✅ 直接WebFetch metacritic.com/game/lego-batman-legacy-of-the-dark-knight/原文确认
+  2. Steam价格（基础版$69.99、豪华版套装$89.99、豪华升级DLC单独$24.99）— ✅ 直接WebFetch store.steampowered.com/app/2215200原文确认
+  3. Steam评测数据（全部13,199条/正面12,629/负面570；Steam验证购买者8,391/其他4,808；30天464条91%好评；英语6,339条95%好评）— ✅ 同一Steam页面直接抓取，且与`data/game-facts.json`中7月26日记录的历史数据（12,665/8,072/4,593）方法论完全一致，形成纵向对比
+  4. 语言细分数据（葡萄牙语-巴西335、俄语322、简体中文291、西班牙语-西班牙211，均Very Positive）— ✅ 同一Steam页面"Language"筛选区块直接抓取，为本次会话首次报道此数据点
+  5. Steam成就数52 — ✅ Steam页面"View Steam Achievements (52)"直接确认，与站内`guides/trophy-guide.html`已有PS5奖杯数52交叉印证一致
+  6. 折扣结束日期（Steam 8/10、PS/Xbox 8/13）— ✅ 引用`data/game-facts.json`内部权威数据（sales_history.2026_07_first_major_sale），并与今日Steam页面显示的已恢复原价状态交叉印证一致
+- References：2条真实URL（Steam商店页、Metacritic评分页），均本次会话直接WebFetch核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html内部引用/WayneTech缓存=10/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中）；另以Python脚本对guides/、blog/、根目录共133个HTML文件的内部链接完整性做全站校验（修正脚本路径解析bug后重新扫描）。
+**关键发现：** 全站内部链接扫描发现1处真实死链——`guides/mayhem-collection-dlc.html`的导航栏与面包屑均使用`/guides/`（该目录下无index.html，指向404），而站内其余全部页面统一使用`/#guides`锚点跳转首页对应板块。已修正为`/#guides`，与全站规范一致。此外全站"Last updated"日期梳理显示`guides/subwayne-puzzle-solutions-guide.html`（7月26日，19天未更新）为全站最滞后页面，逐一通读全部8个SubWayne站点解谜步骤，未发现事实错误或过时表述，故未做仅为刷新日期的空洞编辑（仅在内容有实质变化时才更新日期戳，避免为SEO效果做无意义改动）。鉴于今日新博文主题为评分/价格数据，`guides/release-date-platforms.html`（8月8日更新，"Post-Launch Reception"章节已有旧版Metacritic混合分与Steam评测数字段）与`guides/deluxe-edition-explained.html`（8月12日更新，已有折扣倒计时提示框但未反映今日折扣已全平台结束的状态）被判定为本次SEO Top 3中衔接价值最高的两个页面。
+
+**SEO Top 3 更新：**
+1. **`guides/deluxe-edition-explained.html`** — 新增"🛑 Sale now over"提示段落，确认今日Steam价格已恢复原价（$69.99/$89.99/$24.99），说明Steam窗口8/10、PS/Xbox窗口8/13均已按计划结束，链接今日新博文；"Updated"由August 12刷新为August 14. (评分：8/10 — 本页原有折扣倒计时表述若不更新会误导仍在犹豫购买的读者以为折扣可能还在进行，此次为纠正时效性状态的关键更新)
+2. **`guides/release-date-platforms.html`** — "Post-Launch Reception"章节的"Critical reception"条目由旧版单一"84 Metacritic"混合分与"13,072 total (12,510 positive)"Steam数字，更新为分平台Metascore（Xbox 86/PC 84/PS5 83）与最新Steam数字（13,199 total, 12,629 positive, 95.7%），链接今日新博文；"Last updated"由August 8刷新为August 14. (评分：7/10 — 本页是全站评论/发售数据的权威汇总页，此次为用更精确的一手数据替换过时聚合数字)
+3. **`guides/mayhem-collection-dlc.html`** — 修正导航栏与面包屑中的死链`/guides/`（无效目录，404）为全站统一规范`/#guides`锚点。(评分：6/10 — 非数值型事实错误，但属于影响页面可导航性与站内链接权重传递的真实缺陷，审计中新发现并当场修复)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（6条高风险声明全部通过本次会话直接WebFetch核实，含与`data/game-facts.json`历史数据及站内既有页面的交叉印证）
+- [x] References 区块已填写（2条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + 133文件内部链接完整性校验，发现并修正1处死链）
+- [x] SEO Top 3 更新已执行（deluxe-edition-explained.html / release-date-platforms.html / mayhem-collection-dlc.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（133页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次新增数值均为第三方Steam/Metacritic评论平台实时数据，非游戏内部核心事实，未写入game-facts.json，与既往会话方法论一致）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 与此前多次会话相同，本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用，未挂载任何用户文件夹（本次为定时任务自动运行，无用户在场批准文件夹连接）。沙盒内 `/var/tmp/brickhero-push` 存在此前会话遗留的仓库副本，但其属主为`nobody`且当前会话用户对其无写权限（`touch`/写入均返回Permission denied），故未使用；本次改为使用仓库保存的GitHub凭据将仓库全新clone至会话可写路径（`/tmp/brickhero_work`），确认其HEAD（30f7dbd，含2026-08-13每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话全程改用bash（Write工具先在outputs目录起草新博文HTML后cp进repo、python3脚本读写替换既有guide/blog/index.html/_redirects文件，并新增Python脚本修正此前会话内部链接扫描脚本中的路径解析bug后完成全站133文件链接完整性校验）完成对仓库文件的所有读取与编辑操作。

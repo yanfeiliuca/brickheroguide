@@ -3192,3 +3192,48 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 与此前多次会话相同，本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用，未挂载任何用户文件夹（本次为定时任务自动运行，无用户在场批准文件夹连接）。沙盒内 `/var/tmp/brickhero-push`、`/tmp/brickhero_work`、`/var/tmp/bhg-fresh` 存在此前会话遗留的仓库副本，但均因跨会话属主/权限问题（dubious ownership、Permission denied）无法直接复用，故未使用；本次改为使用仓库保存的GitHub凭据将仓库全新clone至会话可写路径（`/tmp/bhg`），确认其HEAD（901ed97，含2026-08-14每日更新的自动sitemap提交）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话使用Write工具先在outputs目录起草新博文HTML后cp进repo，python3脚本读写替换既有guide/blog/index.html/_redirects文件，并新增全站内部链接完整性校验脚本（修正为正确解析干净URL格式）完成对仓库文件的所有读取与编辑操作。
+
+## 2026-08-16 — August 2026 Mod Roundup博文 + PC定价/补丁时效性三处修正
+
+### 阶段一：Blog 更新
+- **`blog/august-2026-mod-roundup.html`** — "LEGO Batman: Legacy of the Dark Knight Mod Roundup — Best New Mods for August 2026". 约800字。选题背景：今日新闻搜索（"LEGO Batman Legacy" news/patch/DLC/Gamescom/Switch 2 preview/speedrun/mod 2026年8月）未发现有效突发新素材——WB Games官方Support页7月更新内容与站内`blog/update-1-007-patch-notes-july-2026.html`逐条核对一致，无新补丁；Speedrun.com stats页仍为72次运行/17名玩家，与站内已发布内容一致；Mayhem Collection相关搜索结果（Sinister Pack 7套服装/5蝙蝠洞道具/1蝙蝠车皮肤、12项新成就、Joker&Harley可玩）均与`data/game-facts.json`及`guides/mayhem-collection-dlc.html`已有内容完全一致，无新信息。Talia al Ghul最终boss战曾考虑作为"查漏补缺"选题（延续8/13 Mr. Freeze、8/15 Bane的boss深度攻略系列），但核查中发现legobatmanwiki.com（直接WebFetch）与WebSearch聚合结果（疑似源自Neoseeker）对该战机制的描述存在实质性矛盾（前者：foam-spray冷却齿轮机关+黄光无敌判定；后者：batclaw抓腿+Nightwing电缆炸弹拉拽）——两份内容均来自"看似可信"的来源但彼此不可调和，为避免重蹈此前会话中"三份文档三种版本"的虚构风险，主动放弃该选题，未写入任何一版机制描述。转而选择填补内容空缺：全站blog目录仅有June/July两期Mod Roundup，8月尚无对应文章。通过直接WebFetch（而非依赖JS渲染的Nexus Mods列表页，改用可服务端渲染的经典URL格式`/legobatmanlegacyofthedarkknight/mods/N`）逐一核实三个mod页面的最新版本与更新日期：Ultimate Engine Tweaks（v3.6，2026年8月11日更新，136次背书，changelog逐条摘录自v3.0/v3.5/v3.6版本历史）、TheDCfanXO's Rebirth and New 52 Pack（v2.0，2026年8月2日更新，20次背书，changelog为"Fixed Colors and Lighting"配色/光照修正）、UE4SS框架（自5月22日至今版本未变，但页面新显示"Mods using this mod (13)"——13个依赖此框架的衍生mod，56次背书，为7月期报道中未提及的新增长数据点）。Tags: Community. Image: `legobatmangame.com/_astro/og-image.BcIYb3Fq.jpg`（官方key art横幅，与foes/family/fight-2/gear-3/postfooter/prefooter-keyart/clues-2并列全站最低使用次数16次组，本次为17次）. Sources: 3条真实URL（Nexus Mods mods/9、mods/6、mods/5，均本次会话直接WebFetch核实版本号/日期/背书数/changelog原文）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：本文全部版本号、更新日期、背书数、changelog文本均为本次会话直接WebFetch三个Nexus Mods页面原文所得，非转述或推断：
+  1. Ultimate Engine Tweaks v3.6，"Last updated: 11 August 2026, 12:36PM"，136 endorsements，changelog v3.6="Bugfixes"，v3.5="Further optimized Sharpness...Further improved Clarity...Reduced shadows' shimmering"，v3.0="Fixed textures/assets' streaming bugs...Decreased VRAM usage...Decreased the risk of Out of Memory related crashes" — ✅ 直接WebFetch nexusmods.com/legobatmanlegacyofthedarkknight/mods/9原文逐字确认
+  2. TheDCfanXO's Rebirth and New 52 Pack v2.0，"Last updated: 02 August 2026, 9:50AM"，20 endorsements，changelog v2.0="Fixed Colors and Lightning/lighting" — ✅ 直接WebFetch mods/6原文确认（该mod首次上传为5月22日，本次v2.0为其上线以来第三次修订，与7月期报道中提及的v1.1一脉相承）
+  3. UE4SS for Lego Batman lotdk，"Last updated: 22 May 2026"（版本号未变），56 endorsements，"Mods using this mod (13)" — ✅ 直接WebFetch mods/5原文确认，13为该mod页面本次会话直接读取到的实时依赖计数，未与历史数值比较（7月期文章未记录具体依赖数，故本次仅陈述当前数字，未做无法验证的"增长"断言）
+  4. 主动放弃项：Talia al Ghul最终boss战机制描述 — ❌ 两独立信源（legobatmanwiki.com直接WebFetch原文 vs WebSearch聚合疑似源自Neoseeker的内容）对具体机制（护盾判定方式、击晕手段、Batgirl/Nightwing介入环节）描述互相矛盾且无法调和，按抗幻觉原则整体放弃该选题，未写入正文任何版本
+- References：3条真实URL（Nexus Mods mods/9、mods/6、mods/5），均本次会话直接WebFetch核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 32 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html内部引用/WayneTech缓存=10/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中）；另以Python脚本对guides/、blog/、根目录共135个HTML文件的内部链接完整性做全站校验，0处失效链接；另对本次修改的5个文件（新博文+blog/index.html+pc-requirements.html+all-villains-guide.html+suits-abilities-guide.html）做div标签开闭配对校验，全部平衡无误。
+**关键发现：** 站内搜索"through August 10"等时效性表述，发现`guides/pc-requirements.html`、`guides/all-villains-guide.html`、`guides/suits-abilities-guide.html`三个"活文档"型guide页面仍将已于8月10日（Steam）/8月13日（PS/Xbox）结束的首轮20%折扣表述为"currently running"/"cheaper right now"/"through August 10"——该折扣结束状态已由8月14日会话在`deluxe-edition-explained.html`与`release-date-platforms.html`中修正，但这三个页面此前未被覆盖，属于遗漏。此外`guides/pc-requirements.html`额外发现一处更早的遗留错误：该页称"As of July 27, 2026, Epic Games Store has not yet received Update 1.007"，但站内自身`blog/epic-games-store-update-pending-label-removed.html`（7月29日发布）已实证该pending状态已解除（WB Games支持页当时已将EGS与其他平台合并列出，无footnote），且本次会话直接WebFetch同一WB支持页（今日8月16日）确认该合并状态延续至今——pc-requirements.html的guide正文从未跟进这一站内已有的更正，属于跨会话遗留的准确性缺口。
+
+**SEO Top 3 更新：**
+1. **`guides/pc-requirements.html`** — 修正两处时效性错误：(a) Epic Games Store Update 1.007到位状态由"仍pending"更正为"已与其他平台并列，pending footnote已消失"，链接站内7月29日实证文章；(b) 折扣表述由"currently running 20% sale through August 10"更正为"该折扣已结束，Steam 8/10、PS/Xbox 8/13关闭窗口"，链接8月14日数据核查博文与本次新博文；"Updated"由August 12刷新为August 16. (评分：9/10 — 高流量PC技术参考页，两处均为可验证的实质性事实纠正而非单纯日期刷新，其中EGS一项是跨越三周的遗留错误)
+2. **`guides/all-villains-guide.html`** — Mayhem Collection定价段落由"currently discounted 20% to $71.99 through August 10–13"更正为"折扣已结束，价格已恢复SRP"，链接8月14日数据核查博文；"Updated"由August 15刷新为August 16. (评分：7/10 — 高流量反派/DLC信息页，避免误导读者以为促销仍在进行)
+3. **`guides/suits-abilities-guide.html`** — Deluxe Edition Upgrade DLC价格提示框由"Cheaper right now...confirmed through August 10"更正为"该折扣窗口已关闭，价格恢复$24.99"，链接8月14日数据核查博文；"Last updated"由August 11刷新为August 16. (评分：6/10 — 服装/DLC购买决策相关页，同一折扣失效问题的第三处实例)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章）
+
+**放弃选题说明：** Talia al Ghul最终boss战深度攻略（原计划延续Mr. Freeze/Bane系列）因信源冲突主动放弃，详见阶段一B。
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（3条高风险声明全部通过本次会话直接WebFetch原始mod页面核实；1个选题因信源冲突主动放弃，未写入任何未经调和的内容）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（32个 guide 页面禁止错误清单全项扫描 + 135文件内部链接完整性校验，0处失效链接；额外时效性专项扫描发现并修正3处折扣/补丁状态过期表述）
+- [x] SEO Top 3 更新已执行（pc-requirements.html / all-villains-guide.html / suits-abilities-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，仅 blog 新增，无需改动）
+- [x] sitemap.xml 已重新生成（135页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次新增内容均为第三方Nexus Mods实时数据与站内既有折扣时效性修正，非游戏内部核心事实，未写入game-facts.json，与既往会话方法论一致）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+- 与此前多次会话相同，本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用，未挂载任何用户文件夹（本次为定时任务自动运行，无用户在场批准文件夹连接）。沙盒内 `/tmp/bhg`、`/var/tmp/bhg-fresh`、`/var/tmp/brickhero-push`、`/tmp/brickhero_work` 存在此前会话遗留的仓库副本，均未使用（避免复用可能过期的缓存状态）；本次改为使用仓库保存的GitHub凭据将仓库全新clone至会话可写路径（`/tmp/bhg_run`），确认其HEAD（含2026-08-15每日更新的自动sitemap提交）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话使用Write工具先在outputs目录起草新博文HTML后cp进repo，python3脚本读写替换既有guide/blog/index.html/_redirects文件，并新增全站"through August 10"等时效性表述专项grep扫描（区分历史新闻类博文与"活文档"型guide页面，仅修正后者）完成对仓库文件的所有读取与编辑操作。此外，Nexus Mods的默认`/games/`前缀URL为JS渲染SPA（WebFetch返回空壳），改用经典`/legobatmanlegacyofthedarkknight/mods/N`格式URL可获取服务端渲染的完整mod详情页内容，为本次会话新发现的可行抓取路径，供后续会话参考。

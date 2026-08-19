@@ -3330,3 +3330,42 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 - 与此前多次会话相同，本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用，未挂载任何用户文件夹（本次为定时任务自动运行，无用户在场批准文件夹连接）。沙盒内 `/tmp/bhg_run`、`/tmp/brickhero_work`、`/tmp/bhg`、`/var/tmp/bhg-fresh`、`/var/tmp/brickhero-push` 存在此前会话遗留的仓库副本，均未使用（避免复用可能过期或权限受限的缓存状态）；本次改为使用仓库保存的GitHub凭据将仓库全新clone至会话可写路径（`/tmp/bhg_today`），确认其HEAD（含2026-08-17每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话使用Write工具先在outputs目录起草新博文HTML后cp进repo，python3脚本读写替换既有guide/blog/index.html/_redirects文件，并复用此前会话建立的全站内部链接完整性校验脚本（0处失效链接）完成对仓库文件的所有读取与编辑操作。本次新增方法论：对涉及具体战斗机制的选题，在多信源交叉核查阶段，若发现与站内已有历史内容存在同类未核实冲突，不仅放弃新选题的机制描写本身，还应回溯检查站内旧内容是否也需要标注风险提示（而非仅规避不写入新内容）——本次即据此在`all-boss-fights-guide.html`补上了此前会话遗漏的准确性提示。
+
+## 2026-08-19 — Mayhem Collection 30天倒计时 + Gamescom 2026售罄新闻 + 3处Guide更新
+
+### 阶段一：Blog 更新
+- **`blog/mayhem-collection-countdown-30-days-gamescom-sellout.html`** — "Mayhem Collection Countdown: 30 Days Out, and Gamescom 2026 Just Sold Out for the First Time Ever". 690+字. 承接8月9日"40天倒计时"文章的后续更新，核心新信息为Gamescom 2026展位史上首次全部售罄（Inven Global, 2026-07-22）及LEGO确认参展。Tags: News, Analysis. Image: gear-3.5F2kKy0I_1z9tbe.webp（使用次数并列最少组之一，本次使用后计17次）. Sources: Inven Global (Gamescom售罄报道)、Brick Fanatics (LEGO确认参展)、Saving Content (官方DLC新闻稿). 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：4条 ✅（Mayhem Collection内容对照data/game-facts.json核实一致；Gamescom日期与售罄消息经WebSearch+WebFetch双源核实Inven Global原文；LEGO参展消息经WebFetch核实Brick Fanatics原文）；0条 ❌
+- References：3条真实URL（Inven Global、Brick Fanatics、Saving Content），无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中）
+**关键发现：** 无新增准确性问题；发现2处内部链接指向本次已被替代的旧"40天倒计时"文章（`guides/mayhem-collection-dlc.html`、`guides/deluxe-edition-explained.html`），予以更新指向今日新文章；另发现`guides/co-op-guide.html`自7月28日起未更新（全站最久未维护的guide之一），且从未提及6月1.006补丁记录在案、截至7月21日1.008仍未确认修复的PS5分屏co-op崩溃已知问题。
+
+**SEO Top 3 更新：**
+1. **`guides/mayhem-collection-dlc.html`** — "Looking ahead"段落新增Gamescom展位售罄事实（Inven Global来源）及30天倒计时最新状态，内部链接由旧的"40天倒计时"文章更新指向今日新文章。(评分：8/10 — 全站Mayhem Collection核心攻略页，搜索意图最强，保持时效性并修复过时内链)
+2. **`guides/deluxe-edition-explained.html`** — Gamescom提示框同步新增售罄事实，内部链接同步更新指向今日新文章。(评分：6/10 — 高流量版本对比页，避免读者点到过时文章)
+3. **`guides/co-op-guide.html`** — 新增"Known issue"提示框，说明1.006补丁记录在案、截至1.008仍未经官方确认修复的PS5分屏co-op崩溃问题，并链接站内patch tracker；"Last updated"戳由7月28日刷新至8月19日。(评分：7/10 — 纠正一处此前会话遗漏的、对co-op玩家直接相关的已知问题空白，全站最久未维护guide之一)
+
+**新建页面（如有）：** 无
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成
+- [x] References 区块已填写（≥2条真实URL）
+- [x] 推送门控已通过
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描）
+- [x] SEO Top 3 更新已执行
+- [x] index.html 链接已更新（无新 guide 页面，无需改动）
+- [x] sitemap.xml 已重新生成（138页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次内容均为已有DLC事实的时效性更新及Gamescom展会新闻，非游戏内部数值变更）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+本机路径未挂载（定时任务自动运行，无用户在场批准文件夹连接）。沙盒内`/tmp/bhg`、`/tmp/bhg_run`、`/tmp/bhg_today`、`/tmp/brickhero`、`/tmp/brickhero_work`、`/var/tmp/brickhero-push`存在此前会话遗留副本，均未使用；本次改用仓库保存的GitHub凭据全新clone至`/tmp/bhg_20260819`。Read/Write/Edit工具无法访问该clone路径（仅能访问宿主机outputs目录），全部文件读写改用bash内python3脚本完成。

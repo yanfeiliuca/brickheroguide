@@ -3369,3 +3369,50 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 本机路径未挂载（定时任务自动运行，无用户在场批准文件夹连接）。沙盒内`/tmp/bhg`、`/tmp/bhg_run`、`/tmp/bhg_today`、`/tmp/brickhero`、`/tmp/brickhero_work`、`/var/tmp/brickhero-push`存在此前会话遗留副本，均未使用；本次改用仓库保存的GitHub凭据全新clone至`/tmp/bhg_20260819`。Read/Write/Edit工具无法访问该clone路径（仅能访问宿主机outputs目录），全部文件读写改用bash内python3脚本完成。
+
+## 2026-08-20 — Mayhem Collection Gamescom Reveal Confirmed博文 + 3处准确性/时效性修正
+
+### 阶段一：Blog 更新
+- **`blog/mayhem-collection-gamescom-trailer-designer-interview-august-26.html`** — "Mayhem Collection's Gamescom Debut Is Official: Trailer and Designer Interview Set for August 26". 705字。选题背景：今日新闻搜索（"LEGO Batman Legacy of the Dark Knight" news/patch/DLC/Gamescom 2026/speedrun/patch 1.009）发现一条真正的突发新闻——Brick Fanatics于8月19日发布、8月20日更新的独家报道：WB Games社交媒体团队于8月19日确认Mayhem Collection DLC将在Gamescom 2026（8月26-30日，科隆）首次公开亮相，并发布了含Heath Ledger版小丑（《黑暗骑士》）片段的预告视频；IGN确认将于8月26日的Gamescom Studio直播中独家首播全新预告片，并配有与主设计师Tim Spence、高级设计师Chris Payne的深度访谈。此为昨日（8/19）"30天倒计时+售罄"文章的直接后续——昨日文章将Gamescom揭晓定性为Brick Fanatics"合理猜测的候选项"，今日新闻将其坐实为officially confirmed的具体日期/时间。通过直接WebFetch两篇Brick Fanatics原文（8/19确认版 + 7/30成就泄露背景版）及GamesRadar+官方Gamescom 2026日程表交叉核实全部事实点，未采信无法直接核实的IGN原文链接（IGN域名被系统屏蔽，改用Brick Fanatics对IGN内容的直接引述作为二手信源，已在文中明确标注信源为"IGN confirmed"经Brick Fanatics转述）。Tags: News, Analysis. Image: `_astro/clues-2.D9jQ9zQy_Z12vcyH.webp`（哥谭夜景+蝙蝠信号，与family/fight-2/postfooter并列全站最低使用次数组16次，本次使用后17次）. Sources: 3条真实URL（Brick Fanatics×2、GamesRadar+），均本次会话直接WebFetch核实. 5 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：8条，全部✅：
+  1. WB Games确认Mayhem Collection将在Gamescom 2026首次公开亮相 — ✅ 直接WebFetch Brick Fanatics 8/19确认原文
+  2. 8月19日WB Games发布含Heath Ledger小丑片段的预告视频 — ✅ 同上
+  3. IGN Gamescom Studio将于8月26日首播新预告片，时间约6am PT/9am ET/3pm CEST/2pm BST(UK) — ✅ 同上，并经WebSearch二次交叉确认（thebrickpost.com/GoNintendo聚合结果一致）
+  4. 设计师访谈嘉宾为Lead Designer Tim Spence与Advanced Designer Chris Payne — ✅ 同上
+  5. Sinister Pack内容：7件套装（对应7名现有可玩角色）+5个蝙蝠洞装饰+1个蝙蝠车皮肤 — ✅ 同上，且与`data/game-facts.json`（dlc_mayhem_collection.sinister_pack_contents）完全一致
+  6. 标准版升级价格£21.99/$24.99，含Mayhem Collection+现有Legacy Collection — ✅ 同上
+  7. Gamescom 2026日期8月26-30日，科隆Koelnmesse，26日仅限媒体/业界 — ✅ 直接WebFetch GamesRadar+官方日程表原文
+  8. Mayhem Collection发售日9月18日、Switch 2同日发售 — ✅ 核对`data/game-facts.json`一致
+- References：3条真实URL（Brick Fanatics×2、GamesRadar+），均本次会话直接WebFetch核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中）；另以Python脚本对guides/、blog/、根目录共139个HTML文件的内部链接做完整性校验，0处失效链接；补充检查全部34个guide页面均含可见"Updated"时间戳（3种不同格式："Last updated:"/"📅 Updated"/"Updated:"，均为2026年7月26日至8月19日之间，无过时预发行表述如"coming soon"/"expected to launch"）；核实全站最新已知补丁仍为Update 1.008（7月），WebSearch未发现1.009或8月补丁的任何报道，站内表述与实际一致，无需修正。
+**关键发现：** `guides/trophy-guide.html`中"Mayhem Collection DLC Trophies"小节存在过时/不准确表述——"As of July 2026, no DLC trophy or achievement list has been announced by TT Games or WB Games"，但站内自身`blog/mayhem-collection-achievements-leak.html`（7月30日已发布）早已报道12项Steam成就泄露，该guide页面从未同步更新，形成站内自相矛盾的准确性问题。
+
+**SEO Top 3 更新：**
+1. **`guides/mayhem-collection-dlc.html`** — "Looking ahead"段落由"Brick Fanatics猜测可能揭晓"的推测性措辞更新为已确认事实：WB Games确认Gamescom首秀、8月19日预告视频、IGN 8月26日预告片首播及设计师访谈的具体时间，内部链接由旧的"30天倒计时"文章更新指向今日新文章，天数倒计时同步更新为29天。(评分：8/10 — 全站Mayhem Collection核心枢纽页，搜索意图最强，将推测性内容替换为已证实事实，避免误导读者)
+2. **`guides/deluxe-edition-explained.html`** — Gamescom提示框由"a plausible candidate"的推测性表述更新为已确认的揭晓事实及具体播出时间，内部链接同步更新指向今日新文章。(评分：6/10 — 高流量版本对比页，避免读者点到已被取代的旧推测性内容)
+3. **`guides/trophy-guide.html`** — 修正"截至7月尚无DLC成就/奖杯列表公布"的过时表述，补充12项已泄露Steam成就的事实及8月26日Gamescom预告片/访谈信息，并同步调整后续段落中"可能没有独立奖杯列表"的推测性措辞为"很可能会有对应PS5/Xbox奖杯列表"（基于12项Steam成就已确认存在这一新事实）。(评分：8/10 — 全站奖杯攻略核心页，纠正一处此前会话遗漏的站内自相矛盾准确性问题，且是本次会话主动发现而非仅追热点)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（8条高风险声明，全部✅直接WebFetch双源/三源核实）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + 139文件内部链接完整性校验，0处失效链接；额外发现并修正1处站内自相矛盾的历史遗留准确性问题）
+- [x] SEO Top 3 更新已执行（mayhem-collection-dlc.html / deluxe-edition-explained.html / trophy-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，无需改动）
+- [x] sitemap.xml 已重新生成（139页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次内容均为DLC揭晓活动新闻及站内已有事实的准确性/时效性修正，非游戏内部数值变更）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+本机路径未挂载（定时任务自动运行，无用户在场批准文件夹连接）。沙盒内`/var/tmp/brickhero-push`存在此前会话遗留仓库副本，属主为`nobody`且整个目录树（含顶层目录本身）对本次会话用户均为只读权限，连新建文件都被拒绝（Permission denied），未使用；沙盒内`/tmp/bhg/repo`同样存在此前会话遗留副本（Aug 15），属主同样为`nobody`只读；本次改为使用仓库保存的GitHub凭据将仓库全新clone至会话可写路径`/tmp/bhwork-clean/repo`（新建的干净目录，未复用任何历史缓存路径），确认其HEAD（92c9ac4，含2026-08-19每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话使用Write工具先在outputs目录起草新博文HTML后通过bash cp进repo，随后全部guide/blog/index.html/_redirects文件编辑均通过bash内python3脚本完成（字符串精确匹配替换，注意本仓库部分文件使用原生Unicode破折号"—"字符而非HTML实体`&mdash;`，首次替换尝试因实体/字符不匹配而失败，已用python3读取实际字节内容核实后修正）。

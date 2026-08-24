@@ -3509,3 +3509,51 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用，未挂载任何用户文件夹（定时任务自动运行，无用户在场批准文件夹连接）。沙盒内`/tmp/bhg_20260819`、`/tmp/bhwork-clean`、`/tmp/work/brickheroguide`、`/var/tmp/brickhero-push`等存在此前会话遗留副本，均未使用（与既往会话方法论一致，避免复用可能过期或权限受限的缓存状态）；本次改为使用仓库保存的GitHub凭据将仓库全新clone至会话可写路径`/tmp/bhg_session/repo`（新建目录），确认其HEAD与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成。本次方法论要点：选题阶段的"避免与已有内容重复"检查范围此前主要局限于`blog/`目录，本次扩展至同时检查`guides/`目录后，发现同主题攻略页`cheat-codes-unlockables-guide.html`已存在——未因此放弃选题，而是评估两者内容形态差异（guide为FAQ式评评权威参考页，blog为带独立信源引用的对比表深度专题）后，采用"新增博文聚焦guide页尚未收录的增量事实（Hyper Combo技能命名、无NG+）+ 反向补充guide页本身 + 双向互链"的处理方式，将潜在的关键词自相蚕食风险转化为站内主题聚合与内链强化的机会，这一处理思路建议后续会话在遇到blog选题与guides既有页面主题重叠时复用。
+
+## 2026-08-24 — Gamescom Watch Guide Blog + 3处Guide时效性更新（倒计时/日期戳/互链）
+
+### 阶段一：Blog 更新
+- **`blog/gamescom-2026-two-days-away-watch-guide.html`** — "Gamescom 2026 Is Two Days Away: Your LEGO Batman Watch Guide for August 25–26"。710字。选题背景：今日新闻搜索（"LEGO Batman Legacy of the Dark Knight" news/patch update/Mayhem Collection Gamescom/reddit讨论，共4组关键词）未发现任何真正的突发新闻——Mayhem Collection的Gamescom揭晓已被8月19-20日两篇文章（"30 Days Out"、"Trailer and Designer Interview Set for August 26"）完整覆盖，8月patch搜索仅返回7月1.008补丁的旧内容，无新补丁；直接WebFetch Steam商店页面获取的评论数据（英文评论6,435条/95%，近30天92%/417条）因缺少与历史记录一致的"全语言总数"口径（今日页面渲染下"All Reviews"栏位与"English Reviews"栏位显示为同一数字，与此前会话记录的13,000+全语言总数口径不一致，判定为页面展示语言/地区差异导致的口径不可比，为避免误用不可比数据造成事实错误，本次未采用Steam数据作为选题）。按协议"若搜索无新内容，选择常青型攻略选题"原则，结合今日（8月24日）恰为Gamescom开幕（8月26日）倒数第2天的自然时间节点，转向"如何观看"实用型选题——明确区分于此前两篇"公告"型报道，本文聚焦具体可执行信息：分地区观看时间表、Gamescom整体日程（含8月25日Opening Night Live，并明确该场与LEGO Batman无关，避免读者误解）、以及"什么已确认/什么仍未知"的清单，文中显式声明"自8月20日以来DLC内容本身没有任何变化"以避免与既有报道重复造成关键词自相蚕食。Tags: News, Guide. Image: `_astro/postfooter.Bp36eHDB_Z2cb3ek.webp`（小丑起源酸缸场景，与Mayhem Collection小丑DLC主题高度契合，全站并列最低使用次数组16次，本次使用后17次）. Sources: Brick Fanatics（今日直接WebFetch核实）、GamesRadar+（今日直接WebFetch核实）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：9条，全部✅：
+  1. Gamescom 2026于8月26-30日在德国科隆Koelnmesse举办 — ✅ 今日直接WebFetch Brick Fanatics + GamesRadar+双源确认
+  2. Gamescom Opening Night Live于8月25日举行，与LEGO Batman无关联确认信息 — ✅ 今日直接WebFetch GamesRadar+官方日程页确认（该页未提及LEGO Batman）
+  3. Mayhem Collection预告片将于8月26日IGN Gamescom Studio直播独家首播，约太平洋时间6am/东部时间9am/英国时间2pm/中欧时间3pm — ✅ 今日直接WebFetch Brick Fanatics原文逐字确认
+  4. 设计师访谈嘉宾为Lead Designer Tim Spence与Advanced Designer Chris Payne — ✅ 同上
+  5. Mayhem Collection内容（Joker+Harley可玩、Arkham Asylum越狱新任务、Sinister Pack含7套服装/5个蝙蝠洞装饰/1个蝙蝠车皮肤）— ✅ 与`data/game-facts.json`（内部权威数据源）及今日WebFetch的Brick Fanatics、Steam商店页三方交叉核实一致（注：Steam页面文案简化表述为"1个蝙蝠洞道具组"，与game-facts.json"5个装饰"表述不同，判定为营销文案简化，采信game-facts.json+Brick Fanatics双源的"5个"表述）
+  6. 标准版升级豪华版价格$24.99 — ✅ 今日直接WebFetch Steam商店页面DLC价格栏 + Brick Fanatics（£21.99/$24.99）双源确认，与game-facts.json一致
+  7. WB Games 8月19日预告片未确认展台可试玩，仅为视频内容 — ✅ 今日直接WebFetch Brick Fanatics原文明确表述"not clear...whether the DLC will be playable"
+  8. Mayhem Collection 9月18日发售，Switch 2同日上市 — ✅ game-facts.json + Brick Fanatics一致
+  9. 站内互链目标文件（`/guides/mayhem-collection-dlc.html`、`mayhem-collection-gamescom-trailer-designer-interview-august-26.html`、`mayhem-collection-achievements-leak.html`等）— ✅ 全部经Python脚本核实文件存在，0处失效链接
+- References：2条真实URL（Brick Fanatics、GamesRadar+），均本次会话直接WebFetch核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中）；另以Python脚本对全站142个HTML文件（含新增博文）的内部链接做完整性校验，0处失效链接；补充核对`guides/waynetech-upgrades-guide.html`与`guides/gotham-districts-guide.html`的"9个区域"表述与`data/game-facts.json`的"4座岛屿"表述是否冲突——核实为两个不同颗粒度的既有站内约定（9个可激活塔区域 vs 4个岛屿级地理分区），两页互相一致，非新增错误，不予修改。
+**关键发现：** `guides/mayhem-collection-dlc.html`第223行的Gamescom倒计时（"4 days away"/"27 days out"）为8月22日计算值，今日（8月24日）已分别滚动至2天/25天，构成明确的事实性错误（而非仅仅过时），予以修正；`guides/release-date-platforms.html`与`guides/deluxe-edition-explained.html`的"Last updated"时间戳分别滞后3天与10天，且均缺少指向今日新发布Gamescom观看指南的互链，予以补充。
+
+**SEO Top 3 更新：**
+1. **`guides/mayhem-collection-dlc.html`** — Gamescom倒计时由"4 days away"/"27 days out"更正为"2 days away"/"25 days out"，新增指向今日Gamescom观看指南博文的互链，时间戳由8月22日刷新至8月24日。(评分：8/10 — 全站Mayhem Collection核心枢纽页，未标注"as of"日期的倒计时数值属于随时间推移会变为事实性错误的高风险内容类型，此前两次会话已分别在8月21日、8月22日修正过同一问题，本次为该已知模式的第三次滚动修正)
+2. **`guides/release-date-platforms.html`** — "Last updated"时间戳由8月21日刷新至8月24日；Development History时间线新增"August 26, 2026 (upcoming)"条目，说明Mayhem Collection预告片与设计师访谈的Gamescom Studio直播安排，并链接至今日新发布的观看指南。(评分：6/10 — 高流量发售信息聚合页，作为站内"post-launch data"权威追踪页，新增面向未来事件的时间线条目增强内容完整性与内链)
+3. **`guides/deluxe-edition-explained.html`** — "Updated"时间戳由8月14日刷新至8月24日（滞后10天，为本次审计发现的最大滞后案例之一）；Mayhem Collection章节新增指向今日Gamescom观看指南的互链，衔接现有的"Deluxe Edition Upgrade Steam listing"核实段落。(评分：6/10 — 全站版本对比核心页，购买决策直接相关，时间戳滞后10天且缺少最新Gamescom进展互链，属于本次审计中时效性缺口最明显的页面)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（9条高风险声明，全部✅今日直接WebFetch双源核实或与内部权威数据源交叉核实）
+- [x] References 区块已填写（2条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + 142文件内部链接完整性校验，0处失效链接）
+- [x] SEO Top 3 更新已执行（mayhem-collection-dlc.html / release-date-platforms.html / deluxe-edition-explained.html）
+- [x] index.html 链接已更新（无新 guide 页面，无需改动）
+- [x] sitemap.xml 已重新生成（142页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次内容为倒计时/时间戳的时效性修正及互链补充，非游戏内部核心数值变更，与既往会话方法论一致，不写入game-facts.json）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用，未挂载任何用户文件夹（Cowork定时任务自动运行，无用户在场批准文件夹连接）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/sessions/hopeful-gracious-brahmagupta/brickheroguide`（新建目录，未复用任何历史缓存路径），确认其HEAD（含2026-08-22每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成。本次方法论要点：选题阶段对当日WebFetch获取的Steam评论数据发现口径与历史记录不一致（"All Reviews"栏位疑似仅反映界面语言而非全语言总数），未强行采用可能不可比的数据点，转而选择时效性明确、可独立核实的Gamescom观看指南选题，避免了因数据口径误用导致的潜在事实错误——这一"数据口径存疑时主动放弃而非强行使用"的判断原则建议后续会话在遇到类似第三方数据展示差异时复用。

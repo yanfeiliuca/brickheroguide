@@ -3557,3 +3557,53 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用，未挂载任何用户文件夹（Cowork定时任务自动运行，无用户在场批准文件夹连接）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/sessions/hopeful-gracious-brahmagupta/brickheroguide`（新建目录，未复用任何历史缓存路径），确认其HEAD（含2026-08-22每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成。本次方法论要点：选题阶段对当日WebFetch获取的Steam评论数据发现口径与历史记录不一致（"All Reviews"栏位疑似仅反映界面语言而非全语言总数），未强行采用可能不可比的数据点，转而选择时效性明确、可独立核实的Gamescom观看指南选题，避免了因数据口径误用导致的潜在事实错误——这一"数据口径存疑时主动放弃而非强行使用"的判断原则建议后续会话在遇到类似第三方数据展示差异时复用。
+
+## 2026-08-25 — Batcave Expansions Cost Guide Blog + 3处Guide更新（Trophy补全/倒计时修正/时间戳刷新）
+
+### 阶段一：Blog 更新
+- **`blog/batcave-expansions-cost-guide.html`** — "All 5 Batcave Expansions in LEGO Batman: Legacy of the Dark Knight, Ranked by Cost"。711字。选题背景：今日新闻搜索（"LEGO Batman Legacy of the Dark Knight" news/Mayhem Collection Gamescom trailer/patch update reddit/speedrun mod Steam Deck，共4组关键词）未发现任何真正的突发新闻——Gamescom 2026揭晓（8月26日IGN Gamescom Studio直播首播Mayhem Collection预告片）已被8月19-24日五篇文章完整覆盖，且Opening Night Live（8月25日，今日）已在8月24日文章中明确说明与LEGO Batman无关联；Steam补丁搜索仅返回7月旧补丁信息，无新补丁；速通数据（72次跑分/17名玩家）与8月21日已核实数据完全一致，判定该选题已耗尽。按协议"若搜索无新内容，选择常青型攻略选题"，选题过程中先尝试"WayneTech缓存里程碑奖励"角度，但直接WebFetch核实后发现该角度信息模糊（各来源均未提供具体里程碑奖励内容，且发现PowerPyx页面对WayneTech缓存总数表述为130个，与站内`data/game-facts.json`及其他多来源交叉验证的200个存在冲突——判定为PowerPyx单一来源的表述差异，不采信、不据此修改站内既有200个的权威数值，仅作为审计发现记录），遂放弃该选题；转向"Batcave付费扩建费用"角度，直接WebFetch核实TheGamer与PowerPyx两个独立信源，发现两者数据完全一致（Training Area 50,000/Display Area 75,000/Science Area 100,000/Clean Slate Area 100,000 Studs，合计325,000），且站内全文搜索确认这四个具体数值此前从未被任何guide或blog页面记录过，属于真实的内容空白，遂采用。Tags: Guide, Tips. Image: `_astro/gear-3.5F2kKy0I_1z9tbe.webp`（蝙蝠侠骑蝙蝠摩托，与其余7张图片并列全站最低使用次数组18次，本次使用后19次）. Sources: TheGamer（今日直接WebFetch核实）、PowerPyx（今日直接WebFetch核实）. 5 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：10条，全部✅：
+  1. Batcave共有5个扩建区域，其中1个为主线剧情必经（第3章自动解锁），另外4个为付费可选 — ✅ 今日直接WebFetch PowerPyx原文确认
+  2. Training Area造价50,000 Studs — ✅ 今日直接WebFetch TheGamer + PowerPyx双源确认
+  3. Display Area造价75,000 Studs — ✅ 同上双源确认
+  4. Science Area造价100,000 Studs — ✅ 同上双源确认
+  5. Clean Slate Area造价100,000 Studs — ✅ 同上双源确认
+  6. 四项合计325,000 Studs — ✅ 基于已双源核实的四个数值直接相加（50,000+75,000+100,000+100,000=325,000），非独立信源声明，为已核实数值的算术推导
+  7. 各区域内容物（Training=健身器械，Science=测试仪器与工作台，Display=已解锁奖杯展示位，Clean Slate=空白可自定义空间）— ✅ 今日直接WebFetch TheGamer原文逐一确认
+  8. 完成全部四项扩建对应铜奖杯"I own the place." — ✅ 今日直接WebFetch PowerPyx奖杯路线图原文确认
+  9. 全部Batcave解锁后可访问其中隐藏的全部MiniKit奖杯与WayneTech缓存；金色技能砖解锁的Collectible Detective技能可辅助定位 — ✅ 今日直接WebFetch TheGamer原文确认
+  10. 全游戏52个奖杯（1白金/3金/4银/44铜），无一不可错过 — ✅ 今日直接WebFetch PowerPyx原文确认，与站内`guides/trophy-guide.html`既有数值一致
+- References：2条真实URL（TheGamer、PowerPyx），均本次会话直接WebFetch核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10总数/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中；grep命中的"10"均为WayneTech缓存里程碑数组`[10,30,50,70,80,90,110,140,150,160,180]`中的正常数值，非总数错误）；另以Python脚本对全站143个HTML文件（含新增博文）的内部链接做完整性校验，0处失效链接。
+**关键发现：** `guides/mayhem-collection-dlc.html`第223行Gamescom倒计时（"2 days away"/"25 days out"）为8月24日计算值，今日（8月25日）已构成事实性错误（Gamescom明日即开幕），予以修正；`guides/trophy-guide.html`"Batcave Upgrade Trophies"小节此前仅笼统提及"Batcave房间解锁"相关奖杯，未点名具体奖杯"I own the place."及四项付费扩建的具体造价，属实质性内容空白，本次结合今日博文核实的数据予以补充；`guides/batcave-hub-guide.html`"Last updated"时间戳为8月3日，距今22天为本次审计发现的最大滞后案例，且该页描述的6个"金砖门槛"房间（Vehicle Garage/Wardrobe/Trophy Room等）与今日研究发现的4个"Stud付费"扩建房间（Training/Display/Science/Clean Slate Area）为两套不同系统，此前页面完全未提及后者，存在潜在的读者混淆风险，予以新增FAQ澄清并互链。
+**审计发现但未采纳的数据点：** PowerPyx奖杯路线图页面（2026-07-30更新）中"There are a total of 130 WayneTech caches"的表述与站内`data/game-facts.json`权威数值（200个，经Official WB Games/IGN/GamesRadar/PowerPyx/Steam多方交叉核实，且被TheGamer、Game8、GameRant等本次及历次会话核实的多个独立信源支持）不一致，判定为PowerPyx该页面的单点表述差异（可能未更新至内容更新后的最终数值，或计入口径不同），未采信，未据此修改`game-facts.json`或任何站内页面，仅记录供后续会话留意。
+
+**SEO Top 3 更新：**
+1. **`guides/mayhem-collection-dlc.html`** — Gamescom倒计时由"2 days away"/"25 days out"更正为"Gamescom opens tomorrow (August 26)"/"24 days out"，时间戳由8月24日刷新至8月25日。(评分：8/10 — 全站Mayhem Collection核心枢纽页，倒计时类数值属于随时间推移必然过期的内容类型，此前三次会话已分别修正过同一问题，本次为第四次滚动修正)
+2. **`guides/trophy-guide.html`** — "Batcave Upgrade Trophies"小节新增一段，点名具体奖杯"I own the place."（铜奖杯，四项付费扩建合计325,000 Studs）并链接今日新博文获取完整明细。(评分：7/10 — 全站奖杯攻略核心页，填补此前会话遗留的具体奖杯信息空白，与今日新博文形成主题聚合)
+3. **`guides/batcave-hub-guide.html`** — 时间戳由8月3日修正为8月25日（滞后22天，本次审计最大滞后案例）；新增FAQ条目澄清"金砖门槛房间"与"Stud付费扩建房间"为两套不同系统，避免读者混淆；Related Guides新增今日博文链接。(评分：6/10 — 全站Batcave权威参考页，时间戳滞后22天且存在潜在系统混淆风险，本次审计中发现的最高优先级页面级问题)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（10条高风险声明，全部✅今日直接WebFetch双源核实，1条为已核实数值的算术推导）
+- [x] References 区块已填写（2条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + 143文件内部链接完整性校验，0处失效链接；发现并记录1处外部信源数值冲突，判定不采信）
+- [x] SEO Top 3 更新已执行（mayhem-collection-dlc.html / trophy-guide.html / batcave-hub-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，无需改动）
+- [x] sitemap.xml 已重新生成（143页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次内容为guides/blog此前未记录的Batcave扩建造价明细及倒计时/时间戳时效性修正，非游戏内部核心数值变更；PowerPyx的130个WayneTech缓存表述与既有200个权威值冲突，经核实判定不采信，不写入game-facts.json）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接，且本次会话沙盒未预置任何历史遗留副本）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/tmp/repo`（新建目录），确认其HEAD（83baec0，含2026-08-24每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：选题阶段对第一候选角度（WayneTech缓存里程碑奖励）进行WebFetch核实时意外发现PowerPyx页面的缓存总数表述（130）与站内长期沿用的权威值（200，经五个以上独立信源历次交叉核实）不一致——未因单一信源的冲突表述而动摇已有充分交叉验证支撑的权威数值，也未因此在博文中使用模糊或双重表述，而是完整放弃该选题转向数据更清晰的替代角度，并将这一发现如实记录在PROGRESS.md供后续会话参考，这一"单一信源冲突不足以推翻多源交叉验证结论，但仍需记录留痕"的处理原则建议后续会话遇到类似情况时复用。

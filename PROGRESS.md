@@ -3607,3 +3607,51 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接，且本次会话沙盒未预置任何历史遗留副本）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/tmp/repo`（新建目录），确认其HEAD（83baec0，含2026-08-24每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：选题阶段对第一候选角度（WayneTech缓存里程碑奖励）进行WebFetch核实时意外发现PowerPyx页面的缓存总数表述（130）与站内长期沿用的权威值（200，经五个以上独立信源历次交叉核实）不一致——未因单一信源的冲突表述而动摇已有充分交叉验证支撑的权威数值，也未因此在博文中使用模糊或双重表述，而是完整放弃该选题转向数据更清晰的替代角度，并将这一发现如实记录在PROGRESS.md供后续会话参考，这一"单一信源冲突不足以推翻多源交叉验证结论，但仍需记录留痕"的处理原则建议后续会话遇到类似情况时复用。
+
+## 2026-08-26 — Two-Face Boss Fight Deep-Dive Blog + 3处Guide更新（含1处事实性纠错）
+
+### 阶段一：Blog 更新
+- **`blog/two-face-boss-fight-halys-circus-guide.html`** — "Two-Face Boss Fight: The Complete Haly's Circus Strategy & Collectibles Guide"。988字。选题背景：今日恰为此前三篇文章（8/19公告、8/20预告、8/24观看指南）预告的Gamescom Mayhem Collection预告片首播当日（IGN Gamescom Studio直播，太平洋时间6am），今日新闻搜索（"Mayhem Collection" trailer Gamescom/IGN Gamescom Studio Tim Spence Chris Payne/reddit今日反应，共4组关键词，含直接WebFetch今日Brick Fanatics、Gamereactor、GoNintendo、legobatmanwiki.com Mayhem Mode页等5个信源）确认：截至本次会话搜索时点，尚无任何已发布的预告片首播后报道或设计师访谈内容摘要——legobatmanwiki.com的Mayhem Mode专页明确写明"Specific gameplay specifics...have not been detailed by WB Games or TT Games at time of writing"，直接WebFetch的Gamereactor"trailer reveal"文章经检查实为5月13日豪华版预告旧闻（非今日新闻，且其"28套追加服装/20个蝙蝠洞道具"数字与game-facts.json的Sinister Pack"7套服装/5个蝙蝠洞装饰"存在口径差异，判定为豪华版整体内容与Mayhem Collection单项DLC内容的不同统计口径，未采信旧闻数字，也未据此修改站内数值）；判定预告片首播的实际内容尚未被媒体索引到，选题耗尽。按协议"若搜索无新内容，选择常青型攻略选题"，转向站内空白点排查——`guides/`目录仅有4个主线章节walkthrough(mission-1至4)，`blog/`已覆盖Bane Round 2、Mr. Freeze两个Boss深度攻略，但Chapter 3的Two-Face Boss战从未有独立深度攻略（仅`blog/all-boss-fights-guide.html`总览页有2-3句简述）。选定该选题后，直接WebFetch两个独立信源核实：legobatmanwiki.com的Two-Face Boss专页（3阶段coin-flip机制细节）与camzillasmom.com的Mission 10完整图文walkthrough（确认任务名"Haly's Circus"、Robin的Birdarang能力首次登场、5枚Coin位置、Red Brick: Clown机关位置、两轮炸弹拆除跑酷路线）。写作过程中发现原稿一句"可重试"表述未获信源直接支持，自查阶段主动删除该未经核实的推断性表述。Tags: Guide, Tips. Image: `_astro/family.CQW_jlFK_2qvCfg.webp`（戈登局长与猫女，与Chapter 3猫女Falcone Fortune支线呼应，全站并列最低使用次数组18次，本次使用后19次）. Sources: LEGO Batman Wiki（今日直接WebFetch核实）、Camzillasmom（今日直接WebFetch核实）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：9条，全部✅：
+  1. Two-Face Boss战位于Mission 10、Chapter 3、任务名"Haly's Circus" — ✅ 今日直接WebFetch camzillasmom.com原文逐字确认，另WebSearch交叉验证（villains.fandom.com、YouTube标题）
+  2. 所需角色为Batman与Robin — ✅ 今日直接WebFetch legobatmanwiki.com Two-Face Boss专页确认
+  3. 3阶段coin-flip机制（Heads近战冲锋/Tails远程+召唤手下/低血量combined阶段，触发四角马戏团机关可打掉约一半血量，Robin撑竿终结）— ✅ 今日直接WebFetch legobatmanwiki.com逐字确认
+  4. Robin的Birdarang能力在本任务首次登场，可同时锁定3个目标 — ✅ 今日直接WebFetch camzillasmom.com确认
+  5. Cable Launcher（缆绳发射器）能力同样在本任务教学引入 — ✅ 同上
+  6. 两轮炸弹拆除跑酷路线细节（绿色平台/尖刺、大弹跳垫、滚桶楼梯、摆动斧头、双滚筒平衡、抓握杆攀爬、Bat Claw开启炸弹）— ✅ 今日直接WebFetch camzillasmom.com逐段确认
+  7. 5枚Coin具体位置 — ✅ 今日直接WebFetch camzillasmom.com确认，且与Push Square独立信源的"5 Coins + 1 Red Brick"总数一致（Push Square页面本身因IP被服务器拦截返回423错误未能获取正文细节，仅用于总数交叉验证）
+  8. Red Brick名为"Red Brick: Clown"，通过打地鼠式力量测试小游戏（踩踏板触发，Robin射击3个目标）获得 — ✅ 今日直接WebFetch camzillasmom.com确认，与legobatmanwiki.com、既有站内all-boss-fights-guide.html简述的机关描述一致
+  9. Two-Face配音演员Rich Keeble — ✅ WebSearch交叉核实（Behind The Voice Actors等信源），与站内`guides/all-villains-guide.html`原有记录一致，未变更
+- References：2条真实URL（LEGO Batman Wiki、Camzillasmom），均本次会话直接WebFetch核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 32 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10总数/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中）；另以Python脚本对全站145个HTML文件（含新增博文）的内部链接做完整性校验，0处失效链接（唯一命中项为`/sitemap.xml`的相对路径引用，非HTML文件故被脚本判定为"缺失"，实为脚本对文件类型过滤的误报，非真实失效链接）。
+**关键发现（重要）：** 在为今日Two-Face选题核实资料时，发现`guides/all-villains-guide.html`中Two-Face的"Hideout"字段原记录为**"City Hall"**，配文描述为"courtroom setting"（法庭场景）——经今日直接WebFetch的legobatmanwiki.com与camzillasmom.com两个独立信源交叉核实，本作Two-Face的实际Boss战场景为**"Haly's Circus"**（马戏团），涉及走钢丝、大炮、秋千等马戏团机关与两轮炸弹拆除跑酷，并无法庭场景。"City Hall/courtroom"的表述与《蝙蝠侠：阿卡姆之城》(Batman: Arkham City)中Two-Face的经典法庭挟持场景高度相似，判定为此前会话可能受该系列既有印象影响产生的事实性错误（而非本作实际内容），予以修正（含快速参考表格行与详细角色卡片描述两处）。配音演员"Rich Keeble"经核实无误，未改动。`guides/mayhem-collection-dlc.html`第223行前后的Gamescom更新段落（"opens tomorrow"/"24 days out"/"As of today (August 25)"）为8月25日计算值，今日（8月26日，Gamescom开幕当日）已构成事实性错误，予以修正为"opens today"/"23 days out"。
+
+**SEO Top 3 更新：**
+1. **`guides/all-villains-guide.html`** — 修正Two-Face的Boss战地点字段（快速参考表格+详细角色卡片共2处），由错误的"City Hall/courtroom setting"更正为经双源核实的"Haly's Circus"，并补充coin-flip三阶段机制简述，时间戳由8月16日刷新至8月26日。(评分：9/10 — 全站"全部14个反派"权威落地页，此次修正的是一处真实的事实性错误而非单纯时效性问题，且该错误此前可能已持续误导读者数周，是本次审计的最高优先级发现)
+2. **`guides/mayhem-collection-dlc.html`** — Gamescom更新段落由"opens tomorrow"/"24 days out"/"As of today (August 25)"更正为"opens today"/"23 days out"，并简化措辞避免"tomorrow"类相对时间表述过期。(评分：7/10 — 全站Mayhem Collection核心枢纽页，倒计时类数值属于此前会话已连续5次滚动修正过的已知问题模式，本次为Gamescom开幕当日的第6次修正)
+3. **`guides/trophy-guide.html`** — "Character & Suit Trophies"小节Batgirl命名奖杯说明后新增一段，指出Robin同样在Chapter 3的Two-Face/Haly's Circus任务中加入队伍，并链接今日新博文获取完整Boss战攻略与收集品位置。(评分：6/10 — 全站奖杯攻略核心页，与今日新博文形成主题聚合，复用此前会话验证有效的"guide页反向补充+双向互链"处理模式)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（9条高风险声明，全部今日直接WebFetch双源或多源核实）
+- [x] References 区块已填写（2条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（32个 guide 页面禁止错误清单全项扫描 + 145文件内部链接完整性校验，0处真实失效链接；发现并修正1处此前会话遗留的Two-Face地点事实性错误）
+- [x] SEO Top 3 更新已执行（all-villains-guide.html / mayhem-collection-dlc.html / trophy-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，无需改动）
+- [x] sitemap.xml 已重新生成（144页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次内容为guides页面既有Two-Face地点描述的事实性纠错及Gamescom倒计时时效性修正，非游戏内部核心数值变更，与既往会话方法论一致，不写入game-facts.json）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接，本次会话沙盒未预置任何历史遗留副本）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/sessions/sharp-confident-goodall/repo`（新建目录），确认其HEAD（6df7588，含2026-08-25每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：选题阶段为核实"今日预告片首播"选题的可行性，直接WebFetch了包括legobatmanwiki.com Mayhem Mode专页在内的多个信源，该页面明确声明"截至撰写时尚无更多细节"，据此判断今日新闻角度已耗尽而非强行编造预告片内容，转向常青型选题；在为常青选题核实资料的过程中，直接WebFetch的两个独立信源（legobatmanwiki.com、camzillasmom.com）均一致指向"Haly's Circus"马戏团场景，与站内`guides/all-villains-guide.html`原有的"City Hall/courtroom setting"记录直接冲突——面对此类站内既有内容与今日新核实信源冲突的情况，本次采用"双独立信源一致 + 与本站已发布的Mr. Freeze/Bane等其他Boss攻略的场景描述模式相符（均为具体游戏内场景而非泛用法庭模板）"的判断标准，认定原站内记录为事实性错误并予以修正，而非默认信任站内既有内容；这一"发现站内内容与今日新核实的多源信息冲突时，以今日直接核实的独立信源为准、主动修正而非回避"的处理原则，建议后续会话在审计阶段遇到类似冲突时复用。

@@ -3706,3 +3706,55 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接，本次会话沙盒未预置任何历史遗留副本）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/sessions/compassionate-tender-shannon/repo`（新建目录），确认其HEAD（含2026-08-26每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit/Grep工具报错"outside this session's connected folders"或VM路径不存在（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：选题阶段核实今日官方新闻稿时，意外发现站内`guides/mayhem-collection-dlc.html`存在与官方信息**直接矛盾**（而非仅仅过时）的具体技能名称、服装名称、机制描述——这些内容在站内无任何可追溯的信源引用，且经核查与今日两个独立信源（官方新闻稿原文、Notebookcheck编辑报道）逐字不符，判定为此前某次会话在无信源支撑情况下生成的推断性内容。面对此类"发现站内既有内容疑似为无信源支撑的历史性错误"的情况，本次采用"以今日直接核实的官方一手信源为准，全面替换而非部分调和，并在页面内保留修正说明供读者理解"的处理原则——这与此前会话"单一信源冲突不足以推翻多源交叉验证结论"的原则不同（本次冲突方是官方一手信源vs无信源支撑的历史内容，而非两个都有一定可信度的第三方信源之间的冲突），建议后续会话在遇到官方信源与站内无信源支撑内容冲突时，优先采信官方信源并全面修正。
+
+## 2026-08-28 — LEGO Batman Returns Batmobile (76355) Officially Confirmed Blog + 3处Guide更新（新增76355非兑换码澄清说明）
+
+### 阶段一：Blog 更新
+- **`blog/lego-batman-returns-batmobile-76355-officially-confirmed.html`** — "LEGO Batman Returns Batmobile (76355) Is Officially Confirmed: Real Price, Real Dates, and No In-Game Code"。727字。选题背景：今日新闻搜索（"LEGO Batman Legacy of the Dark Knight" news August 28/Mayhem Collection Gamescom reaction/reddit review Steam patch/speedrun community，共4组关键词）发现的Mayhem Collection预告片相关内容（Vice、mynintendonews等）均为对8/26官方新闻稿的二次转述，与站内8/27文章已完整覆盖的官方一手信息重复，判定为已耗尽；速通数据（72次跑分/17名玩家）与此前多次会话核实数据完全一致，同样耗尽；Steam补丁讨论区搜索仅返回6月旧补丁信息，无新补丁。转而排查站内此前"未证实"标记的选题——站内`blog/lego-batman-returns-set-76355-batmobile-rumor.html`（5月/6月）与`blog/lego-batman-returns-batmobile-76355-price-update.html`（7月）两篇文章均基于Reddit r/Legoleak的未证实爆料撰写，且价格更新文章明确写道"Rumour status: Everything in this article is based on unconfirmed leaks"。直接WebSearch核实后发现LEGO官方已于8月18日正式发布该套装的官方新闻稿（LEGO.com About Us/Newsroom），这是站内此前两篇"传闻"文章从未被后续更新覆盖的真实内容空白——遂采用"从传闻到官方实锤"角度撰写。直接WebFetch两个独立信源：LEGO.com官方新闻稿全文与The Brick Fan（8月18日发布，同日核实与官方新闻稿逐字一致），另直接WebFetch LEGO官方游戏兑换页面（legacy-dark-knight-dlc-lego-batman-sets）确认该套装**不在**兑换码资格列表中（仅76330–76333四款在列），避免了可能的读者误导。Tags: News. Image: `_astro/og-image.BcIYb3Fq.jpg`（官方OG横幅图，与其余5张图片并列全站最低使用次数组18次，本次使用后19次；说明：该图为游戏通用宣传图，非套装本身画面，图注中已明确注明）. Sources: LEGO.com官方新闻稿（今日直接WebFetch核实）、The Brick Fan（今日直接WebFetch核实）、LEGO官方兑换页面（今日直接WebFetch核实，用于确认76355不在列表中）. 5 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：12条，全部✅：
+  1. 套装编号76355，2,269块积木 — ✅ 今日直接WebFetch LEGO.com官方新闻稿+The Brick Fan双源逐字确认
+  2. 官方定价$229.99 / £189.99 / €209.99 — ✅ 双源确认完全一致
+  3. LEGO Insiders抢先购买日期9月1日，全面开售9月4日 — ✅ 双源确认
+  4. 年龄分级18+（收藏级展示模型） — ✅ 今日直接WebFetch LEGO.com官方新闻稿"Product Information"板块原文确认
+  5. 变形机制：按钮触发侧板打开，露出Batmissile逃生载具，"lift-arm mechanism" — ✅ 双源逐字确认
+  6. 6处隐藏彩蛋，其中明确点名"企鹅追踪器"彩蛋 — ✅ 今日直接WebFetch官方新闻稿原文确认
+  7. 蝙蝠侠专属人仔，全新开模头罩与斗篷 — ✅ 双源确认（The Brick Fan："Batman minifigure with a new cowl and cape piece"；LEGO官方："newly moulded cape"）
+  8. 尺寸约17吋长/6.5吋宽/4吋高（45cm/17cm/10cm） — ✅ 今日直接WebFetch LEGO.com官方新闻稿"Product Information"板块原文确认
+  9. 为此套装专门开发3个全新LEGO模具零件 — ✅ 官方新闻稿原文确认
+  10. 该套装**不在**Legacy of the Dark Knight游戏兑换码资格列表中，仅76330/76331/76332/76333四款在列 — ✅ 今日直接WebFetch LEGO官方兑换页面（legacy-dark-knight-dlc-lego-batman-sets）原文确认，页面仅列出四款套装
+  11. 站内此前文章曾推测"企鹅人仔"为套装亮点 — ✅ 今日直接grep站内`blog/lego-batman-returns-set-76355-batmobile-rumor.html`原文确认（"A Penguin minifigure would be the real draw for collectors"），证实为此前未证实推测，已被官方信息推翻
+  12. 7月传闻更新中的2,269块/约$230价格与官方数字对比 — ✅ 基于今日核实的官方数字与站内历史文章原文直接比对，非独立声明，为已核实数据的对比整理
+- References：3条真实URL（LEGO.com官方新闻稿、The Brick Fan、LEGO官方兑换页面），均本次会话直接WebFetch核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10总数/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中；两处"trophy-achievement-guide"匹配经检查均为指向happythumbsgaming.com外部URL路径的正常引用，非站内失效链接误报）；另以Python脚本对全站147个HTML文件（含新增博文）的内部链接做完整性校验，0处失效链接。
+**关键发现：** `guides/suits-abilities-guide.html`、`guides/collectibles-guide.html`、`guides/cheat-codes-unlockables-guide.html`三个页面均提及"76330–76333四款可兑换LEGO套装"，但均未提及今日核实的新套装76355——由于76355同为LEGO Batman载具类套装且发售窗口相近（9月上旬 vs 游戏Mayhem Collection的9月18日），存在读者误以为其也可兑换游戏内奖励的合理混淆风险，属于真实的内容空白（而非事实错误），予以在三个页面分别新增澄清说明。审计过程中额外核实了`guides/deluxe-edition-explained.html`中"Steam评论数13,199"的表述与今日WebSearch返回的"6,450条评论"数字存在明显口径差异（可能因语言筛选或界面本地化导致，此前8/24会话已记录过同类"All Reviews栏位疑似仅反映界面语言"的口径问题）——按既定原则"数据口径存疑时主动放弃而非强行使用"，未采纳今日搜索的6,450数字，未修改该页面，仅记录留痕供后续会话参考。
+**审计发现但未采纳的数据点：** 同上，Steam评论总数今日搜索返回6,450，与站内既有13,199（8月14日核实）及`game-facts.json`历史基准（12,665，7月26日）均存在量级差异，判定为搜索结果的信源口径不一致（可能为语言筛选后的子集），不采信，不修改任何页面或`game-facts.json`。
+
+**SEO Top 3 更新：**
+1. **`guides/suits-abilities-guide.html`** — 在"LEGO Set QR Redemption Rewards"小节新增说明框，指出76355不在兑换码资格列表中，链接今日新博文，时间戳由8/16刷新至8/28。(评分：8/10 — 全站服装解锁权威页，直接承接读者"哪些LEGO套装能兑换游戏奖励"的核心搜索意图，避免因新套装发布导致的潜在误解)
+2. **`guides/collectibles-guide.html`** — 在"Golden Red Brick"说明后新增同类澄清说明框，链接今日新博文，时间戳由8/7刷新至8/28。(评分：7/10 — 全站收藏品权威页，Golden Red Brick兑换来源信息需与今日新套装信息保持一致)
+3. **`guides/cheat-codes-unlockables-guide.html`** — 在"真实解锁途径"列表后新增说明框，明确76355不含兑换码，时间戳由8/22刷新至8/28。(评分：6/10 — 该页面吸引搜索"金手指/兑换码"意图的读者，与新套装信息形成主题闭环)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（12条高风险声明，全部今日直接WebFetch多源核实）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + 147文件内部链接完整性校验，0处失效链接；发现并记录1处Steam评论数口径冲突，判定不采信）
+- [x] SEO Top 3 更新已执行（suits-abilities-guide.html / collectibles-guide.html / cheat-codes-unlockables-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，无需改动）
+- [x] sitemap.xml 已重新生成（146页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次内容为LEGO官方周边套装信息，非游戏内部核心数值类别；Steam评论数口径冲突经核实判定不采信，不写入）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接，本次会话沙盒未预置任何历史遗留副本）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/sessions/gallant-serene-gates/repo`（新建目录），确认其HEAD（含2026-08-27每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：选题阶段核实"今日新闻"角度时发现均为已覆盖内容的二次转述，遂主动排查站内历史"未证实/传闻"标记文章是否已有官方后续，这一"主动回查站内已发布的传闻类文章是否已被后续官方信息实锤"的选题排查方法此前会话未明确采用过，本次发现站内两篇76355传闻文章确实存在超过一个月未更新的真实空白，建议后续会话在常规新闻搜索无果时，将此方法（回查历史"rumor/leak"标记文章）纳入常规选题排查步骤。此外，审计阶段核实Steam评论数时，再次遇到与8/24会话记录相同的"第三方数据源口径不一致"问题（今日6,450 vs 站内8/14记录的13,199 vs game-facts.json基准12,665），复用既定"口径存疑时不强行采用"原则，未做任何修改，符合[[数据口径存疑处理原则]]的既往判断标准。

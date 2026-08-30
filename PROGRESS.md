@@ -3758,3 +3758,54 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接，本次会话沙盒未预置任何历史遗留副本）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/sessions/gallant-serene-gates/repo`（新建目录），确认其HEAD（含2026-08-27每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错"outside this session's connected folders"（工具仅能访问宿主机outputs目录，无法访问VM内clone路径）——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：选题阶段核实"今日新闻"角度时发现均为已覆盖内容的二次转述，遂主动排查站内历史"未证实/传闻"标记文章是否已有官方后续，这一"主动回查站内已发布的传闻类文章是否已被后续官方信息实锤"的选题排查方法此前会话未明确采用过，本次发现站内两篇76355传闻文章确实存在超过一个月未更新的真实空白，建议后续会话在常规新闻搜索无果时，将此方法（回查历史"rumor/leak"标记文章）纳入常规选题排查步骤。此外，审计阶段核实Steam评论数时，再次遇到与8/24会话记录相同的"第三方数据源口径不一致"问题（今日6,450 vs 站内8/14记录的13,199 vs game-facts.json基准12,665），复用既定"口径存疑时不强行采用"原则，未做任何修改，符合[[数据口径存疑处理原则]]的既往判断标准。
+
+## 2026-08-30 — Mayhem Collection Designer Interview Blog (Joker-Mite lore, Crew System, Absolute Mode specifics) + 3处Guide更新
+
+### 阶段一：Blog 更新
+- **`blog/mayhem-collection-designer-interview-joker-mite-crew-system.html`** — "Mayhem Collection Designer Interview: Joker-Mite's Origin, the New Crew System, and How Absolute Mode Really Works"。792字。选题背景：常规新闻搜索（"LEGO Batman Legacy" news August 29/30、Mayhem Collection update、patch/speedrun/community，共3组关键词）未发现8/28之后的重大新进展（一条Quick Brick Games关于"NEW patch"的推文经交叉核实后确认描述与站内已覆盖的1.007更新内容重复，非新补丁，未采用）。转而深挖8/26 Gamescom官方新闻稿之外的信源，发现Brick Fanatics发布了两篇基于IGN Gamescom Studio现场对TT Games关卡设计师Tim Spencer与高级设计师Chris Payne的独家采访衍生报道（8/26"features detailed"、8/27"Joker-Mite revealed"），两篇均含官方新闻稿未提及的具体机制引述。核实后确认这些细节（Joker-Mite的Brave and the Bold漫画出处与Bat-Mite镜像设定、冰淇淋车形态商店、Crew System取代处决动作机制、鬣狗解锁区域/开店打劫的额外用途、Task Force X"12人池随机抽4人每局不同"的具体机制、Absolute难度"单条命+移除格挡闪避提示"的具体设定）均不在站内既有8/27两篇Mayhem文章及`guides/mayhem-collection-dlc.html`/`guides/difficulty-modes-guide.html`中——其中`guides/difficulty-modes-guide.html`对比表格中Absolute列此前多处明确标注"Not yet detailed"占位符，属实质性内容空白而非选题重复。Tags: News, Guide. Image: `_astro/postfooter.Bp36eHDB_Z2cb3ek.webp`（Red Hood落入酸桶，与本文"反派起源"主题呼应，与其余4张图片并列全站最低使用次数组18次，本次使用后19次）. Sources: Brick Fanatics×2篇（今日直接WebFetch核实，含Tim Spencer/Chris Payne对IGN的直接引述）、Gematsu（今日直接WebFetch核实，用于交叉核对官方版本的Task Force X点名名单与Absolute难度官方措辞）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：11条，全部✅：
+  1. Joker-Mite为五维空间小精灵，首次登场于《蝙蝠侠：勇敢与无畏》，因小丑短暂获得Bat-Mite的现实扭曲能力而意外诞生 — ✅ 今日直接WebFetch Brick Fanatics "Joker-Mite revealed"原文确认
+  2. Joker-Mite在哥谭各处经营商店连锁，出售蝙蝠洞装饰品、人仔服装、奖杯、红砖，使用"偷来的现金"而非Stud结算 — ✅ 同上原文确认
+  3. 商店外观为绿紫配色的改装冰淇淋车，Joker-Mite悬浮于中央，周围环绕可解锁物品；画面中可见疑似带反派增益效果的红砖 — ✅ 同上原文确认（红砖效果描述为Brick Fanatics记者的画面解读，本文已如实标注为"looked like"式推测性描述，未坐实为确认机制）
+  4. TT Games关卡设计师Tim Spencer与高级设计师Chris Payne在IGN Gamescom Studio现场接受采访，确认基础游戏的处决(takedown)动作在反派任务中被移除，取而代之的是全新"Crew System"——招募阿卡姆囚犯组建犯罪团伙 — ✅ 今日直接WebFetch Brick Fanatics "features detailed"原文逐字确认（Chris Payne原话引述）
+  5. 哈莉的鬣狗Bud & Lou除战斗召唤外，还可用于解锁区域、开启可打劫的商店 — ✅ 同上原文确认
+  6. Tim Spencer原话："A random selection of four [Suicide Squad members] out of 12 will arrive to try and stop you...Their configuration, their abilities, the things that you're facing changes each and every time" — ✅ 同上原文逐字确认
+  7. 官方新闻稿此前仅点名6名Task Force X成员（Deathstroke/Killer Croc/Captain Boomerang/Deadshot/King Shark/Polka-Dot Man），未说明总池规模或每局出场人数 — ✅ 今日直接WebFetch Gematsu官方新闻稿原文确认（无总数/每局人数信息），与Brick Fanatics"12人池/每局4人"的设计师采访形成互补而非冲突
+  8. Absolute难度官方新闻稿措辞仅为"harder...requiring greater skill, awareness, and precision in combat"，未提及生命数或UI提示机制 — ✅ 今日直接WebFetch Gematsu原文确认
+  9. Absolute难度设计师采访确认具体机制：单条命（无复活）、移除格挡与闪避的画面提示 — ✅ 今日直接WebFetch Brick Fanatics "features detailed"原文确认（"giving players just a single life, as well as removing counter and dodge prompts"）
+  10. Gamescom 2026于8月26日通过IGN Gamescom Studio直播首播Mayhem Collection预告片，设计师采访同期进行 — ✅ Brick Fanatics与Gematsu双源确认
+  11. 站内此前8/26文章（`mayhem-collection-gamescom-trailer-designer-interview-august-26.html`）发布于预告片首播前，文中明确写道"We'll update this page with the actual trailer and interview details"，但后续未见对该页面的实际更新记录 — ✅ 今日直接grep站内该文件原文确认此表述存在，证实设计师采访的具体内容确为站内首次覆盖
+- References：3条真实URL（Brick Fanatics×2、Gematsu），均本次会话直接WebFetch核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10总数/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中，两处"trophy-achievement-guide"匹配均为happythumbsgaming.com外部URL正常引用）；另以Python脚本对全站148个HTML文件（含新增博文）的内部链接做完整性校验，0处失效链接。本次审计过程中发现的所有编辑均已完成后二次运行禁止错误清单扫描，确认无新增违规。
+**关键发现：** `guides/difficulty-modes-guide.html`对比表格中Absolute难度列存在多处"Not yet detailed"占位符（Lives/Respawns、Enemy crowd size、Shield enemies、Gadget combos），其中Lives/Respawns一项经今日设计师采访实锤为"单条命无复活"，属可填补的真实内容空白（其余三项因无直接信源支撑保留占位符，未推断填充）。`guides/mayhem-collection-dlc.html`中"Absolute Mayhem成就暗示可重复运行结构"此前明确标注为"remains a community theory, not a confirmed mechanic"，经今日设计师采访实锤（Crew System、鬣狗多用途、Joker-Mite漫画出处）已从推测升级为官方确认，予以更新措辞并保留原始推测记录的历史脉络。`guides/all-villains-guide.html`中Task Force X描述仍停留在"Dataminers have also reportedly uncovered"的7月数据挖掘阶段表述，与今日设计师采访的官方"12人池随机4人"机制形成新旧信息落差，予以更新。
+**审计发现但未采纳的数据点：** Brick Fanatics "Joker-Mite revealed"一文中关于红砖"villainous power-up qualities"的描述为记者对预告片画面的推测性解读（原文"possibly with villainous power-up qualities"），非TT Games官方确认，本次guide页面更新中未将其作为确认机制写入，仅在blog正文中保留其推测性措辞。
+
+**SEO Top 3 更新：**
+1. **`guides/difficulty-modes-guide.html`** — 将Absolute难度对比表格"Lives / Respawns"列从"Not yet detailed"占位符更新为设计师采访实锤的"Single life — no respawns"，同步在正文段落中补充"移除格挡/闪避画面提示"的具体机制描述并链接今日新博文，Gadget combos列占位符标注补充"(counter/dodge prompts removed)"提示读者关联信息，更新时间戳（8/27→8/30）。(评分：9/10 — 全站难度对比权威页存在literal"Not yet detailed"占位符，属最高优先级的真实内容空白，且今日核实的具体数值可直接、无歧义地填入，搜索"LEGO Batman Absolute难度"意图强烈)
+2. **`guides/mayhem-collection-dlc.html`** — 在Task Force X确认敌人段落后补充"12人池随机4人每局"设计师采访细节及原话引述；将Absolute Mayhem成就段落后新增"8月30日更新——官方已确认"说明框，涵盖Crew System取代处决动作、鬣狗解锁区域/开店用途、Joker-Mite的Brave and the Bold漫画出处与冰淇淋车形态，均链接今日新博文，更新时间戳（8/27→8/30）。(评分：8/10 — 全站Mayhem Collection核心枢纽页，此前将可重复运行结构标注为"社区推测非确认机制"，今日信息将其实锤为官方确认，属状态升级型更新)
+3. **`guides/all-villains-guide.html`** — 将Task Force X的"Dataminers have also reportedly uncovered"7月数据挖掘阶段表述更新为设计师采访确认的"12人池随机4人"官方机制，保留原数据挖掘链接的同时新增今日博文链接。(评分：6/10 — 全站反派权威页，Task Force X表述从"传闻/数据挖掘"状态升级为"官方确认"状态，属真实性提升而非内容空白)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（11条高风险声明，全部今日直接WebFetch多源核实）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + 148文件内部链接完整性校验，0处失效链接；编辑后二次扫描确认无新增违规）
+- [x] SEO Top 3 更新已执行（difficulty-modes-guide.html / mayhem-collection-dlc.html / all-villains-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，无需改动）
+- [x] sitemap.xml 已重新生成（147页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次内容为DLC设计细节/难度机制描述，非game-facts.json覆盖的核心数值类别，不写入）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/sessions/lucid-vibrant-clarke/repo`（新建目录），确认其HEAD（含2026-08-28每日更新，8/29无更新记录）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错该路径为"VM path"，工具仅能访问宿主机outputs目录——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次选题排查方法：常规新闻关键词搜索（含一条疑似"新补丁"的推文线索）交叉核实后判定为已覆盖内容的重复描述，未采用；转而复查8/26官方新闻稿之外的独立信源（Brick Fanatics基于同一场IGN Gamescom Studio采访的衍生报道），发现该采访包含官方新闻稿未涉及的具体机制细节（设计师原话引述），且站内既有8/26文章明确标注"待更新采访细节"但此后无更新记录——这一"复查同一事件的独立信源报道，寻找官方通稿未覆盖的采访类细节"的选题方法此前会话未明确采用，建议后续会话在官方新闻稿信息已耗尽但事件本身重大（如设计师采访、发布会）时，将此方法纳入常规选题排查步骤。

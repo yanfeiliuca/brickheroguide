@@ -3809,3 +3809,56 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/sessions/lucid-vibrant-clarke/repo`（新建目录），确认其HEAD（含2026-08-28每日更新，8/29无更新记录）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错该路径为"VM path"，工具仅能访问宿主机outputs目录——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次选题排查方法：常规新闻关键词搜索（含一条疑似"新补丁"的推文线索）交叉核实后判定为已覆盖内容的重复描述，未采用；转而复查8/26官方新闻稿之外的独立信源（Brick Fanatics基于同一场IGN Gamescom Studio采访的衍生报道），发现该采访包含官方新闻稿未涉及的具体机制细节（设计师原话引述），且站内既有8/26文章明确标注"待更新采访细节"但此后无更新记录——这一"复查同一事件的独立信源报道，寻找官方通稿未覆盖的采访类细节"的选题方法此前会话未明确采用，建议后续会话在官方新闻稿信息已耗尽但事件本身重大（如设计师采访、发布会）时，将此方法纳入常规选题排查步骤。
+
+## 2026-09-18 — Mayhem Collection & Switch 2 Launch Day Blog + 3处Guide更新（DLC实际发售当天）
+
+### 阶段一：Blog 更新
+- **`blog/mayhem-collection-launch-day-everything-confirmed.html`** — "Mayhem Collection Is Out Now: Everything Confirmed for LEGO Batman's Double Launch Day"。935字。选题背景：本次会话为定时任务自动运行，检查PROGRESS.md发现最近一次记录为2026-08-30（其间存在约19天的会话空档，环境说明详见下方），而今日（9/18）恰好是`data/game-facts.json`中早已记录的Mayhem Collection DLC官方发售日**且**Switch 2版本发售日——这是站内自8月起持续追踪的DLC倒计时系列报道的"揭晓日"，判定为当日最高优先级、无可替代的选题，不再另行搜索新闻比较。WebSearch确认双发售如期进行（Vice/GoNintendo/WBD Pressroom/GamesBeat等多源交叉确认Switch2发售，finalweapon.net/nintendoeverything确认DLC同日发售），随后直接WebFetch三个信源获取发售当日的具体细节：Brick Fanatics于昨日（9/17，发售前一天）发布的完整DLC指南文章（含30套小丑/哈莉专属服装、Joker-Mite商店机制、Henchmaster角色漫画出处、Batman Day快闪店信息等此前会话未覆盖的新细节）、WBD官方新闻稿（Switch2版本完整发售内容清单）、以及Virtualni Kutak于9/10发布的Gamescom试玩体验报道（小丑拳击手套枪/哈莉大锤的具体玩法描述、逃脱机制细节）。三者均为本次会话直接WebFetch核实的一手/近一手信源，无一来自记忆或推断。Tags: News, Guide. Image: `_astro/prefooter-keyart.C5w2I9s1_1Iktj5.jpg`（官方关键美术图，与其余3张图片并列全站最低使用次数组18次，本次使用后19次；适合"双发售总结"这类不聚焦单一角色/场景的综合性文章）. Sources: Brick Fanatics（今日直接WebFetch核实，9/17发布）、Warner Bros. Discovery Pressroom官方新闻稿（今日直接WebFetch核实）、Virtualni Kutak试玩报道（今日直接WebFetch核实，9/10发布）. 7 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：13条，全部✅：
+  1. Mayhem Collection DLC与Switch 2版本均于9月18日同步发售 — ✅ 今日WebSearch多源交叉确认（Vice、GoNintendo、WBD Pressroom、GamesBeat、finalweapon.net、nintendoeverything），另今日直接WebFetch Brick Fanatics（9/17发布，明确写道"finally drops tomorrow"）与WBD官方新闻稿双重确认
+  2. Deluxe Edition持有者今日自动解锁DLC；Standard Edition可付费$24.99/£21.99/€24.99升级（含Legacy Collection） — ✅ 今日直接WebFetch Brick Fanatics原文逐字确认，与`game-facts.json`既有数值一致
+  3. Mayhem Mode机制：在"locked-down"的North Island区域进行限时任务，返回Amusement Mile的可自定义Funhouse据点；期间可打劫商店、砸ATM、喷涂鸦、偷载具、与A.R.G.U.S.特工战斗，直至Task Force X前来追捕 — ✅ 今日直接WebFetch Brick Fanatics原文逐字确认（新增"locked-down North Island"与"Funhouse"具体名称，此前会话仅笼统提及"Amusement Mile"）
+  4. Sinister Pack含7套服装、Jokermobile载具、5件蝙蝠洞装饰道具 — ✅ 今日直接WebFetch Brick Fanatics + WBD官方新闻稿双源确认，与`game-facts.json`既有数值完全一致
+  5. 小丑与哈莉本身另有30套可解锁服装（独立于Sinister Pack的7套） — ✅ 今日直接WebFetch Brick Fanatics原文确认（"a whopping 30 new outfits to unlock for The Joker and Harley Quinn"），此数字为本次会话首次核实，不与`game-facts.json`任何既有字段冲突（该文件未记录此数字）
+  6. Joker-Mite为五维空间小精灵，经营商店售卖武器/装备/奖杯等物品 — ✅ 今日直接WebFetch Brick Fanatics原文确认，与8/30会话核实的Joker-Mite起源信息（Batman: The Brave and the Bold）一致，未冲突
+  7. Henchmaster角色首次登场于漫画《Batman: The Joker War Zone》#1，负责训练被救出的阿卡姆囚犯，使其可作为可自定义团伙的一员被召唤 — ✅ 今日直接WebFetch Brick Fanatics原文逐字确认，与8/30会话核实的"Crew System"机制形成互补（Crew System为机制名，Henchmaster为该机制的训练者角色，此前会话未点名此角色）
+  8. DLC预告片/宣传素材中出现的其他DC角色：Amanda Waller、Mad Hatter、Poison Ivy、Deadshot、Captain Boomerang、Bronze Tiger、King Shark、Polka-Dot Man — ✅ 今日直接WebFetch Brick Fanatics原文确认
+  9. TT Games设计总监Jimmy Sedora（经Xbox Wire 9/14报道，Brick Fanatics今日转引）确认Mayhem Collection深受《蝙蝠侠：动画系列》（哈莉·奎茵首次登场的1992年剧集）启发，DLC过场动画采用4:3画幅致敬 — ✅ 今日直接WebFetch Brick Fanatics原文确认引述来源
+  10. Switch 2版本标准版$69.99/豪华版$89.99；豪华版今日发售即包含Legacy Collection与Mayhem Collection两个DLC；实体豪华版含免费复古蝙蝠侠人仔（限量） — ✅ 今日直接WebFetch WBD官方新闻稿原文逐字确认，与`game-facts.json`既有数值完全一致
+  11. 所有Switch 2预购（标准版与豪华版）均可获得《黑暗骑士归来》战服，该战服并非Switch2平台独占——PS5/Xbox/PC玩家已于5月的基础游戏发售时获得 — ✅ 今日直接WebFetch WBD官方新闻稿确认Switch2预购内容，与`game-facts.json`中`preorder_bonuses.dark_knight_returns_batsuit`字段（"NOT Switch 2 exclusive — available on ALL platforms"）完全一致，属于禁止错误清单第4项的正确表述，未误写为独占
+  12. Switch 2版本性能：官方仍未公布具体规格，独立评测与性能分析要到今日版本正式发售后才开始出现 — ✅ 今日WebSearch结果原文确认（tomsguide/gamefaqs等信源指出"the game just launched on that platform today"，性能分析待定），与`game-facts.json`中`performance`字段"TT Games has not released official specs"表述一致，未使用禁止清单第5项的"estimated/TBD"措辞，而是明确写出已知的720p/1080p数值
+  13. Warner Bros. Games将于9月19日（Batman Day）在纽约曼哈顿第五大道667号Microsoft Experience Center举办快闪活动，12-5pm EST，可现场试玩Mayhem Collection并领取周边 — ✅ 今日直接WebFetch Brick Fanatics原文确认
+- References：3条真实URL（Brick Fanatics、WBD Pressroom官方新闻稿、Virtualni Kutak），均本次会话直接WebFetch核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10总数/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中；grep到guides/jim-gordon-guide.html一处误报，人工核实为指向`/guides/waynetech-upgrades-guide.html`的正常站内链接，非违规）；另以Python脚本对全站149个HTML文件（含新增博文）的内部链接做完整性校验，0处失效链接。
+**关键发现（重大）：** `guides/mayhem-collection-dlc.html`、`guides/release-date-platforms.html`、`guides/difficulty-modes-guide.html`三个页面此前均以"未来时"表述DLC与Switch2发售及Absolute难度上线（"releasing on September 18"、"launches September 18"、"arriving September 18"），而今日恰好就是9月18日——三页均存在真实的时态陈旧问题（而非事实错误），且`mayhem-collection-dlc.html`与`release-date-platforms.html`均缺少今日直接核实的最新细节（30套服装数量、Joker-Mite商店细节、Henchmaster、Batman Day快闪店；Switch2具体发售内容清单）。此外`guides/mayhem-collection-dlc.html`"Who Gets It Free?"板块中Standard Edition说明此前写道"a separate standalone option may be added closer to September 18, 2026"——该表述在发售当日已不再适用（要么已推出独立购买选项，要么确认没有），经核实Brick Fanatics今日文章仍只提及Deluxe Upgrade一条路径，未提及独立购买选项，故将该句改为"as of launch day, no standalone purchase exists"的当下时态确认表述，而非简单删除。
+**审计发现但未采纳的数据点：** 无（本次审计未发现与`data/game-facts.json`权威数值冲突的外部信源；Brick Fanatics"30 new outfits"为该文件未覆盖的补充数字，非冲突，未写入`game-facts.json`——因该文件的`usage_rule`要求数值类声明来自该文件，本次判断"30套服装"属于当日新闻性细节而非核心游戏数值类别，采用"来源明确标注+不写入game-facts.json"的既定处理原则，与8/30会话"Absolute难度机制细节未写入game-facts.json"的先例一致）。
+
+**SEO Top 3 更新：**
+1. **`guides/mayhem-collection-dlc.html`** — 全站Mayhem Collection核心枢纽页，新增"Update (September 18, 2026) —— it's out now"发售当日更新段落（30套服装、Henchmaster漫画出处、4:3画幅致敬、Batman Day快闪店，链接今日新博文），"Release date"callout改为"🚀 Released today"当下时态，Standard Edition购买路径说明改为发售当日确认表述，Quick Facts侧栏"Release"与"DLC Roadmap"的⏳状态改为✅ Out now，Quick Stats卡片"Sep 18"改为"OUT NOW"，meta description/og:description同步刷新，时间戳（8/30→9/18）。(评分：10/10 — 全站DLC核心枢纽页在DLC实际发售当天仍用"releasing on"未来时态描述已经上线的内容，属于本轮审计最高优先级的时效性问题，且今日核实的4项新细节均为此前完全空白的内容)
+2. **`guides/release-date-platforms.html`** — Switch2发售行"Pre-orders open now"改为"Out now"并补充豪华版今日发售内容清单（Legacy Collection+Mayhem Collection+复古人仔），性能对比表格"Launches September 18"改为"Launched...独立评测正在陆续出现"当下时态，FAQ板块Switch2条目补充"today"时间锚点、"confirming it was never Switch 2-exclusive"呼应禁止错误清单第4项、链接今日新博文，时间戳（8/24→9/18）。(评分：8/10 — 全站发售日期权威页，Switch2行是当日搜索"LEGO Batman Switch2"用户的直接落地内容，未来时态在发售当日属于明显的用户可感知错误)
+3. **`guides/difficulty-modes-guide.html`** — meta description/og:description、正文首段、Absolute Mode标题、对比表格表头、FAQ条目共6处"arriving/arrives September 18"未来时态统一改为"live since/live now"当下时态，TOC锚文本同步更新，时间戳（8/30→9/18）。(评分：7/10 — 全站难度模式权威页，Absolute模式今日已上线但页面仍用未来时描述，属于状态更新型问题而非内容空白)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（13条高风险声明，全部今日直接WebFetch多源核实）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + 149文件内部链接完整性校验，0处失效链接；发现并修正3处guide页面时态陈旧问题）
+- [x] SEO Top 3 更新已执行（mayhem-collection-dlc.html / release-date-platforms.html / difficulty-modes-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，无需改动）
+- [x] sitemap.xml 已重新生成（148页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（本次"30套服装"为当日新闻性细节，非该文件覆盖的核心数值类别，按既定原则不写入）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/tmp/brickheroguide`（新建目录），确认其HEAD（含2026-08-30每日更新，其间19天无会话记录，本次未做任何补记或推测性处理，仅从今日实际HEAD状态继续）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错该VM路径"outside this session's connected folders"——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：今日恰逢`game-facts.json`中早已记录的DLC与Switch2双发售日，选题排查无需常规新闻搜索比对——直接确认"今天是什么日子"（对照game-facts.json的release_date字段）即锁定最高优先级选题，这一"检查game-facts.json中是否存在与当前会话日期吻合的既定发售/里程碑日期"的选题方法此前会话未明确采用过，建议后续会话在常规新闻搜索前，先执行这一日期匹配检查，尤其是在game-facts.json记录了明确未来日期的条目时。此外，本次审计发现的"3处guide页面因未来时态描述已上线内容"问题，是一类此前会话未系统化处理过的问题类型（不同于此前常见的"数值错误"或"内容空白"）——建议后续会话在处理任何game-facts.json中记录了具体日期的功能/DLC/版本发售页面时，将"发售当日/发售后检查时态是否需要从将来时切换为现在时/过去时"纳入常规审计步骤。

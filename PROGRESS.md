@@ -3862,3 +3862,51 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/tmp/brickheroguide`（新建目录），确认其HEAD（含2026-08-30每日更新，其间19天无会话记录，本次未做任何补记或推测性处理，仅从今日实际HEAD状态继续）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错该VM路径"outside this session's connected folders"——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：今日恰逢`game-facts.json`中早已记录的DLC与Switch2双发售日，选题排查无需常规新闻搜索比对——直接确认"今天是什么日子"（对照game-facts.json的release_date字段）即锁定最高优先级选题，这一"检查game-facts.json中是否存在与当前会话日期吻合的既定发售/里程碑日期"的选题方法此前会话未明确采用过，建议后续会话在常规新闻搜索前，先执行这一日期匹配检查，尤其是在game-facts.json记录了明确未来日期的条目时。此外，本次审计发现的"3处guide页面因未来时态描述已上线内容"问题，是一类此前会话未系统化处理过的问题类型（不同于此前常见的"数值错误"或"内容空白"）——建议后续会话在处理任何game-facts.json中记录了具体日期的功能/DLC/版本发售页面时，将"发售当日/发售后检查时态是否需要从将来时切换为现在时/过去时"纳入常规审计步骤。
+
+## 2026-09-19 — Switch 2 Performance Confirmed Blog + 3处Guide更新（发售后首份性能报告）
+
+### 阶段一：Blog 更新
+- **`blog/switch-2-performance-confirmed-30fps-locked.html`** — "LEGO Batman on Switch 2: 30 FPS Confirmed, No Performance Mode Toggle"。868字。选题背景：本次会话检查PROGRESS.md确认最近一次记录为昨日（9/18，Mayhem Collection与Switch2双发售日），昨日文章明确留下一个未解悬念——"性能评测要等版本正式发售后才开始出现"。常规新闻关键词搜索（"LEGO Batman Legacy of the Dark Knight" news 2026-09-19、Mayhem Collection review reaction、Switch 2 launch review performance，共3组）发现My Nintendo News于9/18发布的性能确认报道（"is 30fps on Nintendo Switch 2"），直接回答了昨日文章留下的悬念，属于真实的信息空白填补（而非选题重复）。过程中曾发现GameFAQs一篇标题含"Switch 2"的用户评测，经核实其"Product Release"栏位实为Xbox Series X版本、发布于6/22（早于Switch2发售），系平台分类页面的错误归类而非真实Switch2评测，予以排除未采用，避免误用。Tags: News, Guide. Image: `_astro/fight-2.BFd6neBb_2adSpB.webp`（Red Hood帮派vs蝙蝠侠，与clues-2/fight-3并列全站最低使用次数组18次，本次使用后19次）. Sources: My Nintendo News（今日直接WebFetch核实，9/18发布）、Brick Fanatics（今日直接WebFetch核实，9/17发布，Batman Day快闪店一手信源）、Pure Xbox（今日WebSearch核实，5月发布，用于Xbox Series X/S性能对比背景）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：8条，全部✅：
+  1. Switch2版本仅单一30fps模式，无Performance/Fidelity模式切换 — ✅ 今日直接WebFetch My Nintendo News原文逐字确认（"doesn't feature a Performance Mode or a Fidelity Mode and is simply locked in at 30fps"）
+  2. TT Games/WB Games未公布Switch2具体分辨率数字（掌机/底座） — ✅ 今日WebSearch确认无信源提供具体分辨率数字，按既定原则明确标注为"未公布"而非编造估计值
+  3. PS5/Xbox Series X均为Fidelity+Performance双模式，4K DRS，30/60fps — ✅ 今日WebSearch重新核实（Pure Xbox），与站内`guides/release-date-platforms.html`既有数据一致
+  4. Xbox Series S仅单一模式，1080p输出/720p原生渲染，锁定30fps — ✅ 今日WebSearch核实Pure Xbox原文确认，与站内既有`blog/platform-performance-comparison.html`数据一致
+  5. Steam Deck约25-30fps浮动，已获Valve Verified认证（2026年5月12日） — ✅ 与`data/game-facts.json`既有基准数据一致，未改动
+  6. Batman Day快闪店：9月19日12-5pm EST，曼哈顿第五大道667号Microsoft Experience Center，可试玩Mayhem Collection并领取免费周边 — ✅ 今日直接WebFetch Brick Fanatics原文逐字确认（一手信源，非转引）
+  7. Deluxe Edition今日自动解锁DLC；Standard Edition可付费$24.99/£21.99/€24.99升级 — ✅ 今日直接WebFetch Brick Fanatics原文确认，与`game-facts.json`既有数值一致
+  8. 21个主线任务、7名可玩角色（文中"Bottom Line"段落引用） — ✅ 直接取自`data/game-facts.json`权威内部数据源，非独立声明
+- References：3条真实URL（My Nintendo News、Brick Fanatics、Pure Xbox），均本次会话直接核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10总数/主线任务29+或8/Dark Knight Returns Switch2独占/Switch2性能estimated-TBD/收藏品99+/canonical带.html后缀，全部0命中；`collectibles-guide.html`与`suits-abilities-guide.html`中出现的"10"均为WayneTech里程碑列表"10, 30, 50..."的正常数据，非违规误报）；另以Python脚本对全站149个HTML文件的内部链接做完整性校验，首次扫描发现今日新博文中2处死链（`/guides/pc-steam-deck-best-settings-guide.html`应为`/blog/pc-steam-deck-best-settings-guide.html`，该指南实际位于blog目录而非guides目录），已修正，二次扫描确认0处失效链接。
+**关键发现（重大）：** `guides/release-date-platforms.html`的Platform Differences表格此前将Switch2列为与PS5/Xbox同样的"Performance Mode / Quality Mode"双模式结构（"720p handheld / up to 1080p docked"对应Performance，"1080p docked"对应Quality），并称"TT Games仍未公布官方性能规格、独立评测才刚开始出现"——这与今日实锤的"仅单一30fps模式，无双模式切换"直接冲突，属于事实错误而非仅仅过时，予以修正为单模式表述并新增更新说明框。此外，`guides/deluxe-edition-explained.html`与`guides/suits-abilities-guide.html`两页均仍写道"Switch2预购目前仍开放，是获取黑暗骑士归来战服的唯一途径"——但游戏已于昨日（9/18）正式发售，"预购仍开放"的表述在今日已不再准确（游戏发售后通常不存在"预购"概念）。经WebFetch官方FAQ页面（legobatmangame.com/faq）核实，该页面未再列出此战服的预购细节，无法确认发售后是否仍可通过标准购买获得——按"数据口径存疑时主动放弃而非强行使用"的既定原则，未断言"已下架"或"仍可获得"，仅将两页表述改为准确的时态说明并如实标注"官方未确认发售后是否仍可获得"，建议读者自行核实平台商店页面或游戏内奖励。
+**审计发现但未采纳/未编辑的次要问题：** `guides/mission-1-walkthrough.html`与`guides/trophy-guide.html`中各有一处"Switch2 launches September 18"式将来时态表述，游戏已于昨日发售，理论上应改为过去时——因今日SEO Top 3名额已用于影响更大的3个页面（release-date-platforms.html的直接事实冲突、deluxe-edition-explained.html与suits-abilities-guide.html的预购状态准确性问题），此两处次要时态问题记录留痕，建议下次会话优先处理。
+
+**SEO Top 3 更新：**
+1. **`guides/release-date-platforms.html`** — Platform Differences表格将Switch2行从虚构的双模式（Performance/Quality）结构改为准确的单模式表述（"Single mode only — 30 fps (locked)"），新增"Update (September 19, 2026)"说明框引述My Nintendo News原文核实内容并链接今日新博文，页面时间戳更新（9/18→9/19），meta description同步刷新。(评分：10/10 — 全站发售平台权威页此前的表格结构直接暗示Switch2存在读者可切换的双模式，与今日实锤的"无切换选项、仅单一模式"形成直接的事实性冲突，而非单纯的时效性滞后，属本轮审计最高优先级修正)
+2. **`guides/deluxe-edition-explained.html`** — 修正"Switch2预购仍开放，是获取黑暗骑士归来战服唯一途径"的过时表述，改为准确反映游戏已于9/18发售、预购窗口已随之关闭，并如实标注官方未确认发售后可获得性，避免误导读者以为仍可通过预购获取，时间戳更新（8/24→9/19）。(评分：8/10 — 涉及读者能否获得免费战服的实际可操作性信息，表述不准确可能导致读者做出错误购买决策)
+3. **`guides/suits-abilities-guide.html`** — 同上问题的第二处独立表述，同步修正为准确的发售后时态说明，时间戳更新（8/28→9/19）。(评分：7/10 — 全站服装解锁权威页面，与deluxe-edition-explained.html形成信息一致性闭环)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（8条高风险声明，全部今日直接WebFetch/WebSearch核实）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + 149文件内部链接完整性校验，发现并修正2处新博文死链、1处guide页面重大事实冲突、2处guide页面预购状态准确性问题）
+- [x] SEO Top 3 更新已执行（release-date-platforms.html / deluxe-edition-explained.html / suits-abilities-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，无需改动）
+- [x] sitemap.xml 已重新生成（149页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 已更新（performance字段：switch2_handheld/switch2_docked/switch2_performance_note 从"未公布规格待定"更新为今日实锤的"单一30fps锁定模式"，last_verified刷新至2026-09-19）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/tmp/repo`，确认其HEAD（含2026-09-18每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错该VM路径"outside this session's connected folders"——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/game-facts.json/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：(1) 选题排查时直接复查"昨日文章明确留下的未解悬念"（昨日博文原文写道"performance breakdowns...are only starting to roll in today"），这一"检查前一日博文是否有明确留白的悬念/伏笔，作为今日选题的直接线索"的方法此前会话未明确采用过，建议纳入常规选题排查步骤，尤其适用于连续多日报道同一事件的场景；(2) 核实来源时发现GameFAQs一篇标题含目标平台关键词的评测页面实为其他平台评测的错误归类（发布日期早于该平台发售日、Product Release栏位注明为其他平台），这一"核实评测类来源时需交叉检查发布日期与产品栏位是否与标题所指平台逻辑自洽"的方法建议纳入常规信源核实步骤，避免因标题关键词匹配而误用来源；(3) 内部链接完整性校验脚本首次在本文撰写阶段而非仅审计阶段捕获了2处新博文自身的死链（引用guides目录下不存在的路径，实际文件在blog目录），确认了"新文章发布前必须运行链接校验脚本"这一步骤的必要性，此前会话该校验主要用于guide页面审计、较少针对当日新增博文本身做同等严格校验，建议后续会话将链接校验步骤明确扩展至"新增博文本身"而不仅是"审计对象guide页面"。

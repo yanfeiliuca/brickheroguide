@@ -4,7 +4,7 @@
     "developer": "TT Games",
     "publisher": "WB Games",
     "release_date": "2026-05-22",
-    "last_verified": "2026-06-27",
+    "last_verified": "2026-09-19",
     "source_authority": "Official WB Games page, IGN, GamesRadar, PowerPyx, Steam",
     "usage_rule": "AI MUST only use values from this file for any numerical claim. If a value is missing, mark as [UNVERIFIED] and flag for human research."
   },
@@ -49,9 +49,9 @@
     "steam_deck_verified_date": "2026-05-12"
   },
   "performance": {
-    "switch2_handheld": "720p",
-    "switch2_docked": "1080p (max)",
-    "switch2_performance_note": "720p handheld / up to 1080p docked. TT Games has not released official specs; full analysis pending Switch 2 launch 2026-09-18."
+    "switch2_handheld": "30 fps (single mode, locked)",
+    "switch2_docked": "30 fps (single mode, locked)",
+    "switch2_performance_note": "Confirmed September 18, 2026 by day-one reporting (My Nintendo News): no Performance/Fidelity mode toggle exists on Switch 2 -- it runs a single locked 30 fps mode, unlike PS5/Xbox Series X's dual 30/60 fps modes. Closest parallel is Xbox Series S, which also ships one 30 fps mode. Exact resolution figures for handheld vs docked play remain unpublished by TT Games."
   },
   "content_counts": {
     "main_missions": 21,

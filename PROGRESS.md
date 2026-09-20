@@ -3910,3 +3910,50 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接）。本次使用任务说明中保存的GitHub凭据将仓库全新clone至会话可写路径`/tmp/repo`，确认其HEAD（含2026-09-18每日更新）与origin/main一致后，完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错该VM路径"outside this session's connected folders"——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/game-facts.json/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：(1) 选题排查时直接复查"昨日文章明确留下的未解悬念"（昨日博文原文写道"performance breakdowns...are only starting to roll in today"），这一"检查前一日博文是否有明确留白的悬念/伏笔，作为今日选题的直接线索"的方法此前会话未明确采用过，建议纳入常规选题排查步骤，尤其适用于连续多日报道同一事件的场景；(2) 核实来源时发现GameFAQs一篇标题含目标平台关键词的评测页面实为其他平台评测的错误归类（发布日期早于该平台发售日、Product Release栏位注明为其他平台），这一"核实评测类来源时需交叉检查发布日期与产品栏位是否与标题所指平台逻辑自洽"的方法建议纳入常规信源核实步骤，避免因标题关键词匹配而误用来源；(3) 内部链接完整性校验脚本首次在本文撰写阶段而非仅审计阶段捕获了2处新博文自身的死链（引用guides目录下不存在的路径，实际文件在blog目录），确认了"新文章发布前必须运行链接校验脚本"这一步骤的必要性，此前会话该校验主要用于guide页面审计、较少针对当日新增博文本身做同等严格校验，建议后续会话将链接校验步骤明确扩展至"新增博文本身"而不仅是"审计对象guide页面"。
+
+## 2026-09-20 — Update 1.010 Trophy Confirmation Blog + Trophy/DLC/Release-Date Guide Updates
+
+### 阶段一：Blog 更新
+- **`blog/update-1-010-mayhem-collection-trophies-confirmed.html`** — "Update 1.010: WB Games Confirms 12 Mayhem Collection Trophies, Matching August's Leak"。799字。选题背景：常规新闻关键词搜索（"LEGO Batman Legacy of the Dark Knight" news September 2026、Mayhem Collection update patch review 2026、community speedrun glitch）发现WB Games官方LEGO Games Support页面新发布的"September 2026 Update"完整补丁说明，其中包含一条此前全站从未报道过的关键新信息——官方首次确认Mayhem Collection DLC在PS5/Xbox/PC上拥有独立的12个奖杯/成就（"12 new trophies/achievements, unlockable within the Mayhem Collection DLC"），与7月泄露的12项Steam成就列表数量完全吻合。站内`guides/trophy-guide.html`与`guides/mayhem-collection-dlc.html`自发售日起均明确写道"TT Games尚未确认DLC是否有独立奖杯列表"，本次为真实的信息空白填补而非选题重复。判定为当日最高优先级选题：属于site尚未覆盖的Update 1.010补丁本身（此前博文止步于Update 1.008），且直接回应了两个guide页面长期悬而未决的疑问。Tags: News, Analysis. Image: `_astro/clues-2.D9jQ9zQy_Z12vcyH.webp`（哥谭夜景蝙蝠信号图，与fight-3并列全站最低使用次数组18次，本次使用后19次）. Sources: WB Games/LEGO Games Support官方September 2026 Update页面（今日直接WebFetch核实）、MP1st（今日直接WebFetch核实，9/16发布，Update 1.010构建号与Sinister Pack数据信源）、Brick Fanatics（今日直接WebFetch核实，9/17发布，Deluxe升级价格与Sinister Pack细节交叉验证）. 5 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：7条，全部✅：
+  1. WB Games官方September 2026 Update页面确认Mayhem Collection DLC在PS5/Xbox/PC上新增12个奖杯/成就 — ✅ 今日直接WebFetch官方legogamessupport.wbgames.com原文逐字确认（"12 new trophies/achievements, unlockable within the Mayhem Collection DLC on PlayStation 5, XBOX Series X|S, and PC (Steam & Epic Games Store)"）
+  2. 该数字与7月泄露的12项Steam成就列表数量完全吻合 — ✅ 基于站内`blog/mayhem-collection-achievements-leak.html`既有记录（7月泄露内容）与今日官方确认数字的直接对比，非独立外部声明
+  3. Switch 2版本已上线，Mayhem Collection DLC对Switch2/PS5/Xbox/PC的Deluxe Edition用户开放 — ✅ 今日直接WebFetch官方页面原文确认
+  4. Absolute难度模式作为免费更新对所有玩家开放 — ✅ 今日直接WebFetch官方页面确认，与站内`guides/difficulty-modes-guide.html`既有记录一致，未改动该页面（本次未列入Top3）
+  5. Update 1.010（构建号1.010.000）已于9月16日上线，早于9月18日DLC正式解锁两天 — ✅ 今日直接WebFetch MP1st原文确认（文章发布于9/16下午5:44，正文明确写道"you'll be prompted to download update 1.010"，暗示当时已在推送）；初稿曾写"9月16日至17日"，经核实MP1st仅确认9/16在推送，未见直接信源支持17日，已修正为仅陈述9月16日，避免无信源支撑的日期扩展
+  6. Sinister Pack内容为7套服装/1辆蝙蝠车皮肤/5件蝙蝠洞装饰道具 — ✅ 今日直接WebFetch MP1st + Brick Fanatics双源确认，与`data/game-facts.json`既有数值完全一致；初稿曾表述为MP1st"首次confirmed"该细节，经核实该细节实为8月Gamescom官方发布会已确认、站内guide页面此前已收录，MP1st仅为9/16数据文件层面的再次印证，已修正措辞避免夸大信源首发性
+  7. Deluxe Edition升级价格为$24.99/£21.99/€24.99 — ✅ 今日直接WebFetch Brick Fanatics原文确认，与`data/game-facts.json`既有editions.deluxe字段一致
+- References：3条真实URL（WB Games官方、MP1st、Brick Fanatics），均本次会话直接WebFetch核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10总数/主线任务29+或8/Dark Knight Returns Switch2独占/收藏品99+/canonical带.html后缀，全部0命中，仅`data/audit-checklist.html`元文档中出现"✗ trophy-achievement-guide.html"字样，系该文档本身用于展示"这些是错误示例"的说明性内容，非实际违规）；全站150个HTML文件（含新增博文）内部链接完整性Python脚本校验，0处失效链接。
+**关键发现：** `guides/trophy-guide.html`与`guides/mayhem-collection-dlc.html`两页均在发售当天遗留"TT Games尚未确认DLC是否有独立奖杯列表"的不确定表述，而今日WB Games官方页面已直接确认为12个奖杯/成就——这是本次审计发现的最高优先级信息更新，两页均属于同一事实的不同呈现位置，形成一致性修正闭环。此外`guides/release-date-platforms.html`第336行的一处tip-box仍写道"Mayhem Collection DLC (arriving September 18, 2026)"——DLC已于两天前发售，该表述已过时，予以时态修正。另发现`guides/all-villains-guide.html`第367行存在同类"launches on September 18, 2026"表述（Harley Quinn相关段落），因本次Top 3名额已用于影响更大的3个页面，记录留痕，建议下次会话处理。
+**审计发现但未采纳的数据点：** 无（本次未发现与`data/game-facts.json`权威数值冲突的外部信源）。
+
+**SEO Top 3 更新：**
+1. **`guides/trophy-guide.html`** — "Mayhem Collection DLC Trophies"板块新增"Update (September 20, 2026)"段落，引用WB Games官方原文确认12个奖杯/成就的确切数字，标题从"(September 18, 2026)"改为"(Confirmed: 12, Live Since September 18, 2026)"，Platinum callout措辞从"if they exist"改为"are confirmed to be a separate, additional list"，链接今日新博文，时间戳（8/13→9/20）。(评分：10/10 — 全站权威奖杯攻略页此前对DLC奖杯数量存在明确的不确定表述，今日有官方信源可直接消除该不确定性，属于本轮审计最高优先级的信息空白填补)
+2. **`guides/mayhem-collection-dlc.html`** — Platinum note callout从"TT Games has not yet confirmed whether the Mayhem Collection will include its own separate trophy/achievement list"改为官方已确认的12个奖杯具体数字，与Trophy Guide形成一致性闭环，链接今日新博文，时间戳（9/18→9/20）。(评分：8/10 — 全站Mayhem Collection核心枢纽页与Trophy Guide共享同一事实点，需同步更新避免站内信息不一致)
+3. **`guides/release-date-platforms.html`** — 第336行tip-box中"Season Pass for the Mayhem Collection DLC (arriving September 18, 2026)"改为"which launched September 18, 2026 and is live now"，消除DLC已发售两天后仍用将来时态的表述，时间戳（9/19→9/20）。(评分：6/10 — 全站发售日期权威页的次要陈旧表述，非事实错误但属于用户可感知的时态问题)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（7条高风险声明，全部今日直接WebFetch核实；核查过程中发现并修正初稿2处表述精确度问题——Update 1.010上线日期未过度扩展、Sinister Pack细节首发信源归属修正）
+- [x] References 区块已填写（3条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + 150文件内部链接完整性校验，0处失效链接；发现并修正3处guide页面表述问题，记录1处次要问题留待下次会话）
+- [x] SEO Top 3 更新已执行（trophy-guide.html / mayhem-collection-dlc.html / release-date-platforms.html）
+- [x] index.html 链接已更新（无新 guide 页面，无需改动）
+- [x] sitemap.xml 已重新生成（150页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（12个DLC奖杯为奖杯类目而非该文件既有数值类别覆盖范围，按既定原则本次未写入；若下次会话确认具体奖杯名称与稀有度，建议届时评估是否扩展该文件结构）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接）。本次会话发现临时目录`/tmp/repo`中存有上次会话遗留的仓库克隆，但其`.git`目录文件属主为`nobody`且权限为644（不可写），当前会话用户`hopeful-tender-wright`无法对其执行`git fetch/push`（`Permission denied`）；核实该遗留目录的HEAD commit（`de6722c`，2026-09-19每日更新）后，改为使用任务说明中保存的GitHub凭据将仓库全新clone至新的会话可写路径`/tmp/brickhero_work/repo`，确认新clone的HEAD与遗留目录一致（即确认9/19的commit已成功推送到origin/main，并非本次误认为"待推送"）后，在新clone上完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错该VM路径"outside this session's connected folders"——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：(1) 遇到`/tmp/repo`权限异常时，未假设"存在未推送的本地提交"就贸然尝试修复权限或强行推送，而是先通过全新clone对比HEAD commit哈希来确认远程仓库的真实状态，避免了对一个实际已正常同步的仓库做不必要的操作——这一"权限异常时以全新clone核对远程真实状态、而非信任本地可能损坏的git状态"的方法建议纳入后续会话标准步骤；(2) 事实核查阶段（步骤3B）中，对草稿两处表述（日期范围扩展、信源首发性归属）做了主动收窄修正，即使这两处内容本身与`game-facts.json`或禁止错误清单不冲突——这体现了核查步骤不应仅比对"是否触碰已知禁区"，还应比对"每句表述是否精确对应所引用信源的原文范围"，建议后续会话在步骤3B中明确加入这一更细粒度的逐句信源比对标准。

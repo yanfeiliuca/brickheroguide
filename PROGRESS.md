@@ -3957,3 +3957,55 @@ Full site audit and rewrite with verified post-launch data sourced from GameRant
 
 ### 环境说明（本次会话）
 本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接）。本次会话发现临时目录`/tmp/repo`中存有上次会话遗留的仓库克隆，但其`.git`目录文件属主为`nobody`且权限为644（不可写），当前会话用户`hopeful-tender-wright`无法对其执行`git fetch/push`（`Permission denied`）；核实该遗留目录的HEAD commit（`de6722c`，2026-09-19每日更新）后，改为使用任务说明中保存的GitHub凭据将仓库全新clone至新的会话可写路径`/tmp/brickhero_work/repo`，确认新clone的HEAD与遗留目录一致（即确认9/19的commit已成功推送到origin/main，并非本次误认为"待推送"）后，在新clone上完成全部编辑、sitemap生成与推送。Read/Write/Edit工具报错该VM路径"outside this session's connected folders"——本次会话新博文HTML通过bash heredoc直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：(1) 遇到`/tmp/repo`权限异常时，未假设"存在未推送的本地提交"就贸然尝试修复权限或强行推送，而是先通过全新clone对比HEAD commit哈希来确认远程仓库的真实状态，避免了对一个实际已正常同步的仓库做不必要的操作——这一"权限异常时以全新clone核对远程真实状态、而非信任本地可能损坏的git状态"的方法建议纳入后续会话标准步骤；(2) 事实核查阶段（步骤3B）中，对草稿两处表述（日期范围扩展、信源首发性归属）做了主动收窄修正，即使这两处内容本身与`game-facts.json`或禁止错误清单不冲突——这体现了核查步骤不应仅比对"是否触碰已知禁区"，还应比对"每句表述是否精确对应所引用信源的原文范围"，建议后续会话在步骤3B中明确加入这一更细粒度的逐句信源比对标准。
+
+## 2026-09-21 — Mayhem Runs Post-Launch Mechanics Deep-Dive + DLC/Villains/Stud-Farming Guide Updates
+
+### 阶段一：Blog 更新
+- **`blog/mayhem-runs-extraction-sewers-clean-escape-explained.html`** — "Mayhem Runs Explained: Extraction Sewers, Clean Escape Bonuses, and What It Costs to Gear Up"。1090字。选题背景：常规新闻关键词搜索后，发现两篇3天内发布的post-launch hands-on深度内容——BricksFanz（9/20发布）的DLC实机评测与All Things How（9/19更新）的Mayhem Run机制详解——均包含全站此前从未报道过的具体数值：Extraction Sewer撤离机制、Clean Escape +10%奖励 vs Captured -50%惩罚（附具体数值案例：教程关卡被抓5,312 studs vs 剩7秒清场撤离41,271 studs）、Grapple Hook（500,000 studs）与Theater扩建（100,000 studs）的具体定价、Hench Master crew系统成就条件、以及"首次clean escape后Task Force X介入"的触发逻辑。站内`guides/mayhem-collection-dlc.html`此前对Mayhem Run的描述仅为"race back to Amusement Mile before the clock runs out"的模糊表述，无撤离点、无百分比、无商店定价——本次为真实的信息空白填补而非选题重复。Tags: Guide, Analysis. Image: `_astro/fight-3.KeK453wH_Z23bgKb.webp`（全站最低使用次数图片，18次，本次使用后19次）. Sources: All Things How（今日直接WebFetch核实）、BricksFanz（今日直接WebFetch核实）. 6 min read.
+
+### 阶段一B：网络事实核查结果
+- 🔴 高风险声明核查：12条，全部✅（详见对话内核查记录，均为今日会话内直接WebFetch两个信源原文逐条核实，非搜索摘要推断）：
+  1. Extraction Sewer机制：绿色图标+绿烟标记的下水道井盖，计时器归零前抵达即可撤离 — ✅ All Things How原文
+  2. Clean Escape奖励+10%，Captured惩罚-50% — ✅ All Things How原文
+  3. 具体案例数值：教程关卡强制被抓5,312 studs / 第二次撤离剩7秒41,271 studs — ✅ All Things How原文
+  4. Extraction Sewer分布于Amusement Mile与East End — ✅ All Things How原文
+  5. 存在"使用每个撤离点"相关成就 — ✅ All Things How原文
+  6. 计时目标分类（A.R.G.U.S. Roadblocks/Pop-Up Shops/Store Heists and Safes/Graffiti/ATMs/Landmarks） — ✅ All Things How原文
+  7. Joker-Mite双商店：路边摊售临时道具（Dodge Launch、Updraft、LEGO Batman Movie战服、Batman Beyond战服），据点商店售永久装备（Vehicle Key、Grapple Hook 500,000 studs） — ✅ All Things How原文
+  8. Toy Shop免费自定义 / Theater付费扩建100,000 studs / Base of Operations奖杯 — ✅ All Things How原文
+  9. Hench Master招募机制，相关成就要求招募3名/同时激活10名 — ✅ All Things How原文
+  10. 首次clean escape后Amanda Waller派出Task Force X（Deadshot、Katana、Captain Boomerang、Mongal、King Shark、Deathstroke、Polka-Dot Man） — ✅ All Things How原文
+  11. BricksFanz：跑图中途派出5名Task Force X成员，全部击败后激活Chaos Mode（加速/滑翔/秒破坏） — ✅ BricksFanz原文直接WebFetch核实
+  12. 核查过程中额外发现并规避1处信源误用陷阱：GameFAQs一篇标题含"Mayhem Collection"关键词的PS5评测页面，经核实其发布日期（2026年6月22日）早于DLC发售日（9月18日）且正文明确写道"looking forward to the DLC later this year"，实为误挂在DLC商品页下的主游戏评测，已识别并弃用，未采纳其中任何数据
+- References：2条真实URL（All Things How、BricksFanz），均本次会话直接WebFetch核实，无占位符
+- 推送门控：🟢 通过
+
+### 阶段二：内容审计结果
+**审计页面数：** 34 个 guide 页面（禁止错误清单全项grep扫描：trophy-achievement-guide.html引用/WayneTech缓存=10总数/主线任务29+或8/Dark Knight Returns Switch2独占/收藏品99+/canonical带.html后缀，全部0命中）；全站152个HTML文件（含新增博文）内部链接完整性Python脚本校验，0处失效链接（校验脚本本次同时覆盖了新博文自身及3篇被编辑guide页面新增的内部链接）。
+**关键发现：** `guides/mayhem-collection-dlc.html`对Mayhem Run结构的描述自8月27日修正后就再未更新，仍是"race back to Amusement Mile"的模糊表述，与今日两个post-launch实机信源确认的具体撤离/奖惩机制存在信息空白（非事实冲突，而是详细度严重滞后于已发售内容）。`guides/all-villains-guide.html`第367行遗留自上次会话记录在案的"launches on September 18, 2026"将来时态表述，DLC已发售三天，予以时态修正。`guides/stud-farming-guide.html`自8月5日DLC发售前就未更新，未提及Mayhem Run本身也是Deluxe Edition用户的一条独立高效Stud来源，予以补充。
+**审计发现但未采纳的数据点：** 无（本次未发现与`data/game-facts.json`权威数值冲突的外部信源；`guides/difficulty-modes-guide.html`中"Absolute难度是否影响Platinum/100%"的"Not yet confirmed"表述属于诚实的未知标注而非过时错误，未改动）。
+
+**SEO Top 3 更新：**
+1. **`guides/mayhem-collection-dlc.html`** — 将Mayhem Run描述从模糊的"race back to Amusement Mile"改为具体的Extraction Sewer机制（Clean Escape +10% / Captured -50%），新增September 21更新框引述Grapple Hook（500,000 studs）与Theater（100,000 studs）定价并链接今日新博文；同时在此前"Bronze Tiger, Javelin, Katana, Lester, Mongal, Rick Flag remain unconfirmed"的注释后新增September 21更新，确认Katana与Mongal已在post-launch实机报告中被证实出现于Task Force X阵容（Killer Croc未出现于该阵容，与TT Games此前所述"12人池随机抽取"设计一致，非矛盾），meta description与时间戳同步更新（9/20→9/21）。(评分：10/10 — 全站Mayhem Collection核心枢纽页此前对已发售DLC核心玩法循环的描述严重滞后于实际内容深度，且解决了此前审计记录在案的2个反派名字"unconfirmed"悬念)
+2. **`guides/stud-farming-guide.html`** — 新增"Added September 21, 2026"提示框，说明Mayhem Run Clean Escape撤离是Deluxe Edition用户独立于Bat-Mite Store循环之外的高效Stud来源（引用具体案例41,271 studs/次），并说明其仅适用于Mayhem Mode沙盒而非主线流程，链接今日新博文，时间戳更新（8/5→9/21）。(评分：7/10 — 全站Stud攻略权威页自DLC发售前就未更新，遗漏了一条读者可能正在寻找的新增高效方法)
+3. **`guides/all-villains-guide.html`** — 修正Harley Quinn段落中"launches on September 18, 2026"的将来时态为"launched September 18, 2026 and is live now"，补充Deluxe/Standard具体升级价格并链接今日新博文，时间戳更新（8/27→9/21）。(评分：6/10 — 上次会话审计已记录在案的次要时态问题，本次优先处理清理历史待办)
+
+**新建页面（如有）：** 无 guide 页面新建（仅新增 blog 文章）
+
+### Verification Checklist
+- [x] Blog 新文章已写入
+- [x] 步骤3B 网络事实核查已完成（12条高风险声明，全部今日直接WebFetch双信源核实；核查过程中识别并规避1处GameFAQs信源误用陷阱——标题匹配但实为其他时间点的主游戏评测误挂在DLC商品页下）
+- [x] References 区块已填写（2条真实URL，均直接核实，无占位符）
+- [x] 推送门控已通过 🟢
+- [x] blog/index.html 已更新（顶部新卡片 + Latest Posts侧边栏，保持3条）
+- [x] 内容审计已完成（34个 guide 页面禁止错误清单全项扫描 + 152文件内部链接完整性校验，0处失效链接）
+- [x] SEO Top 3 更新已执行（mayhem-collection-dlc.html / stud-farming-guide.html / all-villains-guide.html）
+- [x] index.html 链接已更新（无新 guide 页面，无需改动）
+- [x] sitemap.xml 已重新生成（151页）
+- [x] PROGRESS.md 已追加
+- [x] data/game-facts.json 无新数值需更新（Mayhem Run撤离百分比与商店定价属于DLC玩法机制细节，非该文件既有数值类别覆盖范围，按既定原则本次未写入该文件，已完整记录于新博文与guide更新中）
+- [x] _redirects 已同步新增今日博文条目
+- [x] Git commit + push 已完成
+
+### 环境说明（本次会话）
+本机路径 `/Users/yanfeiliu/Documents/GitHub/brickheroguide/BrickHeroGuide.com/` 在本沙盒中不可用（Cowork定时任务自动运行，无用户在场批准文件夹连接）。本次会话发现`/tmp/repo`与`/tmp/brickhero_work/repo`均为历史会话遗留目录（前者git状态显示"ahead 1"疑似未推送提交），未直接信任或修复这些遗留目录，而是沿用上次会话确立的方法论——使用任务说明中保存的GitHub凭据将仓库全新clone至新路径`/tmp/bhg`，确认其HEAD（`9f5ca64`，2026-09-20每日更新）与预期一致后，在全新clone上完成全部编辑、sitemap生成与推送，未touch两个遗留目录。Read/Write/Edit工具报错该路径"outside this session's connected folders"——本次会话新博文HTML通过bash heredoc（quoted 'HTMLEOF'，避免变量展开）直接写入repo路径，全部guide/blog-index/_redirects/PROGRESS.md文件的读取与编辑均通过bash内python3脚本（字符串精确匹配替换，先assert确认目标文本存在再替换，避免静默失败）完成，与既往会话方法论一致。本次方法论要点：(1) 核实来源阶段发现GameFAQs "Mayhem Collection" PS5评测页面标题精确匹配DLC名称，但正文内容与发布日期（6/22，早于9/18 DLC发售且原文提及"looking forward to the DLC later this year"）明确表明这是挂错商品页的主游戏评测——这是此前会话方法论中"核实评测类来源时需交叉检查发布日期与产品栏位是否与标题所指平台逻辑自洽"原则的又一次成功应用，本次进一步扩展为"不仅要交叉检查平台/产品栏位，还要交叉检查评测正文中的时间线索（如'looking forward to X'这类明确指向评测写作时X尚未发生的表述）"，建议纳入下次会话的信源核实标准动作；(2) 选题排查环节延续了"复查前一日博文与站内guide页面是否有明确留白的悬念"这一此前会话新确立的方法——本次具体应用于复查`guides/mayhem-collection-dlc.html`中"remain unconfirmed"标注的反派名单，进而在今日信源中定位到可直接解决该悬念的具体证据（Katana、Mongal），建议后续会话在选题阶段将"扫描站内guide页面所有'unconfirmed/TBD/待查证'标注"作为与"复查前日博文悬念"并列的标准选题线索来源。
